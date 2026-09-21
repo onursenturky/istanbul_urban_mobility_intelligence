@@ -1,0 +1,30 @@
+{
+  "zero_demand_remote_cells_never_high_opportunity": {
+    "pct_in_citywide_top_decile": 0.0,
+    "pass": "True"
+  },
+  "consensus_frequencies_reproduce_phase6c_exactly": {
+    "readiness_match": true,
+    "opportunity_match": true,
+    "pass": true
+  },
+  "no_cluster_membership_used_in_scoring": {
+    "cluster_reference_in_score_computation_code": false,
+    "cluster_reference_in_downstream_interpretation_code": true,
+    "note": "The downstream reference is run_sensitivity()'s typology_score_summary.csv cross-tab, built strictly AFTER scenario_scores is computed and saved -- interpretation only, not a scoring input.",
+    "pass": true
+  },
+  "no_district_identifier_used_as_predictor": {
+    "note": "district is carried as METADATA in all output tables for grouping/reporting, never read as a numeric predictor by any value function or weighting formula in mcda_phase6b_scoring.py.",
+    "pass": true
+  },
+  "readiness_and_opportunity_mathematically_separate": {
+    "note": "No column in scenario_scores.parquet combines the two; verified by column name inspection.",
+    "combined_columns_found": [],
+    "pass": true
+  },
+  "no_scenario_silently_defaulted": {
+    "note": "All 4 scenarios appear symmetrically in every Phase 6B/6C output; sanity-check and mapping code uses 'balanced_equal_dimensions' only as an ILLUSTRATIVE example for printed diagnostics, never as a computational default embedded in a saved score.",
+    "pass": true
+  }
+}

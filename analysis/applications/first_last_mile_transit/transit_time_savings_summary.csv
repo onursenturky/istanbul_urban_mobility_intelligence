@@ -1,0 +1,3 @@
+system,n_cells_both_reachable_15min,pct_cells_both_reachable_15min,median_time_savings_min,p25_time_savings_min,p75_time_savings_min,p90_time_savings_min,pct_cells_cycling_slower_than_walking
+GENERAL,4760,21.32,3.94,2.06,6.51,8.45,1.05
+FIXED,1601,7.17,5.46,3.42,7.58,8.93,1.69

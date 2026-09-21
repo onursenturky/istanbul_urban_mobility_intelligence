@@ -1,0 +1,173 @@
+{
+  "final_k": 7,
+  "selection_rationale": "Quantitative metrics (silhouette, CH, DB) monotonically favor low k and do not by themselves select k=7. k=7 was chosen because five smaller high-activity clusters are stable in size/profile across k=4..10 (robust structure), while the k=6->k=7 transition splits an oversimplified ~80%-of-the-city background cluster into two substantively different regimes (moderately populated but transit-poor suburbs vs. genuinely remote/undeveloped periphery) that k<=6 erases. Beyond k=7, further splits fragment the same two large clusters without revealing a new regime.",
+  "algorithm": "kmeans",
+  "n_features": 44,
+  "features_used": [
+    "building_coverage_ratio",
+    "hospital_count",
+    "university_count",
+    "school_count",
+    "healthcare_count",
+    "cafe_count",
+    "restaurant_count",
+    "bar_pub_count",
+    "supermarket_count",
+    "retail_count",
+    "office_count",
+    "tourism_count",
+    "leisure_count",
+    "poi_density_km2",
+    "poi_entropy",
+    "population_density_calibrated_km2",
+    "mean_elevation_m",
+    "mean_slope_deg",
+    "pct_area_slope_3_6deg",
+    "pct_area_slope_6_10deg",
+    "metro_station_count",
+    "distance_to_nearest_metro_m",
+    "tram_station_count",
+    "distance_to_nearest_tram_m",
+    "rail_station_count",
+    "distance_to_nearest_rail_m",
+    "ferry_terminal_count",
+    "distance_to_nearest_ferry_m",
+    "metrobus_station_count",
+    "distance_to_nearest_metrobus_m",
+    "distance_to_nearest_transit_m",
+    "transit_stops_within_500m",
+    "transit_stops_within_1000m",
+    "fixed_guideway_stations_within_1000m",
+    "unique_rail_lines",
+    "bus_departures_per_day",
+    "bus_departures_peak_hour",
+    "cycle_infrastructure_density_km_per_km2_ibb_only",
+    "protected_cycleway_density_km_per_km2_ibb_only",
+    "distance_to_nearest_cycle_infrastructure_m_ibb_only",
+    "distance_to_nearest_bicycle_parking_m",
+    "bicycle_parking_count",
+    "distance_to_nearest_micromobility_parking_m",
+    "micromobility_parking_count"
+  ],
+  "cluster_sizes": {
+    "0": 1018,
+    "1": 361,
+    "2": 753,
+    "3": 911,
+    "4": 7672,
+    "5": 1363,
+    "6": 10244
+  },
+  "algorithm_comparison_kmeans_vs_gmm": {
+    "kmeans": {
+      "calinski_harabasz": 65830.2,
+      "davies_bouldin": 0.9815
+    },
+    "gaussian_mixture": {
+      "calinski_harabasz": 4404.4,
+      "davies_bouldin": 5.8406,
+      "bic": -6171741.2
+    },
+    "adjusted_rand_index_kmeans_vs_gmm": 0.2981
+  },
+  "stability_across_seeds": {
+    "seeds_tested": [
+      42,
+      1,
+      7,
+      123,
+      2024
+    ],
+    "pairwise_ari_mean": 1.0,
+    "pairwise_ari_min": 1.0,
+    "pairwise_ari_max": 1.0,
+    "all_pairwise_aris": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "sensitivity_ready_only": {
+    "n_features_full": 44,
+    "n_features_ready_only": 27,
+    "features_excluded": [
+      "cycle_infrastructure_density_km_per_km2_ibb_only",
+      "distance_to_nearest_cycle_infrastructure_m_ibb_only",
+      "distance_to_nearest_ferry_m",
+      "distance_to_nearest_metro_m",
+      "distance_to_nearest_rail_m",
+      "distance_to_nearest_tram_m",
+      "distance_to_nearest_transit_m",
+      "ferry_terminal_count",
+      "fixed_guideway_stations_within_1000m",
+      "metro_station_count",
+      "population_density_calibrated_km2",
+      "protected_cycleway_density_km_per_km2_ibb_only",
+      "rail_station_count",
+      "tram_station_count",
+      "transit_stops_within_1000m",
+      "transit_stops_within_500m",
+      "unique_rail_lines"
+    ],
+    "adjusted_rand_index_full_vs_ready_only": 0.4167,
+    "interpretation": "High ARI (>0.7) would indicate the broad typology structure is not driven by the READY_WITH_LIMITATION features specifically -- i.e. it is not an artifact of the temporally misaligned / İBB-only-definition variables. Lower ARI would indicate those variables materially shape the typology and their caveats should weigh more heavily on interpretation."
+  },
+  "spatial_coherence_summary": {
+    "total_spatial_components": 1261,
+    "mean_largest_component_share_weighted": 0.5452,
+    "per_cluster_fragmentation": {
+      "0": {
+        "n_components": 317,
+        "largest_component_size": 47,
+        "largest_component_share": 0.0462
+      },
+      "1": {
+        "n_components": 60,
+        "largest_component_size": 95,
+        "largest_component_share": 0.2632
+      },
+      "2": {
+        "n_components": 146,
+        "largest_component_size": 77,
+        "largest_component_share": 0.1023
+      },
+      "3": {
+        "n_components": 235,
+        "largest_component_size": 139,
+        "largest_component_share": 0.1526
+      },
+      "4": {
+        "n_components": 6,
+        "largest_component_size": 5999,
+        "largest_component_share": 0.7819
+      },
+      "5": {
+        "n_components": 406,
+        "largest_component_size": 48,
+        "largest_component_share": 0.0352
+      },
+      "6": {
+        "n_components": 91,
+        "largest_component_size": 5764,
+        "largest_component_share": 0.5627
+      }
+    }
+  },
+  "interim_typology_limitation": "This is an INTERIM six-family typology (buildings, POI, population, terrain, transit, cycling). Citywide land-use/green-space features (PARTIAL, 22/39 districts) and the full road network (PARTIAL, 0/39 districts) are NOT yet available and are entirely absent from this analysis -- their absence is not treated as zero, they are simply not represented. A future re-run once those layers are complete may reveal different or additional structure, particularly for green-space character and road-network-dependent measures (road grade, pct cycle-infra coverage of roads).",
+  "outputs": {
+    "candidate_k_diagnostics": "/Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/analysis/clustering/candidate_k_diagnostics.csv",
+    "cluster_assignments": "/Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/analysis/clustering/cluster_assignments.parquet",
+    "cluster_profiles": "/Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/analysis/clustering/cluster_profiles.json",
+    "cluster_profiles_scaled_means": "/Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/analysis/clustering/cluster_profiles_scaled_means.csv",
+    "spatial_coherence_diagnostics": "/Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/analysis/clustering/spatial_coherence_diagnostics.json",
+    "cluster_map": "/Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/analysis/clustering/maps/citywide_cluster_map.png",
+    "family_profile_heatmap": "/Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/analysis/clustering/maps/family_profile_heatmap.png"
+  }
+}

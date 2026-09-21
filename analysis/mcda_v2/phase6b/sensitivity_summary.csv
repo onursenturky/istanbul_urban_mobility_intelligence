@@ -1,0 +1,11 @@
+variant,spearman_rho_vs_baseline,jaccard_top_decile_vs_baseline,mean_abs_diff_vs_baseline,target
+NO_STREET_CONNECTIVITY,0.8445,0.8686,0.0627,readiness
+EXPANDED_TRANSIT,0.9882,0.7807,0.0601,readiness
+NO_ROAD_GRADE,0.9976,0.9485,0.0104,readiness
+ALTERNATIVE_CYCLING,0.9983,0.9982,0.0027,readiness
+WEIGHT_PERTURBATION,0.9986,0.9317,0.0214,readiness
+WEIGHT_PERTURBATION,0.9991,0.8401,0.015,opportunity
+ALTERNATIVE_CYCLING,0.9994,0.9902,0.0006,opportunity
+NO_STREET_CONNECTIVITY,1.0,1.0,0.0,opportunity
+NO_ROAD_GRADE,1.0,1.0,0.0,opportunity
+EXPANDED_TRANSIT,1.0,1.0,0.0,opportunity

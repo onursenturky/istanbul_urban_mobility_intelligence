@@ -1,0 +1,75 @@
+{
+  "fragmentation": {
+    "total_components_all_clusters": 608,
+    "per_cluster": {
+      "0": {
+        "n_components": 354,
+        "largest_component_size": 497,
+        "largest_component_share": 0.1993
+      },
+      "1": {
+        "n_components": 90,
+        "largest_component_size": 5883,
+        "largest_component_share": 0.5824
+      },
+      "2": {
+        "n_components": 57,
+        "largest_component_size": 1085,
+        "largest_component_share": 0.7219
+      },
+      "3": {
+        "n_components": 102,
+        "largest_component_size": 208,
+        "largest_component_share": 0.3382
+      },
+      "4": {
+        "n_components": 5,
+        "largest_component_size": 5970,
+        "largest_component_share": 0.7846
+      }
+    },
+    "mean_largest_component_share_weighted_by_cluster_size": 0.6112
+  },
+  "morans_i_per_cluster": {
+    "cluster_0": {
+      "morans_i": 0.437,
+      "expected_i_under_null": -0.0,
+      "z_score": 123.165,
+      "p_value_pseudo": 0.001,
+      "n_permutations": 999,
+      "interpretation": "significant positive spatial autocorrelation"
+    },
+    "cluster_1": {
+      "morans_i": 0.8246,
+      "expected_i_under_null": -0.0,
+      "z_score": 239.482,
+      "p_value_pseudo": 0.001,
+      "n_permutations": 999,
+      "interpretation": "significant positive spatial autocorrelation"
+    },
+    "cluster_2": {
+      "morans_i": 0.5597,
+      "expected_i_under_null": -0.0,
+      "z_score": 160.707,
+      "p_value_pseudo": 0.001,
+      "n_permutations": 999,
+      "interpretation": "significant positive spatial autocorrelation"
+    },
+    "cluster_3": {
+      "morans_i": 0.4945,
+      "expected_i_under_null": -0.0,
+      "z_score": 142.824,
+      "p_value_pseudo": 0.001,
+      "n_permutations": 999,
+      "interpretation": "significant positive spatial autocorrelation"
+    },
+    "cluster_4": {
+      "morans_i": 0.976,
+      "expected_i_under_null": -0.0,
+      "z_score": 282.171,
+      "p_value_pseudo": 0.001,
+      "n_permutations": 999,
+      "interpretation": "significant positive spatial autocorrelation"
+    }
+  }
+}

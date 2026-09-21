@@ -1,0 +1,29 @@
+{
+  "n_origins": 22322,
+  "primary_definitions": {
+    "WALK_TRANSIT_10MIN_ACCESS": {
+      "n_cells": 3666,
+      "pct_cells": 16.42
+    },
+    "WALK_FIXED_15MIN_ACCESS": {
+      "n_cells": 1618,
+      "pct_cells": 7.25
+    },
+    "CYCLE_TRANSIT_10MIN_ACCESS": {
+      "n_cells": 6971,
+      "pct_cells": 31.23
+    },
+    "CYCLE_FIXED_15MIN_ACCESS": {
+      "n_cells": 3262,
+      "pct_cells": 14.61
+    }
+  },
+  "note": "These are descriptive thresholds, not claims of universal planning standards. Full 5/10/15-minute curves for both systems and both modes are retained in the per-system parquet files.",
+  "walking_runtime_s": 12.5,
+  "cycling_runtime_s": 118.1,
+  "n_system_a_ok_access_points_walking": 5460,
+  "n_system_b_ok_access_points_walking": 560,
+  "n_system_a_ok_access_points_cycling": 5460,
+  "n_system_b_ok_access_points_cycling": 560,
+  "unreachable_representation": "NaN for nearest_time_min when no access point of that system is reachable within the 15-minute search horizon -- never a large finite placeholder."
+}

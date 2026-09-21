@@ -1,0 +1,12 @@
+{
+  "method": "Same evidence-based classification method validated in Phase 8.1 for walking, applied here from the start (no separate 'original' vs 'corrected' pass needed for cycling since this is the FIRST classification, not a revision).",
+  "flag_counts": {
+    "RELIABLE": 14296,
+    "RELIABLE_SEPARATE_COMPONENT": 7758,
+    "QUESTIONABLE_ANCHOR": 160,
+    "KNOWN_NETWORK_LIMITATION_ADALAR": 72,
+    "SMALL_COMPONENT_CAUTION": 36
+  },
+  "key_finding_adalar": "Adalar has ZERO actual cycling-network nodes (unlike its 2-node walking component); all Adalar grid cells anchor ACROSS WATER to the mainland Asian-side mega-component. Every Adalar cell is flagged KNOWN_NETWORK_LIMITATION_ADALAR regardless of which component its anchor node falls in -- any 'cycling accessibility' value for Adalar is an artifact of cross-water snapping, not a real cycling route.",
+  "largest_component_id": 0
+}

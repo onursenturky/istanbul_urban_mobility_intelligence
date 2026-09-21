@@ -1,0 +1,15 @@
+{
+  "question": "Do areas identified as e-bike opportunities also correspond to places where cycling can materially improve access to everyday needs?",
+  "method": "Descriptive overlap only -- e-bike Opportunity/Readiness (frozen Phase 6B-V2 MCDA baseline) was NOT used to compute cycling accessibility, and cycling accessibility results were NOT fed back into the e-bike model.",
+  "n_grid_cells_matched": 22322,
+  "n_cycle_only_gain_cells": 3874,
+  "n_cycle_only_gain_cells_top_quartile_ebike_opportunity": 1218,
+  "pct_cycle_only_gain_cells_top_quartile_ebike_opportunity": 31.44,
+  "n_cycle_only_gain_cells_top_quartile_ebike_readiness": 1596,
+  "pct_cycle_only_gain_cells_top_quartile_ebike_readiness": 41.2,
+  "baseline_top_quartile_share_citywide_pct": 25.0,
+  "correlation_ebike_opportunity_vs_required_categories_gained": 0.0392,
+  "ebike_opportunity_q75_threshold": 0.3172,
+  "ebike_readiness_q75_threshold": 0.591,
+  "interpretation_note": "A positive overlap above the 25% citywide baseline would suggest the two frozen, independently-derived analyses (MCDA-based e-bike suitability and network-based cycling accessibility gain) are pointing at overlapping areas -- a potentially important framework-level cross-validation result. Any such overlap is descriptive co-location, not a causal or behavioral claim."
+}

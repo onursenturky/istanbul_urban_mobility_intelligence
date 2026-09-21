@@ -1,0 +1,47 @@
+{
+  "n_nodes": 1358982,
+  "n_edges": 1503157,
+  "total_length_km": 42460.3,
+  "directed_graph": false,
+  "n_connected_components": 567,
+  "largest_component_size": 827351,
+  "largest_component_share": 0.6088,
+  "n_isolated_components_size1": 0,
+  "component_size_distribution_top10": [
+    827351,
+    521850,
+    1021,
+    637,
+    452,
+    281,
+    275,
+    221,
+    127,
+    126
+  ],
+  "n_edges_dropped_no_geometry": 0,
+  "n_edges_dropped_zero_length": 0,
+  "coverage": {
+    "n_districts_total": 39,
+    "n_districts_with_at_least_1_node": 38,
+    "districts_with_zero_nodes": [
+      "Adalar"
+    ],
+    "n_grid_cells_total": 22322,
+    "n_grid_cells_with_at_least_1_node": 19105,
+    "pct_grid_cells_with_at_least_1_node": 85.59
+  },
+  "focus_areas": {
+    "adalar_islands_node_count": 0,
+    "peripheral_districts_node_counts": {
+      "\u015eile": 60939,
+      "\u00c7atalca": 95041,
+      "Silivri": 75003,
+      "Adalar": 0
+    },
+    "bosphorus_crossing_check": "No dedicated automated bridge-crossing detector implemented in this baseline -- see routing_validation.json for an explicit European-side <-> Asian-side routed test case as the practical crossing check instead of a geometric heuristic here."
+  },
+  "build_diagnostics": {
+    "loaded_from_cache": true
+  }
+}

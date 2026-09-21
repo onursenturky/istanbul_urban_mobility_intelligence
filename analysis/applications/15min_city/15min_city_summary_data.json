@@ -1,0 +1,280 @@
+{
+  "n_valid_grid_cells": 22322,
+  "n_cells_complete_15min_access": 3269,
+  "pct_cells_complete_15min_access": 14.64,
+  "population_summary": {
+    "population_layer_caveat": "Population is CALIBRATED 2020 population (WorldPop-based, Phase 3C calibration). All figures below describe accessibility of the SPATIAL DISTRIBUTION of the calibrated 2020 population to the CURRENT (2026) network/destination snapshot -- NOT a 2026 population estimate.",
+    "total_calibrated_population_2020": 15455565.5,
+    "population_with_complete_15min_access": 12748528.5,
+    "pct_population_with_complete_15min_access": 82.49,
+    "population_lacking_complete_15min_access": 2707036.9,
+    "population_by_category_and_threshold": {
+      "A_food_groceries_5min": 6791061.7,
+      "B_healthcare_5min": 8147937.7,
+      "C_education_5min": 7909754.0,
+      "D_daily_services_5min": 5865811.3,
+      "E_retail_shopping_5min": 8383245.4,
+      "F_leisure_social_5min": 10628680.6,
+      "G_green_recreation_5min": 8204852.4,
+      "H_public_transport_access_5min": 5652073.9,
+      "A_food_groceries_10min": 11254000.2,
+      "B_healthcare_10min": 12434725.7,
+      "C_education_10min": 12668683.6,
+      "D_daily_services_10min": 10261607.9,
+      "E_retail_shopping_10min": 12713341.9,
+      "F_leisure_social_10min": 13903021.0,
+      "G_green_recreation_10min": 12749027.5,
+      "H_public_transport_access_10min": 9342682.6,
+      "A_food_groceries_15min": 13247385.6,
+      "B_healthcare_15min": 13804886.9,
+      "C_education_15min": 13950129.0,
+      "D_daily_services_15min": 12494476.4,
+      "E_retail_shopping_15min": 14060279.1,
+      "F_leisure_social_15min": 14705567.2,
+      "G_green_recreation_15min": 13945431.5,
+      "H_public_transport_access_15min": 11368767.3
+    },
+    "population_by_n_required_categories_accessible_15min": {
+      "0": 1045935.4,
+      "1": 565387.1,
+      "2": 1095714.5,
+      "3": 12748528.5
+    },
+    "population_by_deficit_class": {
+      "EDUCATION_DEFICIT": 178733.8,
+      "FOOD_DEFICIT": 723701.6,
+      "HEALTHCARE_DEFICIT": 193279.0,
+      "MULTI_SERVICE_DEFICIT": 1611322.5,
+      "NONE_COMPLETE_ACCESS": 12748528.5
+    }
+  },
+  "category_accessibility_15min_pct_cells": {
+    "A_food_groceries": 18.57,
+    "B_healthcare": 18.91,
+    "C_education": 20.52,
+    "D_daily_services": 15.16,
+    "E_retail_shopping": 23.2,
+    "F_leisure_social": 34.61,
+    "G_green_recreation": 22.36,
+    "H_public_transport_access": 21.55
+  },
+  "most_common_missing_required_category_counts": {
+    "food": 18177,
+    "healthcare": 18100,
+    "education": 17742
+  },
+  "deficit_class_counts": {
+    "MULTI_SERVICE_DEFICIT": 18106,
+    "NONE_COMPLETE_ACCESS": 3269,
+    "FOOD_DEFICIT": 452,
+    "HEALTHCARE_DEFICIT": 263,
+    "EDUCATION_DEFICIT": 232
+  },
+  "n_multi_service_deficit_cells": 18106,
+  "n_multi_service_deficit_cells_network_reliable": 11810,
+  "n_multi_service_deficit_cells_isolated_component_caveat": 6100,
+  "population_exposed_to_multi_service_deficit": 1611322.5,
+  "quality_flagged_cells": {
+    "RELIABLE": 14319,
+    "ISOLATED_NETWORK_COMPONENT": 7772,
+    "QUESTIONABLE_ANCHOR": 159,
+    "KNOWN_NETWORK_LIMITATION_ADALAR": 72
+  },
+  "district_descriptive_summary_NOT_A_RANKING": {
+    "Adalar": {
+      "n_cells": 72,
+      "pct_complete_15min": 25.0,
+      "pop_total": 16033.0
+    },
+    "Arnavutköy": {
+      "n_cells": 1951,
+      "pct_complete_15min": 4.61,
+      "pop_total": 297771.14
+    },
+    "Ataşehir": {
+      "n_cells": 99,
+      "pct_complete_15min": 94.95,
+      "pop_total": 421284.43
+    },
+    "Avcılar": {
+      "n_cells": 205,
+      "pct_complete_15min": 35.12,
+      "pop_total": 441698.09
+    },
+    "Bahçelievler": {
+      "n_cells": 68,
+      "pct_complete_15min": 91.18,
+      "pop_total": 584595.11
+    },
+    "Bakırköy": {
+      "n_cells": 127,
+      "pct_complete_15min": 61.42,
+      "pop_total": 224480.39
+    },
+    "Bayrampaşa": {
+      "n_cells": 38,
+      "pct_complete_15min": 92.11,
+      "pop_total": 277259.67
+    },
+    "Bağcılar": {
+      "n_cells": 91,
+      "pct_complete_15min": 89.01,
+      "pop_total": 758597.36
+    },
+    "Başakşehir": {
+      "n_cells": 428,
+      "pct_complete_15min": 30.14,
+      "pop_total": 465027.67
+    },
+    "Beykoz": {
+      "n_cells": 1281,
+      "pct_complete_15min": 6.4,
+      "pop_total": 248142.26
+    },
+    "Beylikdüzü": {
+      "n_cells": 171,
+      "pct_complete_15min": 56.73,
+      "pop_total": 366702.52
+    },
+    "Beyoğlu": {
+      "n_cells": 41,
+      "pct_complete_15min": 90.24,
+      "pop_total": 226705.69
+    },
+    "Beşiktaş": {
+      "n_cells": 77,
+      "pct_complete_15min": 85.71,
+      "pop_total": 172861.55
+    },
+    "Büyükçekmece": {
+      "n_cells": 664,
+      "pct_complete_15min": 13.1,
+      "pop_total": 252071.17
+    },
+    "Esenler": {
+      "n_cells": 72,
+      "pct_complete_15min": 68.06,
+      "pop_total": 444821.89
+    },
+    "Esenyurt": {
+      "n_cells": 174,
+      "pct_complete_15min": 65.52,
+      "pop_total": 944657.95
+    },
+    "Eyüpsultan": {
+      "n_cells": 940,
+      "pct_complete_15min": 9.26,
+      "pop_total": 418816.12
+    },
+    "Fatih": {
+      "n_cells": 78,
+      "pct_complete_15min": 93.59,
+      "pop_total": 392297.23
+    },
+    "Gaziosmanpaşa": {
+      "n_cells": 46,
+      "pct_complete_15min": 95.65,
+      "pop_total": 473543.3
+    },
+    "Güngören": {
+      "n_cells": 27,
+      "pct_complete_15min": 96.3,
+      "pop_total": 282044.01
+    },
+    "Kadıköy": {
+      "n_cells": 111,
+      "pct_complete_15min": 98.2,
+      "pop_total": 477438.96
+    },
+    "Kartal": {
+      "n_cells": 161,
+      "pct_complete_15min": 73.29,
+      "pop_total": 479044.05
+    },
+    "Kâğıthane": {
+      "n_cells": 58,
+      "pct_complete_15min": 91.38,
+      "pop_total": 441321.57
+    },
+    "Küçükçekmece": {
+      "n_cells": 176,
+      "pct_complete_15min": 63.07,
+      "pop_total": 790814.48
+    },
+    "Maltepe": {
+      "n_cells": 220,
+      "pct_complete_15min": 53.18,
+      "pop_total": 512170.37
+    },
+    "Pendik": {
+      "n_cells": 783,
+      "pct_complete_15min": 23.5,
+      "pop_total": 721937.52
+    },
+    "Sancaktepe": {
+      "n_cells": 260,
+      "pct_complete_15min": 40.77,
+      "pop_total": 455488.97
+    },
+    "Sarıyer": {
+      "n_cells": 738,
+      "pct_complete_15min": 20.87,
+      "pop_total": 338811.99
+    },
+    "Silivri": {
+      "n_cells": 3491,
+      "pct_complete_15min": 2.49,
+      "pop_total": 200313.46
+    },
+    "Sultanbeyli": {
+      "n_cells": 116,
+      "pct_complete_15min": 87.07,
+      "pop_total": 344361.62
+    },
+    "Sultangazi": {
+      "n_cells": 145,
+      "pct_complete_15min": 49.66,
+      "pop_total": 540412.24
+    },
+    "Tuzla": {
+      "n_cells": 534,
+      "pct_complete_15min": 22.28,
+      "pop_total": 274208.45
+    },
+    "Zeytinburnu": {
+      "n_cells": 50,
+      "pct_complete_15min": 98.0,
+      "pop_total": 284453.98
+    },
+    "Çatalca": {
+      "n_cells": 4612,
+      "pct_complete_15min": 0.93,
+      "pop_total": 74830.53
+    },
+    "Çekmeköy": {
+      "n_cells": 607,
+      "pct_complete_15min": 14.33,
+      "pop_total": 275559.68
+    },
+    "Ümraniye": {
+      "n_cells": 182,
+      "pct_complete_15min": 73.08,
+      "pop_total": 709856.71
+    },
+    "Üsküdar": {
+      "n_cells": 148,
+      "pct_complete_15min": 91.22,
+      "pop_total": 525419.86
+    },
+    "Şile": {
+      "n_cells": 3237,
+      "pct_complete_15min": 0.83,
+      "pop_total": 37885.92
+    },
+    "Şişli": {
+      "n_cells": 43,
+      "pct_complete_15min": 100.0,
+      "pop_total": 261824.54
+    }
+  }
+}

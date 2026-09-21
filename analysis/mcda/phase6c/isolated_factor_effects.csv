@@ -1,0 +1,6 @@
+factor,n_isolated_pairs,mean_spearman_rho,mean_jaccard_top_decile,mean_abs_score_diff,mean_rank_displacement,score_type
+scenario,24,0.9723,0.7617,0.0381,0.0392,readiness
+transit_variant,8,0.9792,0.3788,0.0493,0.0357,readiness
+uf_variant,8,0.999,0.8116,0.0048,0.0059,readiness
+scenario,12,0.9906,0.7252,0.0335,0.0136,opportunity
+demand_variant,4,0.9967,0.8366,0.0083,0.0086,opportunity

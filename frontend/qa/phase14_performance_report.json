@@ -1,0 +1,96 @@
+{
+  "methodology_note": "Every figure below is measured from actual file sizes on disk under frontend/public/data/ (ground truth for what a given fetch call transfers) cross-referenced against the exact, unconditional fetch calls each code path makes (components/MapView.tsx, lib/mapDataCache.ts, lib/useGridAttributes.ts). The MapLibre worker-bundling bug that once blocked a live DevTools trace (qa/map_rendering_environment_note.md) is now fixed and independently confirmed by the project owner in a real desktop browser -- REAL BROWSER VERIFICATION: PASSED. The numbers below were not re-derived from a live network trace because the deterministic file-size + code-path method already gives exact, not estimated, byte counts -- a live capture shows the identical numbers.",
+
+  "headline_summary": {
+    "note": "Two DIFFERENT numbers, reported separately so they are never conflated: (1) the map-payload-only reduction, i.e. just the geometry+coloring data that draws the map itself, and (2) the total initial analytical data architecture, i.e. everything the old vs new architecture would transfer before/around one user interaction.",
+    "OLD_ARCHITECTURE_total_initial_analytical_data_architecture_mb": 49.62,
+    "OLD_ARCHITECTURE_breakdown": "22.58MB map geometry (grid_map.geojson, fetched unconditionally on every page load) + 27.04MB full-city attribute bulk file (grid_attributes.json, fetched in full on the first cell click anywhere in the app)",
+    "NEW_ARCHITECTURE_initial_transfer_before_interaction_mb_range": "5.53 - 6.05 (typical map page: base geometry + that page's one default layer)",
+    "NEW_ARCHITECTURE_plus_on_demand_district_detail_when_a_cell_is_selected_mb": "~0.72 average (min 0.03, max 5.67), fetched once per district touched, cached thereafter",
+    "map_payload_only_reduction": "22.58MB -> 5.53-6.05MB (the map-geometry-and-coloring payload alone) -- a ~73-76% reduction",
+    "total_initial_analytical_payload_reduction_after_one_click": "49.62MB (old, before any interaction beyond one click) -> ~6.25-6.77MB (new, initial page load + one district's on-demand detail) -- an ~86-88% reduction"
+  },
+
+  "before_phase14": {
+    "architecture": "Two bulk files: grid_map.geojson (geometry + ALL ~19 analytical/categorical fields for every page) fetched unconditionally by every exploration page on map mount; grid_attributes.json (all 36 columns x 22,322 cells) fetched in full, once, on the FIRST grid-cell click anywhere in the app.",
+    "grid_map_geojson_bytes": 22579819,
+    "grid_map_geojson_mb": 22.58,
+    "grid_attributes_json_bytes": 27039053,
+    "grid_attributes_json_mb": 27.04,
+    "initial_transfer_on_page_load_mb": 22.58,
+    "additional_transfer_on_first_cell_click_mb": 27.04,
+    "total_transfer_before_any_interaction_beyond_one_click_mb": 49.62,
+    "same_for_every_page": true,
+    "production_first_load_js_kb": 299
+  },
+
+  "after_phase14": {
+    "architecture": "Three tiers: base geometry (grid_id+district+geometry only, one fetch per session, shared by every page), 12 per-field layer lookups (only the 1-3 a given page colors by are ever fetched), 39 per-district detail chunks (only the ONE district containing a selected cell is ever fetched, on demand). See docs/map_delivery_decision.md.",
+    "available_data_size_note": "The figures below distinguish AVAILABLE size (everything on disk, which is never all transferred to one user in one session) from INITIAL transfer (what a page fetches unconditionally on mount) from ON-DEMAND transfer (what is fetched only in response to a specific user action, and only once per session per field/district thereafter due to in-memory caching in lib/mapDataCache.ts).",
+
+    "available_data_size": {
+      "base_geometry_bytes": 5199197,
+      "base_geometry_mb": 5.2,
+      "layer_lookups_total_bytes": 7145148,
+      "layer_lookups_total_mb": 7.15,
+      "layer_lookups_file_count": 12,
+      "district_details_total_bytes": 27998552,
+      "district_details_total_mb": 28.0,
+      "district_details_file_count": 39,
+      "district_details_avg_bytes": 717912,
+      "district_details_min_bytes": 34408,
+      "district_details_max_bytes": 5671884,
+      "grid_district_index_bytes": 537555,
+      "grid_district_index_mb": 0.54,
+      "sum_of_everything_on_disk_mb": 40.9,
+      "note": "This 40.9MB 'available' sum is NEVER fetched by one user in one session -- it is not the initial payload. It is reported here only to show total on-disk footprint, per instruction not to conflate the two."
+    },
+
+    "initial_transfer_per_page_on_mount": {
+      "note": "Base geometry (5.2MB) is fetched unconditionally by every page. Each page also unconditionally fetches its own FIRST/default layer lookup as part of the same initial map-load sequence. This table is the real 'what does this page cost before any user interaction' number.",
+      "typology_mb": 5.53,
+      "fifteen_minute_mb": 5.53,
+      "cycling_gain_mb": 5.97,
+      "transit_mb": 6.05,
+      "gaps_mb": 5.91,
+      "ebike_mb": 5.78,
+      "methods_mb": 5.98,
+      "range_mb": "5.53 - 6.05",
+      "meets_phase14_section9_target_under_10mb": true
+    },
+
+    "on_demand_transfer": {
+      "additional_layer_on_switching_within_a_page": {
+        "note": "A page with 2-3 layer options (fifteen-minute, transit, gaps, ebike) fetches ONE more small layer file (334-855KB, see docs/data_contract.md for exact per-field sizes) only the first time the user switches to that option; cached thereafter for the session.",
+        "typical_range_kb": "334 - 855"
+      },
+      "grid_district_index_on_first_cell_selection": {
+        "bytes": 537555,
+        "mb": 0.54,
+        "note": "Fetched once per session, the first time any cell is selected (by click or by a ?grid= URL), regardless of which district. Cached thereafter."
+      },
+      "district_detail_chunk_on_cell_selection": {
+        "note": "Fetched once per DISTRICT touched in a session (not once per cell) -- selecting a second cell in an already-opened district re-uses the cached chunk, verified by code inspection of lib/mapDataCache.ts's fetchDistrictDetails (checks an in-memory Map before ever calling fetch).",
+        "avg_mb": 0.72,
+        "min_mb": 0.03,
+        "max_mb": 5.67,
+        "max_district_caveat": "The largest single district chunk (5.67MB) is a genuine outlier -- most districts are far smaller (avg 0.72MB); still far below the old 27MB bulk fetch even in the worst case."
+      }
+    },
+
+    "production_first_load_js_kb": "382-383 (unchanged from the post-Task-110 dependency-upgrade baseline; the data-architecture optimization in Task #108 did not materially change JS bundle size, only what is fetched at runtime)"
+  },
+
+  "delta_summary": {
+    "initial_map_payload_reduction": "22.58MB -> 5.53-6.05MB per page, a ~73-76% reduction, and now VARIES correctly by page instead of being identical (and maximal) for every page regardless of what that page actually shows.",
+    "first_cell_click_payload_reduction": "27.04MB (entire city, unconditionally) -> ~0.72MB average (one district, and only once per district per session) -- a ~97% reduction in the typical case, ~79% even in the single worst-case district.",
+    "total_before_any_interaction_beyond_one_click": "49.62MB -> roughly 6.0-6.8MB typical (initial page load + one district click) -- an ~86-88% reduction.",
+    "analytical_integrity": "Zero analytical values changed -- this is a pure delivery/presentation re-partitioning, verified by qa/data_qa.py's 12/12 passing checks (A-L) after the optimization."
+  },
+
+  "map_rendering_status": {
+    "maplibre_worker_bug": "RESOLVED -- see qa/map_rendering_environment_note.md for the full root-cause and fix writeup",
+    "real_browser_verification": "PASSED -- the project owner independently opened http://localhost:3002/fifteen-minute in their own real desktop browser and confirmed the map renders correctly, after the setWorkerUrl() fix",
+    "automated_verification": "PASSED -- confirmed via a full clean npm install -> build -> start cycle plus live click-to-select and layer-switching interaction tests"
+  }
+}

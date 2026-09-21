@@ -1,0 +1,20 @@
+{
+  "walking_nodes": 1358982,
+  "walking_edges": 1503157,
+  "walking_km": 42460.3,
+  "cycling_nodes": 1235676,
+  "cycling_edges": 2712552,
+  "cycling_km": 81378.8,
+  "walking_largest_component_share": 0.6088,
+  "cycling_largest_weak_component_share": 0.6112,
+  "pct_grid_cells_direct_or_nearby_walking": 86.14,
+  "pct_grid_cells_direct_or_nearby_cycling": 86.12,
+  "estimated_citywide_accessibility_runtime_min": 0.9,
+  "walking_district_coverage": "38/39",
+  "walking_grid_cell_coverage_pct": 85.59,
+  "cycling_district_coverage": "38/39",
+  "cycling_grid_cell_coverage_pct": 85.57,
+  "n_routing_pairs_ok": 5,
+  "n_routing_pairs_route_not_found_bosphorus_or_water": 5,
+  "critical_bug_found_and_fixed": "pyrosm to_graph() dropped Asian side for filtered network types -- see manifest"
+}

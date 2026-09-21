@@ -1,0 +1,1267 @@
+{
+  "k3": {
+    "cluster_sizes": [
+      3995,
+      9103,
+      9224
+    ],
+    "cluster_pct": [
+      17.9,
+      40.78,
+      41.32
+    ],
+    "top_distinguishing_raw_by_cluster": {
+      "0": [
+        {
+          "feature": "number_of_transit_modes_accessible",
+          "raw_median": 1.0,
+          "citywide_percentile_of_cluster_median": 91.2
+        },
+        {
+          "feature": "poi_density_km2",
+          "raw_median": 36.0,
+          "citywide_percentile_of_cluster_median": 91.1
+        },
+        {
+          "feature": "poi_entropy",
+          "raw_median": 1.3787834934861753,
+          "citywide_percentile_of_cluster_median": 90.9
+        },
+        {
+          "feature": "population_density_calibrated_km2",
+          "raw_median": 11304.741837374553,
+          "citywide_percentile_of_cluster_median": 90.8
+        },
+        {
+          "feature": "total_poi_count",
+          "raw_median": 8.0,
+          "citywide_percentile_of_cluster_median": 90.7
+        },
+        {
+          "feature": "building_coverage_ratio",
+          "raw_median": 0.14183424856968505,
+          "citywide_percentile_of_cluster_median": 90.7
+        }
+      ],
+      "1": [
+        {
+          "feature": "intersection_density_km2",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 20.3
+        },
+        {
+          "feature": "local_road_length_m",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 20.4
+        },
+        {
+          "feature": "distance_to_nearest_transit_m",
+          "raw_median": 33225.68043061551,
+          "citywide_percentile_of_cluster_median": 79.2
+        },
+        {
+          "feature": "distance_to_nearest_cycle_infrastructure_m_ibb_only",
+          "raw_median": 17735.837419009895,
+          "citywide_percentile_of_cluster_median": 79.2
+        },
+        {
+          "feature": "road_density_km_per_km2",
+          "raw_median": 2.0210228070212914,
+          "citywide_percentile_of_cluster_median": 27.0
+        },
+        {
+          "feature": "population_density_calibrated_km2",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 28.3
+        }
+      ],
+      "2": [
+        {
+          "feature": "pct_road_length_grade_gt_8pct",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 29.9
+        },
+        {
+          "feature": "building_coverage_ratio",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 32.6
+        },
+        {
+          "feature": "building_count",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 33.1
+        },
+        {
+          "feature": "major_road_length_m",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 36.8
+        },
+        {
+          "feature": "landuse_data_coverage_pct",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 37.7
+        },
+        {
+          "feature": "poi_density_km2",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 38.6
+        }
+      ]
+    },
+    "family_bss_pct": {
+      "Buildings/Urban Form": 6.51,
+      "Cycling": 9.02,
+      "Land-use/Green Space": 10.42,
+      "POI": 25.97,
+      "Population": 2.25,
+      "Roads": 12.27,
+      "Terrain": 5.4,
+      "Transit": 28.16
+    },
+    "top10_individual_bss_pct": {
+      "poi_density_km2": 19.41,
+      "residential_share_conditional": 7.06,
+      "transit_stops_within_1000m": 5.81,
+      "bus_departures_per_day": 5.59,
+      "building_coverage_ratio_conditional": 5.43,
+      "cycle_accessible_road_density_km_per_km2": 3.78,
+      "distance_to_nearest_cycle_infrastructure_m_ibb_only": 3.72,
+      "road_density_km_per_km2": 3.68,
+      "mean_absolute_road_grade_pct": 2.96,
+      "distance_to_nearest_rail_m": 2.67
+    },
+    "spatial_fragmentation": {
+      "total_components_all_clusters": 541,
+      "per_cluster": {
+        "0": {
+          "n_components": 133,
+          "largest_component_size": 1704,
+          "largest_component_share": 0.4265
+        },
+        "1": {
+          "n_components": 251,
+          "largest_component_size": 6322,
+          "largest_component_share": 0.6945
+        },
+        "2": {
+          "n_components": 157,
+          "largest_component_size": 5323,
+          "largest_component_share": 0.5771
+        }
+      },
+      "mean_largest_component_share_weighted_by_cluster_size": 0.598
+    },
+    "morans_i_per_cluster": {
+      "cluster_0": {
+        "morans_i": 0.7727,
+        "interpretation": "significant positive spatial autocorrelation"
+      },
+      "cluster_1": {
+        "morans_i": 0.8035,
+        "interpretation": "significant positive spatial autocorrelation"
+      },
+      "cluster_2": {
+        "morans_i": 0.6755,
+        "interpretation": "significant positive spatial autocorrelation"
+      }
+    }
+  },
+  "k4": {
+    "cluster_sizes": [
+      8632,
+      9200,
+      1539,
+      2951
+    ],
+    "cluster_pct": [
+      38.67,
+      41.21,
+      6.89,
+      13.22
+    ],
+    "top_distinguishing_raw_by_cluster": {
+      "0": [
+        {
+          "feature": "distance_to_nearest_transit_m",
+          "raw_median": 34564.264169878385,
+          "citywide_percentile_of_cluster_median": 80.4
+        },
+        {
+          "feature": "distance_to_nearest_cycle_infrastructure_m_ibb_only",
+          "raw_median": 18368.04217290914,
+          "citywide_percentile_of_cluster_median": 80.3
+        },
+        {
+          "feature": "intersection_density_km2",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 20.3
+        },
+        {
+          "feature": "local_road_length_m",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 20.4
+        },
+        {
+          "feature": "road_density_km_per_km2",
+          "raw_median": 2.0539956727614452,
+          "citywide_percentile_of_cluster_median": 27.6
+        },
+        {
+          "feature": "population_density_calibrated_km2",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 28.3
+        }
+      ],
+      "1": [
+        {
+          "feature": "population_density_calibrated_km2",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 28.3
+        },
+        {
+          "feature": "pct_road_length_grade_gt_8pct",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 29.9
+        },
+        {
+          "feature": "building_coverage_ratio",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 32.6
+        },
+        {
+          "feature": "building_count",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 33.1
+        },
+        {
+          "feature": "major_road_length_m",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 36.8
+        },
+        {
+          "feature": "landuse_data_coverage_pct",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 37.7
+        }
+      ],
+      "2": [
+        {
+          "feature": "total_transit_stop_count",
+          "raw_median": 3.0,
+          "citywide_percentile_of_cluster_median": 96.9
+        },
+        {
+          "feature": "bus_departures_per_day",
+          "raw_median": 130.0,
+          "citywide_percentile_of_cluster_median": 96.5
+        },
+        {
+          "feature": "distance_to_nearest_transit_m",
+          "raw_median": 149.27708777415145,
+          "citywide_percentile_of_cluster_median": 4.1
+        },
+        {
+          "feature": "population_density_calibrated_km2",
+          "raw_median": 12242.09329527613,
+          "citywide_percentile_of_cluster_median": 91.4
+        },
+        {
+          "feature": "number_of_transit_modes_accessible",
+          "raw_median": 1.0,
+          "citywide_percentile_of_cluster_median": 91.2
+        },
+        {
+          "feature": "poi_entropy",
+          "raw_median": 1.3787834934861753,
+          "citywide_percentile_of_cluster_median": 90.9
+        }
+      ],
+      "3": [
+        {
+          "feature": "total_poi_count",
+          "raw_median": 7.0,
+          "citywide_percentile_of_cluster_median": 89.9
+        },
+        {
+          "feature": "poi_density_km2",
+          "raw_median": 28.0,
+          "citywide_percentile_of_cluster_median": 89.5
+        },
+        {
+          "feature": "poi_entropy",
+          "raw_median": 1.0,
+          "citywide_percentile_of_cluster_median": 89.0
+        },
+        {
+          "feature": "building_coverage_ratio",
+          "raw_median": 0.11219858314547153,
+          "citywide_percentile_of_cluster_median": 88.9
+        },
+        {
+          "feature": "intersection_density_km2",
+          "raw_median": 196.0,
+          "citywide_percentile_of_cluster_median": 88.7
+        },
+        {
+          "feature": "road_density_km_per_km2",
+          "raw_median": 24.60184572222443,
+          "citywide_percentile_of_cluster_median": 88.7
+        }
+      ]
+    },
+    "family_bss_pct": {
+      "Buildings/Urban Form": 5.83,
+      "Cycling": 8.22,
+      "Land-use/Green Space": 9.26,
+      "POI": 22.53,
+      "Population": 2.02,
+      "Roads": 10.83,
+      "Terrain": 4.37,
+      "Transit": 36.95
+    },
+    "top10_individual_bss_pct": {
+      "poi_density_km2": 17.11,
+      "bus_departures_per_day": 14.32,
+      "transit_stops_within_1000m": 6.34,
+      "residential_share_conditional": 6.21,
+      "building_coverage_ratio_conditional": 4.81,
+      "distance_to_nearest_cycle_infrastructure_m_ibb_only": 3.34,
+      "cycle_accessible_road_density_km_per_km2": 3.31,
+      "road_density_km_per_km2": 3.22,
+      "transit_stops_within_500m": 2.68,
+      "distance_to_nearest_bicycle_parking_m": 2.47
+    },
+    "spatial_fragmentation": {
+      "total_components_all_clusters": 731,
+      "per_cluster": {
+        "0": {
+          "n_components": 230,
+          "largest_component_size": 6138,
+          "largest_component_share": 0.7111
+        },
+        "1": {
+          "n_components": 147,
+          "largest_component_size": 5337,
+          "largest_component_share": 0.5801
+        },
+        "2": {
+          "n_components": 61,
+          "largest_component_size": 1082,
+          "largest_component_share": 0.7031
+        },
+        "3": {
+          "n_components": 293,
+          "largest_component_size": 1115,
+          "largest_component_share": 0.3778
+        }
+      },
+      "mean_largest_component_share_weighted_by_cluster_size": 0.6125
+    },
+    "morans_i_per_cluster": {
+      "cluster_0": {
+        "morans_i": 0.828,
+        "interpretation": "significant positive spatial autocorrelation"
+      },
+      "cluster_1": {
+        "morans_i": 0.6915,
+        "interpretation": "significant positive spatial autocorrelation"
+      },
+      "cluster_2": {
+        "morans_i": 0.5724,
+        "interpretation": "significant positive spatial autocorrelation"
+      },
+      "cluster_3": {
+        "morans_i": 0.584,
+        "interpretation": "significant positive spatial autocorrelation"
+      }
+    }
+  },
+  "k5": {
+    "cluster_sizes": [
+      6113,
+      2914,
+      8621,
+      3140,
+      1534
+    ],
+    "cluster_pct": [
+      27.39,
+      13.05,
+      38.62,
+      14.07,
+      6.87
+    ],
+    "top_distinguishing_raw_by_cluster": {
+      "0": [
+        {
+          "feature": "distance_to_nearest_transit_m",
+          "raw_median": 39323.098667139915,
+          "citywide_percentile_of_cluster_median": 84.7
+        },
+        {
+          "feature": "distance_to_nearest_cycle_infrastructure_m_ibb_only",
+          "raw_median": 20170.502437696738,
+          "citywide_percentile_of_cluster_median": 82.9
+        },
+        {
+          "feature": "intersection_density_km2",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 20.3
+        },
+        {
+          "feature": "local_road_length_m",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 20.4
+        },
+        {
+          "feature": "population_density_calibrated_km2",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 28.3
+        },
+        {
+          "feature": "pct_road_length_grade_gt_8pct",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 29.9
+        }
+      ],
+      "1": [
+        {
+          "feature": "total_poi_count",
+          "raw_median": 7.0,
+          "citywide_percentile_of_cluster_median": 89.9
+        },
+        {
+          "feature": "poi_density_km2",
+          "raw_median": 28.278812686384384,
+          "citywide_percentile_of_cluster_median": 89.8
+        },
+        {
+          "feature": "building_coverage_ratio",
+          "raw_median": 0.11437735540700052,
+          "citywide_percentile_of_cluster_median": 89.1
+        },
+        {
+          "feature": "poi_entropy",
+          "raw_median": 1.0,
+          "citywide_percentile_of_cluster_median": 89.0
+        },
+        {
+          "feature": "intersection_density_km2",
+          "raw_median": 200.0,
+          "citywide_percentile_of_cluster_median": 89.0
+        },
+        {
+          "feature": "road_density_km_per_km2",
+          "raw_median": 24.786459441958264,
+          "citywide_percentile_of_cluster_median": 88.8
+        }
+      ],
+      "2": [
+        {
+          "feature": "population_density_calibrated_km2",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 28.3
+        },
+        {
+          "feature": "pct_road_length_grade_gt_8pct",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 29.9
+        },
+        {
+          "feature": "building_coverage_ratio",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 32.6
+        },
+        {
+          "feature": "building_count",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 33.1
+        },
+        {
+          "feature": "major_road_length_m",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 36.8
+        },
+        {
+          "feature": "landuse_data_coverage_pct",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 37.7
+        }
+      ],
+      "3": [
+        {
+          "feature": "mean_absolute_road_grade_pct",
+          "raw_median": 0.2717180219456848,
+          "citywide_percentile_of_cluster_median": 3.1
+        },
+        {
+          "feature": "road_density_km_per_km2",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 6.3
+        },
+        {
+          "feature": "intersection_density_km2",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 20.3
+        },
+        {
+          "feature": "local_road_length_m",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 20.4
+        },
+        {
+          "feature": "population_density_calibrated_km2",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 28.3
+        },
+        {
+          "feature": "pct_road_length_grade_gt_8pct",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 29.9
+        }
+      ],
+      "4": [
+        {
+          "feature": "total_transit_stop_count",
+          "raw_median": 3.0,
+          "citywide_percentile_of_cluster_median": 96.9
+        },
+        {
+          "feature": "bus_departures_per_day",
+          "raw_median": 132.0,
+          "citywide_percentile_of_cluster_median": 96.6
+        },
+        {
+          "feature": "distance_to_nearest_transit_m",
+          "raw_median": 149.0281176041692,
+          "citywide_percentile_of_cluster_median": 4.0
+        },
+        {
+          "feature": "population_density_calibrated_km2",
+          "raw_median": 12237.46372725346,
+          "citywide_percentile_of_cluster_median": 91.4
+        },
+        {
+          "feature": "number_of_transit_modes_accessible",
+          "raw_median": 1.0,
+          "citywide_percentile_of_cluster_median": 91.2
+        },
+        {
+          "feature": "building_coverage_ratio",
+          "raw_median": 0.14615038967492266,
+          "citywide_percentile_of_cluster_median": 90.9
+        }
+      ]
+    },
+    "family_bss_pct": {
+      "Buildings/Urban Form": 5.33,
+      "Cycling": 7.56,
+      "Land-use/Green Space": 8.41,
+      "POI": 20.45,
+      "Population": 1.82,
+      "Roads": 11.79,
+      "Terrain": 10.72,
+      "Transit": 33.93
+    },
+    "top10_individual_bss_pct": {
+      "poi_density_km2": 15.51,
+      "bus_departures_per_day": 12.97,
+      "mean_absolute_road_grade_pct": 7.44,
+      "transit_stops_within_1000m": 5.74,
+      "residential_share_conditional": 5.65,
+      "building_coverage_ratio_conditional": 4.39,
+      "cycle_accessible_road_density_km_per_km2": 3.85,
+      "road_density_km_per_km2": 3.77,
+      "distance_to_nearest_cycle_infrastructure_m_ibb_only": 2.96,
+      "transit_stops_within_500m": 2.43
+    },
+    "spatial_fragmentation": {
+      "total_components_all_clusters": 1178,
+      "per_cluster": {
+        "0": {
+          "n_components": 23,
+          "largest_component_size": 5123,
+          "largest_component_share": 0.8381
+        },
+        "1": {
+          "n_components": 291,
+          "largest_component_size": 1113,
+          "largest_component_share": 0.3819
+        },
+        "2": {
+          "n_components": 116,
+          "largest_component_size": 4924,
+          "largest_component_share": 0.5712
+        },
+        "3": {
+          "n_components": 690,
+          "largest_component_size": 234,
+          "largest_component_share": 0.0745
+        },
+        "4": {
+          "n_components": 58,
+          "largest_component_size": 1079,
+          "largest_component_share": 0.7034
+        }
+      },
+      "mean_largest_component_share_weighted_by_cluster_size": 0.5588
+    },
+    "morans_i_per_cluster": {
+      "cluster_0": {
+        "morans_i": 0.7692,
+        "interpretation": "significant positive spatial autocorrelation"
+      },
+      "cluster_1": {
+        "morans_i": 0.5868,
+        "interpretation": "significant positive spatial autocorrelation"
+      },
+      "cluster_2": {
+        "morans_i": 0.6749,
+        "interpretation": "significant positive spatial autocorrelation"
+      },
+      "cluster_3": {
+        "morans_i": 0.3666,
+        "interpretation": "significant positive spatial autocorrelation"
+      },
+      "cluster_4": {
+        "morans_i": 0.5727,
+        "interpretation": "significant positive spatial autocorrelation"
+      }
+    }
+  },
+  "k6": {
+    "cluster_sizes": [
+      2997,
+      7292,
+      5705,
+      1469,
+      1972,
+      2887
+    ],
+    "cluster_pct": [
+      13.43,
+      32.67,
+      25.56,
+      6.58,
+      8.83,
+      12.93
+    ],
+    "top_distinguishing_raw_by_cluster": {
+      "0": [
+        {
+          "feature": "mean_absolute_road_grade_pct",
+          "raw_median": 0.21788723616728367,
+          "citywide_percentile_of_cluster_median": 2.4
+        },
+        {
+          "feature": "road_density_km_per_km2",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 6.3
+        },
+        {
+          "feature": "intersection_density_km2",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 20.3
+        },
+        {
+          "feature": "local_road_length_m",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 20.4
+        },
+        {
+          "feature": "population_density_calibrated_km2",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 28.3
+        },
+        {
+          "feature": "distance_to_nearest_cycle_infrastructure_m_ibb_only",
+          "raw_median": 14057.669228481014,
+          "citywide_percentile_of_cluster_median": 70.4
+        }
+      ],
+      "1": [
+        {
+          "feature": "population_density_calibrated_km2",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 28.3
+        },
+        {
+          "feature": "pct_road_length_grade_gt_8pct",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 29.9
+        },
+        {
+          "feature": "building_coverage_ratio",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 32.6
+        },
+        {
+          "feature": "building_count",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 33.1
+        },
+        {
+          "feature": "major_road_length_m",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 36.8
+        },
+        {
+          "feature": "landuse_data_coverage_pct",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 37.7
+        }
+      ],
+      "2": [
+        {
+          "feature": "distance_to_nearest_transit_m",
+          "raw_median": 40329.24547224508,
+          "citywide_percentile_of_cluster_median": 85.7
+        },
+        {
+          "feature": "distance_to_nearest_cycle_infrastructure_m_ibb_only",
+          "raw_median": 20945.186691277333,
+          "citywide_percentile_of_cluster_median": 84.0
+        },
+        {
+          "feature": "intersection_density_km2",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 20.3
+        },
+        {
+          "feature": "local_road_length_m",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 20.4
+        },
+        {
+          "feature": "population_density_calibrated_km2",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 28.3
+        },
+        {
+          "feature": "pct_road_length_grade_gt_8pct",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 29.9
+        }
+      ],
+      "3": [
+        {
+          "feature": "total_transit_stop_count",
+          "raw_median": 3.0,
+          "citywide_percentile_of_cluster_median": 96.9
+        },
+        {
+          "feature": "bus_departures_per_day",
+          "raw_median": 147.0,
+          "citywide_percentile_of_cluster_median": 96.7
+        },
+        {
+          "feature": "distance_to_nearest_transit_m",
+          "raw_median": 147.35621763773597,
+          "citywide_percentile_of_cluster_median": 4.0
+        },
+        {
+          "feature": "population_density_calibrated_km2",
+          "raw_median": 12583.324453241328,
+          "citywide_percentile_of_cluster_median": 91.6
+        },
+        {
+          "feature": "building_count",
+          "raw_median": 107.0,
+          "citywide_percentile_of_cluster_median": 91.2
+        },
+        {
+          "feature": "number_of_transit_modes_accessible",
+          "raw_median": 1.0,
+          "citywide_percentile_of_cluster_median": 91.2
+        }
+      ],
+      "4": [
+        {
+          "feature": "poi_density_km2",
+          "raw_median": 48.140165260633765,
+          "citywide_percentile_of_cluster_median": 93.1
+        },
+        {
+          "feature": "poi_entropy",
+          "raw_median": 1.6392386442065634,
+          "citywide_percentile_of_cluster_median": 92.8
+        },
+        {
+          "feature": "total_poi_count",
+          "raw_median": 11.0,
+          "citywide_percentile_of_cluster_median": 92.8
+        },
+        {
+          "feature": "intersection_density_km2",
+          "raw_median": 268.0,
+          "citywide_percentile_of_cluster_median": 92.4
+        },
+        {
+          "feature": "population_density_calibrated_km2",
+          "raw_median": 13437.305048504295,
+          "citywide_percentile_of_cluster_median": 92.1
+        },
+        {
+          "feature": "building_coverage_ratio",
+          "raw_median": 0.1702534848805767,
+          "citywide_percentile_of_cluster_median": 92.1
+        }
+      ],
+      "5": [
+        {
+          "feature": "landuse_data_coverage_pct",
+          "raw_median": 6.337858079045436,
+          "citywide_percentile_of_cluster_median": 81.2
+        },
+        {
+          "feature": "residential_area_ratio",
+          "raw_median": 0.0049583540530184385,
+          "citywide_percentile_of_cluster_median": 80.3
+        },
+        {
+          "feature": "building_coverage_ratio",
+          "raw_median": 0.009352809056933779,
+          "citywide_percentile_of_cluster_median": 77.0
+        },
+        {
+          "feature": "local_road_length_m",
+          "raw_median": 1701.1135514133514,
+          "citywide_percentile_of_cluster_median": 76.9
+        },
+        {
+          "feature": "building_count",
+          "raw_median": 6.0,
+          "citywide_percentile_of_cluster_median": 76.9
+        },
+        {
+          "feature": "population_density_calibrated_km2",
+          "raw_median": 1068.081787792843,
+          "citywide_percentile_of_cluster_median": 76.8
+        }
+      ]
+    },
+    "family_bss_pct": {
+      "Buildings/Urban Form": 5.57,
+      "Cycling": 7.28,
+      "Land-use/Green Space": 10.08,
+      "POI": 20.75,
+      "Population": 1.92,
+      "Roads": 11.85,
+      "Terrain": 10.33,
+      "Transit": 32.22
+    },
+    "top10_individual_bss_pct": {
+      "poi_density_km2": 15.26,
+      "bus_departures_per_day": 12.21,
+      "mean_absolute_road_grade_pct": 7.09,
+      "residential_share_conditional": 6.48,
+      "transit_stops_within_1000m": 5.53,
+      "building_coverage_ratio_conditional": 4.53,
+      "cycle_accessible_road_density_km_per_km2": 3.84,
+      "road_density_km_per_km2": 3.74,
+      "distance_to_nearest_cycle_infrastructure_m_ibb_only": 2.91,
+      "industrial_share_conditional": 2.35
+    },
+    "spatial_fragmentation": {
+      "total_components_all_clusters": 1453,
+      "per_cluster": {
+        "0": {
+          "n_components": 693,
+          "largest_component_size": 222,
+          "largest_component_share": 0.0741
+        },
+        "1": {
+          "n_components": 102,
+          "largest_component_size": 4187,
+          "largest_component_share": 0.5742
+        },
+        "2": {
+          "n_components": 20,
+          "largest_component_size": 4854,
+          "largest_component_share": 0.8508
+        },
+        "3": {
+          "n_components": 55,
+          "largest_component_size": 1056,
+          "largest_component_share": 0.7189
+        },
+        "4": {
+          "n_components": 232,
+          "largest_component_size": 915,
+          "largest_component_share": 0.464
+        },
+        "5": {
+          "n_components": 351,
+          "largest_component_size": 237,
+          "largest_component_share": 0.0821
+        }
+      },
+      "mean_largest_component_share_weighted_by_cluster_size": 0.5139
+    },
+    "morans_i_per_cluster": {
+      "cluster_0": {
+        "morans_i": 0.3574,
+        "interpretation": "significant positive spatial autocorrelation"
+      },
+      "cluster_1": {
+        "morans_i": 0.6432,
+        "interpretation": "significant positive spatial autocorrelation"
+      },
+      "cluster_2": {
+        "morans_i": 0.7756,
+        "interpretation": "significant positive spatial autocorrelation"
+      },
+      "cluster_3": {
+        "morans_i": 0.5765,
+        "interpretation": "significant positive spatial autocorrelation"
+      },
+      "cluster_4": {
+        "morans_i": 0.6115,
+        "interpretation": "significant positive spatial autocorrelation"
+      },
+      "cluster_5": {
+        "morans_i": 0.4014,
+        "interpretation": "significant positive spatial autocorrelation"
+      }
+    }
+  },
+  "k7": {
+    "cluster_sizes": [
+      7503,
+      1927,
+      2162,
+      3038,
+      1448,
+      5661,
+      583
+    ],
+    "cluster_pct": [
+      33.61,
+      8.63,
+      9.69,
+      13.61,
+      6.49,
+      25.36,
+      2.61
+    ],
+    "top_distinguishing_raw_by_cluster": {
+      "0": [
+        {
+          "feature": "population_density_calibrated_km2",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 28.3
+        },
+        {
+          "feature": "pct_road_length_grade_gt_8pct",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 29.9
+        },
+        {
+          "feature": "building_coverage_ratio",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 32.6
+        },
+        {
+          "feature": "building_count",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 33.1
+        },
+        {
+          "feature": "major_road_length_m",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 36.8
+        },
+        {
+          "feature": "landuse_data_coverage_pct",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 37.7
+        }
+      ],
+      "1": [
+        {
+          "feature": "landuse_data_coverage_pct",
+          "raw_median": 12.399065700910057,
+          "citywide_percentile_of_cluster_median": 83.7
+        },
+        {
+          "feature": "residential_area_ratio",
+          "raw_median": 0.04483179080549866,
+          "citywide_percentile_of_cluster_median": 83.3
+        },
+        {
+          "feature": "local_road_length_m",
+          "raw_median": 1236.2731875858217,
+          "citywide_percentile_of_cluster_median": 72.8
+        },
+        {
+          "feature": "building_coverage_ratio",
+          "raw_median": 0.0024119806511337947,
+          "citywide_percentile_of_cluster_median": 72.4
+        },
+        {
+          "feature": "intersection_density_km2",
+          "raw_median": 28.0,
+          "citywide_percentile_of_cluster_median": 72.2
+        },
+        {
+          "feature": "population_density_calibrated_km2",
+          "raw_median": 453.7570791572074,
+          "citywide_percentile_of_cluster_median": 72.1
+        }
+      ],
+      "2": [
+        {
+          "feature": "total_poi_count",
+          "raw_median": 6.0,
+          "citywide_percentile_of_cluster_median": 88.9
+        },
+        {
+          "feature": "poi_density_km2",
+          "raw_median": 24.0,
+          "citywide_percentile_of_cluster_median": 88.5
+        },
+        {
+          "feature": "poi_entropy",
+          "raw_median": 0.9219280948873623,
+          "citywide_percentile_of_cluster_median": 88.1
+        },
+        {
+          "feature": "intersection_density_km2",
+          "raw_median": 180.0,
+          "citywide_percentile_of_cluster_median": 87.9
+        },
+        {
+          "feature": "road_density_km_per_km2",
+          "raw_median": 23.38151734170296,
+          "citywide_percentile_of_cluster_median": 87.8
+        },
+        {
+          "feature": "distance_to_nearest_cycle_infrastructure_m_ibb_only",
+          "raw_median": 1056.7028583163747,
+          "citywide_percentile_of_cluster_median": 12.4
+        }
+      ],
+      "3": [
+        {
+          "feature": "mean_absolute_road_grade_pct",
+          "raw_median": 0.24599130856274945,
+          "citywide_percentile_of_cluster_median": 2.7
+        },
+        {
+          "feature": "road_density_km_per_km2",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 6.3
+        },
+        {
+          "feature": "intersection_density_km2",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 20.3
+        },
+        {
+          "feature": "local_road_length_m",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 20.4
+        },
+        {
+          "feature": "population_density_calibrated_km2",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 28.3
+        },
+        {
+          "feature": "pct_road_length_grade_gt_8pct",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 29.9
+        }
+      ],
+      "4": [
+        {
+          "feature": "total_transit_stop_count",
+          "raw_median": 3.0,
+          "citywide_percentile_of_cluster_median": 96.9
+        },
+        {
+          "feature": "bus_departures_per_day",
+          "raw_median": 147.0,
+          "citywide_percentile_of_cluster_median": 96.7
+        },
+        {
+          "feature": "distance_to_nearest_transit_m",
+          "raw_median": 147.90952241605547,
+          "citywide_percentile_of_cluster_median": 4.0
+        },
+        {
+          "feature": "population_density_calibrated_km2",
+          "raw_median": 12289.465184355186,
+          "citywide_percentile_of_cluster_median": 91.4
+        },
+        {
+          "feature": "number_of_transit_modes_accessible",
+          "raw_median": 1.0,
+          "citywide_percentile_of_cluster_median": 91.2
+        },
+        {
+          "feature": "local_road_length_m",
+          "raw_median": 4595.882571575513,
+          "citywide_percentile_of_cluster_median": 91.0
+        }
+      ],
+      "5": [
+        {
+          "feature": "distance_to_nearest_transit_m",
+          "raw_median": 40230.12029771384,
+          "citywide_percentile_of_cluster_median": 85.6
+        },
+        {
+          "feature": "distance_to_nearest_cycle_infrastructure_m_ibb_only",
+          "raw_median": 20915.119080919707,
+          "citywide_percentile_of_cluster_median": 84.0
+        },
+        {
+          "feature": "intersection_density_km2",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 20.3
+        },
+        {
+          "feature": "local_road_length_m",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 20.4
+        },
+        {
+          "feature": "population_density_calibrated_km2",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 28.3
+        },
+        {
+          "feature": "pct_road_length_grade_gt_8pct",
+          "raw_median": 0.0,
+          "citywide_percentile_of_cluster_median": 29.9
+        }
+      ],
+      "6": [
+        {
+          "feature": "total_poi_count",
+          "raw_median": 39.0,
+          "citywide_percentile_of_cluster_median": 98.0
+        },
+        {
+          "feature": "poi_density_km2",
+          "raw_median": 160.0,
+          "citywide_percentile_of_cluster_median": 98.0
+        },
+        {
+          "feature": "poi_entropy",
+          "raw_median": 2.3108263301715772,
+          "citywide_percentile_of_cluster_median": 97.3
+        },
+        {
+          "feature": "building_coverage_ratio",
+          "raw_median": 0.2838487453455062,
+          "citywide_percentile_of_cluster_median": 96.6
+        },
+        {
+          "feature": "intersection_density_km2",
+          "raw_median": 356.0,
+          "citywide_percentile_of_cluster_median": 96.1
+        },
+        {
+          "feature": "building_count",
+          "raw_median": 274.0,
+          "citywide_percentile_of_cluster_median": 95.9
+        }
+      ]
+    },
+    "family_bss_pct": {
+      "Buildings/Urban Form": 5.27,
+      "Cycling": 6.92,
+      "Land-use/Green Space": 11.25,
+      "POI": 22.73,
+      "Population": 1.79,
+      "Roads": 11.2,
+      "Terrain": 10.01,
+      "Transit": 30.83
+    },
+    "top10_individual_bss_pct": {
+      "poi_density_km2": 15.58,
+      "bus_departures_per_day": 11.72,
+      "residential_share_conditional": 7.05,
+      "mean_absolute_road_grade_pct": 6.87,
+      "transit_stops_within_1000m": 5.27,
+      "building_coverage_ratio_conditional": 4.33,
+      "cycle_accessible_road_density_km_per_km2": 3.64,
+      "road_density_km_per_km2": 3.55,
+      "industrial_share_conditional": 2.78,
+      "distance_to_nearest_cycle_infrastructure_m_ibb_only": 2.75
+    },
+    "spatial_fragmentation": {
+      "total_components_all_clusters": 1697,
+      "per_cluster": {
+        "0": {
+          "n_components": 117,
+          "largest_component_size": 4302,
+          "largest_component_share": 0.5734
+        },
+        "1": {
+          "n_components": 374,
+          "largest_component_size": 124,
+          "largest_component_share": 0.0643
+        },
+        "2": {
+          "n_components": 331,
+          "largest_component_size": 481,
+          "largest_component_share": 0.2225
+        },
+        "3": {
+          "n_components": 686,
+          "largest_component_size": 228,
+          "largest_component_share": 0.075
+        },
+        "4": {
+          "n_components": 62,
+          "largest_component_size": 1036,
+          "largest_component_share": 0.7155
+        },
+        "5": {
+          "n_components": 29,
+          "largest_component_size": 4840,
+          "largest_component_share": 0.855
+        },
+        "6": {
+          "n_components": 98,
+          "largest_component_size": 204,
+          "largest_component_share": 0.3499
+        }
+      },
+      "mean_largest_component_share_weighted_by_cluster_size": 0.5024
+    },
+    "morans_i_per_cluster": {
+      "cluster_0": {
+        "morans_i": 0.6442,
+        "interpretation": "significant positive spatial autocorrelation"
+      },
+      "cluster_1": {
+        "morans_i": 0.3627,
+        "interpretation": "significant positive spatial autocorrelation"
+      },
+      "cluster_2": {
+        "morans_i": 0.4527,
+        "interpretation": "significant positive spatial autocorrelation"
+      },
+      "cluster_3": {
+        "morans_i": 0.3611,
+        "interpretation": "significant positive spatial autocorrelation"
+      },
+      "cluster_4": {
+        "morans_i": 0.5628,
+        "interpretation": "significant positive spatial autocorrelation"
+      },
+      "cluster_5": {
+        "morans_i": 0.7559,
+        "interpretation": "significant positive spatial autocorrelation"
+      },
+      "cluster_6": {
+        "morans_i": 0.5001,
+        "interpretation": "significant positive spatial autocorrelation"
+      }
+    }
+  }
+}

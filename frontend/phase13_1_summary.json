@@ -1,0 +1,47 @@
+{
+  "version": "UX_CORRECTION_AND_DESKTOP_EXPERIENCE_PASS_V1",
+  "purpose": "Focused product correction pass on top of INTERACTIVE_URBAN_MOBILITY_INTELLIGENCE_PRODUCT_V1 -- no new analysis, datasets, scores, or conclusions.",
+  "problems_addressed": [
+    "1_too_much_technical_terminology_in_UI",
+    "2_map_did_not_reliably_render_after_navigation",
+    "3_desktop_looked_like_stretched_mobile_UI"
+  ],
+  "map_rendering_bug": {
+    "root_causes_found_and_fixed": 4,
+    "detail_file": "qa/phase13_1_map_rendering_qa.json",
+    "final_verification": "11/11 navigation transitions across all 7 exploration pages rendered the map (correct size + correct analytical coloring) with zero interaction required, across multiple repeated passes"
+  },
+  "terminology": {
+    "central_file": "lib/terminology.ts",
+    "guide": "docs/terminology_guide.md",
+    "cross_application_convergence_renamed": "Where Signals Align (primary UI); technical term retained only in info tooltip",
+    "other_renames": ["E-bike Readiness -> E-bike Suitability", "Fixed-Guideway Access -> Rail & Metrobüs Access", "Required Needs -> Everyday Essentials", "Accessibility Gap -> What's Out of Reach? / Access Gaps", "Data Confidence -> How Reliable Is This View?"],
+    "underlying_fields_renamed": false
+  },
+  "desktop_redesign": {
+    "architecture": "Next.js route groups: (editorial) for landing/overview (unchanged top-nav/hero pattern), (exploration) for the 7 map-driven pages (new persistent sidebar + map-dominant shell)",
+    "shell_root": "h-screen + flex-1 chain (replaces the earlier viewport-relative-height + min-height-floor approach that was a root cause of the map rendering bug)",
+    "map_share_of_content_width": {"at_1440px": "70.4%", "at_1280px": "65.9%"},
+    "side_panel": "Persistent 360px desktop column (GridIntelligenceCard when a cell is selected, PanelOverview with headline KPIs otherwise); becomes a fixed mobile bottom sheet below 768px, shown only on selection",
+    "progressive_disclosure": "GridIntelligenceCard rebuilt with collapsible <details> sections (Overview + Everyday Access open by default; Transit/E-bike/Data Quality collapsed)"
+  },
+  "mobile_preserved": true,
+  "o3_identity_preserved": true,
+  "pages_updated": 7,
+  "new_components": ["Sidebar", "InfoTooltip", "PanelOverview"],
+  "rewritten_components": ["MapView (4 bug fixes)", "GridIntelligenceCard (progressive disclosure)", "PageMapExplorer (map-dominant composition)"],
+  "build_status": "Compiled successfully (npm run build), verified running locally on port 3001",
+  "qa_outputs": [
+    "qa/phase13_1_map_rendering_qa.json",
+    "qa/phase13_1_desktop_qa.md",
+    "qa/phase13_1_visual_qa.md",
+    "docs/terminology_guide.md"
+  ],
+  "screenshots_captured": 11,
+  "known_remaining_issues": [
+    "Map share of width at 1280px (65.9%) is a few points under the 70-80% target band",
+    "Cosmetic dev-only StrictMode AbortError console message remains (no functional or production impact)",
+    "Data & Methods page has no single headline-KPI panel state (uses the methodology drawer instead, by design)"
+  ],
+  "completion_decision": "B_UX_CORRECTION_VALIDATED_WITH_DOCUMENTED_LIMITATIONS"
+}

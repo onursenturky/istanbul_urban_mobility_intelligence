@@ -1,0 +1,68 @@
+{
+  "checks": {
+    "B_no_new_composite_score": {
+      "pass": true,
+      "checked_columns": [
+        "calibrated_population_2020",
+        "cycle_infrastructure_density_km_per_km2",
+        "ebike_opportunity",
+        "ebike_readiness",
+        "education_cycle_min",
+        "education_walk_min",
+        "fixed_transit_cycle_min",
+        "fixed_transit_walk_min",
+        "food_cycle_min",
+        "food_walk_min",
+        "general_transit_cycle_min",
+        "general_transit_walk_min",
+        "healthcare_cycle_min",
+        "healthcare_walk_min",
+        "intersection_density_km2",
+        "population_density_per_km2",
+        "required_categories_cycle_15",
+        "required_categories_walk_15"
+      ],
+      "suspicious_columns_found": []
+    },
+    "D_dashboard_fields_trace_to_frozen_sources": {
+      "pass": true,
+      "unmapped_dashboard_columns": [],
+      "mapped_columns_whose_source_is_missing": []
+    },
+    "E_population_totals_reconcile": {
+      "pass": true,
+      "frozen_v2_total": 15455565.5,
+      "dashboard_total": 15455565.5
+    },
+    "F_quality_flags_visible": {
+      "pass": true,
+      "n_non_reliable_walking": 258,
+      "n_non_reliable_cycling": 268
+    },
+    "G_transit_uncertainty_not_shown_as_absence": {
+      "pass": true,
+      "n_no_feed_cells_checked": 8103,
+      "n_incorrectly_labeled_genuine_gap": 0
+    },
+    "H_adalar_limitations_visible": {
+      "pass": true,
+      "n_adalar_cells": 72
+    },
+    "I_claims_registry_blocks_overclaims": {
+      "pass": true,
+      "n_claims": 8
+    },
+    "J_case_studies_use_actual_frozen_values": {
+      "pass": true,
+      "n_cases_checked": 9,
+      "mismatches": []
+    },
+    "K_rounding_does_not_flip_interpretation": {
+      "pass": true,
+      "h01_vs_h01b_raw_diff": 0.02,
+      "note": "82.49 vs 82.47 differ by 0.02pp (2,424 people / 20 cells) -- explicitly reconciled in headline_kpis.json, not silently rounded away; both values are reported, never just one picked."
+    }
+  },
+  "source_reconciliation_pass": true,
+  "ALL_QA_PASS": true
+}

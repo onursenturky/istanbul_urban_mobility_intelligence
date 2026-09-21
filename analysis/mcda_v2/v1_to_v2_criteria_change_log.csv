@@ -1,0 +1,36 @@
+v1_criterion,v2_status,v2_replacement_or_addition,reason
+population_density_calibrated_km2,UNCHANGED,-,No new evidence changes this criterion.
+poi_density_km2,UNCHANGED,-,No new evidence changes this criterion.
+poi_entropy,UNCHANGED,-,No new evidence changes this criterion.
+retail_count,UNCHANGED,-,No new evidence changes this criterion.
+leisure_count,UNCHANGED,-,No new evidence changes this criterion.
+has_buildings,UNCHANGED,-,No new evidence changes this criterion.
+building_coverage_ratio_conditional,UNCHANGED,-,No new evidence changes this criterion.
+distance_to_nearest_metro_m,SENSITIVITY_ONLY,distance_to_nearest_transit_m (already-retained omnibus proxy),"rho>=0.90 with all 4 other mode-specific distances (transit_redundancy_audit.json) -- semantically bundled Istanbul transit corridors, not independent signals."
+distance_to_nearest_tram_m,SENSITIVITY_ONLY,distance_to_nearest_transit_m (already-retained omnibus proxy),"rho>=0.90 with all 4 other mode-specific distances (transit_redundancy_audit.json) -- semantically bundled Istanbul transit corridors, not independent signals."
+distance_to_nearest_rail_m,SENSITIVITY_ONLY,distance_to_nearest_transit_m (already-retained omnibus proxy),"rho>=0.90 with all 4 other mode-specific distances (transit_redundancy_audit.json) -- semantically bundled Istanbul transit corridors, not independent signals."
+distance_to_nearest_ferry_m,SENSITIVITY_ONLY,distance_to_nearest_transit_m (already-retained omnibus proxy),"rho>=0.90 with all 4 other mode-specific distances (transit_redundancy_audit.json) -- semantically bundled Istanbul transit corridors, not independent signals."
+distance_to_nearest_metrobus_m,SENSITIVITY_ONLY,distance_to_nearest_transit_m (already-retained omnibus proxy),"rho>=0.90 with all 4 other mode-specific distances (transit_redundancy_audit.json) -- semantically bundled Istanbul transit corridors, not independent signals."
+distance_to_nearest_transit_m,UNCHANGED,-,No new evidence changes this criterion.
+transit_stops_within_500m,UNCHANGED,-,No new evidence changes this criterion.
+fixed_guideway_stations_within_1000m,UNCHANGED,-,No new evidence changes this criterion.
+bus_departures_per_day,UNCHANGED,-,No new evidence changes this criterion.
+cycle_infrastructure_density_km_per_km2_ibb_only,UNCHANGED,-,No new evidence changes this criterion.
+protected_cycleway_density_km_per_km2_ibb_only,UNCHANGED,-,No new evidence changes this criterion.
+distance_to_nearest_cycle_infrastructure_m_ibb_only,UNCHANGED,-,No new evidence changes this criterion.
+distance_to_nearest_bicycle_parking_m,UNCHANGED,-,No new evidence changes this criterion.
+distance_to_nearest_micromobility_parking_m,UNCHANGED,-,No new evidence changes this criterion.
+mean_slope_deg,UNCHANGED,-,No new evidence changes this criterion.
+pct_area_slope_3_6deg,UNCHANGED,-,No new evidence changes this criterion.
+pct_area_slope_6_10deg,UNCHANGED,-,No new evidence changes this criterion.
+(none -- new in V2),NEWLY_ADDED (CONTEXTUAL_ONLY),road_density_km_per_km2,"Aggregates ALL highway classes (motorway down to service road) into one area-normalized figure, conflating motor-road abundance with fine-grained permeability. A cell dominated by one long motorway se"
+(none -- new in V2),NEWLY_ADDED (CANDIDATE_READINESS),intersection_density_km2,"Direct, literature-standard proxy for street-network permeability (fine, well-connected grids have more junctions) -- distinct from and complementary to transit service. Evidence-backed causal mechani"
+(none -- new in V2),NEWLY_ADDED (CONTEXTUAL_ONLY),major_road_length_m,Motorway/trunk/primary/secondary length. These classes are largely legally closed to cyclists (NOT_CYCLE_ACCESSIBLE_HIGHWAY_CLASSES already excludes motorway/trunk) and function architecturally as sev
+(none -- new in V2),NEWLY_ADDED (CANDIDATE_READINESS),local_road_length_m,"Tertiary/residential/living_street/unclassified/service/road -- the fine-grained, typically low-speed local network. Directly relevant to permeability and last-mile access; semantically the clearest '"
+(none -- new in V2),NEWLY_ADDED (CANDIDATE_READINESS),cycle_accessible_road_density_km_per_km2,"Literally 'how much of the road network a cyclist may legally use, per unit area' -- the single most direct road-based Cycling Readiness proxy among the 11 additions; excludes motorway/trunk/steps by "
+(none -- new in V2),NEWLY_ADDED (CONTEXTUAL_ONLY),green_area_ratio,"Relationship to e-bike deployment is not monotonic or unambiguous: could reflect recreational cycling appeal (positive), low built-up demand context if the cell is mostly forest (neutral-to-negative f"
+(none -- new in V2),NEWLY_ADDED (EXCLUDE_FROM_MCDA),residential_share_conditional,This is a CLUSTERING preprocessing artifact (three-state floor-encoded value engineered specifically for KMeans distance geometry: no-evidence/mapped-zero/mapped-nonzero states separated by arbitrary 
+(none -- new in V2),NEWLY_ADDED (EXCLUDE_FROM_MCDA),industrial_share_conditional,Same preprocessing-artifact and coverage-reliability concerns as residential_share_conditional (rho=0.480 vs the coverage diagnostic -- weaker but still present). Excluded from scoring; the underlying
+(none -- new in V2),NEWLY_ADDED (EXCLUDE_FROM_MCDA),landuse_has_mapped_evidence,"This is a DATA-COVERAGE diagnostic (whether any OSM land-use polygon was mapped at all), not a real-world urban characteristic. Scoring cells based on it would reward or penalize OSM community mapping"
+(none -- new in V2),NEWLY_ADDED (CANDIDATE_READINESS),mean_absolute_road_grade_pct,Directly measures physical grade on the ACTUAL navigable road network (vs. raster DEM slope everywhere) -- more causally proximate to real e-bike/cycling feasibility. See road_grade_terrain_redundancy
+(none -- new in V2),NEWLY_ADDED (CANDIDATE_READINESS),pct_road_length_grade_gt_8pct,"Share of a cell's road length that is genuinely steep (>8%) -- a road-anchored analogue of pct_area_slope_6_10deg, weakly correlated with it (0.221), so it is not a redundant duplicate; adds an extrem"

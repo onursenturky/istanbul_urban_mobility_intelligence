@@ -1,0 +1,25 @@
+{
+  "seed_stability": {
+    "seeds_tested": [
+      42,
+      1,
+      7,
+      123,
+      2024
+    ],
+    "pairwise_ari_mean": 0.9993,
+    "pairwise_ari_min": 0.9988
+  },
+  "kmeans_vs_gmm": {
+    "kmeans": {
+      "calinski_harabasz": 6998.9,
+      "davies_bouldin": 1.5266
+    },
+    "gaussian_mixture": {
+      "calinski_harabasz": 3542.2,
+      "davies_bouldin": 2.45,
+      "bic": -6709569.9
+    },
+    "adjusted_rand_index_kmeans_vs_gmm": 0.1761
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "A_no_required_gap_matches_complete_access": {
+    "pass": true,
+    "reliable_no_required_gap_n": 3249,
+    "reliable_complete_access_n": 3249
+  },
+  "B_fully_closed_matches_frozen_cycle_only_gain": {
+    "pass": true,
+    "forward_rate_fully_closed_is_also_cycle_only_gain": 1.0,
+    "backward_rate_cycle_only_gain_is_also_fully_closed": 0.9922560660815695,
+    "note": "Backward rate is expected to be <100% because Phase 11 additionally excludes non-RELIABLE network-quality cells from FULLY_CLOSED_BY_CYCLING (routing them to CYCLING_RESULT_UNCERTAIN instead) -- a deliberate refinement over Phase 9, not a contradiction."
+  },
+  "C_transit_gap_reproduces_phase10": {
+    "pass": true,
+    "n_checked": 6092,
+    "n_mismatches": 0
+  },
+  "D_population_totals_reconcile": {
+    "pass": true,
+    "frozen_v2_total": 15455565.5,
+    "synthesis_total": 15455565.5
+  },
+  "E_no_uncertain_transit_counted_as_genuine": {
+    "pass": true,
+    "n_uncertain_cells_checked": 16230
+  },
+  "F_no_silent_zero_fill": {
+    "pass": true,
+    "n_nan_in_synthesis": 18177,
+    "n_nan_in_frozen_source": 18177
+  },
+  "G_adalar_limitations_flagged": {
+    "pass": true,
+    "n_adalar_cells": 72,
+    "all_flagged_known_limitation": true,
+    "all_marked_not_reliable": true
+  }
+}

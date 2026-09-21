@@ -1,0 +1,114 @@
+{
+  "hooks": [
+    {
+      "hook_id": "H_15MIN_TR",
+      "title_tr": "İstanbul'un ne kadarı gerçekten 15 dakikalık?",
+      "title_en": "How much of Istanbul is really within 15 minutes?",
+      "question": "What share of the calibrated 2020 population has modeled 15-minute walking access to Food, Healthcare and Education?",
+      "related_dashboard_page": "03_15MIN_ISTANBUL",
+      "related_map": "MAP_02",
+      "claim_id": "C01",
+      "suggested_format": "KPI card + short explainer",
+      "interpretation_note": "Immediately clarify that the analysis measures modeled access to Food + Healthcare + Education and does not declare any area a complete '15-minute city'."
+    },
+    {
+      "hook_id": "H_CYCLING_CHANGES_MAP",
+      "title_tr": "Bisiklet İstanbul'un erişilebilirlik haritasını değiştirebilir mi?",
+      "title_en": "How much does cycling change Istanbul's accessibility map?",
+      "question": "Where does modeled cycling access reach places that modeled walking access does not?",
+      "related_dashboard_page": "04_CYCLING_GAIN",
+      "related_map": "MAP_05",
+      "claim_id": "C02",
+      "suggested_format": "Before/after map comparison",
+      "interpretation_note": "Describes modeled network accessibility only -- not a prediction of actual cycling behavior or mode choice."
+    },
+    {
+      "hook_id": "H_NEAR_VS_REACH",
+      "title_tr": "Metroya yakın olmakla metroya erişebilmek aynı şey mi?",
+      "title_en": "Is being near a metro station the same as being able to reach it?",
+      "question": "How much does cycling expand the number of people who can reach fixed-guideway transit within a modeled time budget?",
+      "related_dashboard_page": "05_TRANSIT_CONNECTION",
+      "related_map": "MAP_07",
+      "claim_id": "C05",
+      "suggested_format": "KPI card + map",
+      "interpretation_note": "RAW figures are sensitive to transit-feed coverage gaps -- always pair with the quality-aware caveat (see claims registry)."
+    },
+    {
+      "hook_id": "H_CYCLING_NOT_CUREALL",
+      "title_tr": "Bisiklet her erişilebilirlik problemini çözebilir mi?",
+      "title_en": "Can cycling solve every accessibility problem?",
+      "question": "In how many cells does cycling fail to close a mapped everyday-needs gap, and why?",
+      "related_dashboard_page": "06_ACCESSIBILITY_GAPS",
+      "related_map": "MAP_08",
+      "claim_id": "C06",
+      "suggested_format": "Insight card / short editorial",
+      "interpretation_note": "352,939 people remain in cells cycling cannot help -- genuine destination sparsity, not a routing limitation. Never label these areas 'service deserts'."
+    },
+    {
+      "hook_id": "H_BIGGEST_BOTTLENECK",
+      "title_tr": "İstanbul'da günlük ihtiyaçlara erişimde en büyük darboğaz hangisi?",
+      "title_en": "What is Istanbul's biggest remaining bottleneck in everyday-needs access?",
+      "question": "Which required category (Food, Healthcare, Education) is missing most often across cells with a gap?",
+      "related_dashboard_page": "06_ACCESSIBILITY_GAPS",
+      "related_map": "MAP_03",
+      "claim_id": "C01",
+      "suggested_format": "Bar chart",
+      "interpretation_note": "Food is the most common missing required category among gap cells (Phase 11 finding) -- reported at the cell level, not a claim about severity or urgency."
+    },
+    {
+      "hook_id": "H_CROSS_APP_CONVERGENCE",
+      "title_tr": "E-bisiklet uygunluğu ile bisiklet erişilebilirlik kazancı aynı yerlerde mi?",
+      "title_en": "Do e-bike suitability and cycling accessibility gain point at the same places?",
+      "question": "How often does an independently-derived e-bike Readiness score coincide with a measured cycling accessibility gain?",
+      "related_dashboard_page": "07_EBIKE",
+      "related_map": "MAP_11",
+      "claim_id": "C08",
+      "suggested_format": "Convergence matrix chart",
+      "interpretation_note": "This is cross-application convergence, explicitly not external validation of either application."
+    },
+    {
+      "hook_id": "H_ACCESSIBILITY_CONCENTRATION",
+      "title_tr": "Erişilebilirlik İstanbul'da nasıl dağılıyor?",
+      "title_en": "How concentrated is accessibility across Istanbul?",
+      "question": "How does land-area coverage of complete access compare to population coverage?",
+      "related_dashboard_page": "01_OVERVIEW",
+      "related_map": "MAP_02",
+      "claim_id": "C01",
+      "suggested_format": "Insight card with two contrasting stats",
+      "interpretation_note": "14.6% of cells hold 82.5% of the population's complete-access outcome -- a real population-distribution property, not a modeling artifact."
+    },
+    {
+      "hook_id": "H_TRANSIT_FEED_GAPS",
+      "title_tr": "Her ilçenin toplu taşıma verisi aynı kalitede mi?",
+      "title_en": "Is transit data quality the same across every district?",
+      "question": "Which districts have insufficient transit-feed data, and how does that change citywide interpretation?",
+      "related_dashboard_page": "05_TRANSIT_CONNECTION",
+      "related_map": "MAP_12",
+      "claim_id": "C04",
+      "suggested_format": "Insight card + quality map",
+      "interpretation_note": "Silivri and Çatalca have zero mapped transit stops (NO_FEED_COVERAGE) -- this is a data-coverage limitation, never displayed as 'no transit access'."
+    },
+    {
+      "hook_id": "H_URBAN_TYPOLOGY",
+      "title_tr": "İstanbul'da kaç farklı kentsel hareketlilik ortamı var?",
+      "title_en": "How many different urban mobility environments exist in Istanbul?",
+      "question": "What does the frozen five-cluster urban typology reveal about Istanbul's spatial structure?",
+      "related_dashboard_page": "02_URBAN_TYPOLOGY",
+      "related_map": "MAP_01",
+      "claim_id": "C01",
+      "suggested_format": "Typology explainer + map",
+      "interpretation_note": "Typology is descriptive, not causal, and never entered any routing or accessibility computation."
+    },
+    {
+      "hook_id": "H_UNCERTAINTY_FIRST_CLASS",
+      "title_tr": "Bu haritadaki her hücreye aynı güvenle bakılabilir mi?",
+      "title_en": "Should every cell on this map be read with the same confidence?",
+      "question": "Where does network or transit-feed quality limit how confidently a result can be interpreted?",
+      "related_dashboard_page": "08_DATA_METHODS",
+      "related_map": "MAP_12",
+      "claim_id": "C04",
+      "suggested_format": "Quality/confidence map",
+      "interpretation_note": "Adalar carries a standing, explicitly flagged network limitation across every phase of this framework."
+    }
+  ]
+}

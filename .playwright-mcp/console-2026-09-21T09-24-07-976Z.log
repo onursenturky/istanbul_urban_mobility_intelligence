@@ -1,0 +1,97 @@
+[     211ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[  203003ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[  203433ms] [LOG] [Fast Refresh] done in 432ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[  203585ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3001/cycling-gain?grid=GRID_16220&district=Beykoz&_rsc=10t43:0
+[  203591ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3001/cycling-gain?grid=GRID_16220&district=Beykoz&_rsc=10t43:0
+[  203776ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3001/cycling-gain?grid=GRID_16220&district=Beykoz:0
+[  204038ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///./node_modules/react-dom/cjs/react-dom.development.js:29889
+[  204058ms] Error: Cannot find module './915.js'
+Require stack:
+- /Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/.next/server/webpack-runtime.js
+- /Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/.next/server/app/cycling-gain/page.js
+- /Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/node_modules/next/dist/server/require.js
+- /Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/node_modules/next/dist/server/load-components.js
+- /Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/node_modules/next/dist/build/utils.js
+- /Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/node_modules/next/dist/server/dev/hot-middleware.js
+- /Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/node_modules/next/dist/server/lib/router-server.js
+- /Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/node_modules/next/dist/server/lib/start-server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1475:15)
+    at <unknown> (file:///Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/node_modules/next/dist/server/require-hook.js:55:36)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1048:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1072:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1093:12)
+    at Module._load (node:internal/modules/cjs/loader:1261:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (file:///Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at __webpack_require__.f.require (file:///Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/.next/server/webpack-runtime.js:198:28)
+    at <unknown> (file:///Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (file:///Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (file:///Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/.next/server/webpack-runtime.js:162:22)
+    at <unknown> (file:///Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/.next/server/app/cycling-gain/page.js:1:9574)
+    at Object.<anonymous> (file:///Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/.next/server/app/cycling-gain/page.js:1:9623)
+    at Module._compile (node:internal/modules/cjs/loader:1829:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1969:10)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1575:12)
+    at mod.require (file:///Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:191:16)
+    at requirePage (file:///Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/node_modules/next/dist/server/require.js:109:84)
+    at <unknown> (file:///Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/node_modules/next/dist/server/load-components.js:103:84)
+    at async loadComponentsImpl (file:///Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/node_modules/next/dist/server/load-components.js:103:26)
+    at async DevServer.findPageComponentsImpl (file:///Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/node_modules/next/dist/server/next-server.js:714:36)
+    at async DevServer.findPageComponents (file:///Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/node_modules/next/dist/server/dev/next-dev-server.js:577:20)
+    at async DevServer.renderPageComponent (file:///Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/node_modules/next/dist/server/base-server.js:1910:24)
+    at async DevServer.renderToResponseImpl (file:///Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (file:///Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (file:///Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (file:///Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/node_modules/next/dist/server/base-server.js:818:17)
+    at async (file:///Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/node_modules/next/dist/server/dev/next-dev-server.js:339:20)
+    at async Span.traceAsyncFn (file:///Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (file:///Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (file:///Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/node_modules/next/dist/server/lib/router-server.js:179:21)
+    at async handleRequest (file:///Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/node_modules/next/dist/server/lib/router-server.js:359:24)
+    at async requestHandlerImpl (file:///Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/node_modules/next/dist/server/lib/router-server.js:383:13)
+    at async Server.requestListener (file:///Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/frontend/node_modules/next/dist/server/lib/start-server.js:141:13)
+[  204058ms] [LOG] [HMR] connected @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/websocket.js:38
+[  224189ms] [ERROR] WebSocket connection to 'ws://localhost:3001/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/websocket.js:63
+[  225571ms] [LOG] [HMR] connected @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/websocket.js:38
+[  225589ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:221
+[  226778ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:221
+[  227961ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3001/_next/static/webpack/eb38f166c67758b7.webpack.hot-update.json:0
+[  227961ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:349
+[  228167ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[  235729ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[  235791ms] [LOG] [Fast Refresh] done in 62ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[  235854ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[  235912ms] [LOG] [Fast Refresh] done in 57ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[  235948ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[  235985ms] [LOG] [Fast Refresh] done in 38ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[  236015ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[  236054ms] [LOG] [Fast Refresh] done in 39ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[  236108ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[  236151ms] [LOG] [Fast Refresh] done in 43ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[  236187ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[  236227ms] [LOG] [Fast Refresh] done in 40ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[  236263ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[  236304ms] [LOG] [Fast Refresh] done in 40ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[  236338ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[  236382ms] [LOG] [Fast Refresh] done in 43ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[  255703ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[  357280ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[  553055ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[ 1183005ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1183355ms] [LOG] [Fast Refresh] done in 350ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[ 1189876ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1190010ms] [LOG] [Fast Refresh] done in 134ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[ 1196951ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1197191ms] [LOG] [Fast Refresh] done in 239ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43
+[ 1205054ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:186
+[ 1205279ms] [LOG] [Fast Refresh] done in 226ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:43

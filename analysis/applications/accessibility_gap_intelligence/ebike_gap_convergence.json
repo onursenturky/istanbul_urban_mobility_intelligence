@@ -1,0 +1,29 @@
+{
+  "baseline_citywide": {
+    "top_quartile_share_pct": 25.0,
+    "robust_high_readiness_share_pct": 8.23,
+    "robust_high_opportunity_share_pct": 9.09
+  },
+  "CYCLING_CLOSES_EVERYDAY_GAP": {
+    "n_cells": 1145,
+    "pct_top_quartile_ebike_opportunity": 43.41,
+    "pct_top_quartile_ebike_readiness": 74.67,
+    "pct_robust_high_readiness": 20.26,
+    "pct_robust_high_opportunity": 10.48
+  },
+  "CYCLING_CLOSES_TRANSIT_GAP": {
+    "n_cells": 745,
+    "pct_top_quartile_ebike_opportunity": 17.99,
+    "pct_top_quartile_ebike_readiness": 13.83,
+    "pct_robust_high_readiness": 0.13,
+    "pct_robust_high_opportunity": 3.76
+  },
+  "CYCLING_CLOSES_BOTH": {
+    "n_cells": 445,
+    "pct_top_quartile_ebike_opportunity": 19.33,
+    "pct_top_quartile_ebike_readiness": 32.13,
+    "pct_robust_high_readiness": 0.9,
+    "pct_robust_high_opportunity": 3.37
+  },
+  "interpretation": "Descriptive cross-application convergence check only -- NOT validation of either application, and e-bike scores were not modified or used to compute any Phase 11 gap/closure class. Elevated shares above the citywide baseline suggest the independently-derived MCDA-based e-bike application and this network-based accessibility-gap synthesis are pointing at overlapping areas."
+}

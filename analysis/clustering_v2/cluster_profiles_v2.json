@@ -1,0 +1,333 @@
+[
+  {
+    "cluster": 0,
+    "n_cells": 2494,
+    "pct_of_city": 11.17,
+    "top_distinguishing_raw_percentile": [
+      {
+        "feature": "leisure_count",
+        "raw_median": 2.0,
+        "citywide_percentile": 88.8
+      },
+      {
+        "feature": "poi_density_km2",
+        "raw_median": 20.0,
+        "citywide_percentile": 87.4
+      },
+      {
+        "feature": "poi_entropy",
+        "raw_median": 0.811,
+        "citywide_percentile": 87.0
+      },
+      {
+        "feature": "distance_to_nearest_cycle_infrastructure_m_ibb_only",
+        "raw_median": 1176.802,
+        "citywide_percentile": 13.7
+      },
+      {
+        "feature": "building_coverage_ratio",
+        "raw_median": 0.072,
+        "citywide_percentile": 86.1
+      },
+      {
+        "feature": "population_density_calibrated_km2",
+        "raw_median": 5114.725,
+        "citywide_percentile": 85.9
+      }
+    ],
+    "family_level_mean_scaled": {
+      "buildings": 0.69,
+      "cycling": -0.208,
+      "poi": 0.439,
+      "population": 1.22,
+      "terrain": 0.019,
+      "transit": -0.032
+    },
+    "dominant_districts": [
+      {
+        "district": "Sarıyer",
+        "n_cells": 228
+      },
+      {
+        "district": "Büyükçekmece",
+        "n_cells": 159
+      },
+      {
+        "district": "Başakşehir",
+        "n_cells": 154
+      },
+      {
+        "district": "Beykoz",
+        "n_cells": 147
+      },
+      {
+        "district": "Tuzla",
+        "n_cells": 115
+      }
+    ]
+  },
+  {
+    "cluster": 1,
+    "n_cells": 10101,
+    "pct_of_city": 45.25,
+    "top_distinguishing_raw_percentile": [
+      {
+        "feature": "population_density_calibrated_km2",
+        "raw_median": 0.0,
+        "citywide_percentile": 28.3
+      },
+      {
+        "feature": "building_coverage_ratio",
+        "raw_median": 0.0,
+        "citywide_percentile": 32.6
+      },
+      {
+        "feature": "transit_stops_within_1000m",
+        "raw_median": 0.0,
+        "citywide_percentile": 37.7
+      },
+      {
+        "feature": "poi_density_km2",
+        "raw_median": 0.0,
+        "citywide_percentile": 38.6
+      },
+      {
+        "feature": "distance_to_nearest_tram_m",
+        "raw_median": 26788.436,
+        "citywide_percentile": 40.1
+      },
+      {
+        "feature": "distance_to_nearest_micromobility_parking_m",
+        "raw_median": 18479.908,
+        "citywide_percentile": 40.7
+      }
+    ],
+    "family_level_mean_scaled": {
+      "buildings": -0.393,
+      "cycling": -0.063,
+      "poi": 0.007,
+      "population": 0.356,
+      "terrain": 0.079,
+      "transit": -0.019
+    },
+    "dominant_districts": [
+      {
+        "district": "Arnavutköy",
+        "n_cells": 1746
+      },
+      {
+        "district": "Çatalca",
+        "n_cells": 1558
+      },
+      {
+        "district": "Şile",
+        "n_cells": 1481
+      },
+      {
+        "district": "Beykoz",
+        "n_cells": 916
+      },
+      {
+        "district": "Eyüpsultan",
+        "n_cells": 807
+      }
+    ]
+  },
+  {
+    "cluster": 2,
+    "n_cells": 1503,
+    "pct_of_city": 6.73,
+    "top_distinguishing_raw_percentile": [
+      {
+        "feature": "bus_departures_per_day",
+        "raw_median": 134.0,
+        "citywide_percentile": 96.6
+      },
+      {
+        "feature": "distance_to_nearest_transit_m",
+        "raw_median": 148.969,
+        "citywide_percentile": 4.0
+      },
+      {
+        "feature": "transit_stops_within_500m",
+        "raw_median": 7.0,
+        "citywide_percentile": 95.9
+      },
+      {
+        "feature": "transit_stops_within_1000m",
+        "raw_median": 25.0,
+        "citywide_percentile": 95.8
+      },
+      {
+        "feature": "distance_to_nearest_metrobus_m",
+        "raw_median": 2205.965,
+        "citywide_percentile": 8.1
+      },
+      {
+        "feature": "population_density_calibrated_km2",
+        "raw_median": 12029.34,
+        "citywide_percentile": 91.2
+      }
+    ],
+    "family_level_mean_scaled": {
+      "buildings": 0.829,
+      "cycling": -0.224,
+      "poi": 0.598,
+      "population": 1.336,
+      "terrain": 0.053,
+      "transit": 0.457
+    },
+    "dominant_districts": [
+      {
+        "district": "Beykoz",
+        "n_cells": 218
+      },
+      {
+        "district": "Pendik",
+        "n_cells": 169
+      },
+      {
+        "district": "Tuzla",
+        "n_cells": 132
+      },
+      {
+        "district": "Ümraniye",
+        "n_cells": 113
+      },
+      {
+        "district": "Çekmeköy",
+        "n_cells": 85
+      }
+    ]
+  },
+  {
+    "cluster": 3,
+    "n_cells": 615,
+    "pct_of_city": 2.76,
+    "top_distinguishing_raw_percentile": [
+      {
+        "feature": "retail_count",
+        "raw_median": 13.0,
+        "citywide_percentile": 98.1
+      },
+      {
+        "feature": "restaurant_count",
+        "raw_median": 4.0,
+        "citywide_percentile": 97.9
+      },
+      {
+        "feature": "healthcare_count",
+        "raw_median": 4.0,
+        "citywide_percentile": 97.8
+      },
+      {
+        "feature": "cafe_count",
+        "raw_median": 2.0,
+        "citywide_percentile": 97.8
+      },
+      {
+        "feature": "poi_density_km2",
+        "raw_median": 152.0,
+        "citywide_percentile": 97.8
+      },
+      {
+        "feature": "office_count",
+        "raw_median": 2.0,
+        "citywide_percentile": 97.4
+      }
+    ],
+    "family_level_mean_scaled": {
+      "buildings": 1.258,
+      "cycling": -0.259,
+      "poi": 1.344,
+      "population": 1.485,
+      "terrain": -0.03,
+      "transit": 0.013
+    },
+    "dominant_districts": [
+      {
+        "district": "Kadıköy",
+        "n_cells": 63
+      },
+      {
+        "district": "Fatih",
+        "n_cells": 63
+      },
+      {
+        "district": "Bağcılar",
+        "n_cells": 54
+      },
+      {
+        "district": "Zeytinburnu",
+        "n_cells": 36
+      },
+      {
+        "district": "Kartal",
+        "n_cells": 24
+      }
+    ]
+  },
+  {
+    "cluster": 4,
+    "n_cells": 7609,
+    "pct_of_city": 34.09,
+    "top_distinguishing_raw_percentile": [
+      {
+        "feature": "distance_to_nearest_tram_m",
+        "raw_median": 59293.428,
+        "citywide_percentile": 82.9
+      },
+      {
+        "feature": "distance_to_nearest_micromobility_parking_m",
+        "raw_median": 48608.001,
+        "citywide_percentile": 82.9
+      },
+      {
+        "feature": "distance_to_nearest_bicycle_parking_m",
+        "raw_median": 37850.508,
+        "citywide_percentile": 82.9
+      },
+      {
+        "feature": "distance_to_nearest_cycle_infrastructure_m_ibb_only",
+        "raw_median": 20161.958,
+        "citywide_percentile": 82.9
+      },
+      {
+        "feature": "distance_to_nearest_transit_m",
+        "raw_median": 37356.877,
+        "citywide_percentile": 82.9
+      },
+      {
+        "feature": "distance_to_nearest_metrobus_m",
+        "raw_median": 44678.898,
+        "citywide_percentile": 82.9
+      }
+    ],
+    "family_level_mean_scaled": {
+      "buildings": -0.486,
+      "cycling": 0.322,
+      "poi": 0.007,
+      "population": 0.086,
+      "terrain": 0.147,
+      "transit": 0.293
+    },
+    "dominant_districts": [
+      {
+        "district": "Çatalca",
+        "n_cells": 3013
+      },
+      {
+        "district": "Silivri",
+        "n_cells": 2879
+      },
+      {
+        "district": "Şile",
+        "n_cells": 1636
+      },
+      {
+        "district": "Arnavutköy",
+        "n_cells": 81
+      }
+    ]
+  }
+]

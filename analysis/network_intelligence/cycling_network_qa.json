@@ -1,0 +1,39 @@
+{
+  "n_nodes": 1235676,
+  "n_edges": 2712552,
+  "total_length_km": 81378.8,
+  "directed_graph": true,
+  "n_weakly_connected_components": 702,
+  "largest_weak_component_size": 755287,
+  "largest_weak_component_share": 0.6112,
+  "n_isolated_weak_components_size1": 0,
+  "n_strongly_connected_components": 702,
+  "largest_strong_component_size": 755287,
+  "largest_strong_component_share": 0.6112,
+  "note": "Strong connectivity is naturally much lower for a directed one-way street network (many dead-end/cul-de-sac one-way segments cannot round-trip) -- weak connectivity is the more relevant reachability measure for cutoff-Dijkstra accessibility queries, reported alongside strong connectivity for full transparency, not in place of it.",
+  "n_edges_dropped_no_geometry": 0,
+  "n_edges_dropped_zero_length": 0,
+  "coverage": {
+    "n_districts_total": 39,
+    "n_districts_with_at_least_1_node": 38,
+    "districts_with_zero_nodes": [
+      "Adalar"
+    ],
+    "n_grid_cells_total": 22322,
+    "n_grid_cells_with_at_least_1_node": 19100,
+    "pct_grid_cells_with_at_least_1_node": 85.57
+  },
+  "focus_areas": {
+    "adalar_islands_node_count": 0,
+    "peripheral_districts_node_counts": {
+      "\u015eile": 59754,
+      "\u00c7atalca": 94840,
+      "Silivri": 73066,
+      "Adalar": 0
+    },
+    "bosphorus_crossing_check": "No dedicated automated bridge-crossing detector implemented in this baseline -- see routing_validation.json for an explicit European-side <-> Asian-side routed test case as the practical crossing check instead of a geometric heuristic here."
+  },
+  "build_diagnostics": {
+    "loaded_from_cache": true
+  }
+}

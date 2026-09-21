@@ -1,0 +1,128 @@
+- generic [active] [ref=f83e1]:
+  - generic [ref=f83e2]:
+    - complementary [ref=f83e3]:
+      - link "Istanbul Urban Mobility Intelligence" [ref=f83e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f83e5]:
+          - generic [ref=f83e6]: Istanbul
+          - generic [ref=f83e7]: Urban Mobility Intelligence
+      - navigation "Analysis modules" [ref=f83e8]:
+        - list [ref=f83e9]:
+          - listitem [ref=f83e10]:
+            - link "Overview" [ref=f83e11] [cursor=pointer]:
+              - /url: /overview
+          - listitem [ref=f83e12]:
+            - link "Urban Typology" [ref=f83e13] [cursor=pointer]:
+              - /url: /typology
+          - listitem [ref=f83e14]:
+            - link "15-Minute Istanbul" [ref=f83e15] [cursor=pointer]:
+              - /url: /fifteen-minute
+          - listitem [ref=f83e16]:
+            - link "Cycling Gain" [ref=f83e17] [cursor=pointer]:
+              - /url: /cycling-gain
+          - listitem [ref=f83e18]:
+            - link "Transit Connection" [ref=f83e19] [cursor=pointer]:
+              - /url: /transit
+          - listitem [ref=f83e20]:
+            - link "Accessibility Gaps" [ref=f83e21] [cursor=pointer]:
+              - /url: /gaps
+          - listitem [ref=f83e22]:
+            - link "E-bike" [ref=f83e23] [cursor=pointer]:
+              - /url: /ebike
+          - listitem [ref=f83e24]:
+            - link "Data & Methods" [ref=f83e25] [cursor=pointer]:
+              - /url: /methods
+      - paragraph [ref=f83e27]: An O3 Sustainability spatial intelligence project.
+    - main [ref=f83e28]:
+      - generic [ref=f83e29]:
+        - generic [ref=f83e31]:
+          - heading "Cycling Gain" [level=1] [ref=f83e32]
+          - paragraph [ref=f83e33]:
+            - text: What changes when we add cycling?
+            - button "How this works" [ref=f83e35] [cursor=pointer]: i
+        - generic [ref=f83e36]:
+          - generic [ref=f83e37]:
+            - generic [ref=f83e38]:
+              - application "Istanbul accessibility map" [ref=f83e39]:
+                - region "Map" [ref=f83e40]
+                - generic [ref=f83e41]:
+                  - button "Zoom in" [ref=f83e42] [cursor=pointer]
+                  - button "Zoom out" [ref=f83e44] [cursor=pointer]
+              - button "Reset view" [ref=f83e46] [cursor=pointer]
+              - generic [ref=f83e49]:
+                - paragraph [ref=f83e50]: Loading the Istanbul accessibility map
+                - paragraph [ref=f83e51]: Preparing 22,322 spatial cells…
+            - tablist "Map layer" [ref=f83e53]:
+              - tab "Accessibility change" [selected] [ref=f83e54] [cursor=pointer]
+            - generic [ref=f83e56]:
+              - generic [ref=f83e57]: District
+              - combobox "District" [ref=f83e58]:
+                - option "All districts" [selected]
+                - option "Adalar"
+                - option "Arnavutköy"
+                - option "Ataşehir"
+                - option "Avcılar"
+                - option "Bağcılar"
+                - option "Bahçelievler"
+                - option "Bakırköy"
+                - option "Başakşehir"
+                - option "Bayrampaşa"
+                - option "Beşiktaş"
+                - option "Beykoz"
+                - option "Beylikdüzü"
+                - option "Beyoğlu"
+                - option "Büyükçekmece"
+                - option "Çatalca"
+                - option "Çekmeköy"
+                - option "Esenler"
+                - option "Esenyurt"
+                - option "Eyüpsultan"
+                - option "Fatih"
+                - option "Gaziosmanpaşa"
+                - option "Güngören"
+                - option "Kadıköy"
+                - option "Kâğıthane"
+                - option "Kartal"
+                - option "Küçükçekmece"
+                - option "Maltepe"
+                - option "Pendik"
+                - option "Sancaktepe"
+                - option "Sarıyer"
+                - option "Silivri"
+                - option "Sultanbeyli"
+                - option "Sultangazi"
+                - option "Şile"
+                - option "Şişli"
+                - option "Tuzla"
+                - option "Ümraniye"
+                - option "Üsküdar"
+                - option "Zeytinburnu"
+            - generic [ref=f83e60]:
+              - generic [ref=f83e61]: Walking → cycling accessibility change
+              - list [ref=f83e62]:
+                - listitem [ref=f83e63]:
+                  - generic [ref=f83e65]: Walking access already complete
+                - listitem [ref=f83e66]:
+                  - generic [ref=f83e68]: Cycling closes the gap
+                - listitem [ref=f83e69]:
+                  - generic [ref=f83e71]: Cycling partially closes the gap
+                - listitem [ref=f83e72]:
+                  - generic [ref=f83e74]: Gap remains
+                - listitem [ref=f83e75]:
+                  - generic [ref=f83e77]: Evidence uncertain
+          - complementary [ref=f83e78]:
+            - generic [ref=f83e79]:
+              - generic [ref=f83e80]:
+                - heading "What changes when we add cycling?" [level=2] [ref=f83e81]
+                - paragraph [ref=f83e82]: See where cycling expands access to everyday essentials beyond walking.
+              - generic [ref=f83e83]:
+                - generic [ref=f83e84]:
+                  - text: Complete cycling access
+                  - generic [ref=f83e85]: 95.57%
+                  - paragraph [ref=f83e86]: Approximately 95.6% of the calibrated 2020 population has complete 15-minute potential cycling access to the three required everyday needs.
+                - generic [ref=f83e87]:
+                  - text: Cycling accessibility gain
+                  - generic [ref=f83e88]: 2.10M
+                  - paragraph [ref=f83e89]: Cycling potentially closes the mapped everyday-needs walking gap for approximately 2.10 million people in the calibrated population surface.
+              - paragraph [ref=f83e90]: Click any cell on the map to see its details.
+  - alert [ref=f83e91]

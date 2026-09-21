@@ -1,0 +1,58 @@
+{
+  "section": "Phase 9 Sections 1-2",
+  "graph_integrity_check_vs_phase7": {
+    "n_nodes_current": 1235676,
+    "n_nodes_frozen": 1235676,
+    "n_nodes_match": true,
+    "n_edges_current": 2712552,
+    "n_edges_frozen": 2712552,
+    "n_edges_match": true,
+    "total_length_km_current": 81378.8,
+    "total_length_km_frozen": 81378.8,
+    "is_directed": true
+  },
+  "known_limitation_oneway_bicycle": "DIRECTED -- respects the generic `oneway` tag (standard default). oneway:bicycle contraflow exceptions ARE present in the source data (verified) but are NOT yet applied to override directionality in this baseline -- a documented limitation, not a silent gap.",
+  "n_weakly_connected_components": 702,
+  "component_classification_thresholds": {
+    "MAJOR_VALID_COMPONENT": ">=468,231 nodes (data-driven, cycling-specific)",
+    "LARGE_LOCAL_VALID_COMPONENT": ">=1 anchored cell AND population>=4,800 (cycling-specific, 90th pct)",
+    "SMALL_LOCAL_COMPONENT": ">=1 anchored cell AND 0<population<threshold",
+    "QUESTIONABLE_FRAGMENT": "0 anchored cells, OR anchored cells with 0 population",
+    "KNOWN_NETWORK_LIMITATION": "component's only district is Adalar"
+  },
+  "component_class_counts": {
+    "QUESTIONABLE_FRAGMENT": 603,
+    "SMALL_LOCAL_COMPONENT": 87,
+    "LARGE_LOCAL_VALID_COMPONENT": 10,
+    "MAJOR_VALID_COMPONENT": 2
+  },
+  "component_class_population": {
+    "LARGE_LOCAL_VALID_COMPONENT": 61707.3,
+    "MAJOR_VALID_COMPONENT": 15273671.8,
+    "QUESTIONABLE_FRAGMENT": 0.0,
+    "SMALL_LOCAL_COMPONENT": 120187.1
+  },
+  "cycling_anchor_quality_counts": {
+    "DIRECT": 12422,
+    "NEARBY": 6801,
+    "LARGE_SNAP": 2867,
+    "QUESTIONABLE": 232
+  },
+  "cycling_anchor_pct_direct_or_nearby": 86.12,
+  "cycling_anchor_n_questionable": 232,
+  "cycling_anchor_population_by_quality": {
+    "DIRECT": 14953852.6,
+    "LARGE_SNAP": 51470.8,
+    "NEARBY": 433705.5,
+    "QUESTIONABLE": 16536.5
+  },
+  "cycling_anchor_snap_distance_stats": {
+    "min": 0.42,
+    "median": 82.425,
+    "mean": 165.95260057342531,
+    "p90": 365.3160000000002,
+    "p99": 1007.538000000002,
+    "max": 11867.66
+  },
+  "note": "Anchors are IDENTICAL to the frozen Phase 7 grid_network_anchors.parquet cycling_* columns -- no re-anchoring performed here, this is a QA report over existing frozen values."
+}

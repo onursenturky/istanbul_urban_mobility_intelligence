@@ -1,0 +1,41 @@
+feature_name,dimension,variant,value_function
+poi_density_km2,Demand,sat,"percentile_rank ** 0.5 (concave, diminishing returns)"
+poi_entropy,Demand,lin,percentile_rank (linear)
+retail_count,Demand,sat,percentile_rank ** 0.5
+leisure_count,Demand,sat,percentile_rank ** 0.5
+population_density_calibrated_km2,Demand,saturating,percentile_rank ** 0.5 (Variant 1)
+population_density_calibrated_km2,Demand,target_range,"Rising 0->1 over [p0,p50]; flat at 1 over [p50,p85]; declining to floor 0.7 over [p85,p100] (Variant 2 -- breakpoints p50/p85/floor=0.7 are explicit SCENARIO ASSUMPTIONS, not empirical thresholds)"
+has_buildings,Urban Form,binary,"0/1 threshold indicator, used directly"
+building_coverage_ratio_conditional,Urban Form,saturating,Among built cells: percentile_rank(raw conditional coverage) ** 0.5; 0 for non-built cells (Variant 1)
+building_coverage_ratio_conditional,Urban Form,target_range,"Among built cells: same [p50,p85,floor=0.7] target-range shape as population (Variant 2); 0 for non-built cells"
+distance_to_nearest_metro_m,Transit,T1_integration,"(1 - percentile_rank(distance)) ** 0.5 -- closer=better, diminishing returns"
+distance_to_nearest_metro_m,Transit,T2_substitution,"inverted-U peaking at the 70th-closeness percentile (rank=0.3), declining toward a floor of 0.6 for extreme closeness and 0.0 for extreme distance -- PEAK LOCATION AND FLOOR ARE SCENARIO ASSUMPTIONS, not an empirically validated crossover"
+distance_to_nearest_tram_m,Transit,T1_integration,"(1 - percentile_rank(distance)) ** 0.5 -- closer=better, diminishing returns"
+distance_to_nearest_tram_m,Transit,T2_substitution,"inverted-U peaking at the 70th-closeness percentile (rank=0.3), declining toward a floor of 0.6 for extreme closeness and 0.0 for extreme distance -- PEAK LOCATION AND FLOOR ARE SCENARIO ASSUMPTIONS, not an empirically validated crossover"
+distance_to_nearest_rail_m,Transit,T1_integration,"(1 - percentile_rank(distance)) ** 0.5 -- closer=better, diminishing returns"
+distance_to_nearest_rail_m,Transit,T2_substitution,"inverted-U peaking at the 70th-closeness percentile (rank=0.3), declining toward a floor of 0.6 for extreme closeness and 0.0 for extreme distance -- PEAK LOCATION AND FLOOR ARE SCENARIO ASSUMPTIONS, not an empirically validated crossover"
+distance_to_nearest_ferry_m,Transit,T1_integration,"(1 - percentile_rank(distance)) ** 0.5 -- closer=better, diminishing returns"
+distance_to_nearest_ferry_m,Transit,T2_substitution,"inverted-U peaking at the 70th-closeness percentile (rank=0.3), declining toward a floor of 0.6 for extreme closeness and 0.0 for extreme distance -- PEAK LOCATION AND FLOOR ARE SCENARIO ASSUMPTIONS, not an empirically validated crossover"
+distance_to_nearest_metrobus_m,Transit,T1_integration,"(1 - percentile_rank(distance)) ** 0.5 -- closer=better, diminishing returns"
+distance_to_nearest_metrobus_m,Transit,T2_substitution,"inverted-U peaking at the 70th-closeness percentile (rank=0.3), declining toward a floor of 0.6 for extreme closeness and 0.0 for extreme distance -- PEAK LOCATION AND FLOOR ARE SCENARIO ASSUMPTIONS, not an empirically validated crossover"
+distance_to_nearest_transit_m,Transit,T1_integration,"(1 - percentile_rank(distance)) ** 0.5 -- closer=better, diminishing returns"
+distance_to_nearest_transit_m,Transit,T2_substitution,"inverted-U peaking at the 70th-closeness percentile (rank=0.3), declining toward a floor of 0.6 for extreme closeness and 0.0 for extreme distance -- PEAK LOCATION AND FLOOR ARE SCENARIO ASSUMPTIONS, not an empirically validated crossover"
+transit_stops_within_500m,Transit,T1_integration,"percentile_rank ** 0.5 -- more service=better, diminishing returns"
+transit_stops_within_500m,Transit,T2_substitution,"inverted-U peaking at the 70th percentile of service intensity, declining toward 0.6 at the extreme high end -- SCENARIO ASSUMPTION"
+fixed_guideway_stations_within_1000m,Transit,T1_integration,"percentile_rank ** 0.5 -- more service=better, diminishing returns"
+fixed_guideway_stations_within_1000m,Transit,T2_substitution,"inverted-U peaking at the 70th percentile of service intensity, declining toward 0.6 at the extreme high end -- SCENARIO ASSUMPTION"
+bus_departures_per_day,Transit,T1_integration,"percentile_rank ** 0.5 -- more service=better, diminishing returns"
+bus_departures_per_day,Transit,T2_substitution,"inverted-U peaking at the 70th percentile of service intensity, declining toward 0.6 at the extreme high end -- SCENARIO ASSUMPTION"
+cycle_infrastructure_density_km_per_km2_ibb_only,Cycling Readiness,readiness,percentile-rank-based saturating benefit/cost (see code); used directly for Readiness
+cycle_infrastructure_density_km_per_km2_ibb_only,Cycling Infrastructure Gap,gap,"1 - (the same criterion's Readiness value) -- Opportunity role only, never combined with Readiness's own use of this criterion"
+protected_cycleway_density_km_per_km2_ibb_only,Cycling Readiness,readiness,percentile-rank-based saturating benefit/cost (see code); used directly for Readiness
+protected_cycleway_density_km_per_km2_ibb_only,Cycling Infrastructure Gap,gap,"1 - (the same criterion's Readiness value) -- Opportunity role only, never combined with Readiness's own use of this criterion"
+distance_to_nearest_cycle_infrastructure_m_ibb_only,Cycling Readiness,readiness,percentile-rank-based saturating benefit/cost (see code); used directly for Readiness
+distance_to_nearest_cycle_infrastructure_m_ibb_only,Cycling Infrastructure Gap,gap,"1 - (the same criterion's Readiness value) -- Opportunity role only, never combined with Readiness's own use of this criterion"
+distance_to_nearest_bicycle_parking_m,Cycling Readiness,readiness,percentile-rank-based saturating benefit/cost (see code); used directly for Readiness
+distance_to_nearest_bicycle_parking_m,Cycling Infrastructure Gap,gap,"1 - (the same criterion's Readiness value) -- Opportunity role only, never combined with Readiness's own use of this criterion"
+distance_to_nearest_micromobility_parking_m,Cycling Readiness,readiness,percentile-rank-based saturating benefit/cost (see code); used directly for Readiness
+distance_to_nearest_micromobility_parking_m,Cycling Infrastructure Gap,gap,"1 - (the same criterion's Readiness value) -- Opportunity role only, never combined with Readiness's own use of this criterion"
+mean_slope_deg,Terrain,piecewise,"Frozen pilot treatment: 1.0 <=3deg, linear decline to floor 0.5 by 10deg, floor held beyond. Weight 0.6 within Terrain (primary signal)."
+pct_area_slope_6_10deg,Terrain,share_cost,"1.0 at 0% steep-area share, linear to floor 0.5 at 100% share. Weight 0.25 within Terrain (secondary: penalizes cells whose mean is moderate but whose steep sub-area is large)."
+pct_area_slope_3_6deg,Terrain,share_cost,Same form. Weight 0.15 within Terrain (tertiary signal) -- weights are DELIBERATELY UNEQUAL (not 1/3 each) specifically to avoid triple-counting the same underlying slope information three times at full strength.

@@ -1,0 +1,37 @@
+{
+  "reproduction_check": {
+    "total_calibrated_population": 15455565.5,
+    "population_with_complete_access": 12748528.5,
+    "reproduced_pct": 82.49,
+    "original_reported_pct": 82.49,
+    "matches_original": true
+  },
+  "denominator_A_all_populated_cells": {
+    "label": "A_ALL_POPULATED_CELLS",
+    "n_included_cells": 22322,
+    "included_calibrated_population": 15455565.5,
+    "population_with_complete_access": 12748528.5,
+    "pct_with_complete_access": 82.49,
+    "population_excluded_by_qa": 0.0,
+    "pct_of_total_population_excluded": 0.0
+  },
+  "denominator_B_quality_reliable_cells": {
+    "label": "B_QUALITY_RELIABLE_CELLS",
+    "n_included_cells": 22064,
+    "included_calibrated_population": 15439028.9,
+    "population_with_complete_access": 12746104.4,
+    "pct_with_complete_access": 82.56,
+    "population_excluded_by_qa": 16536.5,
+    "pct_of_total_population_excluded": 0.11
+  },
+  "denominator_C_strict_high_confidence_cells": {
+    "label": "C_STRICT_HIGH_CONFIDENCE_CELLS",
+    "n_included_cells": 21932,
+    "included_calibrated_population": 15312322.2,
+    "population_with_complete_access": 12746104.4,
+    "pct_with_complete_access": 83.24,
+    "population_excluded_by_qa": 143243.2,
+    "pct_of_total_population_excluded": 0.93
+  },
+  "interpretation": "The gap between A and B/C (if any) shows how much of the raw 82.49% figure rests on cells whose network representation is questionable/limited, as opposed to genuinely well-represented network structure. A large A-to-C drop would mean the headline figure is NOT quality-robust; a small drop means it is."
+}

@@ -1,0 +1,149 @@
+{
+  "spearman_rho_readiness": 0.852,
+  "spearman_rho_opportunity": 1.0,
+  "jaccard_top_decile_readiness": 0.7583,
+  "jaccard_top_decile_opportunity": 1.0,
+  "readiness_consensus_transition": {
+    "CONDITIONAL_HIGH": {
+      "CONDITIONAL_HIGH": 40,
+      "FREQUENT_HIGH": 91,
+      "NEVER_HIGH": 37,
+      "RARE_HIGH": 85,
+      "ROBUST_HIGH": 14
+    },
+    "FREQUENT_HIGH": {
+      "CONDITIONAL_HIGH": 102,
+      "FREQUENT_HIGH": 56,
+      "NEVER_HIGH": 22,
+      "RARE_HIGH": 48,
+      "ROBUST_HIGH": 10
+    },
+    "NEVER_HIGH": {
+      "CONDITIONAL_HIGH": 1045,
+      "FREQUENT_HIGH": 48,
+      "NEVER_HIGH": 17846,
+      "RARE_HIGH": 710,
+      "ROBUST_HIGH": 1
+    },
+    "RARE_HIGH": {
+      "CONDITIONAL_HIGH": 102,
+      "FREQUENT_HIGH": 76,
+      "NEVER_HIGH": 82,
+      "RARE_HIGH": 58,
+      "ROBUST_HIGH": 12
+    },
+    "ROBUST_HIGH": {
+      "CONDITIONAL_HIGH": 936,
+      "FREQUENT_HIGH": 449,
+      "NEVER_HIGH": 6,
+      "RARE_HIGH": 16,
+      "ROBUST_HIGH": 430
+    }
+  },
+  "opportunity_consensus_transition": {
+    "CONDITIONAL_HIGH": {
+      "CONDITIONAL_HIGH": 1,
+      "FREQUENT_HIGH": 0,
+      "NEVER_HIGH": 0,
+      "RARE_HIGH": 0,
+      "ROBUST_HIGH": 0
+    },
+    "FREQUENT_HIGH": {
+      "CONDITIONAL_HIGH": 129,
+      "FREQUENT_HIGH": 74,
+      "NEVER_HIGH": 0,
+      "RARE_HIGH": 0,
+      "ROBUST_HIGH": 2
+    },
+    "NEVER_HIGH": {
+      "CONDITIONAL_HIGH": 457,
+      "FREQUENT_HIGH": 0,
+      "NEVER_HIGH": 19027,
+      "RARE_HIGH": 401,
+      "ROBUST_HIGH": 0
+    },
+    "RARE_HIGH": {
+      "CONDITIONAL_HIGH": 200,
+      "FREQUENT_HIGH": 0,
+      "NEVER_HIGH": 0,
+      "RARE_HIGH": 3,
+      "ROBUST_HIGH": 0
+    },
+    "ROBUST_HIGH": {
+      "CONDITIONAL_HIGH": 78,
+      "FREQUENT_HIGH": 602,
+      "NEVER_HIGH": 0,
+      "RARE_HIGH": 0,
+      "ROBUST_HIGH": 1348
+    }
+  },
+  "attribution_top500_readiness_changes": {
+    "intersection_density_km2": {
+      "median_big_readiness_increase_cells": 20.0,
+      "median_big_readiness_decrease_cells": 0.0,
+      "median_all_cells": 4.0
+    },
+    "local_road_length_m": {
+      "median_big_readiness_increase_cells": 1167.9821,
+      "median_big_readiness_decrease_cells": 0.0,
+      "median_all_cells": 298.7209
+    },
+    "cycle_accessible_road_length_m": {
+      "median_big_readiness_increase_cells": 1700.8724,
+      "median_big_readiness_decrease_cells": 505.8803,
+      "median_all_cells": 940.3813
+    },
+    "mean_absolute_road_grade_pct": {
+      "median_big_readiness_increase_cells": 2.7896,
+      "median_big_readiness_decrease_cells": 2.0019,
+      "median_all_cells": 2.7055
+    },
+    "cycle_infrastructure_density_km_per_km2_ibb_only": {
+      "median_big_readiness_increase_cells": 0.0,
+      "median_big_readiness_decrease_cells": 0.0,
+      "median_all_cells": 0.0
+    }
+  },
+  "by_district_mean_readiness_change": {
+    "Şile": 0.0266,
+    "Silivri": 0.0183,
+    "Çatalca": 0.0152,
+    "Pendik": 0.0038,
+    "Çekmeköy": 0.0038,
+    "Beykoz": -0.0051,
+    "Arnavutköy": -0.0052,
+    "Sarıyer": -0.0062,
+    "Kartal": -0.0098,
+    "Ümraniye": -0.0145,
+    "Maltepe": -0.015,
+    "Eyüpsultan": -0.0173,
+    "Ataşehir": -0.018,
+    "Sancaktepe": -0.0247,
+    "Esenyurt": -0.0269,
+    "Tuzla": -0.0272,
+    "Sultanbeyli": -0.0277,
+    "Kadıköy": -0.0292,
+    "Üsküdar": -0.0296,
+    "Büyükçekmece": -0.0342,
+    "Başakşehir": -0.0396,
+    "Şişli": -0.0446,
+    "Bayrampaşa": -0.0468,
+    "Zeytinburnu": -0.0468,
+    "Beşiktaş": -0.0504,
+    "Küçükçekmece": -0.0518,
+    "Fatih": -0.0521,
+    "Bağcılar": -0.0525,
+    "Beylikdüzü": -0.0544,
+    "Güngören": -0.055,
+    "Sultangazi": -0.0561,
+    "Kâğıthane": -0.0588,
+    "Beyoğlu": -0.0602,
+    "Esenler": -0.0609,
+    "Bakırköy": -0.0624,
+    "Gaziosmanpaşa": -0.0648,
+    "Avcılar": -0.0745,
+    "Bahçelievler": -0.0819,
+    "Adalar": -0.0915
+  },
+  "note": "V1 reference = readiness__balanced_equal_dimensions__T1__uf_sat / opportunity__balanced_equal_dimensions__demand_sat (V1's own balanced-scenario baseline variant). Difference is NOT framed as V2 being 'better' -- only as attributable new information (Street Connectivity, road grade, simplified transit representation, unchanged cycling representation) changing where readiness/opportunity concentrate."
+}

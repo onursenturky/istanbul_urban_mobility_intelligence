@@ -1,0 +1,97 @@
+{
+  "narrative": {
+    "product_name": "Istanbul Urban Mobility Intelligence",
+    "positioning": "A network-based spatial intelligence framework for understanding urban accessibility and active-mobility opportunities across Istanbul.",
+    "five_high_level_questions": [
+      "What kind of urban environments exist across Istanbul?",
+      "What everyday needs can residents potentially reach by walking?",
+      "Where does cycling materially expand accessibility?",
+      "Where can cycling expand access to public transport?",
+      "Where do mapped accessibility gaps remain?"
+    ],
+    "translation_rule": "The end user never needs to know 'Phase 8' or 'Phase 9' -- those become, respectively, the '15-Minute Istanbul' and 'Cycling Gain' application modules described below."
+  },
+  "architecture": {
+    "layers": [
+      {
+        "layer": 1,
+        "name": "URBAN DATA FOUNDATION",
+        "components": [
+          "Buildings",
+          "Population",
+          "POIs",
+          "Roads",
+          "Terrain",
+          "Land Use",
+          "Transit",
+          "Cycling Infrastructure"
+        ],
+        "frozen_artifacts": [
+          "data/processed/citywide/features/urban_mobility_features_citywide_v2.parquet",
+          "data/processed/citywide/metadata/feature_dictionary_citywide_v2.csv"
+        ]
+      },
+      {
+        "layer": 2,
+        "name": "SPATIAL INTELLIGENCE",
+        "components": [
+          "Urban Mobility Typology",
+          "Walking Network",
+          "Cycling Network"
+        ],
+        "frozen_artifacts": [
+          "analysis/clustering_v2_eight_family/cluster_assignments_v2ef.parquet",
+          "data/processed/network/walking_graph.pkl",
+          "data/processed/network/cycling_graph.pkl",
+          "analysis/network_intelligence/network_intelligence_manifest.json"
+        ]
+      },
+      {
+        "layer": 3,
+        "name": "ACCESSIBILITY INTELLIGENCE",
+        "components": [
+          "Everyday Needs 5/10/15-Minute Walking Accessibility",
+          "Cycling Accessibility",
+          "Transit Infrastructure Accessibility"
+        ],
+        "frozen_artifacts": [
+          "analysis/applications/15min_city/15MIN_ISTANBUL_WALKING_V1_FROZEN_manifest.json",
+          "analysis/applications/cycling_accessibility/phase9_manifest.json",
+          "analysis/applications/first_last_mile_transit/phase10_manifest.json"
+        ]
+      },
+      {
+        "layer": 4,
+        "name": "ACTIVE MOBILITY INTELLIGENCE",
+        "components": [
+          "Walking to Cycling Accessibility Gain",
+          "First/Last-Mile Cycling Gain",
+          "E-bike Readiness",
+          "Latent E-bike Opportunity"
+        ],
+        "frozen_artifacts": [
+          "analysis/applications/cycling_accessibility/walking_cycling_complete_access_comparison.parquet",
+          "analysis/applications/first_last_mile_transit/general_transit_mode_comparison.parquet",
+          "analysis/mcda_v2/phase6b/ebike_readiness_baseline.parquet",
+          "analysis/mcda_v2/phase6b/ebike_opportunity_baseline.parquet"
+        ]
+      },
+      {
+        "layer": 5,
+        "name": "DECISION INTELLIGENCE",
+        "components": [
+          "Accessibility Gap Type",
+          "Population Associated with Gaps",
+          "Cycling Gap Closure",
+          "Remaining Accessibility Gaps",
+          "Data/Network Confidence"
+        ],
+        "frozen_artifacts": [
+          "analysis/applications/accessibility_gap_intelligence/accessibility_gap_grid_synthesis.parquet",
+          "analysis/applications/accessibility_gap_intelligence/phase11_manifest.json"
+        ]
+      }
+    ],
+    "flow": "URBAN DATA FOUNDATION -> SPATIAL INTELLIGENCE -> ACCESSIBILITY INTELLIGENCE -> ACTIVE MOBILITY INTELLIGENCE -> DECISION INTELLIGENCE"
+  }
+}

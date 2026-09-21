@@ -1,0 +1,23 @@
+# Readiness consensus class by k=5 cluster
+cluster,CONDITIONAL_HIGH,FREQUENT_HIGH,NEVER_HIGH,RARE_HIGH,ROBUST_HIGH
+0,825,289,877,283,220
+1,386,35,9238,422,20
+2,725,252,214,188,124
+3,289,144,55,24,103
+4,0,0,7609,0,0
+
+# Opportunity consensus class by k=5 cluster
+cluster,CONDITIONAL_HIGH,FREQUENT_HIGH,NEVER_HIGH,RARE_HIGH,ROBUST_HIGH
+0,399,223,1200,153,519
+1,93,10,9983,13,2
+2,162,205,584,42,510
+3,43,166,118,13,275
+4,168,72,7142,183,44
+
+# Joint class by k=5 cluster
+cluster,HIGH_readiness__HIGH_opportunity,HIGH_readiness__LOW_opportunity,HIGH_readiness__MODERATE_SENSITIVE_opportunity,LOW_readiness__HIGH_opportunity,LOW_readiness__LOW_opportunity,LOW_readiness__MODERATE_SENSITIVE_opportunity,MODERATE_SENSITIVE_readiness__HIGH_opportunity,MODERATE_SENSITIVE_readiness__LOW_opportunity,MODERATE_SENSITIVE_readiness__MODERATE_SENSITIVE_opportunity
+0,64,425,20,434,491,235,244,437,144
+1,0,55,0,12,9559,89,0,382,4
+2,129,227,20,115,223,64,471,176,78
+3,99,128,20,74,1,4,268,2,19
+4,0,0,0,116,7325,168,0,0,0

@@ -1,0 +1,21 @@
+{
+  "n_origins": 22322,
+  "n_destinations_total": 81854,
+  "n_destinations_excluded_questionable_anchor": 590,
+  "n_destinations_used_by_category": {
+    "A_food_groceries": 4161,
+    "B_healthcare": 5913,
+    "C_education": 3379,
+    "D_daily_services": 6109,
+    "E_retail_shopping": 22518,
+    "F_leisure_social": 27834,
+    "G_green_recreation": 5890,
+    "H_public_transport_access": 5460
+  },
+  "runtime_seconds": 138.2,
+  "ms_per_origin": 6.193,
+  "graph": "cycling (DIRECTED, respects oneway; oneway:bicycle contraflow NOT applied -- known limitation)",
+  "baseline_speed_kmh": 15.0,
+  "method": "networkx cutoff-Dijkstra (exact), ONE 15-min run per origin, 5/10-min derived by sub-filtering the same reachable set -- not 3 separate Dijkstra runs, not Euclidean buffers.",
+  "unreachable_representation": "NaN for nearest_time_min when no category destination is reachable within the 15-minute search horizon -- never a large finite placeholder value."
+}

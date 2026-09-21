@@ -1,0 +1,86 @@
+- generic [active] [ref=f86e1]:
+  - generic [ref=f86e2]:
+    - generic [ref=f86e3]:
+      - link "Istanbul / Urban Mobility Intelligence" [ref=f86e4] [cursor=pointer]:
+        - /url: /
+      - button "Toggle navigation menu" [ref=f86e7] [cursor=pointer]
+    - main [ref=f86e10]:
+      - generic [ref=f86e11]:
+        - generic [ref=f86e13]:
+          - heading "Transit Connection" [level=1] [ref=f86e14]
+          - paragraph [ref=f86e15]:
+            - text: Can cycling bring transit closer?
+            - button "How this works" [ref=f86e17] [cursor=pointer]: i
+        - generic [ref=f86e19]:
+          - generic [ref=f86e20]:
+            - application "Istanbul accessibility map" [ref=f86e21]:
+              - region "Map" [ref=f86e22]
+              - generic [ref=f86e23]:
+                - button "Zoom in" [ref=f86e24] [cursor=pointer]
+                - button "Zoom out" [ref=f86e26] [cursor=pointer]
+            - button "Reset view" [ref=f86e28] [cursor=pointer]
+            - generic [ref=f86e31]:
+              - paragraph [ref=f86e32]: Loading the Istanbul accessibility map
+              - paragraph [ref=f86e33]: Preparing 22,322 spatial cells…
+          - tablist "Map layer" [ref=f86e35]:
+            - tab "Access gap" [selected] [ref=f86e36] [cursor=pointer]
+            - tab "Cycling gain" [ref=f86e37] [cursor=pointer]
+          - generic [ref=f86e39]:
+            - generic [ref=f86e40]: District
+            - combobox "District" [ref=f86e41]:
+              - option "All districts" [selected]
+              - option "Adalar"
+              - option "Arnavutköy"
+              - option "Ataşehir"
+              - option "Avcılar"
+              - option "Bağcılar"
+              - option "Bahçelievler"
+              - option "Bakırköy"
+              - option "Başakşehir"
+              - option "Bayrampaşa"
+              - option "Beşiktaş"
+              - option "Beykoz"
+              - option "Beylikdüzü"
+              - option "Beyoğlu"
+              - option "Büyükçekmece"
+              - option "Çatalca"
+              - option "Çekmeköy"
+              - option "Esenler"
+              - option "Esenyurt"
+              - option "Eyüpsultan"
+              - option "Fatih"
+              - option "Gaziosmanpaşa"
+              - option "Güngören"
+              - option "Kadıköy"
+              - option "Kâğıthane"
+              - option "Kartal"
+              - option "Küçükçekmece"
+              - option "Maltepe"
+              - option "Pendik"
+              - option "Sancaktepe"
+              - option "Sarıyer"
+              - option "Silivri"
+              - option "Sultanbeyli"
+              - option "Sultangazi"
+              - option "Şile"
+              - option "Şişli"
+              - option "Tuzla"
+              - option "Ümraniye"
+              - option "Üsküdar"
+              - option "Zeytinburnu"
+          - generic [ref=f86e43]:
+            - generic [ref=f86e44]: Transit access gap (general + rail & metrobüs access)
+            - list [ref=f86e45]:
+              - listitem [ref=f86e46]:
+                - generic [ref=f86e48]: No mapped transit-access gap
+              - listitem [ref=f86e49]:
+                - generic [ref=f86e51]: General transit access gap
+              - listitem [ref=f86e52]:
+                - generic [ref=f86e54]: Fixed-guideway access gap
+              - listitem [ref=f86e55]:
+                - generic [ref=f86e57]: General + fixed-guideway gap
+              - listitem [ref=f86e58]:
+                - generic [ref=f86e60]: Data insufficient for transit interpretation
+              - listitem [ref=f86e61]:
+                - generic [ref=f86e63]: Network evidence uncertain
+  - alert [ref=f86e64]

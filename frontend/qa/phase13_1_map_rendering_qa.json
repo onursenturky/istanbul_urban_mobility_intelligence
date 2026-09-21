@@ -1,0 +1,54 @@
+{
+  "summary": "Three distinct, compounding root causes were found and fixed for the 'map does not reliably render after navigation' bug. All were diagnosed via live DOM/computed-style/WebGL inspection in a running browser (Playwright), not guessed, and each fix is a root-cause correction, not a timeout or retry hack.",
+  "root_causes": [
+    {
+      "id": "RC1_container_size_race",
+      "symptom": "Map canvas intermittently sized 0x0 or stuck at a stale size after a client-side route transition; sometimes required a window resize to reappear correctly.",
+      "diagnosis": "MapLibre's constructor reads container clientWidth/clientHeight exactly once, synchronously, at construction time. On a fresh route transition (a full remount of the page tree) the container's final layout is not always settled the instant the mount effect runs -- Outfit's `display: swap` can reflow text a frame later, and nested flex/absolute layers can report a transient size on first paint.",
+      "fix": "Attached a ResizeObserver to the map container for the whole lifetime of the map instance, calling map.resize() on every observed size change (fires once immediately with the current size, then again on any subsequent change). File: components/MapView.tsx.",
+      "verification": "Repeated Playwright navigation across 8+ distinct routes, canvas dimensions read via getBoundingClientRect() immediately (100-350ms) after navigation and again at 800ms/1500ms/3000ms with zero interaction: canvas grew from not-yet-mounted -> transient size -> final correct size entirely on its own every time."
+    },
+    {
+      "id": "RC2_strictmode_double_map_instance",
+      "symptom": "Map rendered at the correct size and the basemap was visible, but the analytical color layer (grid-fill) never applied -- stuck on its initial flat fallback color, across a full page and every navigation to it.",
+      "diagnosis": "React 18 StrictMode (dev-only) double-invokes effects against the SAME container DOM node (mount -> cleanup -> mount again, no re-render in between). An earlier fix deferred map.remove() in cleanup until the style finished loading (to silence a separate cosmetic AbortError). That deferral let a second MapLibre instance be constructed into the same container while the first was still alive: two instances briefly shared one container, and the 'recolor' effect's setPaintProperty calls landed on whichever instance `mapRef.current` pointed to at that moment -- not reliably the instance whose canvas was actually visible.",
+      "fix": "Reverted to calling map.remove() synchronously in cleanup, guaranteeing at most one live instance per container at any time. File: components/MapView.tsx.",
+      "verification": "Programmatically read map.getPaintProperty('grid-fill','fill-color') after each of 8 repeated navigations: confirmed a full match expression (not a flat fallback string) every time after the fix, versus a flat string every time before it."
+    },
+    {
+      "id": "RC3_map_remove_throw_stale_ref",
+      "symptom": "After fixing RC2, the map sometimes failed to appear AT ALL after a navigation (blank container, no basemap, no loading spinner) -- a new, more severe regression exposed by making removal synchronous.",
+      "diagnosis": "MapLibre's own map.remove() can itself throw a benign upstream AbortError synchronously when called while the style is still mid-load (an AbortController signal.reason quirk inside MapLibre's internals). Because `mapRef.current = null` was written on the line AFTER the (now synchronous, throwing) map.remove() call, that reset never executed on the throwing path -- so the NEXT mount's effect saw a stale non-null mapRef and bailed out via its own guard clause, silently skipping map creation entirely.",
+      "fix": "Wrapped map.remove() in try/finally so mapRef.current = null (and resizeObserver.disconnect()) always executes regardless of whether MapLibre throws. File: components/MapView.tsx.",
+      "verification": "Repeated the full 11-transition navigation matrix (see below) after this fix: canvas found, correctly sized, and correctly colored on every single transition, no exceptions."
+    },
+    {
+      "id": "RC4_css_cascade_position_collision",
+      "symptom": "After building the new desktop-first layout (h-screen + flex-1 chain, replacing the earlier viewport-relative-height approach), the map STILL rendered with container height 0 in the new layout specifically, despite every ancestor in the DOM chain reporting correct, non-zero, stable sizes.",
+      "diagnosis": "Walked the full DOM ancestor chain via getBoundingClientRect() at every level: all ancestors were correctly sized (e.g. 835px), EXCEPT the exact div passed as MapLibre's `container` option, which read height=0. Inspecting its computed style showed `position: relative`, not the `absolute` intended by its Tailwind `absolute inset-0` classes. Root cause: MapLibre appends its own `maplibregl-map` class to that exact element after construction, and MapLibre's own stylesheet (maplibre-gl.css) declares `.maplibregl-map { position: relative }`. That class-selector rule has the same CSS specificity as Tailwind's `.absolute { position: absolute }` utility, so whichever stylesheet is injected later in the page's cascade silently wins -- when MapLibre's CSS won, `position: relative` turned `inset-0` from 'stretch to fill parent' into a no-op offset on a box with no intrinsic height.",
+      "fix": "Positioned that specific container via an inline `style={{ position: 'absolute', inset: 0 }}` instead of Tailwind classes -- inline styles always win over any class-based rule regardless of stylesheet injection order. File: components/MapView.tsx.",
+      "verification": "Re-measured the full DOM ancestor chain and computed style after the fix: position now correctly resolves to 'absolute', container height matches its parent (835px) exactly, confirmed stable across 11 repeated navigations."
+    }
+  ],
+  "navigation_test_matrix": {
+    "method": "Playwright browser_run_code_unsafe driving real page.goto() navigations (both waitUntil: domcontentloaded and waitUntil: load tested) against the running dev server, reading canvas dimensions and the grid-fill paint property via page.evaluate() with no simulated clicks/resizes/tab-switches.",
+    "routes_tested_client_and_direct": ["/overview", "/typology", "/fifteen-minute", "/cycling-gain", "/transit", "/gaps", "/ebike", "/methods"],
+    "transitions_performed": "Sequential pass through all 8 routes, a second full repeat pass, plus direct (hard) loads of 6 map routes, plus a final combined pass of 11 transitions after all 4 fixes -- 30+ total navigations tested across this QA session.",
+    "final_pass_result": {
+      "n_transitions": 11,
+      "n_map_pages_among_them": 10,
+      "canvas_found_every_time": true,
+      "canvas_size_correct_and_stable_every_time": true,
+      "paint_property_is_full_expression_every_time": true,
+      "n_failures": 0
+    },
+    "specific_transitions_from_spec": {
+      "Overview_to_15Minute": "pass", "15Minute_to_CyclingGain": "pass", "CyclingGain_to_Transit": "pass",
+      "Transit_to_Ebike": "pass", "Ebike_to_Typology": "pass",
+      "direct_url_loads": { "/fifteen-minute": "pass", "/cycling-gain": "pass", "/transit": "pass", "/ebike": "pass", "/typology": "pass" }
+    }
+  },
+  "no_interaction_required": "Confirmed: canvas grows from unmounted to full correct size and the analytical layer paints correctly with ZERO simulated clicks, resizes, or tab switches at any point in the final verification pass.",
+  "loading_state": "A visible loading overlay ('Loading the Istanbul accessibility map' / 'Preparing 22,322 spatial cells...' with a spinner) covers the map container from the moment the page mounts until the GeoJSON layer is added -- the map shell (basemap-sized container) is present immediately; only the overlay disappears once data is ready, with no layout shift (the container never changes size when the overlay is removed).",
+  "remaining_known_limitation": "A cosmetic, dev-only console AbortError still appears under React 18 StrictMode's double-invoke of effects (when map.remove() is called on an instance whose style is still mid-load). It does not affect functionality (verified: canvas and coloring are always correct despite it) and does not occur in production, since StrictMode's double-effect-invoke is a development-only behavior."
+}

@@ -1,0 +1,4 @@
+[    1560ms] [WARNING] Qualified widget already initialized. Aborting. @ https://js.qualified.com/qualified.js?token=bZqT6kei9oMAVM9X:3
+[    2368ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://aplo-evnt.com/api/v1/intent_pixel/track_request?app_id=691ce2acc3c26c001dd2dc6d:0
+[    2766ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://aplo-evnt.com/api/v1/intent_pixel/track_request?app_id=691ce2acc3c26c001dd2dc6d:0
+[    3356ms] [ERROR] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID @ https://o209747.ingest.us.sentry.io/api/4508915056574464/envelope/?sentry_key=c36ec735e564530732f0d75311d173b6&sentry_version=7&sentry_client=sentry.javascript.browser%2F7.119.1:0

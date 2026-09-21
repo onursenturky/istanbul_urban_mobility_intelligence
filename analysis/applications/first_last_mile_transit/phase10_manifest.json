@@ -1,0 +1,353 @@
+{
+  "version": "FIRST_LAST_MILE_TRANSIT_ACCESSIBILITY_V1",
+  "supersedes": "None -- first version of this application",
+  "depends_on_frozen": [
+    "NETWORK_INTELLIGENCE_FOUNDATION_V1",
+    "15MIN_ISTANBUL_WALKING_V1_FROZEN",
+    "CYCLING_ACCESSIBILITY_AND_ACTIVE_MOBILITY_GAIN_V1",
+    "CITYWIDE_V2_EIGHT_FAMILY_TYPOLOGY",
+    "E-bike Readiness & Opportunity (Phase 6B-V2)"
+  ],
+  "system_definitions": {
+    "system_a_general_transit": [
+      "metro",
+      "tram",
+      "rail",
+      "metrobus",
+      "bus",
+      "ferry"
+    ],
+    "system_b_fixed_guideway": [
+      "metro",
+      "tram",
+      "rail",
+      "metrobus"
+    ]
+  },
+  "primary_thresholds": {
+    "general_transit": "10min",
+    "fixed_guideway": "15min"
+  },
+  "baseline_speeds_kmh": {
+    "walking": 5.0,
+    "cycling": 15.0
+  },
+  "input_hashes": {
+    "transit_access_point_dedup": {
+      "path": "analysis/applications/first_last_mile_transit/transit_access_point_dedup.parquet",
+      "sha256": "74c79526db65f9d5053638e3d812926b05d081fd52ba4976b1a133a3ecd0d5bc"
+    },
+    "transit_walking_anchors": {
+      "path": "analysis/applications/first_last_mile_transit/transit_walking_anchors.parquet",
+      "sha256": "487467112c256a3af1804f9919672ebeba14d9fd763a7ea88ad4f3aba7bc654b"
+    },
+    "transit_cycling_anchors": {
+      "path": "analysis/applications/first_last_mile_transit/transit_cycling_anchors.parquet",
+      "sha256": "f69932bc214e1d2d6660e7f48746f8eb6c455463adf938e87456ad42e097cad9"
+    },
+    "walking_general_transit_accessibility": {
+      "path": "analysis/applications/first_last_mile_transit/walking_general_transit_accessibility.parquet",
+      "sha256": "4f25d2dd79bb356558e652b7bbc911869b7669dec2d0040fd6a71c679ab7a562"
+    },
+    "cycling_general_transit_accessibility": {
+      "path": "analysis/applications/first_last_mile_transit/cycling_general_transit_accessibility.parquet",
+      "sha256": "1115f8c16bdee24ac67512d60b189285f02691aa6539573fad10999d5aed632f"
+    },
+    "transit_gap_diagnostics": {
+      "path": "analysis/applications/first_last_mile_transit/transit_gap_diagnostics.parquet",
+      "sha256": "2a11c90b542975cbfe9d085846f92559718a60355b9506f980eacfad7fbb736c"
+    },
+    "walking_graph_frozen": {
+      "path": "data/processed/network/walking_graph.pkl",
+      "sha256": "a6e4e1f057841e993fb88cc2a486a056ab89ec9c23110fbce264e4dd777f8dd3"
+    },
+    "cycling_graph_frozen": {
+      "path": "data/processed/network/cycling_graph.pkl",
+      "sha256": "26e5e4993d88c45ef744478e92a352885c466cdcca6f61ed49275011011e4111"
+    }
+  },
+  "critical_qa_tests": {
+    "A_monotonicity": {
+      "total_violations": 0,
+      "status": "PASS"
+    },
+    "B_mode_plausibility": {
+      "general": {
+        "walk_pct_cells_10min": 16.42,
+        "cycle_pct_cells_10min": 31.23,
+        "cycling_generally_better": true,
+        "n_cells_cycling_worse_at_15min": 51
+      },
+      "fixed": {
+        "walk_pct_cells_10min": 4.41,
+        "cycle_pct_cells_10min": 11.7,
+        "cycling_generally_better": true,
+        "n_cells_cycling_worse_at_15min": 17
+      }
+    },
+    "C_spatial_plausibility": {
+      "core_districts": [
+        "Fatih",
+        "Beyoğlu",
+        "Beşiktaş",
+        "Kadıköy",
+        "Şişli",
+        "Üsküdar"
+      ],
+      "periphery_districts": [
+        "Çatalca",
+        "Silivri",
+        "Şile",
+        "Arnavutköy"
+      ],
+      "core_median_walk_general_nearest_min": 5.62,
+      "periphery_median_walk_general_nearest_min": 8.16,
+      "core_shorter_than_periphery": true,
+      "caveat": "Periphery median is computed only over cells WITH a reachable stop -- Silivri/Catalca cells with NO reachable stop at all (NaN) are excluded from this median, not counted as 0 or infinite."
+    },
+    "D_feed_gap_sensitivity": {
+      "n_cells_excluded_non_good_coverage": 16507,
+      "pct_cells_excluded": 73.95,
+      "walk_general_10min_pct_ALL_DISTRICTS": 16.42,
+      "walk_general_10min_pct_GOOD_COVERAGE_ONLY": 47.26,
+      "cycle_general_10min_pct_ALL_DISTRICTS": 31.23,
+      "cycle_general_10min_pct_GOOD_COVERAGE_ONLY": 78.69,
+      "interpretation": "Citywide cell-based percentages shift substantially when non-GOOD_COVERAGE districts (including Silivri/Catalca's 8,103 cells with zero mapped stops) are excluded -- confirms the headline citywide cell-based rate is heavily influenced by feed-coverage gaps, not purely by network/accessibility performance. Population-weighted figures in population_transit_accessibility_summary.json's QUALITY_AWARE_RELIABLE_ONLY block are the more defensible citywide summary for this reason."
+    },
+    "E_cross_water_artifacts": {
+      "adalar_n_cells": 72,
+      "adalar_pct_walk_general_10min": 88.89,
+      "adalar_pct_cycle_general_10min": 30.56,
+      "adalar_pct_cycle_fixed_15min": 30.56,
+      "interpretation": "Adalar's cycling access figures reflect cross-water snapping to the mainland cycling mega-component (documented Phase 9 limitation, unchanged here) -- NOT real on-island cycling routes. Adalar's relatively high WALKING general-transit access (ferry docks are genuinely local) is real; its cycling figures are not.",
+      "ferry_only_access_cells": 791
+    },
+    "F_stop_density_artifacts": {
+      "n_distinct_walking_nodes_used": 5022,
+      "n_access_points_ok": 5460,
+      "max_access_points_sharing_one_node": 4,
+      "pct_nodes_with_gt_5_access_points": 0.0,
+      "interpretation": "Some network nodes serve as the nearest anchor for multiple access points (e.g. opposite-direction bus stops snapping to the same intersection node) -- this is expected given real-world stop clustering at intersections/interchanges, not a dedup failure (the access points themselves are already deduplicated in Section 3; this is about shared NEAREST-NODE assignment, a separate, expected phenomenon). reachable_count_Xmin fields in the accessibility tables count ACCESS POINTS, not unique nodes, so this does not silently deflate counts, but interpret raw reachable_count as 'access points', not 'unique locations'."
+    }
+  },
+  "freeze_checklist": {
+    "1_transit_source_limitations_preserved": true,
+    "2_stop_dedup_defensible": true,
+    "3_destination_anchoring_qa_acceptable": true,
+    "4_5_10_15_curves_monotonic": true,
+    "5_no_major_unexplained_cross_water_artifact": true,
+    "6_feed_gap_sensitivity_does_not_invalidate": true,
+    "7_walk_cycle_comparison_quality_robust": true,
+    "8_sanity_checks_no_unexplained_implausibility": true
+  },
+  "freeze_decision": "B_VALIDATED_WITH_DOCUMENTED_LIMITATIONS_FREEZE_V1",
+  "known_limitations": {
+    "main_gtfs_staleness": "Used only for station locations/route topology, never departure frequency.",
+    "no_parent_child_station_data": "Both feeds lack usable parent/child station structure; dedup is spatial-only (20m, same mode).",
+    "silivri_catalca_no_feed_coverage": "Zero mapped transit stops -- NO_FEED_COVERAGE != NO_TRANSIT_SERVICE.",
+    "adalar_cycling_cross_water_artifact": "Cycling access figures for Adalar reflect cross-water snapping, not real routes (inherited from Phase 9).",
+    "oneway_bicycle_not_modeled": "Inherited from Phase 7/9 cycling graph.",
+    "ferry_excluded_from_system_b": "Deliberate -- ferry lacks fixed-guideway infrastructure semantics."
+  },
+  "headline_results": {
+    "population_layer_caveat": "This combines calibrated 2020 population distribution with the frozen transit/network data snapshots -- NOT a 2026 population estimate.",
+    "walking_general_transit": {
+      "label": "walking_general_transit",
+      "total_population": 15455565.5,
+      "RAW": {
+        "population_within_5min": 5652073.9,
+        "pct_within_5min": 36.57,
+        "population_within_10min": 9342682.6,
+        "pct_within_10min": 60.45,
+        "population_within_15min": 11368767.3,
+        "pct_within_15min": 73.56,
+        "population_unreachable_within_15min": 4086798.1,
+        "pct_unreachable_within_15min": 26.44,
+        "denominator_population": 15455565.5
+      },
+      "QUALITY_AWARE_RELIABLE_ONLY": {
+        "population_within_5min": 5389629.7,
+        "pct_within_5min": 47.23,
+        "population_within_10min": 8487613.1,
+        "pct_within_10min": 74.37,
+        "population_within_15min": 9965582.2,
+        "pct_within_15min": 87.32,
+        "population_unreachable_within_15min": 1446600.4,
+        "pct_unreachable_within_15min": 12.68,
+        "denominator_population": 11412182.6
+      }
+    },
+    "walking_fixed_transit": {
+      "label": "walking_fixed_transit",
+      "total_population": 15455565.5,
+      "RAW": {
+        "population_within_5min": 1843197.5,
+        "pct_within_5min": 11.93,
+        "population_within_10min": 4984436.6,
+        "pct_within_10min": 32.25,
+        "population_within_15min": 7648411.5,
+        "pct_within_15min": 49.49,
+        "population_unreachable_within_15min": 7807153.9,
+        "pct_unreachable_within_15min": 50.51,
+        "denominator_population": 15455565.5
+      },
+      "QUALITY_AWARE_RELIABLE_ONLY": {
+        "population_within_5min": 1678268.0,
+        "pct_within_5min": 14.71,
+        "population_within_10min": 4315688.9,
+        "pct_within_10min": 37.82,
+        "population_within_15min": 6508694.7,
+        "pct_within_15min": 57.03,
+        "population_unreachable_within_15min": 4903487.9,
+        "pct_unreachable_within_15min": 42.97,
+        "denominator_population": 11412182.6
+      }
+    },
+    "cycling_general_transit": {
+      "label": "cycling_general_transit",
+      "total_population": 15455565.5,
+      "RAW": {
+        "population_within_5min": 11065155.9,
+        "pct_within_5min": 71.59,
+        "population_within_10min": 13674115.7,
+        "pct_within_10min": 88.47,
+        "population_within_15min": 14319319.7,
+        "pct_within_15min": 92.65,
+        "population_unreachable_within_15min": 1136245.8,
+        "pct_unreachable_within_15min": 7.35,
+        "denominator_population": 15455565.5
+      },
+      "QUALITY_AWARE_RELIABLE_ONLY": {
+        "population_within_5min": 9760862.9,
+        "pct_within_5min": 85.53,
+        "population_within_10min": 11111322.3,
+        "pct_within_10min": 97.36,
+        "population_within_15min": 11232873.4,
+        "pct_within_15min": 98.43,
+        "population_unreachable_within_15min": 179309.2,
+        "pct_unreachable_within_15min": 1.57,
+        "denominator_population": 11412182.6
+      }
+    },
+    "cycling_fixed_transit": {
+      "label": "cycling_fixed_transit",
+      "total_population": 15455565.5,
+      "RAW": {
+        "population_within_5min": 7249879.2,
+        "pct_within_5min": 46.91,
+        "population_within_10min": 11066626.3,
+        "pct_within_10min": 71.6,
+        "population_within_15min": 12387893.3,
+        "pct_within_15min": 80.15,
+        "population_unreachable_within_15min": 3067672.1,
+        "pct_unreachable_within_15min": 19.85,
+        "denominator_population": 15455565.5
+      },
+      "QUALITY_AWARE_RELIABLE_ONLY": {
+        "population_within_5min": 6184011.0,
+        "pct_within_5min": 54.19,
+        "population_within_10min": 8853375.0,
+        "pct_within_10min": 77.58,
+        "population_within_15min": 9647339.7,
+        "pct_within_15min": 84.54,
+        "population_unreachable_within_15min": 1764842.9,
+        "pct_unreachable_within_15min": 15.46,
+        "denominator_population": 11412182.6
+      }
+    },
+    "gap_class_population_raw": {
+      "BOTH_TRANSIT_GAPS": 1227855.9,
+      "FIXED_GUIDEWAY_GAP": 1777903.4,
+      "GENERAL_TRANSIT_GAP": 490878.1,
+      "NO_TRANSIT_GAP": 11958927.9
+    },
+    "gap_class_population_reliable_only": {
+      "BOTH_TRANSIT_GAPS": 157543.9,
+      "FIXED_GUIDEWAY_GAP": 1563475.1,
+      "GENERAL_TRANSIT_GAP": 103380.6,
+      "NO_TRANSIT_GAP": 9587783.0
+    },
+    "cycle_only_transit_gain_by_system_and_threshold": [
+      {
+        "system": "GENERAL",
+        "threshold_min": 5,
+        "access_class": "CYCLE_ONLY_TRANSIT_GAIN",
+        "n_cells": 2700,
+        "pct_cells": 12.1,
+        "population": 5467286.7,
+        "pct_population": 35.37
+      },
+      {
+        "system": "FIXED",
+        "threshold_min": 5,
+        "access_class": "CYCLE_ONLY_TRANSIT_GAIN",
+        "n_cells": 1181,
+        "pct_cells": 5.29,
+        "population": 5456954.8,
+        "pct_population": 35.31
+      },
+      {
+        "system": "GENERAL",
+        "threshold_min": 10,
+        "access_class": "CYCLE_ONLY_TRANSIT_GAIN",
+        "n_cells": 3369,
+        "pct_cells": 15.09,
+        "population": 4394148.8,
+        "pct_population": 28.43
+      },
+      {
+        "system": "FIXED",
+        "threshold_min": 10,
+        "access_class": "CYCLE_ONLY_TRANSIT_GAIN",
+        "n_cells": 1638,
+        "pct_cells": 7.34,
+        "population": 6125219.8,
+        "pct_population": 39.63
+      },
+      {
+        "system": "GENERAL",
+        "threshold_min": 15,
+        "access_class": "CYCLE_ONLY_TRANSIT_GAIN",
+        "n_cells": 3663,
+        "pct_cells": 16.41,
+        "population": 3025322.3,
+        "pct_population": 19.57
+      },
+      {
+        "system": "FIXED",
+        "threshold_min": 15,
+        "access_class": "CYCLE_ONLY_TRANSIT_GAIN",
+        "n_cells": 1661,
+        "pct_cells": 7.44,
+        "population": 4801394.5,
+        "pct_population": 31.07
+      }
+    ]
+  },
+  "n_implausibility_flags": 0,
+  "output_paths": [
+    "analysis/applications/first_last_mile_transit/cycling_fixed_transit_accessibility.parquet",
+    "analysis/applications/first_last_mile_transit/cycling_general_transit_accessibility.parquet",
+    "analysis/applications/first_last_mile_transit/district_transit_accessibility_summary.csv",
+    "analysis/applications/first_last_mile_transit/ebike_transit_gain_overlap.json",
+    "analysis/applications/first_last_mile_transit/fixed_transit_mode_comparison.parquet",
+    "analysis/applications/first_last_mile_transit/general_transit_mode_comparison.parquet",
+    "analysis/applications/first_last_mile_transit/phase10_sanity_checks.json",
+    "analysis/applications/first_last_mile_transit/phase9_phase10_cycling_gain_overlap.json",
+    "analysis/applications/first_last_mile_transit/population_transit_accessibility_summary.json",
+    "analysis/applications/first_last_mile_transit/transit_access_point_dedup.csv",
+    "analysis/applications/first_last_mile_transit/transit_access_point_dedup.parquet",
+    "analysis/applications/first_last_mile_transit/transit_access_point_summary.csv",
+    "analysis/applications/first_last_mile_transit/transit_accessibility_gain_5_10_15.csv",
+    "analysis/applications/first_last_mile_transit/transit_cycling_anchors.parquet",
+    "analysis/applications/first_last_mile_transit/transit_district_quality.csv",
+    "analysis/applications/first_last_mile_transit/transit_gap_diagnostics.parquet",
+    "analysis/applications/first_last_mile_transit/transit_source_audit.json",
+    "analysis/applications/first_last_mile_transit/transit_time_savings_summary.csv",
+    "analysis/applications/first_last_mile_transit/transit_walking_anchors.parquet",
+    "analysis/applications/first_last_mile_transit/typology_transit_accessibility_summary.csv",
+    "analysis/applications/first_last_mile_transit/walking_fixed_transit_accessibility.parquet",
+    "analysis/applications/first_last_mile_transit/walking_general_transit_accessibility.parquet"
+  ],
+  "stop_condition": "First/last-mile transit ACCESS ONLY. Did NOT proceed to full multimodal routing, timetable-based transit journey accessibility, GTFS replacement, terrain-adjusted cycling, accessibility-gap synthesis, equity modeling, predictive ML, dashboard, or visualization styling."
+}

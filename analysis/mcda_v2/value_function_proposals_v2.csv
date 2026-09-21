@@ -1,0 +1,12 @@
+feature_name,value_function_type,evidence_status,notes
+intersection_density_km2,Saturating benefit (diminishing returns),ASSUMPTION-DRIVEN,Benefit direction is evidence-backed (permeability literature); the SATURATING shape (vs. pure monotonic) is an assumption guarding against rewarding extreme values that may reflect messy/over-segmented digitization rather than real added permeability.
+local_road_length_m,Saturating benefit,ASSUMPTION-DRIVEN,Same rationale as intersection_density_km2.
+cycle_accessible_road_density_km_per_km2,Monotonic benefit,EVIDENCE-BACKED (direct definitional relevance),"Directly counts legally cycle-accessible network; monotonic benefit is the most defensible default, still capped for reasonableness like other density criteria in this project."
+mean_absolute_road_grade_pct,"Piecewise/threshold cost, reusing frozen pilot slope thresholds (comfortable <=3%, floor by 10%) adapted to grade",ASSUMPTION-DRIVEN (thresholds reused from a different physical quantity),"Missing (NaN, roadless cells) MUST be handled by an explicit missing-data-safe rule at scoring time (e.g. fall back to raster slope alone), never imputed as 0 or as the worst/best case."
+pct_road_length_grade_gt_8pct,Monotonic cost,ASSUMPTION-DRIVEN,Same missing-data caveat as mean_absolute_road_grade_pct.
+green_area_ratio,Contextual / no score (or inverted-U IF a recreational-cycling-opportunity sub-question is later posed),ASSUMPTION-DRIVEN / UNRESOLVED,No monotonic 'more green = better' assumption made; not scored in either Conservative or Expanded architecture below.
+road_density_km_per_km2,Contextual / no score,N/A,Class-conflation problem -- see criteria_catalog_v2_audit.csv.
+major_road_length_m,Contextual / no score,N/A,Ambiguous barrier-vs-connectivity direction -- see audit.
+residential_share_conditional,Contextual / no score (excluded),N/A,Preprocessing artifact + coverage confound -- see audit.
+industrial_share_conditional,Contextual / no score (excluded),N/A,Preprocessing artifact + coverage confound -- see audit.
+landuse_has_mapped_evidence,Contextual / no score (excluded),N/A,"Data-coverage diagnostic, not a real-world condition."

@@ -1,0 +1,15 @@
+group,n_cells,feature,median,q1,q3,citywide_percentile_of_median
+high_opportunity_lower_readiness,1734,population_density_calibrated_km2,11760.136,3512.898,21902.668,91.1
+high_opportunity_lower_readiness,1734,poi_density_km2,44.55,20.0,97.367,92.6
+high_opportunity_lower_readiness,1734,poi_entropy,1.785,1.0,2.236,93.5
+high_opportunity_lower_readiness,1734,retail_count,1.0,0.0,6.0,92.2
+high_opportunity_lower_readiness,1734,leisure_count,3.0,1.0,6.0,91.2
+high_opportunity_lower_readiness,1734,has_buildings,1.0,1.0,1.0,82.6
+high_opportunity_lower_readiness,1734,building_coverage_ratio,0.158,0.057,0.275,91.4
+high_opportunity_lower_readiness,1734,distance_to_nearest_transit_m,393.097,172.924,1334.139,12.2
+high_opportunity_lower_readiness,1734,transit_stops_within_500m,1.0,0.0,7.0,86.5
+high_opportunity_lower_readiness,1734,bus_departures_per_day,0.0,0.0,78.0,45.9
+high_opportunity_lower_readiness,1734,cycle_infrastructure_density_km_per_km2_ibb_only,0.0,0.0,0.0,48.0
+high_opportunity_lower_readiness,1734,distance_to_nearest_bicycle_parking_m,1967.818,1008.531,5201.961,12.7
+high_opportunity_lower_readiness,1734,distance_to_nearest_micromobility_parking_m,6661.182,2655.772,15520.89,15.8
+high_opportunity_lower_readiness,1734,mean_slope_deg,5.422,4.146,7.435,39.6

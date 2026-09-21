@@ -1,0 +1,64 @@
+{
+  "A_monotonicity": {
+    "total_violations": 0,
+    "status": "PASS"
+  },
+  "B_mode_plausibility": {
+    "general": {
+      "walk_pct_cells_10min": 16.42,
+      "cycle_pct_cells_10min": 31.23,
+      "cycling_generally_better": true,
+      "n_cells_cycling_worse_at_15min": 51
+    },
+    "fixed": {
+      "walk_pct_cells_10min": 4.41,
+      "cycle_pct_cells_10min": 11.7,
+      "cycling_generally_better": true,
+      "n_cells_cycling_worse_at_15min": 17
+    }
+  },
+  "C_spatial_plausibility": {
+    "core_districts": [
+      "Fatih",
+      "Beyoğlu",
+      "Beşiktaş",
+      "Kadıköy",
+      "Şişli",
+      "Üsküdar"
+    ],
+    "periphery_districts": [
+      "Çatalca",
+      "Silivri",
+      "Şile",
+      "Arnavutköy"
+    ],
+    "core_median_walk_general_nearest_min": 5.62,
+    "periphery_median_walk_general_nearest_min": 8.16,
+    "core_shorter_than_periphery": true,
+    "caveat": "Periphery median is computed only over cells WITH a reachable stop -- Silivri/Catalca cells with NO reachable stop at all (NaN) are excluded from this median, not counted as 0 or infinite."
+  },
+  "D_feed_gap_sensitivity": {
+    "n_cells_excluded_non_good_coverage": 16507,
+    "pct_cells_excluded": 73.95,
+    "walk_general_10min_pct_ALL_DISTRICTS": 16.42,
+    "walk_general_10min_pct_GOOD_COVERAGE_ONLY": 47.26,
+    "cycle_general_10min_pct_ALL_DISTRICTS": 31.23,
+    "cycle_general_10min_pct_GOOD_COVERAGE_ONLY": 78.69,
+    "interpretation": "Citywide cell-based percentages shift substantially when non-GOOD_COVERAGE districts (including Silivri/Catalca's 8,103 cells with zero mapped stops) are excluded -- confirms the headline citywide cell-based rate is heavily influenced by feed-coverage gaps, not purely by network/accessibility performance. Population-weighted figures in population_transit_accessibility_summary.json's QUALITY_AWARE_RELIABLE_ONLY block are the more defensible citywide summary for this reason."
+  },
+  "E_cross_water_artifacts": {
+    "adalar_n_cells": 72,
+    "adalar_pct_walk_general_10min": 88.89,
+    "adalar_pct_cycle_general_10min": 30.56,
+    "adalar_pct_cycle_fixed_15min": 30.56,
+    "interpretation": "Adalar's cycling access figures reflect cross-water snapping to the mainland cycling mega-component (documented Phase 9 limitation, unchanged here) -- NOT real on-island cycling routes. Adalar's relatively high WALKING general-transit access (ferry docks are genuinely local) is real; its cycling figures are not.",
+    "ferry_only_access_cells": 791
+  },
+  "F_stop_density_artifacts": {
+    "n_distinct_walking_nodes_used": 5022,
+    "n_access_points_ok": 5460,
+    "max_access_points_sharing_one_node": 4,
+    "pct_nodes_with_gt_5_access_points": 0.0,
+    "interpretation": "Some network nodes serve as the nearest anchor for multiple access points (e.g. opposite-direction bus stops snapping to the same intersection node) -- this is expected given real-world stop clustering at intersections/interchanges, not a dedup failure (the access points themselves are already deduplicated in Section 3; this is about shared NEAREST-NODE assignment, a separate, expected phenomenon). reachable_count_Xmin fields in the accessibility tables count ACCESS POINTS, not unique nodes, so this does not silently deflate counts, but interpret raw reachable_count as 'access points', not 'unique locations'."
+  }
+}

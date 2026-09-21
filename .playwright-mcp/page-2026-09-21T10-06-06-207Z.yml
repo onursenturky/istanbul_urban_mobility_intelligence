@@ -1,0 +1,122 @@
+- generic [active] [ref=f80e1]:
+  - generic [ref=f80e2]:
+    - complementary [ref=f80e3]:
+      - link "Istanbul Urban Mobility Intelligence" [ref=f80e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f80e5]:
+          - generic [ref=f80e6]: Istanbul
+          - generic [ref=f80e7]: Urban Mobility Intelligence
+      - navigation "Analysis modules" [ref=f80e8]:
+        - list [ref=f80e9]:
+          - listitem [ref=f80e10]:
+            - link "Overview" [ref=f80e11] [cursor=pointer]:
+              - /url: /overview
+          - listitem [ref=f80e12]:
+            - link "Urban Typology" [ref=f80e13] [cursor=pointer]:
+              - /url: /typology
+          - listitem [ref=f80e14]:
+            - link "15-Minute Istanbul" [ref=f80e15] [cursor=pointer]:
+              - /url: /fifteen-minute
+          - listitem [ref=f80e16]:
+            - link "Cycling Gain" [ref=f80e17] [cursor=pointer]:
+              - /url: /cycling-gain
+          - listitem [ref=f80e18]:
+            - link "Transit Connection" [ref=f80e19] [cursor=pointer]:
+              - /url: /transit
+          - listitem [ref=f80e20]:
+            - link "Accessibility Gaps" [ref=f80e21] [cursor=pointer]:
+              - /url: /gaps
+          - listitem [ref=f80e22]:
+            - link "E-bike" [ref=f80e23] [cursor=pointer]:
+              - /url: /ebike
+          - listitem [ref=f80e24]:
+            - link "Data & Methods" [ref=f80e25] [cursor=pointer]:
+              - /url: /methods
+      - paragraph [ref=f80e27]: An O3 Sustainability spatial intelligence project.
+    - main [ref=f80e28]:
+      - generic [ref=f80e29]:
+        - generic [ref=f80e31]:
+          - heading "Transit Connection" [level=1] [ref=f80e32]
+          - paragraph [ref=f80e33]:
+            - text: Can cycling bring transit closer?
+            - button "How this works" [ref=f80e35] [cursor=pointer]: i
+        - generic [ref=f80e36]:
+          - generic [ref=f80e37]:
+            - generic [ref=f80e38]:
+              - application "Istanbul accessibility map" [ref=f80e39]:
+                - region "Map" [ref=f80e40]
+                - generic [ref=f80e41]:
+                  - button "Zoom in" [ref=f80e42] [cursor=pointer]
+                  - button "Zoom out" [ref=f80e44] [cursor=pointer]
+              - button "Reset view" [ref=f80e46] [cursor=pointer]
+              - generic [ref=f80e49]:
+                - paragraph [ref=f80e50]: Loading the Istanbul accessibility map
+                - paragraph [ref=f80e51]: Preparing 22,322 spatial cells…
+            - tablist "Map layer" [ref=f80e53]:
+              - tab "Access gap" [selected] [ref=f80e54] [cursor=pointer]
+              - tab "Cycling gain" [ref=f80e55] [cursor=pointer]
+            - generic [ref=f80e57]:
+              - generic [ref=f80e58]: District
+              - combobox "District" [ref=f80e59]:
+                - option "All districts" [selected]
+                - option "Adalar"
+                - option "Arnavutköy"
+                - option "Ataşehir"
+                - option "Avcılar"
+                - option "Bağcılar"
+                - option "Bahçelievler"
+                - option "Bakırköy"
+                - option "Başakşehir"
+                - option "Bayrampaşa"
+                - option "Beşiktaş"
+                - option "Beykoz"
+                - option "Beylikdüzü"
+                - option "Beyoğlu"
+                - option "Büyükçekmece"
+                - option "Çatalca"
+                - option "Çekmeköy"
+                - option "Esenler"
+                - option "Esenyurt"
+                - option "Eyüpsultan"
+                - option "Fatih"
+                - option "Gaziosmanpaşa"
+                - option "Güngören"
+                - option "Kadıköy"
+                - option "Kâğıthane"
+                - option "Kartal"
+                - option "Küçükçekmece"
+                - option "Maltepe"
+                - option "Pendik"
+                - option "Sancaktepe"
+                - option "Sarıyer"
+                - option "Silivri"
+                - option "Sultanbeyli"
+                - option "Sultangazi"
+                - option "Şile"
+                - option "Şişli"
+                - option "Tuzla"
+                - option "Ümraniye"
+                - option "Üsküdar"
+                - option "Zeytinburnu"
+            - generic [ref=f80e61]:
+              - generic [ref=f80e62]: Transit access gap (general + rail & metrobüs access)
+              - list [ref=f80e63]:
+                - listitem [ref=f80e64]:
+                  - generic [ref=f80e66]: No mapped transit-access gap
+                - listitem [ref=f80e67]:
+                  - generic [ref=f80e69]: General transit access gap
+                - listitem [ref=f80e70]:
+                  - generic [ref=f80e72]: Fixed-guideway access gap
+                - listitem [ref=f80e73]:
+                  - generic [ref=f80e75]: General + fixed-guideway gap
+                - listitem [ref=f80e76]:
+                  - generic [ref=f80e78]: Data insufficient for transit interpretation
+                - listitem [ref=f80e79]:
+                  - generic [ref=f80e81]: Network evidence uncertain
+          - complementary [ref=f80e82]:
+            - generic [ref=f80e83]:
+              - generic [ref=f80e84]:
+                - heading "Can cycling bring transit closer?" [level=2] [ref=f80e85]
+                - paragraph [ref=f80e86]: Compare walking and cycling access to public transport.
+              - paragraph [ref=f80e87]: Click any cell on the map to see its details.
+  - alert [ref=f80e88]

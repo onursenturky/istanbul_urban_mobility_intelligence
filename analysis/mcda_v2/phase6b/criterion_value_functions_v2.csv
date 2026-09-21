@@ -1,0 +1,22 @@
+feature_name,dimension,value_function,evidence_status
+poi_density_km2,Demand/Activity,percentile_rank ** 0.5 (saturating benefit),ASSUMPTION-DRIVEN (functional shape); direction evidence-backed
+retail_count,Demand/Activity,percentile_rank ** 0.5 (saturating benefit),ASSUMPTION-DRIVEN (functional shape); direction evidence-backed
+leisure_count,Demand/Activity,percentile_rank ** 0.5 (saturating benefit),ASSUMPTION-DRIVEN (functional shape); direction evidence-backed
+population_density_calibrated_km2,Demand/Activity,percentile_rank ** 0.5 (saturating benefit),ASSUMPTION-DRIVEN (functional shape); direction evidence-backed
+poi_entropy,Demand/Activity,percentile_rank (linear benefit),ASSUMPTION-DRIVEN
+distance_to_nearest_transit_m,Transit Accessibility,(1 - percentile_rank(distance)) ** 0.5 -- closer=better,ASSUMPTION-DRIVEN (functional shape)
+transit_stops_within_500m,Transit Accessibility,percentile_rank ** 0.5 (saturating benefit),ASSUMPTION-DRIVEN
+bus_departures_per_day,Transit Accessibility,percentile_rank ** 0.5 (saturating benefit),ASSUMPTION-DRIVEN
+fixed_guideway_stations_within_1000m,Transit Accessibility,percentile_rank ** 0.5 (saturating benefit),ASSUMPTION-DRIVEN
+distance_to_nearest_cycle_infrastructure_m_ibb_only,Cycling Readiness,(1 - percentile_rank(distance)) ** 0.5,ASSUMPTION-DRIVEN
+distance_to_nearest_bicycle_parking_m,Cycling Readiness,(1 - percentile_rank(distance)) ** 0.5,ASSUMPTION-DRIVEN
+distance_to_nearest_micromobility_parking_m,Cycling Readiness,(1 - percentile_rank(distance)) ** 0.5,ASSUMPTION-DRIVEN
+protected_cycleway_density_km_per_km2_ibb_only,Cycling Readiness,percentile_rank ** 0.5,ASSUMPTION-DRIVEN
+cycle_infrastructure_density_km_per_km2_ibb_only,Cycling Readiness,"percentile_rank ** 0.5 (PRIMARY infrastructure representation, per Phase 6A-V2)",ASSUMPTION-DRIVEN (shape); representation choice evidence-backed (see Phase 6A-V2 audit)
+intersection_density_km2,Street Connectivity,percentile_rank ** 0.5 (saturating benefit),ASSUMPTION-DRIVEN (shape); direction evidence-backed (Phase 6A-V2)
+local_road_length_m,Street Connectivity,percentile_rank ** 0.5 (saturating benefit),ASSUMPTION-DRIVEN (shape); direction evidence-backed
+cycle_accessible_road_density_km_per_km2,Street Connectivity,"percentile_rank (linear benefit, per Phase 6A-V2 'monotonic benefit' proposal)",EVIDENCE-BACKED (direct definitional relevance)
+mean_slope_deg,Physical Feasibility,"piecewise: 1.0 <=3.0deg, linear decline to floor 0.5 by 10.0deg (frozen pilot thresholds)","ASSUMPTION-DRIVEN (thresholds reused from pilot, not re-derived)"
+pct_area_slope_6_10deg,Physical Feasibility,"share-cost, floor 0.5 at 100% share",ASSUMPTION-DRIVEN
+pct_area_slope_3_6deg,Physical Feasibility,"share-cost, floor 0.5 at 100% share",ASSUMPTION-DRIVEN
+mean_absolute_road_grade_pct,Physical Feasibility,"piecewise: 1.0 <=3.0%, linear decline to floor 0.5 by 10.0% (grade thresholds reused from the pilot's raster-slope convention, NOT independently derived for road grade)",ASSUMPTION-DRIVEN (thresholds AND their reuse across two different physical quantities are both assumptions)

@@ -1,0 +1,38 @@
+{
+  "n_retained_criteria": 24,
+  "dimensions": [
+    "Demand/Activity Potential",
+    "Urban Form",
+    "Mobility/Transit Context",
+    "Cycling Readiness",
+    "Terrain Feasibility",
+    "Cycling Infrastructure Gap"
+  ],
+  "weighting_scenarios": [
+    "balanced_equal_dimensions",
+    "demand_oriented",
+    "infrastructure_readiness_oriented",
+    "first_last_mile_transit_integration_oriented"
+  ],
+  "transit_variants": [
+    "T1_integration (diminishing-returns benefit)",
+    "T2_substitution (inverted-U, peak at rank 0.3/0.7, floor 0.6)"
+  ],
+  "demand_variants": [
+    "saturating (percentile_rank**0.5)",
+    "target_range (rising/flat/declining, breakpoints p50/p85, floor 0.7)"
+  ],
+  "opportunity_formula": "demand_potential ** alpha * infrastructure_gap ** (1 - alpha), alpha = scenario's Demand weight / (Demand weight + Cycling Readiness weight) -- multiplicative, bounded [0,1], zero demand forces zero opportunity regardless of gap size.",
+  "readiness_formula": "weighted sum of {Urban Form, Transit(T1|T2), Cycling Readiness, Terrain}, weights renormalized from each scenario's 5-dimension vector after excluding Demand.",
+  "readiness_and_opportunity_never_combined": true,
+  "no_scenario_selected_as_preferred": true,
+  "no_districts_ranked": true,
+  "limitations": [
+    "No observed shared e-bike demand/deployment target exists anywhere in this project -- all scores are scenario-based decision-support indicators, not predicted demand or validated outcomes.",
+    "No citywide road-network dimension (PARTIAL, 0/39 districts).",
+    "No complete citywide land-use/green-space dimension (PARTIAL, 22/39 districts).",
+    "Population reference year (2020) predates most other sources (OSM/GTFS 2026).",
+    "main_gtfs (metro/tram/rail/ferry) infrastructure snapshot is from 2023-2024.",
+    "Cycling infrastructure/parking criteria are İBB-only (OSM complement excluded)."
+  ]
+}

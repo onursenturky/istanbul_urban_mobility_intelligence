@@ -1,0 +1,11 @@
+{
+  "completion_decision": "B_PRESENTATION_PACKAGE_VALIDATED_WITH_DOCUMENTED_LIMITATIONS",
+  "all_qa_pass": true,
+  "n_output_files": 21,
+  "n_kpis_registered": 29,
+  "n_map_layers": 12,
+  "n_charts": 8,
+  "n_claims": 8,
+  "n_case_studies": 9,
+  "n_district_profiles": 39
+}

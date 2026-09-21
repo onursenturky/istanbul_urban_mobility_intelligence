@@ -1,0 +1,85 @@
+{
+  "complete_vs_incomplete_cell_comparison": [
+    {
+      "COMPLETE_15MIN_ACCESS": false,
+      "n_cells": 19053,
+      "mean_pop_density": 592.23,
+      "median_pop_density": 0.0,
+      "total_population": 2707036.93,
+      "mean_building_coverage": 0.01,
+      "mean_building_count": 6.31
+    },
+    {
+      "COMPLETE_15MIN_ACCESS": true,
+      "n_cells": 3269,
+      "mean_pop_density": 15883.09,
+      "median_pop_density": 13304.76,
+      "total_population": 12748528.53,
+      "mean_building_coverage": 0.18,
+      "mean_building_count": 190.39
+    }
+  ],
+  "density_band_concentration": {
+    "top_10pct_densest_cells": {
+      "n_cells": 2232,
+      "pct_of_citywide_population": 79.63,
+      "pct_of_citywide_complete_access_population_located_here": 88.53,
+      "pct_of_this_bands_own_population_with_complete_access": 91.7
+    },
+    "top_20pct_densest_cells": {
+      "n_cells": 4464,
+      "pct_of_citywide_population": 96.5,
+      "pct_of_citywide_complete_access_population_located_here": 99.65,
+      "pct_of_this_bands_own_population_with_complete_access": 85.18
+    },
+    "top_30pct_densest_cells": {
+      "n_cells": 6696,
+      "pct_of_citywide_population": 99.56,
+      "pct_of_citywide_complete_access_population_located_here": 99.99,
+      "pct_of_this_bands_own_population_with_complete_access": 82.84
+    }
+  },
+  "typology_cross_reference": [
+    {
+      "cluster": 0,
+      "n_cells": 6113,
+      "total_population": 66003.86,
+      "mean_density": 45.25,
+      "pct_complete_access_cells": 0.46,
+      "pct_of_citywide_population": 0.43
+    },
+    {
+      "cluster": 1,
+      "n_cells": 2914,
+      "total_population": 9310604.94,
+      "mean_density": 13092.39,
+      "pct_complete_access_cells": 63.56,
+      "pct_of_citywide_population": 60.24
+    },
+    {
+      "cluster": 2,
+      "n_cells": 8621,
+      "total_population": 1096987.49,
+      "mean_density": 532.16,
+      "pct_complete_access_cells": 2.87,
+      "pct_of_citywide_population": 7.1
+    },
+    {
+      "cluster": 3,
+      "n_cells": 3140,
+      "total_population": 38708.3,
+      "mean_density": 53.97,
+      "pct_complete_access_cells": 0.67,
+      "pct_of_citywide_population": 0.25
+    },
+    {
+      "cluster": 4,
+      "n_cells": 1534,
+      "total_population": 4943260.87,
+      "mean_density": 13051.21,
+      "pct_complete_access_cells": 73.08,
+      "pct_of_citywide_population": 31.98
+    }
+  ],
+  "conclusion": "The top 10% densest cells alone hold 79.63% of citywide population; the top 30% hold 99.56%. Istanbul's population is heavily concentrated in a minority of cells by area/count, while most grid cells (by simple count) are low-density periphery -- this is the primary, quantified explanation for why a small % of CELLS having complete access corresponds to a much larger % of POPULATION having it. This is a property of the city's population distribution, not an artifact of the accessibility model, and is independently corroborated by the V2 typology cross-reference (the two dense/transit-rich clusters hold the large majority of population and complete-access share)."
+}

@@ -1,0 +1,147 @@
+- generic [active] [ref=f7e1]:
+  - generic [ref=f7e2]:
+    - navigation [ref=f7e3]:
+      - generic [ref=f7e4]:
+        - link "Istanbul Urban Mobility Intelligence, home" [ref=f7e5] [cursor=pointer]:
+          - /url: /
+          - generic [ref=f7e7]: Istanbul / Urban Mobility Intelligence
+        - list [ref=f7e8]:
+          - listitem [ref=f7e9]:
+            - link "Overview" [ref=f7e10] [cursor=pointer]:
+              - /url: /overview
+          - listitem [ref=f7e11]:
+            - link "Urban Typology" [ref=f7e12] [cursor=pointer]:
+              - /url: /typology
+          - listitem [ref=f7e13]:
+            - link "15-Minute Istanbul" [ref=f7e14] [cursor=pointer]:
+              - /url: /fifteen-minute
+          - listitem [ref=f7e15]:
+            - link "Cycling Gain" [ref=f7e16] [cursor=pointer]:
+              - /url: /cycling-gain
+          - listitem [ref=f7e17]:
+            - link "Transit Connection" [ref=f7e18] [cursor=pointer]:
+              - /url: /transit
+          - listitem [ref=f7e19]:
+            - link "Accessibility Gaps" [ref=f7e20] [cursor=pointer]:
+              - /url: /gaps
+          - listitem [ref=f7e21]:
+            - link "E-bike" [ref=f7e22] [cursor=pointer]:
+              - /url: /ebike
+          - listitem [ref=f7e23]:
+            - link "Data & Methods" [ref=f7e24] [cursor=pointer]:
+              - /url: /methods
+    - main [ref=f7e25]:
+      - generic [ref=f7e26]:
+        - generic [ref=f7e27]:
+          - heading "Cycling Gain" [level=1] [ref=f7e28]
+          - paragraph [ref=f7e29]: What changes when cycling becomes part of the accessibility equation?
+        - generic [ref=f7e30]:
+          - generic [ref=f7e31]:
+            - generic [ref=f7e32]: Complete cycling access
+            - generic [ref=f7e33]: 95.57%
+            - paragraph [ref=f7e34]: Approximately 95.6% of the calibrated 2020 population has complete 15-minute potential cycling access to the three required everyday needs.
+            - group [ref=f7e35]:
+              - generic "methodology" [ref=f7e36] [cursor=pointer]
+          - generic [ref=f7e37]:
+            - generic [ref=f7e38]: Cycling accessibility gain
+            - generic [ref=f7e39]: 2.10M
+            - paragraph [ref=f7e40]: Cycling potentially closes the mapped everyday-needs walking gap for approximately 2.10 million people in the calibrated population surface.
+            - group [ref=f7e41]:
+              - generic "methodology" [ref=f7e42] [cursor=pointer]
+        - generic [ref=f7e44]:
+          - generic [ref=f7e45]:
+            - tablist "Map layer" [ref=f7e46]:
+              - tab "Accessibility change" [selected] [ref=f7e47] [cursor=pointer]
+            - generic [ref=f7e49]:
+              - generic [ref=f7e50]: District
+              - combobox "District" [ref=f7e51]:
+                - option "All districts" [selected]
+                - option "Adalar"
+                - option "Arnavutköy"
+                - option "Ataşehir"
+                - option "Avcılar"
+                - option "Bağcılar"
+                - option "Bahçelievler"
+                - option "Bakırköy"
+                - option "Başakşehir"
+                - option "Bayrampaşa"
+                - option "Beşiktaş"
+                - option "Beykoz"
+                - option "Beylikdüzü"
+                - option "Beyoğlu"
+                - option "Büyükçekmece"
+                - option "Çatalca"
+                - option "Çekmeköy"
+                - option "Esenler"
+                - option "Esenyurt"
+                - option "Eyüpsultan"
+                - option "Fatih"
+                - option "Gaziosmanpaşa"
+                - option "Güngören"
+                - option "Kadıköy"
+                - option "Kâğıthane"
+                - option "Kartal"
+                - option "Küçükçekmece"
+                - option "Maltepe"
+                - option "Pendik"
+                - option "Sancaktepe"
+                - option "Sarıyer"
+                - option "Silivri"
+                - option "Sultanbeyli"
+                - option "Sultangazi"
+                - option "Şile"
+                - option "Şişli"
+                - option "Tuzla"
+                - option "Ümraniye"
+                - option "Üsküdar"
+                - option "Zeytinburnu"
+          - generic [ref=f7e52]:
+            - generic [ref=f7e53]:
+              - application "Istanbul accessibility map" [ref=f7e54]:
+                - region "Map" [ref=f7e55]
+                - generic [ref=f7e56]:
+                  - button "Zoom in" [ref=f7e57] [cursor=pointer]
+                  - button "Zoom out" [ref=f7e59] [cursor=pointer]
+                - region "Map" [ref=f7e61]
+                - generic [ref=f7e62]:
+                  - button "Zoom in" [ref=f7e63] [cursor=pointer]
+                  - button "Zoom out" [ref=f7e65] [cursor=pointer]
+              - button "Reset view" [ref=f7e67] [cursor=pointer]
+              - generic [ref=f7e68]: Loading map…
+            - generic [ref=f7e70]:
+              - generic [ref=f7e71]: Walking → cycling accessibility change
+              - list [ref=f7e72]:
+                - listitem [ref=f7e73]:
+                  - generic [ref=f7e75]: Walking access already complete
+                - listitem [ref=f7e76]:
+                  - generic [ref=f7e78]: Cycling closes the gap
+                - listitem [ref=f7e79]:
+                  - generic [ref=f7e81]: Cycling partially closes the gap
+                - listitem [ref=f7e82]:
+                  - generic [ref=f7e84]: Gap remains
+                - listitem [ref=f7e85]:
+                  - generic [ref=f7e87]: Evidence uncertain
+        - generic [ref=f7e88]:
+          - text: Reading this map
+          - heading "Five accessibility-change classes" [level=3] [ref=f7e89]
+          - generic [ref=f7e90]:
+            - list [ref=f7e91]:
+              - listitem [ref=f7e92]:
+                - generic [ref=f7e94]: Walking access already complete
+              - listitem [ref=f7e95]:
+                - generic [ref=f7e97]: Cycling closes the gap
+              - listitem [ref=f7e98]:
+                - generic [ref=f7e100]: Cycling closes a transit-access gap
+              - listitem [ref=f7e101]:
+                - generic [ref=f7e103]: Cycling closes both gaps
+              - listitem [ref=f7e104]:
+                - generic [ref=f7e106]: Cycling partially closes the gap
+              - listitem [ref=f7e107]:
+                - generic [ref=f7e109]: Gap remains
+              - listitem [ref=f7e110]:
+                - generic [ref=f7e112]: Evidence uncertain
+            - paragraph [ref=f7e113]: This is a descriptive network measurement of modeled potential accessibility -- not a validated mode-choice prediction or a claim about how people will actually travel.
+    - contentinfo [ref=f7e114]:
+      - generic [ref=f7e115]: Istanbul Urban Mobility Intelligence — an O3 Sustainability spatial intelligence project.
+      - generic [ref=f7e116]: Modeled network accessibility. Not observed travel behavior. See Data & Methods.
+  - alert [ref=f7e117]

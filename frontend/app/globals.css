@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* ---- O3 Sustainability design tokens (single source of truth) ---- */
+  --o3-bg-primary: #194b0a;
+  --o3-bg-deep: #113306;
+
+  --o3-accent: #b2f093;
+  --o3-green: #6baf82;
+
+  --o3-text-primary: #f1ffe0;
+  --o3-text-secondary: #c5dfc9;
+
+  --o3-card: rgba(255, 255, 255, 0.06);
+  --o3-card-hover: rgba(255, 255, 255, 0.08);
+
+  --o3-card-border: rgba(197, 223, 201, 0.15);
+  --o3-card-border-strong: rgba(197, 223, 201, 0.2);
+
+  --o3-highlight: #f1ffe0;
+  --o3-highlight-text: #113306;
+
+  /* Analytical semantic colors -- deliberately NOT all shades of the same
+     green (data readability over brand purity, per Phase 13 spec). */
+  --sem-positive: #6baf82; /* complete / already-sufficient accessibility */
+  --sem-gain: #b2f093; /* cycling closes the gap -- the flagship positive signal */
+  --sem-partial: #e0c168; /* partial gain -- warm-neutral, visually distinct from gain/gap */
+  --sem-gap: #e0785a; /* remaining accessibility gap -- warm contrasting tone */
+  --sem-uncertain: #8c9a91; /* uncertainty -- muted desaturated neutral */
+  --sem-transit-limit: #7d8bb0; /* transit-data limitation -- distinct muted blue-gray */
+  --sem-known-limit: #a98cc7; /* known network limitation (e.g. Adalar) -- separate recognizable tone */
+}
+
+html,
+body {
+  background: var(--o3-bg-deep);
+  color: var(--o3-text-primary);
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-outfit), "Outfit", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--o3-accent);
+  color: var(--o3-highlight-text);
+}
+
+:focus-visible {
+  outline: 2px solid var(--o3-accent);
+  outline-offset: 2px;
+}
+
+/* MapLibre popup / control dark-theme overrides so the map UI belongs to the product */
+.maplibregl-popup-content {
+  background: var(--o3-bg-primary) !important;
+  color: var(--o3-text-primary) !important;
+  border: 1px solid var(--o3-card-border-strong);
+  border-radius: 10px;
+  font-family: var(--font-outfit), sans-serif;
+}
+.maplibregl-popup-tip {
+  border-top-color: var(--o3-bg-primary) !important;
+  border-bottom-color: var(--o3-bg-primary) !important;
+}
+.maplibregl-ctrl-attrib {
+  background: rgba(17, 51, 6, 0.7) !important;
+}
+.maplibregl-ctrl-attrib a {
+  color: var(--o3-text-secondary) !important;
+}
+.maplibregl-ctrl-group {
+  background: var(--o3-bg-primary) !important;
+  border: 1px solid var(--o3-card-border);
+}
+.maplibregl-ctrl-group button {
+  filter: invert(1) brightness(1.6);
+}
+
+.o3-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.o3-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--o3-card-border-strong);
+  border-radius: 4px;
+}

@@ -1,0 +1,21 @@
+scenario,dimension,weight
+balanced_equal_dimensions,Demand/Activity Potential,0.2
+balanced_equal_dimensions,Urban Form,0.2
+balanced_equal_dimensions,Mobility/Transit Context,0.2
+balanced_equal_dimensions,Cycling Readiness,0.2
+balanced_equal_dimensions,Terrain Feasibility,0.2
+demand_oriented,Demand/Activity Potential,0.4
+demand_oriented,Urban Form,0.15
+demand_oriented,Mobility/Transit Context,0.15
+demand_oriented,Cycling Readiness,0.15
+demand_oriented,Terrain Feasibility,0.15
+infrastructure_readiness_oriented,Demand/Activity Potential,0.15
+infrastructure_readiness_oriented,Urban Form,0.15
+infrastructure_readiness_oriented,Mobility/Transit Context,0.15
+infrastructure_readiness_oriented,Cycling Readiness,0.4
+infrastructure_readiness_oriented,Terrain Feasibility,0.15
+first_last_mile_transit_integration_oriented,Demand/Activity Potential,0.15
+first_last_mile_transit_integration_oriented,Urban Form,0.1
+first_last_mile_transit_integration_oriented,Mobility/Transit Context,0.45
+first_last_mile_transit_integration_oriented,Cycling Readiness,0.15
+first_last_mile_transit_integration_oriented,Terrain Feasibility,0.15

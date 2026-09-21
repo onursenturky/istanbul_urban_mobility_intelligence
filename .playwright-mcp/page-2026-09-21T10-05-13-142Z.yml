@@ -1,0 +1,52 @@
+- generic [active] [ref=f76e1]:
+  - generic [ref=f76e2]:
+    - navigation [ref=f76e3]:
+      - generic [ref=f76e4]:
+        - link "Istanbul Urban Mobility Intelligence, home" [ref=f76e5] [cursor=pointer]:
+          - /url: /
+          - generic [ref=f76e7]: Istanbul / Urban Mobility Intelligence
+        - list [ref=f76e8]:
+          - listitem [ref=f76e9]:
+            - link "Overview" [ref=f76e10] [cursor=pointer]:
+              - /url: /overview
+          - listitem [ref=f76e11]:
+            - link "Urban Typology" [ref=f76e12] [cursor=pointer]:
+              - /url: /typology
+          - listitem [ref=f76e13]:
+            - link "15-Minute Istanbul" [ref=f76e14] [cursor=pointer]:
+              - /url: /fifteen-minute
+          - listitem [ref=f76e15]:
+            - link "Cycling Gain" [ref=f76e16] [cursor=pointer]:
+              - /url: /cycling-gain
+          - listitem [ref=f76e17]:
+            - link "Transit Connection" [ref=f76e18] [cursor=pointer]:
+              - /url: /transit
+          - listitem [ref=f76e19]:
+            - link "Accessibility Gaps" [ref=f76e20] [cursor=pointer]:
+              - /url: /gaps
+          - listitem [ref=f76e21]:
+            - link "E-bike" [ref=f76e22] [cursor=pointer]:
+              - /url: /ebike
+          - listitem [ref=f76e23]:
+            - link "Data & Methods" [ref=f76e24] [cursor=pointer]:
+              - /url: /methods
+    - main [ref=f76e25]:
+      - generic [ref=f76e31]:
+        - generic [ref=f76e32]:
+          - paragraph [ref=f76e33]: Istanbul
+          - heading "Urban Mobility Intelligence" [level=1] [ref=f76e34]: Urban MobilityIntelligence
+        - paragraph [ref=f76e35]: How accessible is everyday life across Istanbul?
+        - paragraph [ref=f76e36]:
+          - text: Explore how urban form, walking, cycling and public transport shape access to everyday needs across the city. Today, modeled 15-minute walking access to Food, Healthcare and Education reaches
+          - generic [ref=f76e37]: 82.49%
+          - text: of the calibrated 2020 population.
+        - generic [ref=f76e38]:
+          - link "Explore the map" [ref=f76e39] [cursor=pointer]:
+            - /url: /overview
+          - link "How it works" [ref=f76e40] [cursor=pointer]:
+            - /url: /methods
+        - paragraph [ref=f76e41]: An O3 Sustainability spatial intelligence project.
+    - contentinfo [ref=f76e42]:
+      - generic [ref=f76e43]: Istanbul Urban Mobility Intelligence — an O3 Sustainability spatial intelligence project.
+      - generic [ref=f76e44]: Modeled network accessibility. Not observed travel behavior. See Data & Methods.
+  - alert [ref=f76e45]

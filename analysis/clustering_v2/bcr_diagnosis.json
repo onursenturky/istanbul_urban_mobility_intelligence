@@ -1,0 +1,70 @@
+{
+  "n_cells": 22322,
+  "zero_mass": {
+    "n_zero": 14547,
+    "pct_zero": 65.17
+  },
+  "raw_distribution": {
+    "min": 0.0,
+    "max": 0.6754748726883069,
+    "mean": 0.03302270440232423,
+    "std": 0.08421722150847927,
+    "median": 0.0,
+    "iqr": 0.005344391262458158,
+    "percentiles_all_cells": {
+      "p50": 0.0,
+      "p75": 0.005344391262458158,
+      "p90": 0.13012277042425757,
+      "p95": 0.23725809597142655,
+      "p97.5": 0.3156926416903475,
+      "p99": 0.4072596519427747,
+      "p99.5": 0.4573704203845288,
+      "p99.9": 0.5300503337626915,
+      "p100": 0.6754748726883069
+    },
+    "percentiles_nonzero_cells_only": {
+      "p50": 0.03707051600996096,
+      "p75": 0.15482704777642303,
+      "p90": 0.28035689067956576,
+      "p95": 0.3528546788277351,
+      "p97.5": 0.42009729350143155,
+      "p99": 0.4777361474983217,
+      "p99.5": 0.5139271608748276,
+      "p99.9": 0.5663314658926362,
+      "p100": 0.6754748726883069
+    }
+  },
+  "log1p_transformed": {
+    "median": 0.0,
+    "iqr": 0.005330160683345729,
+    "percentiles": {
+      "p50": 0.0,
+      "p75": 0.005330160683345729,
+      "p90": 0.12232627310520015,
+      "p95": 0.2128977183414513,
+      "p97.5": 0.2743632502939863,
+      "p99": 0.3416442967874707,
+      "p99.5": 0.37663366773358486,
+      "p99.9": 0.42530062485713616,
+      "p100": 0.5160966311793457
+    }
+  },
+  "log1p_plus_robustscaler_final": {
+    "median": 0.0,
+    "iqr_used_by_scaler": 0.005330160683345729,
+    "center_used_by_scaler": 0.0,
+    "percentiles": {
+      "p50": 0.0,
+      "p75": 1.0,
+      "p90": 22.94982841463163,
+      "p95": 39.94208261050319,
+      "p97.5": 51.47372970410512,
+      "p99": 64.09643481386033,
+      "p99.5": 70.66084685033788,
+      "p99.9": 79.79133278026731,
+      "p100": 96.82571724186616
+    },
+    "max_scaled_value": 96.82571724186616
+  },
+  "explanation": "65.2% of cells are exactly zero, so the log1p-transformed distribution's IQR is tiny (0.00533) because both Q1 and most of Q3 sit at or near zero. RobustScaler divides by this near-zero IQR (0.00533), so the minority of cells with real building coverage (up to raw 0.675, i.e. 67.5% coverage) get inflated into extreme scaled values (max scaled = 96.8). This is a mechanical consequence of applying a median/IQR-based robust scaler to a variable whose IQR is compressed by a large exact-zero mass, not a data error."
+}

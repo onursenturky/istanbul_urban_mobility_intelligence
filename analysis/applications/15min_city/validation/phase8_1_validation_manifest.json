@@ -1,0 +1,119 @@
+{
+  "version": "15MIN_ISTANBUL_PHASE8_1_VALIDATION_V1",
+  "scope": "Validation/QA correction of Phase 8 (15MIN_ISTANBUL_NETWORK_PROXIMITY_V1) -- no accessibility recomputation, no network rebuild, no taxonomy change.",
+  "input_hashes": {
+    "grid_proximity_summary": {
+      "path": "analysis/applications/15min_city/grid_proximity_summary.parquet",
+      "sha256": "9a32428a0be67aaba7f37c457c3d559837fb2eaeafe6a38dfec336aaa2259e0d"
+    },
+    "grid_nearest_service_times": {
+      "path": "analysis/applications/15min_city/grid_nearest_service_times.parquet",
+      "sha256": "efc810023368066da24a04935b1d6dc548c7c07ffc0e2f06f45a52327a89decd"
+    },
+    "accessibility_quality_flags_original": {
+      "path": "analysis/applications/15min_city/accessibility_quality_flags.parquet",
+      "sha256": "bec1fa4fa458376d726b433a6203baf0a3a4ae1c8150a6a8f78f02cc3f71475e"
+    },
+    "walking_graph": {
+      "path": "data/processed/network/walking_graph.pkl",
+      "sha256": "a6e4e1f057841e993fb88cc2a486a056ab89ec9c23110fbce264e4dd777f8dd3"
+    }
+  },
+  "component_classification": {
+    "MAJOR_VALID_COMPONENT": ">=500,000 nodes",
+    "LARGE_LOCAL_VALID_COMPONENT": ">=1 anchored cell AND population>=1,000",
+    "SMALL_LOCAL_COMPONENT": ">=1 anchored cell AND 0<population<1,000",
+    "QUESTIONABLE_FRAGMENT": "0 anchored cells, OR anchored cells with 0 population",
+    "KNOWN_NETWORK_LIMITATION": "component's only district is Adalar"
+  },
+  "n_cells_quality_interpretation_changed": 7772,
+  "pct_cells_quality_interpretation_changed": 34.82,
+  "population_accessibility_denominators": {
+    "reproduction_check": {
+      "total_calibrated_population": 15455565.5,
+      "population_with_complete_access": 12748528.5,
+      "reproduced_pct": 82.49,
+      "original_reported_pct": 82.49,
+      "matches_original": true
+    },
+    "denominator_A_all_populated_cells": {
+      "label": "A_ALL_POPULATED_CELLS",
+      "n_included_cells": 22322,
+      "included_calibrated_population": 15455565.5,
+      "population_with_complete_access": 12748528.5,
+      "pct_with_complete_access": 82.49,
+      "population_excluded_by_qa": 0.0,
+      "pct_of_total_population_excluded": 0.0
+    },
+    "denominator_B_quality_reliable_cells": {
+      "label": "B_QUALITY_RELIABLE_CELLS",
+      "n_included_cells": 22064,
+      "included_calibrated_population": 15439028.9,
+      "population_with_complete_access": 12746104.4,
+      "pct_with_complete_access": 82.56,
+      "population_excluded_by_qa": 16536.5,
+      "pct_of_total_population_excluded": 0.11
+    },
+    "denominator_C_strict_high_confidence_cells": {
+      "label": "C_STRICT_HIGH_CONFIDENCE_CELLS",
+      "n_included_cells": 21932,
+      "included_calibrated_population": 15312322.2,
+      "population_with_complete_access": 12746104.4,
+      "pct_with_complete_access": 83.24,
+      "population_excluded_by_qa": 143243.2,
+      "pct_of_total_population_excluded": 0.93
+    },
+    "interpretation": "The gap between A and B/C (if any) shows how much of the raw 82.49% figure rests on cells whose network representation is questionable/limited, as opposed to genuinely well-represented network structure. A large A-to-C drop would mean the headline figure is NOT quality-robust; a small drop means it is."
+  },
+  "freeze_decision": "B_VALIDATED_WITH_DOCUMENTED_LIMITATIONS_FREEZE_V1",
+  "freeze_decision_criteria": {
+    "reproducible": true,
+    "quality_robust": true,
+    "no_threshold_cliff": true,
+    "no_implausible_sanity_results": true,
+    "documented_limitations_exist": true
+  },
+  "freeze_decision_rationale": "The headline population-accessibility result is exactly reproducible and quality-robust (A=82.49%, B=82.56%, C=83.24%, max drift 0.75pp across denominators). The 34.8% quality-flag reinterpretation (Asian side reclassified from ISOLATED to RELIABLE_SEPARATE_COMPONENT) was a genuine correction, applied and verified, not a band-aid over a real problem. No threshold cliffs, no implausible sanity-check results. Documented limitations (Adalar network gap, POI-only green/recreation undercount, moderate-reliability Daily Services category) remain and are carried forward, not hidden.",
+  "methodological_limitations_carried_forward": [
+    "Adalar (Prince Islands): confirmed known network-coverage limitation (Phase 7); a dedicated 2-node component with 0 recorded population -- accessibility results there remain unreliable by design.",
+    "G_green_recreation category is POI-sourced only (not land-use polygons) -- a documented lower bound.",
+    "D_daily_services is a new grouping not part of any frozen MCDA category -- moderate reliability.",
+    "The 20-minute threshold-sensitivity figures come from a NEW lightweight query (required categories only) -- consistent methodology, but not part of the frozen 5/10/15-minute Phase 8 outputs."
+  ],
+  "original_phase8_outputs_preserved": [
+    "15min_city_manifest.json",
+    "15min_city_summary.json",
+    "15min_city_summary_data.json",
+    "accessibility_computation_diagnostics.json",
+    "accessibility_deficit_classes.parquet",
+    "accessibility_quality_flags.parquet",
+    "category_accessibility_summary.csv",
+    "grid_accessibility_10min.parquet",
+    "grid_accessibility_15min.parquet",
+    "grid_accessibility_5min.parquet",
+    "grid_nearest_service_times.parquet",
+    "grid_proximity_summary.parquet",
+    "poi_category_qa.json",
+    "poi_everyday_needs_taxonomy.csv",
+    "poi_network_anchors.parquet",
+    "population_accessibility_summary.json",
+    "sanity_check_cases.json",
+    "typology_accessibility_summary.csv"
+  ],
+  "validation_outputs": [
+    "accessibility_growth_5_10_15.csv",
+    "accessibility_growth_marginal_gains.csv",
+    "bottleneck_and_threshold_full.json",
+    "corrected_accessibility_quality_flags.parquet",
+    "network_component_audit.csv",
+    "population_accessibility_validation.json",
+    "population_concentration_analysis.json",
+    "quality_flag_correction_diagnostics.json",
+    "required_category_bottlenecks.csv",
+    "required_service_travel_time_stats.csv",
+    "threshold_sensitivity.csv",
+    "traveltime_and_growth_full.json",
+    "validation_sanity_checks.json"
+  ],
+  "stop_condition": "STOPPED after Phase 8.1 validation -- no cycling accessibility, accessibility-gap application, transit-inclusive accessibility, equity analysis, predictive ML, dashboard, visualization styling, or new data acquisition were performed."
+}

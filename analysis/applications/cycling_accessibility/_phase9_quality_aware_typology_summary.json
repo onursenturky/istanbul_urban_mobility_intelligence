@@ -1,0 +1,89 @@
+{
+  "quality_aware_comparison": {
+    "raw_access_class_pct": {
+      "NEITHER_ACCESS": 68.0,
+      "CYCLE_ONLY_GAIN": 17.36,
+      "WALK_AND_CYCLE_ACCESS": 14.549999999999999,
+      "WALK_ONLY_ACCESS": 0.09
+    },
+    "quality_aware_reliable_only_access_class_pct": {
+      "NEITHER_ACCESS": 67.83,
+      "CYCLE_ONLY_GAIN": 17.43,
+      "WALK_AND_CYCLE_ACCESS": 14.64,
+      "WALK_ONLY_ACCESS": 0.1
+    },
+    "cycle_only_gain_raw_n_cells": 3874,
+    "cycle_only_gain_reliable_n_cells": 3845,
+    "cycle_only_gain_raw_population": 2097550.1,
+    "cycle_only_gain_reliable_population": 2095477.3,
+    "cycle_only_gain_flag_breakdown": {
+      "RELIABLE": 2599,
+      "RELIABLE_SEPARATE_COMPONENT": 1246,
+      "QUESTIONABLE_ANCHOR": 19,
+      "KNOWN_NETWORK_LIMITATION_ADALAR": 10
+    },
+    "interpretation": "CYCLE_ONLY_GAIN cells flagged QUESTIONABLE_ANCHOR, SMALL_COMPONENT_CAUTION, or KNOWN_NETWORK_LIMITATION_ADALAR should NOT be read as genuine active-mobility gains -- they may reflect anchor/snap artifacts rather than a real routable improvement. Use the RELIABLE-only figures for any downstream claim about genuine cycling accessibility gain."
+  },
+  "typology_cross_tab_counts": {
+    "CYCLE_ONLY_GAIN": {
+      "0": 455,
+      "1": 760,
+      "2": 2193,
+      "3": 193,
+      "4": 273
+    },
+    "NEITHER_ACCESS": {
+      "0": 5630,
+      "1": 302,
+      "2": 6181,
+      "3": 2926,
+      "4": 140
+    },
+    "WALK_AND_CYCLE_ACCESS": {
+      "0": 28,
+      "1": 1838,
+      "2": 247,
+      "3": 21,
+      "4": 1114
+    },
+    "WALK_ONLY_ACCESS": {
+      "0": 0,
+      "1": 14,
+      "2": 0,
+      "3": 0,
+      "4": 7
+    }
+  },
+  "typology_cross_tab_pop": {
+    "CYCLE_ONLY_GAIN": {
+      "0": 16336.4,
+      "1": 1024113.1,
+      "2": 538024.0,
+      "3": 16129.1,
+      "4": 502947.6
+    },
+    "NEITHER_ACCESS": {
+      "0": 42143.1,
+      "1": 131842.7,
+      "2": 337401.6,
+      "3": 20524.4,
+      "4": 77575.0
+    },
+    "WALK_AND_CYCLE_ACCESS": {
+      "0": 7524.3,
+      "1": 8106807.2,
+      "2": 221561.9,
+      "3": 2054.8,
+      "4": 4336120.3
+    },
+    "WALK_ONLY_ACCESS": {
+      "0": 0.0,
+      "1": 47841.9,
+      "2": 0.0,
+      "3": 0.0,
+      "4": 26618.0
+    }
+  },
+  "strongest_gain_cluster": "1",
+  "cluster_with_highest_neither_access_share": "3"
+}

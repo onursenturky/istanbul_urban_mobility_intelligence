@@ -1,0 +1,7 @@
+mode,n_access_points,n_districts,in_system_a,in_system_b
+bus,4872,26,True,False
+ferry,66,12,True,False
+metro,120,24,True,True
+metrobus,333,21,True,True
+rail,47,11,True,True
+tram,63,13,True,True

@@ -1,0 +1,28 @@
+- generic [active] [ref=f8e1]:
+  - generic [ref=f8e2]:
+    - navigation [ref=f8e3]:
+      - generic [ref=f8e4]:
+        - link "Istanbul Urban Mobility Intelligence, home" [ref=f8e5] [cursor=pointer]:
+          - /url: /
+          - generic [ref=f8e7]: Istanbul / Urban Mobility Intelligence
+        - button "Toggle navigation menu" [ref=f8e8] [cursor=pointer]
+    - main [ref=f8e11]:
+      - generic [ref=f8e17]:
+        - generic [ref=f8e18]:
+          - paragraph [ref=f8e19]: Istanbul
+          - heading "Urban Mobility Intelligence" [level=1] [ref=f8e20]: Urban MobilityIntelligence
+        - paragraph [ref=f8e21]: How accessible is everyday life across Istanbul?
+        - paragraph [ref=f8e22]:
+          - text: Explore how urban form, walking, cycling and public transport shape access to everyday needs across the city. Today, modeled 15-minute walking access to Food, Healthcare and Education reaches
+          - generic [ref=f8e23]: 82.49%
+          - text: of the calibrated 2020 population.
+        - generic [ref=f8e24]:
+          - link "Explore the map" [ref=f8e25] [cursor=pointer]:
+            - /url: /overview
+          - link "How it works" [ref=f8e26] [cursor=pointer]:
+            - /url: /methods
+        - paragraph [ref=f8e27]: An O3 Sustainability spatial intelligence project.
+    - contentinfo [ref=f8e28]:
+      - generic [ref=f8e29]: Istanbul Urban Mobility Intelligence — an O3 Sustainability spatial intelligence project.
+      - generic [ref=f8e30]: Modeled network accessibility. Not observed travel behavior. See Data & Methods.
+  - alert [ref=f8e31]

@@ -1,0 +1,46 @@
+{
+  "correlation_matrix": {
+    "mean_absolute_road_grade_pct": {
+      "mean_absolute_road_grade_pct": 1.0,
+      "pct_road_length_grade_gt_8pct": 0.643,
+      "mean_slope_deg": 0.476,
+      "pct_area_slope_3_6deg": -0.121,
+      "pct_area_slope_6_10deg": 0.307
+    },
+    "pct_road_length_grade_gt_8pct": {
+      "mean_absolute_road_grade_pct": 0.643,
+      "pct_road_length_grade_gt_8pct": 1.0,
+      "mean_slope_deg": 0.322,
+      "pct_area_slope_3_6deg": -0.103,
+      "pct_area_slope_6_10deg": 0.221
+    },
+    "mean_slope_deg": {
+      "mean_absolute_road_grade_pct": 0.476,
+      "pct_road_length_grade_gt_8pct": 0.322,
+      "mean_slope_deg": 1.0,
+      "pct_area_slope_3_6deg": -0.51,
+      "pct_area_slope_6_10deg": 0.408
+    },
+    "pct_area_slope_3_6deg": {
+      "mean_absolute_road_grade_pct": -0.121,
+      "pct_road_length_grade_gt_8pct": -0.103,
+      "mean_slope_deg": -0.51,
+      "pct_area_slope_3_6deg": 1.0,
+      "pct_area_slope_6_10deg": 0.118
+    },
+    "pct_area_slope_6_10deg": {
+      "mean_absolute_road_grade_pct": 0.307,
+      "pct_road_length_grade_gt_8pct": 0.221,
+      "mean_slope_deg": 0.408,
+      "pct_area_slope_3_6deg": 0.118,
+      "pct_area_slope_6_10deg": 1.0
+    }
+  },
+  "key_correlations": {
+    "mean_absolute_road_grade_pct__vs__mean_slope_deg": 0.476,
+    "mean_absolute_road_grade_pct__vs__pct_area_slope_6_10deg": 0.307,
+    "pct_road_length_grade_gt_8pct__vs__pct_area_slope_6_10deg": 0.221
+  },
+  "finding": "Road-grade and raster-slope criteria are MODERATELY correlated (0.22-0.48), not near-duplicates (well under the 0.90 redundancy threshold used throughout this project). They measure related but distinct things: raster DEM slope is a continuous surface covering the whole cell regardless of whether any road exists there, while road-grade is sampled ONLY at actual road-segment endpoints -- the exact surface a cyclist would traverse. Road-grade is NaN (not 0) for the 12.6% of cells with no road present at all, meaning raster slope remains the ONLY terrain-feasibility signal available for those cells.",
+  "decision": "OPTION B -- SUPPLEMENT, not replace. mean_absolute_road_grade_pct and pct_road_length_grade_gt_8pct enter the Terrain Feasibility dimension ALONGSIDE (not instead of) mean_slope_deg / pct_area_slope_3_6deg / pct_area_slope_6_10deg, with REDUCED individual weight relative to the 3 existing slope criteria to reflect (a) partial coverage (NaN for roadless cells, requiring an explicit missing-data-safe aggregation rule at scoring time) and (b) genuine but moderate conceptual overlap with the existing raster-slope signal. A full replacement (Option A) is rejected because it would silently lose all terrain-feasibility signal for roadless cells; contextual-only (Option D) is rejected because road-grade is demonstrably MORE causally direct for actual cycling paths than a rejected/sensitivity-only treatment would reflect."
+}

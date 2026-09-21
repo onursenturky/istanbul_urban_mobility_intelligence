@@ -1,0 +1,103 @@
+{
+  "population_layer_caveat": "Calibrated 2020 population vs 2026 network/destination snapshot -- same temporal caveat as Phase 8.",
+  "total_calibrated_population_2020": 15455565.5,
+  "cycling_complete_15min_access": {
+    "n_cells": 7122,
+    "pct_cells": 31.91,
+    "population": 14771618.7,
+    "pct_population": 95.57
+  },
+  "walk_vs_cycle_access_class_summary": [
+    {
+      "access_class": "NEITHER_ACCESS",
+      "n_cells": 15179,
+      "pct_cells": 68.0,
+      "population": 609486.8,
+      "pct_population": 3.94
+    },
+    {
+      "access_class": "CYCLE_ONLY_GAIN",
+      "n_cells": 3874,
+      "pct_cells": 17.36,
+      "population": 2097550.1,
+      "pct_population": 13.57
+    },
+    {
+      "access_class": "WALK_AND_CYCLE_ACCESS",
+      "n_cells": 3248,
+      "pct_cells": 14.55,
+      "population": 12674068.6,
+      "pct_population": 82.0
+    },
+    {
+      "access_class": "WALK_ONLY_ACCESS",
+      "n_cells": 21,
+      "pct_cells": 0.09,
+      "population": 74459.9,
+      "pct_population": 0.48
+    }
+  ],
+  "category_gain_summary": [
+    {
+      "category": "FOOD",
+      "n_cells_walk_inaccessible_cycle_accessible": 5225,
+      "population_walk_inaccessible_cycle_accessible": 1707313.2,
+      "n_cells_time_reduced_when_both_accessible": 4088,
+      "median_time_reduction_min_when_both_accessible": 4.34,
+      "population_benefiting_any_improvement": 14747653.2
+    },
+    {
+      "category": "HEALTHCARE",
+      "n_cells_walk_inaccessible_cycle_accessible": 4604,
+      "population_walk_inaccessible_cycle_accessible": 1212856.1,
+      "n_cells_time_reduced_when_both_accessible": 4127,
+      "median_time_reduction_min_when_both_accessible": 4.07,
+      "population_benefiting_any_improvement": 14681123.6
+    },
+    {
+      "category": "EDUCATION",
+      "n_cells_walk_inaccessible_cycle_accessible": 5456,
+      "population_walk_inaccessible_cycle_accessible": 1125813.5,
+      "n_cells_time_reduced_when_both_accessible": 4500,
+      "median_time_reduction_min_when_both_accessible": 4.13,
+      "population_benefiting_any_improvement": 14837909.4
+    }
+  ],
+  "largest_marginal_cycling_gain": {
+    "metric": "COMPLETE_ACCESS",
+    "threshold_min": 5,
+    "walking_pct_cells": 3.57,
+    "cycling_pct_cells": 14.15,
+    "diff_pct_cells": 10.58,
+    "walking_pct_population": 27.39,
+    "cycling_pct_population": 80.66,
+    "diff_pct_population": 53.27
+  },
+  "walking_deficit_closure_summary": [
+    {
+      "closure_status": "FULLY_CLOSED_BY_CYCLING",
+      "n_cells": 3876,
+      "pct_of_deficit_cells": 20.34,
+      "population": 2098757.0
+    },
+    {
+      "closure_status": "PARTIALLY_CLOSED_BY_CYCLING",
+      "n_cells": 4297,
+      "pct_of_deficit_cells": 22.55,
+      "population": 244576.7
+    },
+    {
+      "closure_status": "UNCHANGED_BY_CYCLING",
+      "n_cells": 10880,
+      "pct_of_deficit_cells": 57.1,
+      "population": 363703.3
+    }
+  ],
+  "high_value_gain_cells": {
+    "definition": "population >= median populated-cell population AND (CYCLE_ONLY_GAIN access class OR >=1 required category gained within 15min) -- descriptive filter, NOT a weighted/arbitrary score.",
+    "n_cells": 1526,
+    "pct_cells": 6.84,
+    "population": 2117026.3,
+    "pct_population": 13.7
+  }
+}

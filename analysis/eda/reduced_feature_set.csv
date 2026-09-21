@@ -1,0 +1,72 @@
+feature,family,eligibility_classification,included_in_reduced_set,exclusion_reason
+building_count,buildings,READY,False,Redundant: high Spearman correlation with a retained representative (see redundancy_recommendations.csv)
+mean_building_footprint_m2_valid_only,unknown,unknown,False,43%+ structural missingness once correctly masked (only cells with buildings have a defined mean) -- too sparse for direct inclusion in a complete-case multivariate matrix; kept in descriptive/correlation audit only.
+building_footprint_area_m2,buildings,READY,False,Redundant: high Spearman correlation with a retained representative (see redundancy_recommendations.csv)
+building_coverage_ratio,buildings,READY,True,
+hospital_count,poi,READY,True,
+university_count,poi,READY,True,
+school_count,poi,READY,True,
+healthcare_count,poi,READY,True,
+cafe_count,poi,READY,True,
+restaurant_count,poi,READY,True,
+bar_pub_count,poi,READY,True,
+supermarket_count,poi,READY,True,
+retail_count,poi,READY,True,
+office_count,poi,READY,True,
+tourism_count,poi,READY,True,
+leisure_count,poi,READY,True,
+total_poi_count,poi,READY,False,Redundant: high Spearman correlation with a retained representative (see redundancy_recommendations.csv)
+poi_density_km2,poi,READY,True,
+poi_category_count,poi,READY,False,Redundant: high Spearman correlation with a retained representative (see redundancy_recommendations.csv)
+poi_entropy,poi,READY,True,
+population_worldpop_raw,population,READY_WITH_LIMITATION,False,Redundant: high Spearman correlation with a retained representative (see redundancy_recommendations.csv)
+population_density_worldpop_raw_km2,population,READY_WITH_LIMITATION,False,Redundant: high Spearman correlation with a retained representative (see redundancy_recommendations.csv)
+population_calibrated,population,READY_WITH_LIMITATION,False,Redundant: high Spearman correlation with a retained representative (see redundancy_recommendations.csv)
+population_density_calibrated_km2,population,READY_WITH_LIMITATION,True,
+mean_elevation_m,terrain,READY,True,
+median_elevation_m,terrain,READY,False,Redundant: high Spearman correlation with a retained representative (see redundancy_recommendations.csv)
+min_elevation_m,terrain,READY,False,Redundant: high Spearman correlation with a retained representative (see redundancy_recommendations.csv)
+max_elevation_m,terrain,READY,False,Redundant: high Spearman correlation with a retained representative (see redundancy_recommendations.csv)
+elevation_std_m,terrain,READY,False,Redundant: high Spearman correlation with a retained representative (see redundancy_recommendations.csv)
+elevation_range_m,terrain,READY,False,Redundant: high Spearman correlation with a retained representative (see redundancy_recommendations.csv)
+mean_slope_deg,terrain,READY,True,
+median_slope_deg,terrain,READY,False,Redundant: high Spearman correlation with a retained representative (see redundancy_recommendations.csv)
+max_slope_deg,terrain,READY,False,Redundant: high Spearman correlation with a retained representative (see redundancy_recommendations.csv)
+slope_std_deg,terrain,READY,False,Redundant: high Spearman correlation with a retained representative (see redundancy_recommendations.csv)
+pct_area_slope_lt_3deg,terrain,READY,False,Redundant: high Spearman correlation with a retained representative (see redundancy_recommendations.csv)
+pct_area_slope_3_6deg,terrain,READY,True,
+pct_area_slope_6_10deg,terrain,READY,True,
+pct_area_slope_gt_10deg,terrain,READY,False,Redundant: high Spearman correlation with a retained representative (see redundancy_recommendations.csv)
+metro_station_count,transit,READY_WITH_LIMITATION,True,
+distance_to_nearest_metro_m,transit,READY_WITH_LIMITATION,True,
+tram_station_count,transit,READY_WITH_LIMITATION,True,
+distance_to_nearest_tram_m,transit,READY_WITH_LIMITATION,True,
+rail_station_count,transit,READY_WITH_LIMITATION,True,
+distance_to_nearest_rail_m,transit,READY_WITH_LIMITATION,True,
+ferry_terminal_count,transit,READY_WITH_LIMITATION,True,
+distance_to_nearest_ferry_m,transit,READY_WITH_LIMITATION,True,
+metrobus_station_count,transit,READY,True,
+bus_stop_count,transit,READY,False,Redundant: high Spearman correlation with a retained representative (see redundancy_recommendations.csv)
+distance_to_nearest_metrobus_m,transit,READY,True,
+distance_to_nearest_bus_stop_m,transit,READY,False,Redundant: high Spearman correlation with a retained representative (see redundancy_recommendations.csv)
+total_transit_stop_count,transit,READY_WITH_LIMITATION,False,Redundant: high Spearman correlation with a retained representative (see redundancy_recommendations.csv)
+distance_to_nearest_transit_m,transit,READY_WITH_LIMITATION,True,
+transit_stops_within_500m,transit,READY_WITH_LIMITATION,True,
+transit_stops_within_1000m,transit,READY_WITH_LIMITATION,True,
+bus_stops_within_500m,transit,READY,False,Redundant: high Spearman correlation with a retained representative (see redundancy_recommendations.csv)
+fixed_guideway_stations_within_1000m,transit,READY_WITH_LIMITATION,True,
+number_of_transit_modes_accessible,transit,READY_WITH_LIMITATION,False,Redundant: high Spearman correlation with a retained representative (see redundancy_recommendations.csv)
+routes_serving_grid,transit,READY_WITH_LIMITATION,False,Redundant: high Spearman correlation with a retained representative (see redundancy_recommendations.csv)
+unique_bus_routes,transit,READY,False,Redundant: high Spearman correlation with a retained representative (see redundancy_recommendations.csv)
+unique_rail_lines,transit,READY_WITH_LIMITATION,True,
+bus_departures_per_day,transit,READY,True,
+bus_departures_peak_hour,transit,READY,True,
+cycle_infrastructure_length_km_ibb_only,cycling,READY_WITH_LIMITATION,False,Redundant: high Spearman correlation with a retained representative (see redundancy_recommendations.csv)
+cycle_infrastructure_density_km_per_km2_ibb_only,cycling,READY_WITH_LIMITATION,True,
+protected_cycleway_length_km_ibb_only,cycling,READY_WITH_LIMITATION,False,Redundant: high Spearman correlation with a retained representative (see redundancy_recommendations.csv)
+protected_cycleway_density_km_per_km2_ibb_only,cycling,READY_WITH_LIMITATION,True,
+distance_to_nearest_cycle_infrastructure_m_ibb_only,cycling,READY_WITH_LIMITATION,True,
+distance_to_nearest_bicycle_parking_m,cycling,READY,True,
+bicycle_parking_count,cycling,READY,True,
+distance_to_nearest_micromobility_parking_m,cycling,READY,True,
+micromobility_parking_count,cycling,READY,True,

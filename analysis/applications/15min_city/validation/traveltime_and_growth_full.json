@@ -1,0 +1,271 @@
+{
+  "travel_time_distributions": {
+    "A_food_groceries": {
+      "all_cells": {
+        "n_cells_total": 22322,
+        "n_cells_reachable_within_15min": 4145,
+        "pct_unreachable_within_15min": 81.43,
+        "median_min": 6.65,
+        "p25_min": 3.53,
+        "p75_min": 10.53,
+        "p90_min": 13.09,
+        "p95_min": 13.99,
+        "pct_within_5min": 36.84,
+        "pct_within_10min": 71.53,
+        "pct_within_15min": 100.0,
+        "pct_population_unreachable_within_15min": 14.29,
+        "population_weighted_median_min": 4.79,
+        "population_weighted_p25_min": 2.64,
+        "population_weighted_p75_min": 8.07,
+        "population_weighted_p90_min": 11.11,
+        "population_weighted_p95_min": 12.67,
+        "pct_population_within_5min": 43.94,
+        "pct_population_within_10min": 72.82,
+        "pct_population_within_15min": 85.71
+      },
+      "quality_reliable_cells": {
+        "n_cells_total": 22064,
+        "n_cells_reachable_within_15min": 4110,
+        "pct_unreachable_within_15min": 81.37,
+        "median_min": 6.6,
+        "p25_min": 3.52,
+        "p75_min": 10.46,
+        "p90_min": 13.04,
+        "p95_min": 13.96,
+        "pct_within_5min": 37.1,
+        "pct_within_10min": 72.04,
+        "pct_within_15min": 100.0,
+        "pct_population_unreachable_within_15min": 14.22,
+        "population_weighted_median_min": 4.78,
+        "population_weighted_p25_min": 2.64,
+        "population_weighted_p75_min": 8.07,
+        "population_weighted_p90_min": 11.11,
+        "population_weighted_p95_min": 12.67,
+        "pct_population_within_5min": 43.99,
+        "pct_population_within_10min": 72.89,
+        "pct_population_within_15min": 85.78
+      }
+    },
+    "B_healthcare": {
+      "all_cells": {
+        "n_cells_total": 22322,
+        "n_cells_reachable_within_15min": 4222,
+        "pct_unreachable_within_15min": 81.09,
+        "median_min": 6.19,
+        "p25_min": 3.23,
+        "p75_min": 9.85,
+        "p90_min": 12.82,
+        "p95_min": 13.8,
+        "pct_within_5min": 40.55,
+        "pct_within_10min": 75.82,
+        "pct_within_15min": 100.0,
+        "pct_population_unreachable_within_15min": 10.68,
+        "population_weighted_median_min": 4.04,
+        "population_weighted_p25_min": 2.24,
+        "population_weighted_p75_min": 6.97,
+        "population_weighted_p90_min": 9.97,
+        "population_weighted_p95_min": 11.73,
+        "pct_population_within_5min": 52.72,
+        "pct_population_within_10min": 80.45,
+        "pct_population_within_15min": 89.32
+      },
+      "quality_reliable_cells": {
+        "n_cells_total": 22064,
+        "n_cells_reachable_within_15min": 4177,
+        "pct_unreachable_within_15min": 81.07,
+        "median_min": 6.14,
+        "p25_min": 3.21,
+        "p75_min": 9.77,
+        "p90_min": 12.8,
+        "p95_min": 13.82,
+        "pct_within_5min": 40.99,
+        "pct_within_10min": 76.42,
+        "pct_within_15min": 100.0,
+        "pct_population_unreachable_within_15min": 10.64,
+        "population_weighted_median_min": 4.04,
+        "population_weighted_p25_min": 2.24,
+        "population_weighted_p75_min": 6.96,
+        "population_weighted_p90_min": 9.97,
+        "population_weighted_p95_min": 11.71,
+        "pct_population_within_5min": 52.77,
+        "pct_population_within_10min": 80.53,
+        "pct_population_within_15min": 89.36
+      }
+    },
+    "C_education": {
+      "all_cells": {
+        "n_cells_total": 22322,
+        "n_cells_reachable_within_15min": 4580,
+        "pct_unreachable_within_15min": 79.48,
+        "median_min": 6.26,
+        "p25_min": 3.71,
+        "p75_min": 10.08,
+        "p90_min": 12.81,
+        "p95_min": 13.89,
+        "pct_within_5min": 38.54,
+        "pct_within_10min": 74.63,
+        "pct_within_15min": 100.0,
+        "pct_population_unreachable_within_15min": 9.74,
+        "population_weighted_median_min": 4.49,
+        "population_weighted_p25_min": 2.86,
+        "population_weighted_p75_min": 6.84,
+        "population_weighted_p90_min": 9.73,
+        "population_weighted_p95_min": 11.63,
+        "pct_population_within_5min": 51.18,
+        "pct_population_within_10min": 81.97,
+        "pct_population_within_15min": 90.26
+      },
+      "quality_reliable_cells": {
+        "n_cells_total": 22064,
+        "n_cells_reachable_within_15min": 4556,
+        "pct_unreachable_within_15min": 79.35,
+        "median_min": 6.23,
+        "p25_min": 3.7,
+        "p75_min": 10.0,
+        "p90_min": 12.77,
+        "p95_min": 13.88,
+        "pct_within_5min": 38.74,
+        "pct_within_10min": 75.0,
+        "pct_within_15min": 100.0,
+        "pct_population_unreachable_within_15min": 9.67,
+        "population_weighted_median_min": 4.49,
+        "population_weighted_p25_min": 2.86,
+        "population_weighted_p75_min": 6.84,
+        "population_weighted_p90_min": 9.73,
+        "population_weighted_p95_min": 11.63,
+        "pct_population_within_5min": 51.23,
+        "pct_population_within_10min": 82.06,
+        "pct_population_within_15min": 90.33
+      }
+    }
+  },
+  "growth_curve": [
+    {
+      "category": "A_food_groceries",
+      "threshold_min": 5,
+      "n_cells_accessible": 1527,
+      "pct_cells_accessible": 6.84,
+      "population_accessible": 6791061.7,
+      "pct_population_accessible": 43.94
+    },
+    {
+      "category": "A_food_groceries",
+      "threshold_min": 10,
+      "n_cells_accessible": 2965,
+      "pct_cells_accessible": 13.28,
+      "population_accessible": 11254000.2,
+      "pct_population_accessible": 72.82
+    },
+    {
+      "category": "A_food_groceries",
+      "threshold_min": 15,
+      "n_cells_accessible": 4145,
+      "pct_cells_accessible": 18.57,
+      "population_accessible": 13247385.6,
+      "pct_population_accessible": 85.71
+    },
+    {
+      "category": "B_healthcare",
+      "threshold_min": 5,
+      "n_cells_accessible": 1712,
+      "pct_cells_accessible": 7.67,
+      "population_accessible": 8147937.7,
+      "pct_population_accessible": 52.72
+    },
+    {
+      "category": "B_healthcare",
+      "threshold_min": 10,
+      "n_cells_accessible": 3201,
+      "pct_cells_accessible": 14.34,
+      "population_accessible": 12434725.7,
+      "pct_population_accessible": 80.45
+    },
+    {
+      "category": "B_healthcare",
+      "threshold_min": 15,
+      "n_cells_accessible": 4222,
+      "pct_cells_accessible": 18.91,
+      "population_accessible": 13804886.9,
+      "pct_population_accessible": 89.32
+    },
+    {
+      "category": "C_education",
+      "threshold_min": 5,
+      "n_cells_accessible": 1765,
+      "pct_cells_accessible": 7.91,
+      "population_accessible": 7909754.0,
+      "pct_population_accessible": 51.18
+    },
+    {
+      "category": "C_education",
+      "threshold_min": 10,
+      "n_cells_accessible": 3417,
+      "pct_cells_accessible": 15.31,
+      "population_accessible": 12668683.6,
+      "pct_population_accessible": 81.97
+    },
+    {
+      "category": "C_education",
+      "threshold_min": 15,
+      "n_cells_accessible": 4580,
+      "pct_cells_accessible": 20.52,
+      "population_accessible": 13950129.0,
+      "pct_population_accessible": 90.26
+    },
+    {
+      "category": "COMPLETE",
+      "threshold_min": 5,
+      "n_cells_accessible": 798,
+      "pct_cells_accessible": 3.57,
+      "population_accessible": 4233043.4,
+      "pct_population_accessible": 27.39
+    },
+    {
+      "category": "COMPLETE",
+      "threshold_min": 10,
+      "n_cells_accessible": 2197,
+      "pct_cells_accessible": 9.84,
+      "population_accessible": 10123841.6,
+      "pct_population_accessible": 65.5
+    },
+    {
+      "category": "COMPLETE",
+      "threshold_min": 15,
+      "n_cells_accessible": 3269,
+      "pct_cells_accessible": 14.64,
+      "population_accessible": 12748528.5,
+      "pct_population_accessible": 82.49
+    }
+  ],
+  "marginal_gains": [
+    {
+      "category": "A_food_groceries",
+      "gain_5to10_pct_cells": 6.44,
+      "gain_10to15_pct_cells": 5.29,
+      "gain_5to10_pct_population": 28.88,
+      "gain_10to15_pct_population": 12.89
+    },
+    {
+      "category": "B_healthcare",
+      "gain_5to10_pct_cells": 6.67,
+      "gain_10to15_pct_cells": 4.57,
+      "gain_5to10_pct_population": 27.73,
+      "gain_10to15_pct_population": 8.87
+    },
+    {
+      "category": "C_education",
+      "gain_5to10_pct_cells": 7.4,
+      "gain_10to15_pct_cells": 5.21,
+      "gain_5to10_pct_population": 30.79,
+      "gain_10to15_pct_population": 8.29
+    },
+    {
+      "category": "COMPLETE",
+      "gain_5to10_pct_cells": 6.27,
+      "gain_10to15_pct_cells": 4.8,
+      "gain_5to10_pct_population": 38.11,
+      "gain_10to15_pct_population": 16.99
+    }
+  ],
+  "suspicious_pattern_flags": []
+}

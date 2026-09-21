@@ -1,0 +1,162 @@
+{
+  "0": [
+    {
+      "feature": "leisure_count",
+      "raw_median": 2.0,
+      "citywide_percentile": 88.8
+    },
+    {
+      "feature": "poi_density_km2",
+      "raw_median": 20.0,
+      "citywide_percentile": 87.4
+    },
+    {
+      "feature": "poi_entropy",
+      "raw_median": 0.811,
+      "citywide_percentile": 87.0
+    },
+    {
+      "feature": "distance_to_nearest_cycle_infrastructure_m_ibb_only",
+      "raw_median": 1176.802,
+      "citywide_percentile": 13.7
+    },
+    {
+      "feature": "building_coverage_ratio",
+      "raw_median": 0.072,
+      "citywide_percentile": 86.1
+    },
+    {
+      "feature": "population_density_calibrated_km2",
+      "raw_median": 5114.725,
+      "citywide_percentile": 85.9
+    }
+  ],
+  "1": [
+    {
+      "feature": "population_density_calibrated_km2",
+      "raw_median": 0.0,
+      "citywide_percentile": 28.3
+    },
+    {
+      "feature": "building_coverage_ratio",
+      "raw_median": 0.0,
+      "citywide_percentile": 32.6
+    },
+    {
+      "feature": "transit_stops_within_1000m",
+      "raw_median": 0.0,
+      "citywide_percentile": 37.7
+    },
+    {
+      "feature": "poi_density_km2",
+      "raw_median": 0.0,
+      "citywide_percentile": 38.6
+    },
+    {
+      "feature": "distance_to_nearest_tram_m",
+      "raw_median": 26788.436,
+      "citywide_percentile": 40.1
+    },
+    {
+      "feature": "distance_to_nearest_micromobility_parking_m",
+      "raw_median": 18479.908,
+      "citywide_percentile": 40.7
+    }
+  ],
+  "2": [
+    {
+      "feature": "bus_departures_per_day",
+      "raw_median": 134.0,
+      "citywide_percentile": 96.6
+    },
+    {
+      "feature": "distance_to_nearest_transit_m",
+      "raw_median": 148.969,
+      "citywide_percentile": 4.0
+    },
+    {
+      "feature": "transit_stops_within_500m",
+      "raw_median": 7.0,
+      "citywide_percentile": 95.9
+    },
+    {
+      "feature": "transit_stops_within_1000m",
+      "raw_median": 25.0,
+      "citywide_percentile": 95.8
+    },
+    {
+      "feature": "distance_to_nearest_metrobus_m",
+      "raw_median": 2205.965,
+      "citywide_percentile": 8.1
+    },
+    {
+      "feature": "population_density_calibrated_km2",
+      "raw_median": 12029.34,
+      "citywide_percentile": 91.2
+    }
+  ],
+  "3": [
+    {
+      "feature": "retail_count",
+      "raw_median": 13.0,
+      "citywide_percentile": 98.1
+    },
+    {
+      "feature": "restaurant_count",
+      "raw_median": 4.0,
+      "citywide_percentile": 97.9
+    },
+    {
+      "feature": "healthcare_count",
+      "raw_median": 4.0,
+      "citywide_percentile": 97.8
+    },
+    {
+      "feature": "cafe_count",
+      "raw_median": 2.0,
+      "citywide_percentile": 97.8
+    },
+    {
+      "feature": "poi_density_km2",
+      "raw_median": 152.0,
+      "citywide_percentile": 97.8
+    },
+    {
+      "feature": "office_count",
+      "raw_median": 2.0,
+      "citywide_percentile": 97.4
+    }
+  ],
+  "4": [
+    {
+      "feature": "distance_to_nearest_tram_m",
+      "raw_median": 59293.428,
+      "citywide_percentile": 82.9
+    },
+    {
+      "feature": "distance_to_nearest_micromobility_parking_m",
+      "raw_median": 48608.001,
+      "citywide_percentile": 82.9
+    },
+    {
+      "feature": "distance_to_nearest_bicycle_parking_m",
+      "raw_median": 37850.508,
+      "citywide_percentile": 82.9
+    },
+    {
+      "feature": "distance_to_nearest_cycle_infrastructure_m_ibb_only",
+      "raw_median": 20161.958,
+      "citywide_percentile": 82.9
+    },
+    {
+      "feature": "distance_to_nearest_transit_m",
+      "raw_median": 37356.877,
+      "citywide_percentile": 82.9
+    },
+    {
+      "feature": "distance_to_nearest_metrobus_m",
+      "raw_median": 44678.898,
+      "citywide_percentile": 82.9
+    }
+  ]
+}

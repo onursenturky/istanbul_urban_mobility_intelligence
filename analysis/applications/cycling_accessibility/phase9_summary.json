@@ -1,0 +1,10 @@
+{
+  "n_grid_cells": 22322,
+  "cycling_complete_15min_access_pct_cells": 31.91,
+  "cycling_complete_15min_access_pct_population": 95.57,
+  "walking_complete_15min_access_pct_population_reference": 82.49,
+  "n_cycle_only_gain_cells": 3874,
+  "pop_cycle_only_gain": 2097550.1301529715,
+  "n_high_value_gain_cells": 1526,
+  "ebike_opportunity_overlap_vs_baseline": "31.44% vs 25.0% baseline"
+}

@@ -1,0 +1,44 @@
+{
+  "captured_before_any_phase14_change": true,
+  "package_versions_before": {
+    "next": "14.2.35",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "maplibre-gl": "4.5.0",
+    "recharts": "2.12.7",
+    "typescript": "5.5.4",
+    "tailwindcss": "3.4.7",
+    "postcss": "8.4.40",
+    "node_installed": "v25.9.0",
+    "npm_installed": "11.12.1"
+  },
+  "npm_audit_before": {
+    "total": 3,
+    "high": 1,
+    "critical": 2,
+    "vulnerable_packages": ["next (critical, RCE-class advisories, range 9.3.4-canary.0 - 16.3.0-preview.10)", "postcss (high, transitively bundled inside next/node_modules/postcss@8.4.31)"],
+    "note": "maplibre-gl@4.5.0 was NOT yet flagged in the pre-upgrade audit snapshot taken in this session, but the same advisory database entry (GHSA-jrc7-96c5-q579, critical, XSS Sanitizer Bypass, affects <=6.4.0) applies to it -- confirmed after upgrading and re-auditing. Treated as a pre-existing critical finding either way."
+  },
+  "data_payload_before": {
+    "grid_map.geojson_mb": 22.6,
+    "grid_attributes.json_mb": 27.0,
+    "total_public_data_mb": 49.7,
+    "loading_strategy": "grid_map.geojson fetched in full by every map page on mount (base geometry + ALL ~19 analytical/categorical fields for every layer on every page, even though each page only colors by 1-3 of them); grid_attributes.json (all 36 fields x 22,322 cells) fetched in full, once, client-side, on first Grid Intelligence Card open, cached in a module-level singleton for the rest of the session."
+  },
+  "production_build_before": {
+    "framework": "Next.js 14.2.35 (App Router)",
+    "map_page_first_load_js_kb": 299,
+    "static_pages": ["/ (landing)", "/overview"],
+    "dynamic_pages": ["/typology", "/fifteen-minute", "/cycling-gain", "/transit", "/gaps", "/ebike", "/methods"],
+    "build_status": "Compiled successfully, 0 TypeScript errors (confirmed at the end of Phase 13.1)"
+  },
+  "route_structure_before": {
+    "route_groups": ["(editorial): /, /overview", "(exploration): /typology, /fifteen-minute, /cycling-gain, /transit, /gaps, /ebike, /methods"],
+    "client_server_boundary": "Pages are async server components (data.ts reads public/data/*.json via fs); MapView, GridIntelligenceCard, PageMapExplorer, Sidebar, Navigation are 'use client'"
+  },
+  "known_console_issue_before": "Cosmetic dev-only AbortError under React 18 StrictMode's double-invoke of effects when map.remove() runs on an instance whose style is still mid-load (documented in Phase 13.1's qa/phase13_1_map_rendering_qa.json). Confirmed absent in production builds (StrictMode double-invoke is dev-only)." ,
+  "missing_assets_before": ["favicon.ico (404 in console, cosmetic)", "Open Graph / social preview image", "custom error.tsx / not-found.tsx (Next.js default fallback pages only)"],
+  "public_assets_before": "public/data/ only -- no images, no favicon, no manifest",
+  "security_findings_summary_before": "3 advisories (1 high, 2 critical): Next.js RCE-class advisories (Windows-hosted RCE GHSA-p293-qw3h-jr36, Image Optimization AVIF RCE GHSA-2xp9-vwfh-vxw4, both critical, fixed only at Next >=15.5.24 -- no 14.x backport in the advisory data); PostCSS high-severity advisories via Next's internally bundled postcss@8.4.31.",
+  "purpose": "This is the frozen BEFORE snapshot. See qa/phase14_performance_report.json for the AFTER measurements and phase14_summary.json for the full before/after/delta narrative."
+}

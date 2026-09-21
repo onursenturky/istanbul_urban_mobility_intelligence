@@ -1,0 +1,121 @@
+- generic [active] [ref=f11e1]:
+  - generic [ref=f11e2]:
+    - complementary [ref=f11e3]:
+      - link "Istanbul Urban Mobility Intelligence" [ref=f11e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f11e5]:
+          - generic [ref=f11e6]: Istanbul
+          - generic [ref=f11e7]: Urban Mobility Intelligence
+      - navigation "Analysis modules" [ref=f11e8]:
+        - list [ref=f11e9]:
+          - listitem [ref=f11e10]:
+            - link "Overview" [ref=f11e11] [cursor=pointer]:
+              - /url: /overview
+          - listitem [ref=f11e12]:
+            - link "Urban Typology" [ref=f11e13] [cursor=pointer]:
+              - /url: /typology
+          - listitem [ref=f11e14]:
+            - link "15-Minute Istanbul" [ref=f11e15] [cursor=pointer]:
+              - /url: /fifteen-minute
+          - listitem [ref=f11e16]:
+            - link "Cycling Gain" [ref=f11e17] [cursor=pointer]:
+              - /url: /cycling-gain
+          - listitem [ref=f11e18]:
+            - link "Transit Connection" [ref=f11e19] [cursor=pointer]:
+              - /url: /transit
+          - listitem [ref=f11e20]:
+            - link "Accessibility Gaps" [ref=f11e21] [cursor=pointer]:
+              - /url: /gaps
+          - listitem [ref=f11e22]:
+            - link "E-bike" [ref=f11e23] [cursor=pointer]:
+              - /url: /ebike
+          - listitem [ref=f11e24]:
+            - link "Data & Methods" [ref=f11e25] [cursor=pointer]:
+              - /url: /methods
+      - paragraph [ref=f11e27]: An O3 Sustainability spatial intelligence project.
+    - main [ref=f11e28]:
+      - generic [ref=f11e29]:
+        - generic [ref=f11e30]:
+          - generic [ref=f11e31]:
+            - heading "Data & Methods" [level=1] [ref=f11e32]
+            - paragraph [ref=f11e33]:
+              - text: How Reliable Is This View?
+              - button "How this works" [ref=f11e35] [cursor=pointer]: i
+          - button "View full methodology" [ref=f11e36] [cursor=pointer]
+        - generic [ref=f11e37]:
+          - generic [ref=f11e38]:
+            - generic [ref=f11e39]:
+              - application "Istanbul accessibility map" [ref=f11e40]:
+                - region "Map" [ref=f11e41]
+                - generic [ref=f11e42]:
+                  - button "Zoom in" [ref=f11e43] [cursor=pointer]
+                  - button "Zoom out" [ref=f11e45] [cursor=pointer]
+              - button "Reset view" [ref=f11e47] [cursor=pointer]
+              - generic [ref=f11e50]:
+                - paragraph [ref=f11e51]: Loading the Istanbul accessibility map
+                - paragraph [ref=f11e52]: Preparing 22,322 spatial cells…
+            - tablist "Map layer" [ref=f11e54]:
+              - tab "Reliability" [selected] [ref=f11e55] [cursor=pointer]
+            - generic [ref=f11e57]:
+              - generic [ref=f11e58]: District
+              - combobox "District" [ref=f11e59]:
+                - option "All districts" [selected]
+                - option "Adalar"
+                - option "Arnavutköy"
+                - option "Ataşehir"
+                - option "Avcılar"
+                - option "Bağcılar"
+                - option "Bahçelievler"
+                - option "Bakırköy"
+                - option "Başakşehir"
+                - option "Bayrampaşa"
+                - option "Beşiktaş"
+                - option "Beykoz"
+                - option "Beylikdüzü"
+                - option "Beyoğlu"
+                - option "Büyükçekmece"
+                - option "Çatalca"
+                - option "Çekmeköy"
+                - option "Esenler"
+                - option "Esenyurt"
+                - option "Eyüpsultan"
+                - option "Fatih"
+                - option "Gaziosmanpaşa"
+                - option "Güngören"
+                - option "Kadıköy"
+                - option "Kâğıthane"
+                - option "Kartal"
+                - option "Küçükçekmece"
+                - option "Maltepe"
+                - option "Pendik"
+                - option "Sancaktepe"
+                - option "Sarıyer"
+                - option "Silivri"
+                - option "Sultanbeyli"
+                - option "Sultangazi"
+                - option "Şile"
+                - option "Şişli"
+                - option "Tuzla"
+                - option "Ümraniye"
+                - option "Üsküdar"
+                - option "Zeytinburnu"
+            - generic [ref=f11e61]:
+              - generic [ref=f11e62]: How Reliable Is This View?
+              - list [ref=f11e63]:
+                - listitem [ref=f11e64]:
+                  - generic [ref=f11e66]: Reliable evidence
+                - listitem [ref=f11e67]:
+                  - generic [ref=f11e69]: Network limitation
+                - listitem [ref=f11e70]:
+                  - generic [ref=f11e72]: Data insufficient for transit interpretation
+                - listitem [ref=f11e73]:
+                  - generic [ref=f11e75]: Multiple limitations
+                - listitem [ref=f11e76]:
+                  - generic [ref=f11e78]: Known special case (Adalar)
+          - complementary [ref=f11e79]:
+            - generic [ref=f11e80]:
+              - generic [ref=f11e81]:
+                - heading "How Reliable Is This View?" [level=2] [ref=f11e82]
+                - paragraph [ref=f11e83]: Sources, methods, and where the results should not be over-interpreted.
+              - paragraph [ref=f11e84]: Click any cell on the map to see its details.
+  - alert [ref=f11e85]

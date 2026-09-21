@@ -1,0 +1,46 @@
+{
+  "population_layer_caveat": "Population is CALIBRATED 2020 population (WorldPop-based, Phase 3C calibration). All figures below describe accessibility of the SPATIAL DISTRIBUTION of the calibrated 2020 population to the CURRENT (2026) network/destination snapshot -- NOT a 2026 population estimate.",
+  "total_calibrated_population_2020": 15455565.5,
+  "population_with_complete_15min_access": 12748528.5,
+  "pct_population_with_complete_15min_access": 82.49,
+  "population_lacking_complete_15min_access": 2707036.9,
+  "population_by_category_and_threshold": {
+    "A_food_groceries_5min": 6791061.7,
+    "B_healthcare_5min": 8147937.7,
+    "C_education_5min": 7909754.0,
+    "D_daily_services_5min": 5865811.3,
+    "E_retail_shopping_5min": 8383245.4,
+    "F_leisure_social_5min": 10628680.6,
+    "G_green_recreation_5min": 8204852.4,
+    "H_public_transport_access_5min": 5652073.9,
+    "A_food_groceries_10min": 11254000.2,
+    "B_healthcare_10min": 12434725.7,
+    "C_education_10min": 12668683.6,
+    "D_daily_services_10min": 10261607.9,
+    "E_retail_shopping_10min": 12713341.9,
+    "F_leisure_social_10min": 13903021.0,
+    "G_green_recreation_10min": 12749027.5,
+    "H_public_transport_access_10min": 9342682.6,
+    "A_food_groceries_15min": 13247385.6,
+    "B_healthcare_15min": 13804886.9,
+    "C_education_15min": 13950129.0,
+    "D_daily_services_15min": 12494476.4,
+    "E_retail_shopping_15min": 14060279.1,
+    "F_leisure_social_15min": 14705567.2,
+    "G_green_recreation_15min": 13945431.5,
+    "H_public_transport_access_15min": 11368767.3
+  },
+  "population_by_n_required_categories_accessible_15min": {
+    "0": 1045935.4,
+    "1": 565387.1,
+    "2": 1095714.5,
+    "3": 12748528.5
+  },
+  "population_by_deficit_class": {
+    "EDUCATION_DEFICIT": 178733.8,
+    "FOOD_DEFICIT": 723701.6,
+    "HEALTHCARE_DEFICIT": 193279.0,
+    "MULTI_SERVICE_DEFICIT": 1611322.5,
+    "NONE_COMPLETE_ACCESS": 12748528.5
+  }
+}

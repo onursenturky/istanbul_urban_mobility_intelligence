@@ -1,0 +1,100 @@
+{
+  "section": "Phase 9 Sections 3-4",
+  "destination_set_reused_unchanged_from": "analysis/applications/15min_city/poi_network_anchors.parquet (Phase 8, FROZEN)",
+  "n_destinations": 81854,
+  "categories": [
+    "A_food_groceries",
+    "B_healthcare",
+    "C_education",
+    "D_daily_services",
+    "E_retail_shopping",
+    "F_leisure_social",
+    "G_green_recreation",
+    "H_public_transport_access"
+  ],
+  "anchoring_method": "Nearest cycling-graph node via cKDTree on node (x,y), identical method to Phase 8's walking anchoring -- only the target graph differs.",
+  "anchoring_success_by_category": [
+    {
+      "poi_category": "A_food_groceries",
+      "n_destinations": 4175,
+      "cycling_snap_distance_median_m": 16.74,
+      "cycling_snap_distance_p90_m": 33.31,
+      "cycling_snap_distance_max_m": 5438.5,
+      "cycling_n_questionable": 14,
+      "cycling_pct_ok": 99.66,
+      "walking_pct_ok": 99.66
+    },
+    {
+      "poi_category": "B_healthcare",
+      "n_destinations": 5926,
+      "cycling_snap_distance_median_m": 17.32,
+      "cycling_snap_distance_p90_m": 34.48,
+      "cycling_snap_distance_max_m": 6285.35,
+      "cycling_n_questionable": 13,
+      "cycling_pct_ok": 99.78,
+      "walking_pct_ok": 99.78
+    },
+    {
+      "poi_category": "C_education",
+      "n_destinations": 3391,
+      "cycling_snap_distance_median_m": 32.42,
+      "cycling_snap_distance_p90_m": 53.57,
+      "cycling_snap_distance_max_m": 6375.61,
+      "cycling_n_questionable": 12,
+      "cycling_pct_ok": 99.65,
+      "walking_pct_ok": 99.65
+    },
+    {
+      "poi_category": "D_daily_services",
+      "n_destinations": 6130,
+      "cycling_snap_distance_median_m": 15.69,
+      "cycling_snap_distance_p90_m": 33.78,
+      "cycling_snap_distance_max_m": 6197.16,
+      "cycling_n_questionable": 21,
+      "cycling_pct_ok": 99.66,
+      "walking_pct_ok": 99.66
+    },
+    {
+      "poi_category": "E_retail_shopping",
+      "n_destinations": 22571,
+      "cycling_snap_distance_median_m": 15.31,
+      "cycling_snap_distance_p90_m": 32.52,
+      "cycling_snap_distance_max_m": 6357.29,
+      "cycling_n_questionable": 53,
+      "cycling_pct_ok": 99.77,
+      "walking_pct_ok": 99.77
+    },
+    {
+      "poi_category": "F_leisure_social",
+      "n_destinations": 28244,
+      "cycling_snap_distance_median_m": 22.7,
+      "cycling_snap_distance_p90_m": 53.3,
+      "cycling_snap_distance_max_m": 11961.0,
+      "cycling_n_questionable": 410,
+      "cycling_pct_ok": 98.55,
+      "walking_pct_ok": 98.55
+    },
+    {
+      "poi_category": "G_green_recreation",
+      "n_destinations": 5916,
+      "cycling_snap_distance_median_m": 24.84,
+      "cycling_snap_distance_p90_m": 52.39,
+      "cycling_snap_distance_max_m": 11862.36,
+      "cycling_n_questionable": 26,
+      "cycling_pct_ok": 99.56,
+      "walking_pct_ok": 99.56
+    },
+    {
+      "poi_category": "H_public_transport_access",
+      "n_destinations": 5501,
+      "cycling_snap_distance_median_m": 11.76,
+      "cycling_snap_distance_p90_m": 28.04,
+      "cycling_snap_distance_max_m": 6105.38,
+      "cycling_n_questionable": 41,
+      "cycling_pct_ok": 99.25,
+      "walking_pct_ok": 99.25
+    }
+  ],
+  "baseline_cycling_speed_kmh": 15.0,
+  "baseline_speed_assumption": "Constant 15.0 km/h for ALL cycling edges regardless of grade, surface, or traffic stress -- the SAME transparent baseline defined in Phase 7 (network_builder.py). No terrain-adjusted speed or comfort/stress penalty is introduced in Phase 9. Distance (length_m) and time (travel_time_cycle_s) are stored as separate edge attributes throughout."
+}

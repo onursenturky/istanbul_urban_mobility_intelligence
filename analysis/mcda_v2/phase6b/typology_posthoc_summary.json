@@ -1,0 +1,40 @@
+{
+  "by_cluster": {
+    "0": {
+      "n_cells": 6113,
+      "mean_readiness": 0.3956,
+      "mean_opportunity": 0.0573,
+      "pct_robust_high_readiness": 0.0,
+      "pct_robust_high_opportunity": 1.6031
+    },
+    "1": {
+      "n_cells": 2914,
+      "mean_readiness": 0.6892,
+      "mean_opportunity": 0.4996,
+      "pct_robust_high_readiness": 24.8456,
+      "pct_robust_high_opportunity": 38.9842
+    },
+    "2": {
+      "n_cells": 8621,
+      "mean_readiness": 0.5058,
+      "mean_opportunity": 0.1563,
+      "pct_robust_high_readiness": 0.3364,
+      "pct_robust_high_opportunity": 0.5336
+    },
+    "3": {
+      "n_cells": 3140,
+      "mean_readiness": 0.3279,
+      "mean_opportunity": 0.0332,
+      "pct_robust_high_readiness": 0.0,
+      "pct_robust_high_opportunity": 0.0
+    },
+    "4": {
+      "n_cells": 1534,
+      "mean_readiness": 0.7959,
+      "mean_opportunity": 0.5159,
+      "pct_robust_high_readiness": 70.6649,
+      "pct_robust_high_opportunity": 48.7614
+    }
+  },
+  "note": "Typology membership was NEVER used as a scoring input -- this is post-hoc interpretation only, cross-tabulating already-computed scores against the independently-derived V2 k=5 typology."
+}

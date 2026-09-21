@@ -1,0 +1,39 @@
+{
+  "variants_tested": [
+    "BASELINE",
+    "NO_STREET_CONNECTIVITY",
+    "NO_ROAD_GRADE",
+    "EXPANDED_TRANSIT",
+    "ALTERNATIVE_CYCLING",
+    "WEIGHT_PERTURBATION"
+  ],
+  "weight_perturbation_vector": {
+    "Demand/Activity": 0.16,
+    "Transit Accessibility": 0.2,
+    "Cycling Readiness": 0.24,
+    "Street Connectivity": 0.24,
+    "Physical Feasibility": 0.16
+  },
+  "alpha_by_variant": {
+    "BASELINE": 0.5,
+    "NO_STREET_CONNECTIVITY": 0.5,
+    "NO_ROAD_GRADE": 0.5,
+    "EXPANDED_TRANSIT": 0.5,
+    "ALTERNATIVE_CYCLING": 0.5,
+    "WEIGHT_PERTURBATION": 0.4
+  },
+  "strongest_sensitivity_driver_readiness": {
+    "variant": "NO_STREET_CONNECTIVITY",
+    "spearman_rho_vs_baseline": 0.8445,
+    "jaccard_top_decile_vs_baseline": 0.8686,
+    "mean_abs_diff_vs_baseline": 0.0627,
+    "target": "readiness"
+  },
+  "strongest_sensitivity_driver_opportunity": {
+    "variant": "WEIGHT_PERTURBATION",
+    "spearman_rho_vs_baseline": 0.9991,
+    "jaccard_top_decile_vs_baseline": 0.8401,
+    "mean_abs_diff_vs_baseline": 0.015,
+    "target": "opportunity"
+  }
+}

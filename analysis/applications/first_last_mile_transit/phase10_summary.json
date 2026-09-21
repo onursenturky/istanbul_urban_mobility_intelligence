@@ -1,0 +1,9 @@
+{
+  "freeze_decision": "B_VALIDATED_WITH_DOCUMENTED_LIMITATIONS_FREEZE_V1",
+  "walk_transit_10min_access_pct_cells": 16.42,
+  "cycle_transit_10min_access_pct_cells": 31.23,
+  "walk_fixed_15min_access_pct_cells": 7.25,
+  "cycle_fixed_15min_access_pct_cells": 14.61,
+  "n_districts_no_feed_coverage": 2,
+  "n_districts_flagged_non_good": 18
+}

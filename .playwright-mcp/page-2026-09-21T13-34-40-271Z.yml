@@ -1,0 +1,130 @@
+- generic [active] [ref=f15e1]:
+  - generic [ref=f15e2]:
+    - complementary [ref=f15e3]:
+      - link "Istanbul Urban Mobility Intelligence" [ref=f15e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f15e5]:
+          - generic [ref=f15e6]: Istanbul
+          - generic [ref=f15e7]: Urban Mobility Intelligence
+      - navigation "Analysis modules" [ref=f15e8]:
+        - list [ref=f15e9]:
+          - listitem [ref=f15e10]:
+            - link "Overview" [ref=f15e11] [cursor=pointer]:
+              - /url: /overview
+          - listitem [ref=f15e12]:
+            - link "Urban Typology" [ref=f15e13] [cursor=pointer]:
+              - /url: /typology
+          - listitem [ref=f15e14]:
+            - link "15-Minute Istanbul" [ref=f15e15] [cursor=pointer]:
+              - /url: /fifteen-minute
+          - listitem [ref=f15e16]:
+            - link "Cycling Gain" [ref=f15e17] [cursor=pointer]:
+              - /url: /cycling-gain
+          - listitem [ref=f15e18]:
+            - link "Transit Connection" [ref=f15e19] [cursor=pointer]:
+              - /url: /transit
+          - listitem [ref=f15e20]:
+            - link "Accessibility Gaps" [ref=f15e21] [cursor=pointer]:
+              - /url: /gaps
+          - listitem [ref=f15e22]:
+            - link "E-bike" [ref=f15e23] [cursor=pointer]:
+              - /url: /ebike
+          - listitem [ref=f15e24]:
+            - link "Data & Methods" [ref=f15e25] [cursor=pointer]:
+              - /url: /methods
+      - paragraph [ref=f15e27]: An O3 Sustainability spatial intelligence project.
+    - main [ref=f15e28]:
+      - generic [ref=f15e29]:
+        - generic [ref=f15e31]:
+          - heading "Access Gaps" [level=1] [ref=f15e32]
+          - paragraph [ref=f15e33]:
+            - text: What's still out of reach?
+            - button "How this works" [ref=f15e35] [cursor=pointer]: i
+        - generic [ref=f15e36]:
+          - generic [ref=f15e37]:
+            - generic [ref=f15e38]:
+              - application "Istanbul accessibility map" [ref=f15e39]:
+                - region "Map" [ref=f15e40]
+                - generic [ref=f15e41]:
+                  - button "Zoom in" [ref=f15e42] [cursor=pointer]
+                  - button "Zoom out" [ref=f15e44] [cursor=pointer]
+              - button "Reset view" [ref=f15e46] [cursor=pointer]
+              - generic [ref=f15e49]:
+                - paragraph [ref=f15e50]: Loading the Istanbul accessibility map
+                - paragraph [ref=f15e51]: Preparing 22,322 spatial cells…
+            - tablist "Map layer" [ref=f15e53]:
+              - tab "What's missing" [selected] [ref=f15e54] [cursor=pointer]
+              - tab "Cycling's effect" [ref=f15e55] [cursor=pointer]
+            - generic [ref=f15e57]:
+              - generic [ref=f15e58]: District
+              - combobox "District" [ref=f15e59]:
+                - option "All districts"
+                - option "Adalar"
+                - option "Arnavutköy"
+                - option "Ataşehir"
+                - option "Avcılar"
+                - option "Bağcılar"
+                - option "Bahçelievler"
+                - option "Bakırköy"
+                - option "Başakşehir"
+                - option "Bayrampaşa"
+                - option "Beşiktaş"
+                - option "Beykoz"
+                - option "Beylikdüzü"
+                - option "Beyoğlu"
+                - option "Büyükçekmece"
+                - option "Çatalca"
+                - option "Çekmeköy"
+                - option "Esenler"
+                - option "Esenyurt"
+                - option "Eyüpsultan"
+                - option "Fatih"
+                - option "Gaziosmanpaşa"
+                - option "Güngören"
+                - option "Kadıköy" [selected]
+                - option "Kâğıthane"
+                - option "Kartal"
+                - option "Küçükçekmece"
+                - option "Maltepe"
+                - option "Pendik"
+                - option "Sancaktepe"
+                - option "Sarıyer"
+                - option "Silivri"
+                - option "Sultanbeyli"
+                - option "Sultangazi"
+                - option "Şile"
+                - option "Şişli"
+                - option "Tuzla"
+                - option "Ümraniye"
+                - option "Üsküdar"
+                - option "Zeytinburnu"
+            - generic [ref=f15e61]:
+              - generic [ref=f15e62]: Everyday essentials still out of reach (walking)
+              - list [ref=f15e63]:
+                - listitem [ref=f15e64]:
+                  - generic [ref=f15e66]: No mapped gap
+                - listitem [ref=f15e67]:
+                  - generic [ref=f15e69]: Food access gap
+                - listitem [ref=f15e70]:
+                  - generic [ref=f15e72]: Healthcare access gap
+                - listitem [ref=f15e73]:
+                  - generic [ref=f15e75]: Education access gap
+                - listitem [ref=f15e76]:
+                  - generic [ref=f15e78]: Food + Healthcare gap
+                - listitem [ref=f15e79]:
+                  - generic [ref=f15e81]: Food + Education gap
+                - listitem [ref=f15e82]:
+                  - generic [ref=f15e84]: Healthcare + Education gap
+                - listitem [ref=f15e85]:
+                  - generic [ref=f15e87]: Multiple-need gap (all three)
+                - listitem [ref=f15e88]:
+                  - generic [ref=f15e90]: Evidence uncertain
+          - complementary [ref=f15e91]:
+            - generic [ref=f15e92]:
+              - generic [ref=f15e93]:
+                - generic [ref=f15e94]:
+                  - generic [ref=f15e95]: …
+                  - generic [ref=f15e96]: GRID_15026
+                - button "Close cell details" [ref=f15e97] [cursor=pointer]: ✕
+              - paragraph [ref=f15e99]: Loading…
+  - alert [ref=f15e100]

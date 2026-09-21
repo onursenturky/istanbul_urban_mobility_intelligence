@@ -1,0 +1,122 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - link "Istanbul Urban Mobility Intelligence" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e5]:
+          - generic [ref=e6]: Istanbul
+          - generic [ref=e7]: Urban Mobility Intelligence
+      - navigation "Analysis modules" [ref=e8]:
+        - list [ref=e9]:
+          - listitem [ref=e10]:
+            - link "Overview" [ref=e11] [cursor=pointer]:
+              - /url: /overview
+          - listitem [ref=e12]:
+            - link "Urban Typology" [ref=e13] [cursor=pointer]:
+              - /url: /typology
+          - listitem [ref=e14]:
+            - link "15-Minute Istanbul" [ref=e15] [cursor=pointer]:
+              - /url: /fifteen-minute
+          - listitem [ref=e16]:
+            - link "Cycling Gain" [ref=e17] [cursor=pointer]:
+              - /url: /cycling-gain
+          - listitem [ref=e18]:
+            - link "Transit Connection" [ref=e19] [cursor=pointer]:
+              - /url: /transit
+          - listitem [ref=e20]:
+            - link "Accessibility Gaps" [ref=e21] [cursor=pointer]:
+              - /url: /gaps
+          - listitem [ref=e22]:
+            - link "E-bike" [ref=e23] [cursor=pointer]:
+              - /url: /ebike
+          - listitem [ref=e24]:
+            - link "Data & Methods" [ref=e25] [cursor=pointer]:
+              - /url: /methods
+      - paragraph [ref=e27]: An O3 Sustainability spatial intelligence project.
+    - main [ref=e28]:
+      - generic [ref=e29]:
+        - generic [ref=e31]:
+          - heading "15-Minute Istanbul" [level=1] [ref=e32]
+          - paragraph [ref=e33]:
+            - text: What's within a 15-minute walk?
+            - button "How this works" [ref=e35] [cursor=pointer]: i
+        - generic [ref=e36]:
+          - generic [ref=e37]:
+            - generic [ref=e38]:
+              - application "Istanbul accessibility map" [ref=e39]:
+                - region "Map" [ref=e40]
+                - generic [ref=e41]:
+                  - button "Zoom in" [ref=e42] [cursor=pointer]
+                  - button "Zoom out" [ref=e44] [cursor=pointer]
+              - button "Reset view" [ref=e46] [cursor=pointer]
+              - generic [ref=e49]:
+                - paragraph [ref=e50]: Loading the Istanbul accessibility map
+                - paragraph [ref=e51]: Preparing 22,322 spatial cells…
+            - tablist "Map layer" [ref=e53]:
+              - tab "Walking" [selected] [ref=e54] [cursor=pointer]
+              - tab "Cycling" [ref=e55] [cursor=pointer]
+            - generic [ref=e57]:
+              - generic [ref=e58]: District
+              - combobox "District" [ref=e59]:
+                - option "All districts" [selected]
+                - option "Adalar"
+                - option "Arnavutköy"
+                - option "Ataşehir"
+                - option "Avcılar"
+                - option "Bağcılar"
+                - option "Bahçelievler"
+                - option "Bakırköy"
+                - option "Başakşehir"
+                - option "Bayrampaşa"
+                - option "Beşiktaş"
+                - option "Beykoz"
+                - option "Beylikdüzü"
+                - option "Beyoğlu"
+                - option "Büyükçekmece"
+                - option "Çatalca"
+                - option "Çekmeköy"
+                - option "Esenler"
+                - option "Esenyurt"
+                - option "Eyüpsultan"
+                - option "Fatih"
+                - option "Gaziosmanpaşa"
+                - option "Güngören"
+                - option "Kadıköy"
+                - option "Kâğıthane"
+                - option "Kartal"
+                - option "Küçükçekmece"
+                - option "Maltepe"
+                - option "Pendik"
+                - option "Sancaktepe"
+                - option "Sarıyer"
+                - option "Silivri"
+                - option "Sultanbeyli"
+                - option "Sultangazi"
+                - option "Şile"
+                - option "Şişli"
+                - option "Tuzla"
+                - option "Ümraniye"
+                - option "Üsküdar"
+                - option "Zeytinburnu"
+            - generic [ref=e61]:
+              - generic [ref=e62]: Everyday essentials reachable, walking (15 min)
+              - list [ref=e63]:
+                - listitem [ref=e64]:
+                  - generic [ref=e66]: 3 / 3 everyday essentials (complete)
+                - listitem [ref=e67]:
+                  - generic [ref=e69]: 2 / 3 everyday essentials
+                - listitem [ref=e70]:
+                  - generic [ref=e72]: 1 / 3 everyday essentials
+                - listitem [ref=e73]:
+                  - generic [ref=e75]: 0 / 3 everyday essentials
+          - complementary [ref=e76]:
+            - generic [ref=e77]:
+              - generic [ref=e78]:
+                - heading "What's within a 15-minute walk?" [level=2] [ref=e79]
+                - paragraph [ref=e80]: Explore modeled walking access to food, healthcare and education.
+              - generic [ref=e82]:
+                - text: Complete walking access
+                - generic [ref=e83]: 82.49%
+                - paragraph [ref=e84]: Approximately 82.5% of the calibrated 2020 population distribution lies in cells with modeled 15-minute walking access to Food, Healthcare and Education.
+              - paragraph [ref=e85]: Click any cell on the map to see its details.
+  - alert [ref=e86]

@@ -1,0 +1,132 @@
+{
+  "bottleneck_summary": [
+    {
+      "bottleneck_combination": "FOOD+HEALTHCARE+EDUCATION",
+      "n_cells": 16860,
+      "population": 1045935.4,
+      "pct_cells": 75.53,
+      "pct_population": 6.77
+    },
+    {
+      "bottleneck_combination": "COMPLETE",
+      "n_cells": 3269,
+      "population": 12748528.5,
+      "pct_cells": 14.64,
+      "pct_population": 82.49
+    },
+    {
+      "bottleneck_combination": "FOOD+HEALTHCARE",
+      "n_cells": 596,
+      "population": 284619.8,
+      "pct_cells": 2.67,
+      "pct_population": 1.84
+    },
+    {
+      "bottleneck_combination": "FOOD",
+      "n_cells": 452,
+      "population": 723701.6,
+      "pct_cells": 2.02,
+      "pct_population": 4.68
+    },
+    {
+      "bottleneck_combination": "HEALTHCARE+EDUCATION",
+      "n_cells": 381,
+      "population": 126844.3,
+      "pct_cells": 1.71,
+      "pct_population": 0.82
+    },
+    {
+      "bottleneck_combination": "FOOD+EDUCATION",
+      "n_cells": 269,
+      "population": 153922.9,
+      "pct_cells": 1.21,
+      "pct_population": 1.0
+    },
+    {
+      "bottleneck_combination": "HEALTHCARE",
+      "n_cells": 263,
+      "population": 193279.0,
+      "pct_cells": 1.18,
+      "pct_population": 1.25
+    },
+    {
+      "bottleneck_combination": "EDUCATION",
+      "n_cells": 232,
+      "population": 178733.8,
+      "pct_cells": 1.04,
+      "pct_population": 1.16
+    }
+  ],
+  "most_common_bottleneck_by_cells": {
+    "bottleneck_combination": "FOOD+HEALTHCARE+EDUCATION",
+    "n_cells": 16860,
+    "population": 1045935.4,
+    "pct_cells": 75.53,
+    "pct_population": 6.77
+  },
+  "most_common_bottleneck_by_population": {
+    "bottleneck_combination": "FOOD+HEALTHCARE+EDUCATION",
+    "n_cells": 16860,
+    "population": 1045935.4,
+    "pct_cells": 75.53,
+    "pct_population": 6.77
+  },
+  "threshold_sensitivity": [
+    {
+      "category": "FOOD",
+      "threshold_min": 10,
+      "pct_cells_accessible": 13.28,
+      "pct_population_accessible": 72.82
+    },
+    {
+      "category": "FOOD",
+      "threshold_min": 15,
+      "pct_cells_accessible": 18.57,
+      "pct_population_accessible": 85.71
+    },
+    {
+      "category": "FOOD",
+      "threshold_min": 20,
+      "pct_cells_accessible": 23.09,
+      "pct_population_accessible": 91.46
+    },
+    {
+      "category": "HEALTHCARE",
+      "threshold_min": 10,
+      "pct_cells_accessible": 14.34,
+      "pct_population_accessible": 80.45
+    },
+    {
+      "category": "HEALTHCARE",
+      "threshold_min": 15,
+      "pct_cells_accessible": 18.91,
+      "pct_population_accessible": 89.32
+    },
+    {
+      "category": "HEALTHCARE",
+      "threshold_min": 20,
+      "pct_cells_accessible": 22.85,
+      "pct_population_accessible": 92.74
+    },
+    {
+      "category": "EDUCATION",
+      "threshold_min": 10,
+      "pct_cells_accessible": 15.31,
+      "pct_population_accessible": 81.97
+    },
+    {
+      "category": "EDUCATION",
+      "threshold_min": 15,
+      "pct_cells_accessible": 20.52,
+      "pct_population_accessible": 90.26
+    },
+    {
+      "category": "EDUCATION",
+      "threshold_min": 20,
+      "pct_cells_accessible": 25.14,
+      "pct_population_accessible": 93.52
+    }
+  ],
+  "threshold_cliff_flags": [],
+  "20min_query_runtime_s": 27.3
+}

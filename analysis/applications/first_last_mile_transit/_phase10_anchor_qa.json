@@ -1,0 +1,79 @@
+{
+  "walking_by_mode": {
+    "bus": {
+      "n": 4872,
+      "median_snap_m": 11.19,
+      "p90_snap_m": 26.24,
+      "n_questionable": 29
+    },
+    "ferry": {
+      "n": 66,
+      "median_snap_m": 10.34,
+      "p90_snap_m": 3308.0,
+      "n_questionable": 9
+    },
+    "metro": {
+      "n": 120,
+      "median_snap_m": 4.54,
+      "p90_snap_m": 13.59,
+      "n_questionable": 0
+    },
+    "metrobus": {
+      "n": 333,
+      "median_snap_m": 10.57,
+      "p90_snap_m": 21.43,
+      "n_questionable": 0
+    },
+    "rail": {
+      "n": 47,
+      "median_snap_m": 4.34,
+      "p90_snap_m": 49.09,
+      "n_questionable": 3
+    },
+    "tram": {
+      "n": 63,
+      "median_snap_m": 9.48,
+      "p90_snap_m": 21.9,
+      "n_questionable": 0
+    }
+  },
+  "cycling_by_mode": {
+    "bus": {
+      "n": 4872,
+      "median_snap_m": 11.55,
+      "p90_snap_m": 26.82,
+      "n_questionable": 29
+    },
+    "ferry": {
+      "n": 66,
+      "median_snap_m": 35.62,
+      "p90_snap_m": 3308.0,
+      "n_questionable": 9
+    },
+    "metro": {
+      "n": 120,
+      "median_snap_m": 17.12,
+      "p90_snap_m": 42.92,
+      "n_questionable": 0
+    },
+    "metrobus": {
+      "n": 333,
+      "median_snap_m": 11.83,
+      "p90_snap_m": 24.59,
+      "n_questionable": 0
+    },
+    "rail": {
+      "n": 47,
+      "median_snap_m": 25.79,
+      "p90_snap_m": 60.36,
+      "n_questionable": 3
+    },
+    "tram": {
+      "n": 63,
+      "median_snap_m": 10.23,
+      "p90_snap_m": 26.73,
+      "n_questionable": 0
+    }
+  },
+  "adalar_cycling_cross_water_known_limitation": 9
+}

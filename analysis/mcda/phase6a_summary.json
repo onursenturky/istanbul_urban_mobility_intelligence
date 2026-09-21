@@ -1,0 +1,43 @@
+{
+  "n_eligible_predictors_reviewed": 77,
+  "n_retained_criteria": 24,
+  "n_excluded_redundant": 49,
+  "n_excluded_not_decision_relevant": 2,
+  "n_excluded_pending_dependency": 2,
+  "dimensions": [
+    "Cycling Readiness",
+    "Demand/Activity Potential",
+    "Mobility/Transit Context",
+    "Terrain Feasibility",
+    "Urban Form"
+  ],
+  "direction_counts": {
+    "CONTEXT_DEPENDENT": 16,
+    "BENEFIT": 5,
+    "COST": 3
+  },
+  "readiness_need_recommendation": "YES -- construct two separate dimensions (Readiness, Need/Opportunity) rather than one immediate suitability index. Several retained criteria (cycling infrastructure density/proximity, parking density/proximity) have a direction that depends on which question is being asked, and Phase 5C's robustness audit already showed the citywide typology's structure is sensitive to how such criteria are combined -- collapsing them into one number now would hide that ambiguity rather than resolve it.",
+  "weighting_scenarios": [
+    "balanced_equal_dimensions",
+    "demand_oriented",
+    "first_last_mile_transit_integration_oriented",
+    "infrastructure_readiness_oriented"
+  ],
+  "typology_used_for_interpretation_only": true,
+  "limitations": [
+    "No citywide road-network features (PARTIAL, 0/39 districts) -- road-grade and pct-cycle-infra-coverage-of-roads criteria remain PENDING_DEPENDENCY, excluded here.",
+    "No complete citywide land-use/green-space features (PARTIAL, 22/39 districts) -- no land-use dimension exists in this architecture; its absence is not treated as zero.",
+    "WorldPop reference year (2020) vs. official calibration source (2020, matched) vs. OSM/GTFS (2026) -- population criteria are several years older than most other criteria.",
+    "main_gtfs (metro/tram/rail/ferry) infrastructure snapshot is from 2023-2024, not current -- transit criteria involving these modes may not reflect newly opened lines.",
+    "Cycling infrastructure/parking criteria are İBB-only (OSM complement excluded per prior instruction) -- a definitionally narrower inventory than the pilot's combined source.",
+    "No observed shared e-bike demand or deployment data exists anywhere in this project -- every criterion here is a plausibility-based proxy, not a validated demand driver. No causal claim is made or implied by any BENEFIT/COST direction in this catalog."
+  ],
+  "unresolved_methodological_choices_before_scoring": [
+    "Transit proximity/service direction (substitution vs. integration) -- no defensible distance/frequency threshold identified for the crossover point.",
+    "Cycling infrastructure and parking direction depends on whether it feeds Readiness or Need/Opportunity -- both are logged, neither is chosen as 'the' direction.",
+    "Population density and building coverage saturation breakpoints are percentile-based placeholders, not empirically defensible physical thresholds -- need a scenario decision before scoring.",
+    "Whether Readiness and Need/Opportunity are ultimately combined (and how) or reported as two separate maps/dimensions is NOT decided in this phase.",
+    "Final within-dimension criterion weights (vs. the default equal-split assumption used for the scenario table) are not set.",
+    "Which weighting scenario (or blend) to adopt is not decided."
+  ]
+}

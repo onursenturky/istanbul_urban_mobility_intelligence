@@ -1,0 +1,286 @@
+{
+  "test_points": [
+    {
+      "test_point": "dense_urban_core",
+      "grid_id": "GRID_13704",
+      "district": "Fatih",
+      "walk_node": 1141037807,
+      "cycle_node": 1141037807
+    },
+    {
+      "test_point": "transit_rich_residential",
+      "grid_id": "GRID_14368",
+      "district": "\u00dcsk\u00fcdar",
+      "walk_node": 13634234939,
+      "cycle_node": 13634234939
+    },
+    {
+      "test_point": "moderate_mixed_use",
+      "grid_id": "GRID_09343",
+      "district": "Arnavutk\u00f6y",
+      "walk_node": 2166208807,
+      "cycle_node": 2166208807
+    },
+    {
+      "test_point": "peripheral_settlement",
+      "grid_id": "GRID_00001",
+      "district": "Silivri",
+      "walk_node": 4468031253,
+      "cycle_node": 4468031253
+    },
+    {
+      "test_point": "low_connectivity_undeveloped",
+      "grid_id": "GRID_19932",
+      "district": "Pendik",
+      "walk_node": 8534295247,
+      "cycle_node": 8534295247
+    },
+    {
+      "test_point": "asian_side",
+      "grid_id": "GRID_14127",
+      "district": "\u00dcsk\u00fcdar",
+      "walk_node": 278102207,
+      "cycle_node": 278102207
+    },
+    {
+      "test_point": "european_side",
+      "grid_id": "GRID_13876",
+      "district": "\u015ei\u015fli",
+      "walk_node": 2088921841,
+      "cycle_node": 2088921841
+    },
+    {
+      "test_point": "island_adalar",
+      "grid_id": "GRID_14957",
+      "district": "Adalar",
+      "walk_node": 10282818337,
+      "cycle_node": 10282818337
+    }
+  ],
+  "routes": {
+    "walking": [
+      {
+        "status": "ROUTE_NOT_FOUND",
+        "source": "dense_urban_core",
+        "target": "transit_rich_residential",
+        "source_node": 1141037807,
+        "target_node": 13634234939,
+        "straight_line_distance_m": 6068.5,
+        "pair_label": "core_to_transit_rich_CROSS_BOSPHORUS"
+      },
+      {
+        "status": "OK",
+        "source": "dense_urban_core",
+        "target": "peripheral_settlement",
+        "source_node": 1141037807,
+        "target_node": 4468031253,
+        "straight_line_distance_m": 83730.4,
+        "network_distance_m": 92089.6,
+        "network_euclidean_ratio": 1.1,
+        "estimated_travel_time_min": 1105.08,
+        "n_path_nodes": 2048,
+        "pair_label": "core_to_peripheral"
+      },
+      {
+        "status": "ROUTE_NOT_FOUND",
+        "source": "asian_side",
+        "target": "european_side",
+        "source_node": 278102207,
+        "target_node": 2088921841,
+        "straight_line_distance_m": 3892.9,
+        "pair_label": "asian_to_european_crossing_CROSS_BOSPHORUS"
+      },
+      {
+        "status": "ROUTE_NOT_FOUND",
+        "source": "dense_urban_core",
+        "target": "island_adalar",
+        "source_node": 1141037807,
+        "target_node": 10282818337,
+        "straight_line_distance_m": 18929.5,
+        "pair_label": "core_to_island_CROSS_WATER"
+      },
+      {
+        "status": "ROUTE_NOT_FOUND",
+        "source": "peripheral_settlement",
+        "target": "low_connectivity_undeveloped",
+        "source_node": 4468031253,
+        "target_node": 8534295247,
+        "straight_line_distance_m": 127137.9,
+        "pair_label": "peripheral_to_undeveloped_CROSS_BOSPHORUS"
+      },
+      {
+        "status": "ROUTE_NOT_FOUND",
+        "source": "transit_rich_residential",
+        "target": "moderate_mixed_use",
+        "source_node": 13634234939,
+        "target_node": 2166208807,
+        "straight_line_distance_m": 38149.6,
+        "pair_label": "transit_rich_to_mixed_use_CROSS_BOSPHORUS"
+      },
+      {
+        "status": "OK",
+        "source": "dense_urban_core",
+        "target": "moderate_mixed_use",
+        "source_node": 1141037807,
+        "target_node": 2166208807,
+        "straight_line_distance_m": 33083.4,
+        "network_distance_m": 39358.9,
+        "network_euclidean_ratio": 1.19,
+        "estimated_travel_time_min": 472.31,
+        "n_path_nodes": 1219,
+        "pair_label": "core_to_mixed_use_SAME_SIDE_european"
+      },
+      {
+        "status": "OK",
+        "source": "dense_urban_core",
+        "target": "european_side",
+        "source_node": 1141037807,
+        "target_node": 2088921841,
+        "straight_line_distance_m": 4262.6,
+        "network_distance_m": 4748.1,
+        "network_euclidean_ratio": 1.114,
+        "estimated_travel_time_min": 56.98,
+        "n_path_nodes": 210,
+        "pair_label": "core_to_european_side_SAME_SIDE_european"
+      },
+      {
+        "status": "OK",
+        "source": "transit_rich_residential",
+        "target": "low_connectivity_undeveloped",
+        "source_node": 13634234939,
+        "target_node": 8534295247,
+        "straight_line_distance_m": 37485.9,
+        "network_distance_m": 52846.3,
+        "network_euclidean_ratio": 1.41,
+        "estimated_travel_time_min": 634.16,
+        "n_path_nodes": 1356,
+        "pair_label": "transit_rich_to_undeveloped_SAME_SIDE_asian"
+      },
+      {
+        "status": "OK",
+        "source": "low_connectivity_undeveloped",
+        "target": "asian_side",
+        "source_node": 8534295247,
+        "target_node": 278102207,
+        "straight_line_distance_m": 39472.1,
+        "network_distance_m": 54884.6,
+        "network_euclidean_ratio": 1.39,
+        "estimated_travel_time_min": 658.61,
+        "n_path_nodes": 1408,
+        "pair_label": "undeveloped_to_asian_side_SAME_SIDE_asian"
+      }
+    ],
+    "cycling": [
+      {
+        "status": "ROUTE_NOT_FOUND",
+        "source": "dense_urban_core",
+        "target": "transit_rich_residential",
+        "source_node": 1141037807,
+        "target_node": 13634234939,
+        "straight_line_distance_m": 6068.5,
+        "pair_label": "core_to_transit_rich_CROSS_BOSPHORUS"
+      },
+      {
+        "status": "OK",
+        "source": "dense_urban_core",
+        "target": "peripheral_settlement",
+        "source_node": 1141037807,
+        "target_node": 4468031253,
+        "straight_line_distance_m": 83730.4,
+        "network_distance_m": 92363.4,
+        "network_euclidean_ratio": 1.103,
+        "estimated_travel_time_min": 369.45,
+        "n_path_nodes": 1951,
+        "pair_label": "core_to_peripheral"
+      },
+      {
+        "status": "ROUTE_NOT_FOUND",
+        "source": "asian_side",
+        "target": "european_side",
+        "source_node": 278102207,
+        "target_node": 2088921841,
+        "straight_line_distance_m": 3892.9,
+        "pair_label": "asian_to_european_crossing_CROSS_BOSPHORUS"
+      },
+      {
+        "status": "ROUTE_NOT_FOUND",
+        "source": "dense_urban_core",
+        "target": "island_adalar",
+        "source_node": 1141037807,
+        "target_node": 10282818337,
+        "straight_line_distance_m": 18929.5,
+        "pair_label": "core_to_island_CROSS_WATER"
+      },
+      {
+        "status": "ROUTE_NOT_FOUND",
+        "source": "peripheral_settlement",
+        "target": "low_connectivity_undeveloped",
+        "source_node": 4468031253,
+        "target_node": 8534295247,
+        "straight_line_distance_m": 127137.9,
+        "pair_label": "peripheral_to_undeveloped_CROSS_BOSPHORUS"
+      },
+      {
+        "status": "ROUTE_NOT_FOUND",
+        "source": "transit_rich_residential",
+        "target": "moderate_mixed_use",
+        "source_node": 13634234939,
+        "target_node": 2166208807,
+        "straight_line_distance_m": 38149.6,
+        "pair_label": "transit_rich_to_mixed_use_CROSS_BOSPHORUS"
+      },
+      {
+        "status": "OK",
+        "source": "dense_urban_core",
+        "target": "moderate_mixed_use",
+        "source_node": 1141037807,
+        "target_node": 2166208807,
+        "straight_line_distance_m": 33083.4,
+        "network_distance_m": 39411.6,
+        "network_euclidean_ratio": 1.191,
+        "estimated_travel_time_min": 157.65,
+        "n_path_nodes": 1222,
+        "pair_label": "core_to_mixed_use_SAME_SIDE_european"
+      },
+      {
+        "status": "OK",
+        "source": "dense_urban_core",
+        "target": "european_side",
+        "source_node": 1141037807,
+        "target_node": 2088921841,
+        "straight_line_distance_m": 4262.6,
+        "network_distance_m": 4867.4,
+        "network_euclidean_ratio": 1.142,
+        "estimated_travel_time_min": 19.47,
+        "n_path_nodes": 168,
+        "pair_label": "core_to_european_side_SAME_SIDE_european"
+      },
+      {
+        "status": "OK",
+        "source": "transit_rich_residential",
+        "target": "low_connectivity_undeveloped",
+        "source_node": 13634234939,
+        "target_node": 8534295247,
+        "straight_line_distance_m": 37485.9,
+        "network_distance_m": 52692.6,
+        "network_euclidean_ratio": 1.406,
+        "estimated_travel_time_min": 210.77,
+        "n_path_nodes": 1356,
+        "pair_label": "transit_rich_to_undeveloped_SAME_SIDE_asian"
+      },
+      {
+        "status": "OK",
+        "source": "low_connectivity_undeveloped",
+        "target": "asian_side",
+        "source_node": 8534295247,
+        "target_node": 278102207,
+        "straight_line_distance_m": 39472.1,
+        "network_distance_m": 54840.5,
+        "network_euclidean_ratio": 1.389,
+        "estimated_travel_time_min": 219.36,
+        "n_path_nodes": 1417,
+        "pair_label": "undeveloped_to_asian_side_SAME_SIDE_asian"
+      }
+    ]
+  }
+}

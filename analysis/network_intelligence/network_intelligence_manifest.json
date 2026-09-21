@@ -1,0 +1,137 @@
+{
+  "version": "NETWORK_INTELLIGENCE_FOUNDATION_V1",
+  "asset_inventory": {
+    "source_pbf": "data/raw/osm/pbf/turkey-latest.osm.pbf (Geofabrik, snapshot recorded below) -- REUSED, no re-download",
+    "pbf_snapshot": "2026-09-18T20:21:10Z",
+    "pbf_sha256": "6751c7add46d065aa004093a32a3f75386c41c4d22a4b6369b96bbe0cd84ac03",
+    "istanbul_extract": "data/raw/osm/pbf/istanbul.osm.pbf (Phase 7A osmium extract, REUSED)",
+    "road_network_extract_reused": {
+      "path": "/Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/data/raw/osm/pbf/road_network_extract.osm.pbf",
+      "size_bytes": 16110150,
+      "method": "osmium tags-filter istanbul.osm.pbf w/highway (Phase 7A) -- object-level filter, so foot/bicycle/access/sidewalk/surface/bridge/tunnel/oneway tags are ALL preserved on every matched way, verified below."
+    },
+    "crs": "Source WGS84 (EPSG:4326) -> projected to EPSG:32635 during graph construction (this project's standard metric CRS)",
+    "tag_availability_verified": "foot, bicycle, access, sidewalk(+:both/:left/:right), surface, bridge, tunnel, oneway, oneway:bicycle all present as columns in pyrosm's get_network() output for this PBF (empirically confirmed).",
+    "existing_pyrosm_osmnx_pipeline_reused": "pyrosm.OSM.get_network()/to_graph() + osmnx.project_graph()/convert.to_undirected() -- the exact pipeline already validated in Phase 7A for road-feature computation, now reused for routable-graph construction instead of feature aggregation.",
+    "new_data_acquired": false
+  },
+  "walking_network_qa_summary": {
+    "n_nodes": 1358982,
+    "n_edges": 1503157,
+    "total_length_km": 42460.3
+  },
+  "cycling_network_qa_summary": {
+    "n_nodes": 1235676,
+    "n_edges": 2712552,
+    "total_length_km": 81378.8
+  },
+  "anchor_diagnostics": {
+    "walking": {
+      "n_cells": 22322,
+      "snap_distance_stats": {
+        "min": 0.42,
+        "median": 81.92,
+        "mean": 165.50437236806735,
+        "p90": 365.17200000000014,
+        "p99": 1005.7244000000003,
+        "max": 11815.18
+      },
+      "quality_counts": {
+        "DIRECT": 12448,
+        "NEARBY": 6781,
+        "LARGE_SNAP": 2862,
+        "QUESTIONABLE": 231
+      },
+      "pct_direct_or_nearby": 86.14,
+      "n_questionable": 231,
+      "pct_has_local_node": 85.59
+    },
+    "cycling": {
+      "n_cells": 22322,
+      "snap_distance_stats": {
+        "min": 0.42,
+        "median": 82.425,
+        "mean": 165.95260057342531,
+        "p90": 365.3160000000002,
+        "p99": 1007.538000000002,
+        "max": 11867.66
+      },
+      "quality_counts": {
+        "DIRECT": 12422,
+        "NEARBY": 6801,
+        "LARGE_SNAP": 2867,
+        "QUESTIONABLE": 232
+      },
+      "pct_direct_or_nearby": 86.12,
+      "n_questionable": 232,
+      "pct_has_local_node": 85.57
+    }
+  },
+  "routing_validation_n_pairs_tested": 10,
+  "benchmark": {
+    "graph": "walking",
+    "n_nodes": 1358982,
+    "n_edges": 1503157,
+    "single_origin_5_10_15min_query_s": 1.5298,
+    "batch_100_origins_15min_cutoff_s": 0.23,
+    "mean_per_origin_s": 0.0023,
+    "estimated_all_22322_cells_serial_s": 52.4,
+    "estimated_all_22322_cells_serial_min": 0.9,
+    "method": "networkx.single_source_dijkstra_path_length with cutoff (exact, not approximated) -- stops expanding once the time budget is exceeded rather than computing a full shortest-path tree.",
+    "optimization_recommendation": "Serial per-origin cutoff-Dijkstra is exact and, at the benchmarked rate, tractable for the full 22,322-cell citywide run in well under an hour on a single core -- no approximation is needed for correctness. If a future application needs this run repeatedly (e.g. many parameter sweeps), embarrassingly-parallel batching across origins (each origin's cutoff-Dijkstra is fully independent) is the appropriate speed-up, not precomputed all-pairs distances (memory-prohibitive at this graph size) or a graph-contraction/CH preprocessing step (implementation complexity not justified at this scale/frequency)."
+  },
+  "framework_location": "src/network/ (network_builder, network_rules, network_anchor, routing, accessibility, network_qa) -- application-agnostic, reusable by future engines.",
+  "graph_artifacts": {
+    "walking": "/Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/data/processed/network/walking_graph.pkl",
+    "cycling": "/Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/data/processed/network/cycling_graph.pkl"
+  },
+  "stop_condition": "Foundation only -- no 15-minute-city scores, destination accessibility, proximity rankings, deficit classes, district rankings, maps/dashboard, new MCDA, or predictive ML.",
+  "methodological_concerns_discovered": [
+    {
+      "id": "pyrosm_to_graph_filtered_network_type_node_loss",
+      "severity": "CRITICAL -- found and fixed before this phase's outputs were finalized",
+      "description": "pyrosm.OSM.to_graph() silently dropped ~40% of nodes -- the ENTIRE Asian side of Istanbul, a clean contiguous geographic half, not a random scatter -- when built from get_network(network_type='walking'/'cycling') on data/raw/osm/pbf/road_network_extract.osm.pbf. The identical to_graph() call on get_network(network_type='all') for the SAME file retained 99.27% of nodes (matching the Phase 7A precedent). Confirmed via direct trace that pyrosm's own get_network(network_type='walking') DOES return the missing nodes/edges (verified present for an Adalar-area bounding-box sample: 4623 nodes, 4974 edges) -- they are lost specifically inside to_graph() only for the pre-filtered network types, not for 'all'.",
+      "evidence": "Before fix: walking graph = 827,351 nodes, 14/39 districts with ZERO nodes (all of Kadıköy/Üsküdar/Maltepe/Ataşehir/Ümraniye/Pendik/Kartal/Tuzla/Sancaktepe/Sultanbeyli/Çekmeköy/Beykoz/Şile/Adalar -- essentially the entire Asian side), 56.5% grid-cell coverage, a routing test from Fatih to a Prince-Islands cell falsely SUCCEEDED (24 min, ratio 1.28) because the 'nearest network node' search silently fell back to a mainland node 17km away. After fix: walking graph = 1,358,982 nodes, 38/39 districts covered, 85.6% grid-cell coverage, the same Fatih-to-island query correctly returns ROUTE_NOT_FOUND.",
+      "fix_applied": "Build ONE 'all'-network-type graph via the proven-reliable get_network(network_type='all') + to_graph() path (cached as data/processed/network/all_graph_projected.pkl), then derive the walking and cycling graphs by applying pyrosm's own walking_filter()/cycling_filter() tag-exclusion dictionaries as a POST-HOC edge filter on that graph (network_rules.edge_is_excluded()), instead of asking pyrosm to pre-filter before graph construction. The tag rules themselves are UNCHANGED -- this is a graph-CONSTRUCTION workaround, not a redefinition of what counts as walkable/cyclable.",
+      "not_yet_root_caused": "The exact Cython-level cause inside pyrosm's to_graph() was not identified (out of scope to patch a third-party C-extension) -- treated as a confirmed, reproducible tool limitation for this file/scale, worked around rather than root-caused."
+    },
+    {
+      "id": "adalar_residual_grid_cell_coverage_gap",
+      "severity": "MINOR -- open, honestly reported, not resolved",
+      "description": "After the fix above, 38/39 districts have walking/cycling network nodes; Adalar (Prince Islands) is the ONE remaining district with ZERO network nodes falling within its own grid cells. Investigated: the raw PBF DOES contain ~667 highway ways in the Adalar area (confirmed via the GDAL/pyogrio 'lines' layer, and Phase 7A's all-highway extraction reports 149.53 km of road length for Adalar), and the corrected graph's nearest node to a sampled Adalar-area point is only ~4.7 km away (vastly better than the pre-fix 17 km, but still not 'within an Adalar grid cell'). This is reported as an OPEN, narrower residual gap -- possibly a grid-cell/administrative-boundary alignment nuance rather than a repeat of the systemic bug above -- and should NOT be relied upon for island-specific accessibility queries without further investigation.",
+      "fix_applied": "NONE -- reported, not silently adjusted, per instruction."
+    }
+  ],
+  "connectivity_problems_discovered": {
+    "bosphorus_and_water_crossings": {
+      "finding": "The walking and cycling ROAD networks have NO path across the Bosphorus at any of the tested European<->Asian point pairs, and NO path to the Prince Islands (Adalar) -- CONFIRMED genuine, not a bug: Istanbul's road bridges over the Bosphorus are motorway-class and excluded from both the walking_filter and cycling_filter by design (pedestrians/cyclists are legally barred from them in reality; crossing requires the Marmaray rail tunnel, metro, or a ferry, none of which are part of a walkable/cyclable ROAD network). This was explicitly tested and confirmed, not assumed.",
+      "routing_pairs_confirming_no_crossing": [
+        "core_to_transit_rich_CROSS_BOSPHORUS",
+        "asian_to_european_crossing_CROSS_BOSPHORUS",
+        "core_to_island_CROSS_WATER",
+        "peripheral_to_undeveloped_CROSS_BOSPHORUS",
+        "transit_rich_to_mixed_use_CROSS_BOSPHORUS"
+      ],
+      "routing_pairs_confirming_normal_same_side_connectivity": [
+        "core_to_peripheral",
+        "core_to_mixed_use_SAME_SIDE_european",
+        "core_to_european_side_SAME_SIDE_european",
+        "transit_rich_to_undeveloped_SAME_SIDE_asian",
+        "undeveloped_to_asian_side_SAME_SIDE_asian"
+      ],
+      "n_weakly_connected_components_walking": 567,
+      "largest_component_share_walking": 0.6088,
+      "n_weakly_connected_components_cycling": 702,
+      "largest_weak_component_share_cycling": 0.6112,
+      "interpretation": "The large number of components (567 walking / 702 cycling) and the largest component covering only ~61% of nodes is EXPECTED and CORRECT for a real citywide road-only pedestrian/cycling network -- it reflects genuine water crossings and isolated fragments, not a data quality defect. A future accessibility application must treat cross-Bosphorus / cross-water trips as requiring a DIFFERENT mode (transit/ferry) entirely, not a walking/cycling route."
+    }
+  },
+  "districts_with_zero_network_nodes_after_fix": {
+    "walking": [
+      "Adalar"
+    ],
+    "cycling": [
+      "Adalar"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+- generic [active] [ref=f20e1]:
+  - generic [ref=f20e6]:
+    - paragraph [ref=f20e7]: "404"
+    - heading "This route is off the map." [level=1] [ref=f20e8]
+    - paragraph [ref=f20e9]: Return to Istanbul Urban Mobility Intelligence to keep exploring.
+    - link "Back to the homepage" [ref=f20e10] [cursor=pointer]:
+      - /url: /
+  - alert [ref=f20e11]

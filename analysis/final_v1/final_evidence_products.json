@@ -1,0 +1,28 @@
+{
+  "A_urban_mobility_typology": {
+    "source": "analysis/clustering_v2/cluster_assignments_v2.parquet (Phase 5C k=5)",
+    "recommended_as_final": true,
+    "rationale": "Interim six-family typology, descriptive only, stable across seeds (ARI~1.0) and reasonably robust to limitation-variable removal after the building-coverage dominance fix."
+  },
+  "B_deployment_readiness_consensus": {
+    "source": "analysis/mcda/phase6c/consensus_classes.parquet (readiness_consensus_class, readiness_pct_top_decile)",
+    "recommended_as_final": true,
+    "rationale": "A consensus-frequency output is more defensible than any single weighting scenario: it reports HOW OFTEN a cell is high-readiness across 16 tested assumption combinations rather than asserting one arbitrary combination is correct."
+  },
+  "C_latent_opportunity_consensus": {
+    "source": "analysis/mcda/phase6c/consensus_classes.parquet (opportunity_consensus_class, opportunity_pct_top_decile)",
+    "recommended_as_final": true,
+    "rationale": "Same consensus-over-selection logic as Readiness; additionally validated by the robust-core audit (Section 6 of Phase 6C) showing coherent, non-degenerate demand-vs-gap behavior."
+  },
+  "D_assumption_sensitivity": {
+    "source": "analysis/mcda/phase6c/cell_stability_metrics.parquet + sensitivity_driver_analysis.parquet",
+    "recommended_as_final": true,
+    "rationale": "Uncertainty (score range/std) and dominant-driver fields let any user of the final product see WHERE and WHY conclusions are fragile, rather than hiding that behind a point estimate."
+  },
+  "E_joint_readiness_opportunity_matrix": {
+    "source": "analysis/mcda/phase6c/joint_readiness_opportunity_classes.parquet",
+    "recommended_as_final": true,
+    "rationale": "Preserves the analytically important distinction (e.g. high-opportunity/lower-readiness areas) that a single combined suitability number would erase."
+  },
+  "overall_assessment": "These five products together are MORE DEFENSIBLE than selecting one weighting scenario and one transit hypothesis: they report what is stable, what is uncertain, and why, rather than presenting a single number with hidden assumption-dependence. This is the recommended final analytical framework for INTERIM_CITYWIDE_V1_SIX_FAMILY."
+}

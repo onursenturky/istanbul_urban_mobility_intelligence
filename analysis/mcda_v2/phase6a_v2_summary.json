@@ -1,0 +1,32 @@
+{
+  "v1_baseline_retained_criteria": 24,
+  "transit_redundancy": {
+    "pairs_ge_0.90": 9,
+    "proposal": "reduce 9 -> 4 retained + 5 sensitivity-only"
+  },
+  "road_grade_terrain_decision": "Option B: supplement with reduced weight",
+  "cycling_overlap_decision": "PRIMARY = cycle_infrastructure_density_km_per_km2_ibb_only (unchanged from V1); pct_road_network_with_cycle_infrastructure held sensitivity-only -- percentage-of-network framing risks misleadingly inflated coverage in cells with very little road network at all (small-denominator effect), whereas absolute density is a standard, already-validated planning metric.",
+  "land_use_decision": "residential/industrial three-state representations and the mapped-evidence flag EXCLUDED from MCDA scoring entirely (preprocessing artifacts + severe coverage confound); available for descriptive narrative only.",
+  "green_space_decision": "green_area_ratio held CONTEXTUAL/no-score; no monotonic 'more green = better' assumption made; distinct from the already-scored POI-based leisure_count.",
+  "recommended_dimension_architecture": "B (separate Street Network/Connectivity dimension)",
+  "conservative_criteria_added": [
+    "cycle_accessible_road_density_km_per_km2",
+    "mean_absolute_road_grade_pct"
+  ],
+  "expanded_criteria_added": [
+    "intersection_density_km2",
+    "local_road_length_m",
+    "cycle_accessible_road_density_km_per_km2",
+    "mean_absolute_road_grade_pct",
+    "pct_road_length_grade_gt_8pct"
+  ],
+  "readiness_vs_opportunity": "All retained new road/grade criteria are READINESS-side (enabling conditions/feasibility), none are treated as demand and none enter the opportunity-gap term; road abundance (contextual-only features) is explicitly NOT treated as demand per instruction.",
+  "sensitivity_testing_required_in_phase6b_v2": [
+    "5 mode-specific transit distances (sensitivity-only vs the 4-criterion reduced set)",
+    "pct_road_network_with_cycle_infrastructure vs cycle_infrastructure_density_km_per_km2_ibb_only",
+    "road-grade weight magnitude within Terrain Feasibility (missing-data handling for roadless cells)",
+    "Conservative vs Expanded architecture (does adding Street Network materially change readiness ranking?)",
+    "Architecture A vs B (roads-in-transit vs separate dimension) as an explicit ablation",
+    "connectivity_oriented_expanded_NEW scenario's isolated influence"
+  ]
+}

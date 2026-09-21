@@ -1,0 +1,138 @@
+{
+  "version": "CYCLING_ACCESSIBILITY_AND_ACTIVE_MOBILITY_GAIN_V1",
+  "supersedes": "None -- first version of this application",
+  "frozen_scope": "Cycling accessibility + walking-vs-cycling active-mobility gain, network-based, 15-minute-city taxonomy reused unchanged from 15MIN_ISTANBUL_WALKING_V1_FROZEN.",
+  "depends_on_frozen": [
+    "15MIN_ISTANBUL_WALKING_V1_FROZEN",
+    "NETWORK_INTELLIGENCE_FOUNDATION_V1",
+    "EBIKE_APPLICATION (Phase 6B-V2, analysis/mcda_v2/phase6b/)",
+    "CITYWIDE_V2_EIGHT_FAMILY_TYPOLOGY (post-hoc only)"
+  ],
+  "methodological_language_used": [
+    "potential cycling accessibility",
+    "network-based cycling accessibility",
+    "active-mobility accessibility gain",
+    "modeled travel time"
+  ],
+  "methodological_language_avoided": [
+    "actual cycling behavior",
+    "cycling demand",
+    "people will cycle",
+    "validated mode choice",
+    "causal accessibility improvement"
+  ],
+  "input_hashes": {
+    "cycling_graph": {
+      "path": "data/processed/network/cycling_graph.pkl",
+      "sha256": "26e5e4993d88c45ef744478e92a352885c466cdcca6f61ed49275011011e4111"
+    },
+    "grid_network_anchors": {
+      "path": "analysis/network_intelligence/grid_network_anchors.parquet",
+      "sha256": "4c62b43cec0959693dd3e0a391670853a7f6d9054126e0fefe2977b969e1dd25"
+    },
+    "poi_network_anchors_frozen_walking": {
+      "path": "analysis/applications/15min_city/poi_network_anchors.parquet",
+      "sha256": "0296bfbc72aa67395e6072db8c309d2f661cc869ef06f3db8fad39bcf36ffcbf"
+    },
+    "grid_proximity_summary_frozen_walking": {
+      "path": "analysis/applications/15min_city/grid_proximity_summary.parquet",
+      "sha256": "9a32428a0be67aaba7f37c457c3d559837fb2eaeafe6a38dfec336aaa2259e0d"
+    },
+    "cycling_network_component_audit": {
+      "path": "analysis/applications/cycling_accessibility/cycling_network_component_audit.csv",
+      "sha256": "6863c4d17a8c8480591f6ea8dc4dd3de9fa0e5115a776a0676f2e7561827f478"
+    },
+    "cycling_destination_anchors": {
+      "path": "analysis/applications/cycling_accessibility/cycling_destination_anchors.parquet",
+      "sha256": "1275c192aef642203bc63d18b1bd925d6b4225669e9ae72f636316be44077892"
+    },
+    "cycling_accessibility_15min": {
+      "path": "analysis/applications/cycling_accessibility/cycling_accessibility_15min.parquet",
+      "sha256": "b7fa0b45b5c8b265bd619865285ecdb2227b78d6a1e63c2a219f8281fcbdd9eb"
+    },
+    "walking_cycling_complete_access_comparison": {
+      "path": "analysis/applications/cycling_accessibility/walking_cycling_complete_access_comparison.parquet",
+      "sha256": "75effae7e72ea30d91ecefbe76aab767db6be45a1c3262fc4205a796ca3875d6"
+    },
+    "ebike_opportunity_baseline_frozen": {
+      "path": "analysis/mcda_v2/phase6b/ebike_opportunity_baseline.parquet",
+      "sha256": "fa8db21587f30bd9768e0c1eba6ecf72e073793348e1536273eebcaa277cd081"
+    },
+    "v2_typology_assignments_frozen": {
+      "path": "analysis/clustering_v2_eight_family/cluster_assignments_v2ef.parquet",
+      "sha256": "0361840b37d9937e3e7e9cb3d0ba7efd1802e18446a3cad724b707d5d8606599"
+    }
+  },
+  "baseline_cycling_speed_kmh": 15.0,
+  "known_limitation_oneway_bicycle": "oneway:bicycle contraflow exceptions are present in source OSM tags but NOT applied to override edge directionality in this baseline cycling graph (inherited unchanged from Phase 7).",
+  "known_limitation_adalar_cycling": "Adalar has ZERO actual cycling-network nodes (unlike walking's 2-node component); all Adalar cells anchor across water to the mainland mega-component. All Adalar results are flagged KNOWN_NETWORK_LIMITATION_ADALAR and must not be read as real cycling accessibility.",
+  "headline_results": {
+    "cycling_complete_15min_access": {
+      "n_cells": 7122,
+      "pct_cells": 31.91,
+      "population": 14771618.7,
+      "pct_population": 95.57
+    },
+    "access_class_summary": [
+      {
+        "access_class": "NEITHER_ACCESS",
+        "n_cells": 15179,
+        "pct_cells": 68.0,
+        "population": 609486.8,
+        "pct_population": 3.94
+      },
+      {
+        "access_class": "CYCLE_ONLY_GAIN",
+        "n_cells": 3874,
+        "pct_cells": 17.36,
+        "population": 2097550.1,
+        "pct_population": 13.57
+      },
+      {
+        "access_class": "WALK_AND_CYCLE_ACCESS",
+        "n_cells": 3248,
+        "pct_cells": 14.55,
+        "population": 12674068.6,
+        "pct_population": 82.0
+      },
+      {
+        "access_class": "WALK_ONLY_ACCESS",
+        "n_cells": 21,
+        "pct_cells": 0.09,
+        "population": 74459.9,
+        "pct_population": 0.48
+      }
+    ],
+    "high_value_gain_cells": {
+      "definition": "population >= median populated-cell population AND (CYCLE_ONLY_GAIN access class OR >=1 required category gained within 15min) -- descriptive filter, NOT a weighted/arbitrary score.",
+      "n_cells": 1526,
+      "pct_cells": 6.84,
+      "population": 2117026.3,
+      "pct_population": 13.7
+    }
+  },
+  "ebike_overlap_headline": {
+    "pct_cycle_only_gain_top_quartile_ebike_opportunity": 31.44,
+    "citywide_baseline_pct": 25.0
+  },
+  "n_implausibility_flags_in_sanity_checks": 0,
+  "output_paths": [
+    "analysis/applications/cycling_accessibility/accessibility_gain_5_10_15.csv",
+    "analysis/applications/cycling_accessibility/active_mobility_gain_cells.parquet",
+    "analysis/applications/cycling_accessibility/cycling_accessibility_10min.parquet",
+    "analysis/applications/cycling_accessibility/cycling_accessibility_15min.parquet",
+    "analysis/applications/cycling_accessibility/cycling_accessibility_5min.parquet",
+    "analysis/applications/cycling_accessibility/cycling_accessibility_quality_flags.parquet",
+    "analysis/applications/cycling_accessibility/cycling_accessibility_sanity_checks.json",
+    "analysis/applications/cycling_accessibility/cycling_destination_anchors.parquet",
+    "analysis/applications/cycling_accessibility/cycling_nearest_service_times.parquet",
+    "analysis/applications/cycling_accessibility/cycling_network_component_audit.csv",
+    "analysis/applications/cycling_accessibility/ebike_cycling_gain_overlap.json",
+    "analysis/applications/cycling_accessibility/population_cycling_accessibility_summary.json",
+    "analysis/applications/cycling_accessibility/typology_cycling_gain_summary.csv",
+    "analysis/applications/cycling_accessibility/walking_cycling_category_gain.parquet",
+    "analysis/applications/cycling_accessibility/walking_cycling_complete_access_comparison.parquet",
+    "analysis/applications/cycling_accessibility/walking_deficit_closure.csv"
+  ],
+  "stop_condition": "Cycling accessibility + walking-vs-cycling gain analysis only. Did NOT proceed to terrain-adjusted cycling, comfort/stress modeling, transit-inclusive accessibility, first/last-mile analysis, predictive ML, equity modeling, dashboard, or visualization styling."
+}

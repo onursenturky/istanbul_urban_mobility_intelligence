@@ -1,0 +1,19 @@
+[     218ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38559
+[     265ms] [ERROR] AbortError: signal is aborted without reason
+    at ue._remove (webpack-internal:///(app-pages-browser)/./node_modules/maplibre-gl/dist/maplibre-gl.js:45:133973)
+    at t.Map._updateStyle (webpack-internal:///(app-pages-browser)/./node_modules/maplibre-gl/dist/maplibre-gl.js:45:400776)
+    at t.Map.setStyle (webpack-internal:///(app-pages-browser)/./node_modules/maplibre-gl/dist/maplibre-gl.js:45:400300)
+    at t.Map.remove (webpack-internal:///(app-pages-browser)/./node_modules/maplibre-gl/dist/maplibre-gl.js:45:412787)
+    at eval (webpack-internal:///(app-pages-browser)/./components/MapView.tsx:177:21)
+    at safelyCallDestroy (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:20869:5)
+    at commitHookEffectListUnmount (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21051:11)
+    at invokePassiveEffectUnmountInDEV (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:24033:13)
+    at invokeEffectsInDev (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:26852:9)
+    at legacyCommitDoubleInvokeEffectsInDEV (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:26829:5)
+    at commitDoubleInvokeEffectsInDEV (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:26816:7)
+    at flushPassiveEffectsImpl (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:26514:5)
+    at flushPassiveEffects (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:26438:14)
+    at eval (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:26172:9)
+    at workLoop (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:256:34)
+    at flushWork (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:225:14)
+    at MessagePort.performWorkUntilDeadline (webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/scheduler/cjs/scheduler.development.js:534:21) @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:32

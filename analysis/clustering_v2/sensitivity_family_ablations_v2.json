@@ -1,0 +1,18 @@
+{
+  "population_limitation_only": {
+    "n_features_dropped": 1,
+    "ari_vs_v2_baseline": 0.9846
+  },
+  "main_gtfs_transit_only": {
+    "n_features_dropped": 13,
+    "ari_vs_v2_baseline": 0.8983
+  },
+  "ibb_cycling_only": {
+    "n_features_dropped": 3,
+    "ari_vs_v2_baseline": 0.9585
+  },
+  "all_limitations_removed": {
+    "n_features_dropped": 17,
+    "ari_vs_v2_baseline": 0.8801
+  }
+}

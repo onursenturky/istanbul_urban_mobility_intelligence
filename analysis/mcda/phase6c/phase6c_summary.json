@@ -1,0 +1,173 @@
+{
+  "n_readiness_variants": 16,
+  "n_opportunity_variants": 8,
+  "strongest_agreement": {
+    "pair": [
+      "readiness__balanced_equal_dimensions__T1__uf_sat",
+      "readiness__demand_oriented__T1__uf_sat"
+    ],
+    "spearman_rho": 1.0
+  },
+  "weakest_agreement": {
+    "pair": [
+      "readiness__balanced_equal_dimensions__T1__uf_sat",
+      "readiness__first_last_mile_transit_integration_oriented__T2__uf_sat"
+    ],
+    "spearman_rho": 0.8971,
+    "differing_factors": "scenario,transit_variant"
+  },
+  "isolated_factor_effects_readiness": [
+    {
+      "factor": "scenario",
+      "n_isolated_pairs": 24,
+      "mean_spearman_rho": 0.9723,
+      "mean_jaccard_top_decile": 0.7617,
+      "mean_abs_score_diff": 0.0381,
+      "mean_rank_displacement": 0.0392,
+      "score_type": "readiness"
+    },
+    {
+      "factor": "transit_variant",
+      "n_isolated_pairs": 8,
+      "mean_spearman_rho": 0.9792,
+      "mean_jaccard_top_decile": 0.3788,
+      "mean_abs_score_diff": 0.0493,
+      "mean_rank_displacement": 0.0357,
+      "score_type": "readiness"
+    },
+    {
+      "factor": "uf_variant",
+      "n_isolated_pairs": 8,
+      "mean_spearman_rho": 0.999,
+      "mean_jaccard_top_decile": 0.8116,
+      "mean_abs_score_diff": 0.0048,
+      "mean_rank_displacement": 0.0059,
+      "score_type": "readiness"
+    }
+  ],
+  "isolated_factor_effects_opportunity": [
+    {
+      "factor": "scenario",
+      "n_isolated_pairs": 12,
+      "mean_spearman_rho": 0.9906,
+      "mean_jaccard_top_decile": 0.7252,
+      "mean_abs_score_diff": 0.0335,
+      "mean_rank_displacement": 0.0136,
+      "score_type": "opportunity"
+    },
+    {
+      "factor": "demand_variant",
+      "n_isolated_pairs": 4,
+      "mean_spearman_rho": 0.9967,
+      "mean_jaccard_top_decile": 0.8366,
+      "mean_abs_score_diff": 0.0083,
+      "mean_rank_displacement": 0.0086,
+      "score_type": "opportunity"
+    }
+  ],
+  "readiness_consensus_class_counts": {
+    "NEVER_HIGH": 17993,
+    "CONDITIONAL_HIGH": 2225,
+    "RARE_HIGH": 917,
+    "FREQUENT_HIGH": 720,
+    "ROBUST_HIGH": 467
+  },
+  "opportunity_consensus_class_counts": {
+    "NEVER_HIGH": 19027,
+    "ROBUST_HIGH": 1350,
+    "CONDITIONAL_HIGH": 865,
+    "FREQUENT_HIGH": 676,
+    "RARE_HIGH": 404
+  },
+  "n_robust_high_readiness_verified": 467,
+  "n_robust_high_opportunity_verified": 1350,
+  "joint_class_counts": {
+    "LOW_readiness__LOW_opportunity": 17599,
+    "MODERATE_SENSITIVE_readiness__LOW_opportunity": 997,
+    "MODERATE_SENSITIVE_readiness__HIGH_opportunity": 983,
+    "HIGH_readiness__LOW_opportunity": 835,
+    "LOW_readiness__HIGH_opportunity": 751,
+    "LOW_readiness__MODERATE_SENSITIVE_opportunity": 560,
+    "HIGH_readiness__HIGH_opportunity": 292,
+    "MODERATE_SENSITIVE_readiness__MODERATE_SENSITIVE_opportunity": 245,
+    "HIGH_readiness__MODERATE_SENSITIVE_opportunity": 60
+  },
+  "n_high_opportunity_moderate_or_low_readiness": 1734,
+  "readiness_dominant_driver_counts": {
+    "scenario": 15024,
+    "transit_variant": 7295,
+    "uf_variant": 3
+  },
+  "opportunity_dominant_driver_counts": {
+    "scenario": 9584,
+    "demand_variant": 356
+  },
+  "spatial_autocorrelation_of_stability_surfaces": {
+    "readiness_consensus_frequency": {
+      "morans_i": 0.7782,
+      "expected_i_under_null": -0.0,
+      "z_score": 227.731,
+      "p_value_pseudo": 0.001,
+      "n_permutations": 999,
+      "interpretation": "significant positive spatial autocorrelation"
+    },
+    "opportunity_consensus_frequency": {
+      "morans_i": 0.5228,
+      "expected_i_under_null": -0.0,
+      "z_score": 151.709,
+      "p_value_pseudo": 0.001,
+      "n_permutations": 999,
+      "interpretation": "significant positive spatial autocorrelation"
+    },
+    "readiness_score_range_uncertainty": {
+      "morans_i": 0.7395,
+      "expected_i_under_null": -0.0,
+      "z_score": 217.591,
+      "p_value_pseudo": 0.001,
+      "n_permutations": 999,
+      "interpretation": "significant positive spatial autocorrelation"
+    },
+    "opportunity_score_range_uncertainty": {
+      "morans_i": 0.5577,
+      "expected_i_under_null": -0.0,
+      "z_score": 159.756,
+      "p_value_pseudo": 0.001,
+      "n_permutations": 999,
+      "interpretation": "significant positive spatial autocorrelation"
+    }
+  },
+  "robust_core_typology_distribution": {
+    "robust_high_readiness_by_cluster": {
+      "0": 220,
+      "2": 124,
+      "3": 103,
+      "1": 20
+    },
+    "robust_high_opportunity_by_cluster": {
+      "0": 519,
+      "2": 510,
+      "3": 275,
+      "4": 44,
+      "1": 2
+    }
+  },
+  "methodological_stability_statement": {
+    "robust_findings": [
+      "The overall rank ordering of cells by Readiness is highly stable across weighting scenario, T1-vs-T2 transit assumption, and urban-form value-function variant (pairwise Spearman rho ranging 0.897 to 1.0).",
+      "Opportunity is even more stable across its assumption space (rho 0.969 to 1.0).",
+      "Remote/empty peripheral cells never register as high-opportunity under any tested variant.",
+      "467 cells are Readiness-robust and 1350 cells are Opportunity-robust across every tested variant -- a genuine cross-assumption core, not an artifact of one scenario choice."
+    ],
+    "assumption_sensitive_findings": [
+      "A meaningful minority of cells change top-decile membership depending on which assumption is varied -- see isolated_factor_effects.csv for which single assumption (scenario weighting vs T1/T2 vs value-function variant) drives the most disagreement.",
+      "The 'balanced' and 'first_last_mile_transit_integration_oriented' weighting scenarios coincidentally produce an IDENTICAL demand-vs-cycling-readiness balance (alpha=0.5 in both) for the Opportunity formula, so their Opportunity scores are not independent evidence points for that particular sensitivity axis -- documented here so this is not mistaken for extra robustness."
+    ],
+    "unresolved_evidence_gaps": [
+      "No citywide road-network dimension.",
+      "Incomplete citywide land-use/green-space dimension.",
+      "No observed shared e-bike demand or deployment data exists anywhere in this project.",
+      "Population reference-year, main_gtfs snapshot, and İBB-only cycling-inventory limitations carried forward from Phase 6A/6B."
+    ],
+    "caveat": "Agreement across the tested Phase 6B assumptions means robustness TO THOSE ASSUMPTIONS ONLY -- it is not empirical validation against any observed outcome, since none exists in this project."
+  }
+}

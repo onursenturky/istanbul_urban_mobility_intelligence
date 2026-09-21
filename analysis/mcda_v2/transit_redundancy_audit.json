@@ -1,0 +1,153 @@
+{
+  "correlation_matrix": {
+    "distance_to_nearest_metro_m": {
+      "distance_to_nearest_metro_m": 1.0,
+      "distance_to_nearest_tram_m": 0.963,
+      "distance_to_nearest_rail_m": 0.948,
+      "distance_to_nearest_ferry_m": 0.908,
+      "distance_to_nearest_metrobus_m": 0.961,
+      "distance_to_nearest_transit_m": 0.785,
+      "transit_stops_within_500m": -0.436,
+      "fixed_guideway_stations_within_1000m": -0.41,
+      "bus_departures_per_day": -0.326
+    },
+    "distance_to_nearest_tram_m": {
+      "distance_to_nearest_metro_m": 0.963,
+      "distance_to_nearest_tram_m": 1.0,
+      "distance_to_nearest_rail_m": 0.923,
+      "distance_to_nearest_ferry_m": 0.904,
+      "distance_to_nearest_metrobus_m": 0.91,
+      "distance_to_nearest_transit_m": 0.65,
+      "transit_stops_within_500m": -0.342,
+      "fixed_guideway_stations_within_1000m": -0.374,
+      "bus_departures_per_day": -0.248
+    },
+    "distance_to_nearest_rail_m": {
+      "distance_to_nearest_metro_m": 0.948,
+      "distance_to_nearest_tram_m": 0.923,
+      "distance_to_nearest_rail_m": 1.0,
+      "distance_to_nearest_ferry_m": 0.9,
+      "distance_to_nearest_metrobus_m": 0.968,
+      "distance_to_nearest_transit_m": 0.724,
+      "transit_stops_within_500m": -0.419,
+      "fixed_guideway_stations_within_1000m": -0.383,
+      "bus_departures_per_day": -0.319
+    },
+    "distance_to_nearest_ferry_m": {
+      "distance_to_nearest_metro_m": 0.908,
+      "distance_to_nearest_tram_m": 0.904,
+      "distance_to_nearest_rail_m": 0.9,
+      "distance_to_nearest_ferry_m": 1.0,
+      "distance_to_nearest_metrobus_m": 0.911,
+      "distance_to_nearest_transit_m": 0.657,
+      "transit_stops_within_500m": -0.374,
+      "fixed_guideway_stations_within_1000m": -0.355,
+      "bus_departures_per_day": -0.275
+    },
+    "distance_to_nearest_metrobus_m": {
+      "distance_to_nearest_metro_m": 0.961,
+      "distance_to_nearest_tram_m": 0.91,
+      "distance_to_nearest_rail_m": 0.968,
+      "distance_to_nearest_ferry_m": 0.911,
+      "distance_to_nearest_metrobus_m": 1.0,
+      "distance_to_nearest_transit_m": 0.795,
+      "transit_stops_within_500m": -0.457,
+      "fixed_guideway_stations_within_1000m": -0.37,
+      "bus_departures_per_day": -0.352
+    },
+    "distance_to_nearest_transit_m": {
+      "distance_to_nearest_metro_m": 0.785,
+      "distance_to_nearest_tram_m": 0.65,
+      "distance_to_nearest_rail_m": 0.724,
+      "distance_to_nearest_ferry_m": 0.657,
+      "distance_to_nearest_metrobus_m": 0.795,
+      "distance_to_nearest_transit_m": 1.0,
+      "transit_stops_within_500m": -0.618,
+      "fixed_guideway_stations_within_1000m": -0.35,
+      "bus_departures_per_day": -0.473
+    },
+    "transit_stops_within_500m": {
+      "distance_to_nearest_metro_m": -0.436,
+      "distance_to_nearest_tram_m": -0.342,
+      "distance_to_nearest_rail_m": -0.419,
+      "distance_to_nearest_ferry_m": -0.374,
+      "distance_to_nearest_metrobus_m": -0.457,
+      "distance_to_nearest_transit_m": -0.618,
+      "transit_stops_within_500m": 1.0,
+      "fixed_guideway_stations_within_1000m": 0.379,
+      "bus_departures_per_day": 0.752
+    },
+    "fixed_guideway_stations_within_1000m": {
+      "distance_to_nearest_metro_m": -0.41,
+      "distance_to_nearest_tram_m": -0.374,
+      "distance_to_nearest_rail_m": -0.383,
+      "distance_to_nearest_ferry_m": -0.355,
+      "distance_to_nearest_metrobus_m": -0.37,
+      "distance_to_nearest_transit_m": -0.35,
+      "transit_stops_within_500m": 0.379,
+      "fixed_guideway_stations_within_1000m": 1.0,
+      "bus_departures_per_day": 0.23
+    },
+    "bus_departures_per_day": {
+      "distance_to_nearest_metro_m": -0.326,
+      "distance_to_nearest_tram_m": -0.248,
+      "distance_to_nearest_rail_m": -0.319,
+      "distance_to_nearest_ferry_m": -0.275,
+      "distance_to_nearest_metrobus_m": -0.352,
+      "distance_to_nearest_transit_m": -0.473,
+      "transit_stops_within_500m": 0.752,
+      "fixed_guideway_stations_within_1000m": 0.23,
+      "bus_departures_per_day": 1.0
+    }
+  },
+  "pairs_rho_ge_0.90": [
+    {
+      "a": "distance_to_nearest_metro_m",
+      "b": "distance_to_nearest_tram_m",
+      "rho": 0.963
+    },
+    {
+      "a": "distance_to_nearest_metro_m",
+      "b": "distance_to_nearest_rail_m",
+      "rho": 0.948
+    },
+    {
+      "a": "distance_to_nearest_metro_m",
+      "b": "distance_to_nearest_ferry_m",
+      "rho": 0.908
+    },
+    {
+      "a": "distance_to_nearest_metro_m",
+      "b": "distance_to_nearest_metrobus_m",
+      "rho": 0.961
+    },
+    {
+      "a": "distance_to_nearest_tram_m",
+      "b": "distance_to_nearest_rail_m",
+      "rho": 0.923
+    },
+    {
+      "a": "distance_to_nearest_tram_m",
+      "b": "distance_to_nearest_ferry_m",
+      "rho": 0.904
+    },
+    {
+      "a": "distance_to_nearest_tram_m",
+      "b": "distance_to_nearest_metrobus_m",
+      "rho": 0.91
+    },
+    {
+      "a": "distance_to_nearest_rail_m",
+      "b": "distance_to_nearest_metrobus_m",
+      "rho": 0.968
+    },
+    {
+      "a": "distance_to_nearest_ferry_m",
+      "b": "distance_to_nearest_metrobus_m",
+      "rho": 0.911
+    }
+  ],
+  "n_pairs_ge_0.90": 9,
+  "finding": "9 of the 10 pairwise combinations among the 5 mode-specific distance criteria (metro, tram, rail, ferry, metrobus) are rho>=0.90 (range 0.90-0.97); the 10th (rail vs ferry) is 0.8999, effectively the same finding. This is not a statistical artifact: Istanbul's fixed-guideway transit modes are spatially bundled along the same dense urban corridors (historic peninsula, Bosphorus shore, main arterials), so a cell close to one mode is almost always close to all of them. distance_to_nearest_transit_m (the omnibus 'any mode' distance) correlates 0.65-0.79 with each -- expected, since it is effectively their running minimum -- but is not itself a duplicate of any single mode. transit_stops_within_500m (local stop density) and bus_departures_per_day (service frequency) correlate at 0.75 with each other but capture genuinely different concepts (access diversity vs level-of-service) and are far less redundant with the distance criteria (|rho|<=0.62). fixed_guideway_stations_within_1000m is only weakly-moderately correlated with everything else (0.23-0.46) -- a genuinely distinct 'high-capacity access within a wider radius' signal.",
+  "proposal": "Reduce the 9 transit criteria to 4 for V2: KEEP distance_to_nearest_transit_m (omnibus proximity), transit_stops_within_500m (local access diversity), bus_departures_per_day (service level), fixed_guideway_stations_within_1000m (high-capacity access). MOVE the 5 mode-specific distance criteria (metro/tram/rail/ferry/metrobus) to SENSITIVITY-ONLY status -- available for a future mode-specific policy question, but not double- (quintuple-)counted in the primary architecture. This directly addresses the Phase 5B-V2 finding that removing the transit family collapses typology ARI to 0.427 (the single largest sensitivity of any family tested) by ensuring that sensitivity reflects one coherent concept measured a few complementary ways, not nine near-duplicates of the same 'near a transit corridor' signal outvoting every other dimension. This is proposed on semantic grounds (genuine corridor-bundling explanation) AND statistical grounds (rho>=0.90), not on clustering sensitivity alone, per instruction."
+}

@@ -1,0 +1,15 @@
+{
+  "source_pbf": "data/raw/osm/pbf/turkey-latest.osm.pbf (Geofabrik, snapshot recorded below) -- REUSED, no re-download",
+  "pbf_snapshot": "2026-09-18T20:21:10Z",
+  "pbf_sha256": "6751c7add46d065aa004093a32a3f75386c41c4d22a4b6369b96bbe0cd84ac03",
+  "istanbul_extract": "data/raw/osm/pbf/istanbul.osm.pbf (Phase 7A osmium extract, REUSED)",
+  "road_network_extract_reused": {
+    "path": "/Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/data/raw/osm/pbf/road_network_extract.osm.pbf",
+    "size_bytes": 16110150,
+    "method": "osmium tags-filter istanbul.osm.pbf w/highway (Phase 7A) -- object-level filter, so foot/bicycle/access/sidewalk/surface/bridge/tunnel/oneway tags are ALL preserved on every matched way, verified below."
+  },
+  "crs": "Source WGS84 (EPSG:4326) -> projected to EPSG:32635 during graph construction (this project's standard metric CRS)",
+  "tag_availability_verified": "foot, bicycle, access, sidewalk(+:both/:left/:right), surface, bridge, tunnel, oneway, oneway:bicycle all present as columns in pyrosm's get_network() output for this PBF (empirically confirmed).",
+  "existing_pyrosm_osmnx_pipeline_reused": "pyrosm.OSM.get_network()/to_graph() + osmnx.project_graph()/convert.to_undirected() -- the exact pipeline already validated in Phase 7A for road-feature computation, now reused for routable-graph construction instead of feature aggregation.",
+  "new_data_acquired": false
+}

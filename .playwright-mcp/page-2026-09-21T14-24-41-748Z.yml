@@ -1,0 +1,82 @@
+- generic [active] [ref=f16e1]:
+  - generic [ref=f16e2]:
+    - generic [ref=f16e3]:
+      - link "Istanbul / Urban Mobility Intelligence" [ref=f16e4] [cursor=pointer]:
+        - /url: /
+      - button "Toggle navigation menu" [ref=f16e7] [cursor=pointer]
+    - main [ref=f16e10]:
+      - generic [ref=f16e11]:
+        - generic [ref=f16e13]:
+          - heading "15-Minute Istanbul" [level=1] [ref=f16e14]
+          - paragraph [ref=f16e15]:
+            - text: What's within a 15-minute walk?
+            - button "How this works" [ref=f16e17] [cursor=pointer]: i
+        - generic [ref=f16e19]:
+          - generic [ref=f16e20]:
+            - application "Istanbul accessibility map" [ref=f16e21]:
+              - region "Map" [ref=f16e22]
+              - generic [ref=f16e23]:
+                - button "Zoom in" [ref=f16e24] [cursor=pointer]
+                - button "Zoom out" [ref=f16e26] [cursor=pointer]
+            - button "Reset view" [ref=f16e28] [cursor=pointer]
+            - generic [ref=f16e31]:
+              - paragraph [ref=f16e32]: Loading the Istanbul accessibility map
+              - paragraph [ref=f16e33]: Preparing 22,322 spatial cells…
+          - tablist "Map layer" [ref=f16e35]:
+            - tab "Walking" [selected] [ref=f16e36] [cursor=pointer]
+            - tab "Cycling" [ref=f16e37] [cursor=pointer]
+          - generic [ref=f16e39]:
+            - generic [ref=f16e40]: District
+            - combobox "District" [ref=f16e41]:
+              - option "All districts" [selected]
+              - option "Adalar"
+              - option "Arnavutköy"
+              - option "Ataşehir"
+              - option "Avcılar"
+              - option "Bağcılar"
+              - option "Bahçelievler"
+              - option "Bakırköy"
+              - option "Başakşehir"
+              - option "Bayrampaşa"
+              - option "Beşiktaş"
+              - option "Beykoz"
+              - option "Beylikdüzü"
+              - option "Beyoğlu"
+              - option "Büyükçekmece"
+              - option "Çatalca"
+              - option "Çekmeköy"
+              - option "Esenler"
+              - option "Esenyurt"
+              - option "Eyüpsultan"
+              - option "Fatih"
+              - option "Gaziosmanpaşa"
+              - option "Güngören"
+              - option "Kadıköy"
+              - option "Kâğıthane"
+              - option "Kartal"
+              - option "Küçükçekmece"
+              - option "Maltepe"
+              - option "Pendik"
+              - option "Sancaktepe"
+              - option "Sarıyer"
+              - option "Silivri"
+              - option "Sultanbeyli"
+              - option "Sultangazi"
+              - option "Şile"
+              - option "Şişli"
+              - option "Tuzla"
+              - option "Ümraniye"
+              - option "Üsküdar"
+              - option "Zeytinburnu"
+          - generic [ref=f16e43]:
+            - generic [ref=f16e44]: Everyday essentials reachable, walking (15 min)
+            - list [ref=f16e45]:
+              - listitem [ref=f16e46]:
+                - generic [ref=f16e48]: 3 / 3 everyday essentials (complete)
+              - listitem [ref=f16e49]:
+                - generic [ref=f16e51]: 2 / 3 everyday essentials
+              - listitem [ref=f16e52]:
+                - generic [ref=f16e54]: 1 / 3 everyday essentials
+              - listitem [ref=f16e55]:
+                - generic [ref=f16e57]: 0 / 3 everyday essentials
+  - alert [ref=f16e58]

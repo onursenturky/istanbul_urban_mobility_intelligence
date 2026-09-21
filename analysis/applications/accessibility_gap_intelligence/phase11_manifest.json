@@ -1,0 +1,159 @@
+{
+  "version": "ACCESSIBILITY_GAP_INTELLIGENCE_V1",
+  "supersedes": "None -- first version of this synthesis application",
+  "depends_on_frozen": [
+    "CITYWIDE_V2_EIGHT_FAMILY_TYPOLOGY",
+    "15MIN_ISTANBUL_WALKING_V1_FROZEN",
+    "CYCLING_ACCESSIBILITY_AND_ACTIVE_MOBILITY_GAIN_V1",
+    "FIRST_LAST_MILE_TRANSIT_ACCESSIBILITY_V1",
+    "E-bike Readiness & Opportunity (Phase 6B-V2)"
+  ],
+  "no_new_routing_or_data": true,
+  "no_composite_score_introduced": true,
+  "consistency_tests": {
+    "A_no_required_gap_matches_complete_access": {
+      "pass": true,
+      "reliable_no_required_gap_n": 3249,
+      "reliable_complete_access_n": 3249
+    },
+    "B_fully_closed_matches_frozen_cycle_only_gain": {
+      "pass": true,
+      "forward_rate_fully_closed_is_also_cycle_only_gain": 1.0,
+      "backward_rate_cycle_only_gain_is_also_fully_closed": 0.9922560660815695,
+      "note": "Backward rate is expected to be <100% because Phase 11 additionally excludes non-RELIABLE network-quality cells from FULLY_CLOSED_BY_CYCLING (routing them to CYCLING_RESULT_UNCERTAIN instead) -- a deliberate refinement over Phase 9, not a contradiction."
+    },
+    "C_transit_gap_reproduces_phase10": {
+      "pass": true,
+      "n_checked": 6092,
+      "n_mismatches": 0
+    },
+    "D_population_totals_reconcile": {
+      "pass": true,
+      "frozen_v2_total": 15455565.5,
+      "synthesis_total": 15455565.5
+    },
+    "E_no_uncertain_transit_counted_as_genuine": {
+      "pass": true,
+      "n_uncertain_cells_checked": 16230
+    },
+    "F_no_silent_zero_fill": {
+      "pass": true,
+      "n_nan_in_synthesis": 18177,
+      "n_nan_in_frozen_source": 18177
+    },
+    "G_adalar_limitations_flagged": {
+      "pass": true,
+      "n_adalar_cells": 72,
+      "all_flagged_known_limitation": true,
+      "all_marked_not_reliable": true
+    }
+  },
+  "freeze_checklist": {
+    "1_frozen_outputs_reconcile": true,
+    "2_population_totals_reconcile": true,
+    "3_uncertainty_not_converted_to_deficit": true,
+    "4_cycling_closure_reproduces_phase9": true,
+    "5_transit_gaps_reproduce_quality_aware_phase10": true,
+    "6_no_composite_score_introduced": true,
+    "7_sanity_checks_no_unexplained_contradiction": true,
+    "8_all_classes_traceable_to_measurements": true
+  },
+  "freeze_decision": "B_VALIDATED_WITH_DOCUMENTED_LIMITATIONS_FREEZE_V1",
+  "framework_level_findings": {
+    "q1_population_complete_walking_15min_all_required": {
+      "population": 12746104.4,
+      "pct": 82.47
+    },
+    "q2_population_gaining_complete_access_via_cycling": {
+      "population": 2095477.3,
+      "pct_of_reliable_gap_population": 77.81
+    },
+    "q3_most_common_remaining_bottleneck": {
+      "category": "FOOD",
+      "counts": {
+        "FOOD": 18177,
+        "HEALTHCARE": 18100,
+        "EDUCATION": 17742
+      }
+    },
+    "q4_population_cycling_closes_transit_gap": {
+      "population": 341370.2,
+      "pct": 2.21
+    },
+    "q5_overlap_everyday_and_transit_cycling_gains": {
+      "both_n_cells": 445,
+      "everyday_only_n_cells": 1145,
+      "transit_only_n_cells": 745
+    },
+    "q6_cluster_share_among_any_cycling_closure": {
+      "2": 0.608,
+      "1": 0.216,
+      "4": 0.11,
+      "3": 0.065
+    },
+    "q7_population_cycling_does_not_close_gap_destinations_sparse": {
+      "population": 352939.0,
+      "pct": 2.28
+    },
+    "q8_population_too_uncertain_to_interpret": {
+      "population": 4043382.9,
+      "pct": 26.16
+    }
+  },
+  "input_hashes": {
+    "accessibility_gap_grid_synthesis": {
+      "path": "analysis/applications/accessibility_gap_intelligence/accessibility_gap_grid_synthesis.parquet",
+      "sha256": "840373dbeccfffefb9bc4820ec1b428d2c730be1f1622305cd9f249559f056c0"
+    },
+    "everyday_needs_gap_typology": {
+      "path": "analysis/applications/accessibility_gap_intelligence/everyday_needs_gap_typology.parquet",
+      "sha256": "7db4b35a8b5ff3c8b9367705014ca88a8e37d90ec439e87018fe481e9547b5ec"
+    },
+    "cycling_gap_closure": {
+      "path": "analysis/applications/accessibility_gap_intelligence/cycling_gap_closure.parquet",
+      "sha256": "e2b7ec61cd960de1c16476950ec9e342e41e02bc8e8e26a1cc822a31f2e3c28e"
+    },
+    "transit_access_gap_typology": {
+      "path": "analysis/applications/accessibility_gap_intelligence/transit_access_gap_typology.parquet",
+      "sha256": "243ee4b551c0c9e64dcb8ef3cb63ee902744f273edf8ace289afb4d6706ce2f0"
+    },
+    "phase8_1_corrected_quality_flags": {
+      "path": "analysis/applications/15min_city/validation/corrected_accessibility_quality_flags.parquet",
+      "sha256": "3308201b0fce6081953f94f18f1d235ca835ba4ffb18fa6bafe9793de0bab23d"
+    },
+    "phase9_cycling_quality_flags": {
+      "path": "analysis/applications/cycling_accessibility/cycling_accessibility_quality_flags.parquet",
+      "sha256": "63473314cedfddb76ded660b0835fdae75fe3b259513595bf1d370feac9c7c51"
+    },
+    "phase10_transit_gap_diagnostics": {
+      "path": "analysis/applications/first_last_mile_transit/transit_gap_diagnostics.parquet",
+      "sha256": "2a11c90b542975cbfe9d085846f92559718a60355b9506f980eacfad7fbb736c"
+    }
+  },
+  "n_contradiction_flags_in_sanity_checks": 0,
+  "output_paths": [
+    "analysis/applications/accessibility_gap_intelligence/accessibility_gap_grid_synthesis.parquet",
+    "analysis/applications/accessibility_gap_intelligence/active_mobility_intervention_classes.parquet",
+    "analysis/applications/accessibility_gap_intelligence/active_mobility_intervention_summary.csv",
+    "analysis/applications/accessibility_gap_intelligence/analysis_universe_coverage.json",
+    "analysis/applications/accessibility_gap_intelligence/cycling_gap_closure.parquet",
+    "analysis/applications/accessibility_gap_intelligence/cycling_gap_closure_summary.csv",
+    "analysis/applications/accessibility_gap_intelligence/district_accessibility_gap_summary.csv",
+    "analysis/applications/accessibility_gap_intelligence/ebike_gap_convergence.json",
+    "analysis/applications/accessibility_gap_intelligence/everyday_needs_gap_summary.csv",
+    "analysis/applications/accessibility_gap_intelligence/everyday_needs_gap_typology.parquet",
+    "analysis/applications/accessibility_gap_intelligence/framework_level_findings.json",
+    "analysis/applications/accessibility_gap_intelligence/high_population_accessibility_gaps.parquet",
+    "analysis/applications/accessibility_gap_intelligence/multi_domain_accessibility_patterns.parquet",
+    "analysis/applications/accessibility_gap_intelligence/multi_domain_accessibility_summary.csv",
+    "analysis/applications/accessibility_gap_intelligence/phase11_consistency_tests.json",
+    "analysis/applications/accessibility_gap_intelligence/phase11_manifest.json",
+    "analysis/applications/accessibility_gap_intelligence/phase11_sanity_checks.json",
+    "analysis/applications/accessibility_gap_intelligence/phase11_summary.json",
+    "analysis/applications/accessibility_gap_intelligence/physical_accessibility_deficit_metrics.parquet",
+    "analysis/applications/accessibility_gap_intelligence/transit_access_gap_summary.csv",
+    "analysis/applications/accessibility_gap_intelligence/transit_access_gap_typology.parquet",
+    "analysis/applications/accessibility_gap_intelligence/typology_accessibility_gap_summary.csv"
+  ],
+  "stop_condition": "Accessibility gap synthesis only. Did NOT proceed to new data acquisition, socioeconomic equity, predictive ML, multimodal transit routing, terrain-adjusted cycling, dashboard, final cartography, or policy recommendations."
+}

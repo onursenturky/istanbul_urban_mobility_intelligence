@@ -1,0 +1,10 @@
+{
+  "n_built_cells": 7775,
+  "n_zero_building_cells": 14547,
+  "conditional_scaled_range_among_built_cells": [
+    -0.25971678165793133,
+    3.4226863006299677
+  ],
+  "floor_value_assigned_to_zero_building_cells": -1.2597167816579313,
+  "rationale": "has_buildings (0/1) carries the presence/absence signal directly. The conditional intensity column is fit ONLY on built cells (so its scale reflects real variation among built cells, undistorted by the zero mass), and zero-building cells are floored just below the minimum observed built-cell value -- clearly separated, but not an arbitrary large outlier, and not conflated with a real (if low) building coverage value."
+}

@@ -1,0 +1,27 @@
+{
+  "architecture_A_roads_in_mobility_transit": {
+    "description": "Fold candidate road-readiness criteria (intersection_density_km2, local_road_length_m, cycle_accessible_road_density_km_per_km2) into the existing Mobility/Transit Context dimension.",
+    "pros": [
+      "No new dimension to calibrate",
+      "Keeps 'how you get around' conceptually unified"
+    ],
+    "cons": [
+      "Conflates two mechanistically different things: public-transport service provision vs. street-grid geometry for self-powered travel -- a cell can have excellent transit access on a poorly-permeable street grid, or vice versa, and folding them obscures this",
+      "Further crowds an already-oversized dimension (9 criteria, proposed reduction to 4) with 3 more, undermining the redundancy cleanup in transit_redundancy_audit.json",
+      "Double-counting risk: transit accessibility and street connectivity both correlate with general urbanization, so merging them into one dimension weight double-exposes that shared urbanization signal"
+    ]
+  },
+  "architecture_B_separate_street_network_dimension": {
+    "description": "New 'Street Network/Connectivity' dimension containing exactly intersection_density_km2, local_road_length_m, cycle_accessible_road_density_km_per_km2. road_density_km_per_km2 and major_road_length_m remain CONTEXTUAL (in no scored dimension). Road-grade stays in Terrain Feasibility (a slope/difficulty concept, not a network-geometry concept -- keeping it in Street Network would double-count terrain).",
+    "pros": [
+      "Matches established walkability/bikeability practice of treating network connectivity as a distinct urban-form concept from transit service provision",
+      "Keeps the (separately being reduced) Mobility/Transit dimension focused and interpretable",
+      "Dimension-level weighting (per instruction 12) means a 3-criterion dimension is not automatically under-weighted -- scenario design controls its influence explicitly"
+    ],
+    "cons": [
+      "Adds a 6th dimension, requiring every existing scenario's weight vector to be rebalanced",
+      "A 3-criterion dimension could in principle be given disproportionate weight if scenario design is not deliberate -- mitigated by, not eliminated by, dimension-level weighting"
+    ]
+  },
+  "recommendation": "ARCHITECTURE B. Network permeability and transit service are mechanistically distinct and the transit dimension is independently being decluttered; combining them would re-crowd a dimension this phase is explicitly trying to make more legible, and would risk double-exposing a shared 'general urbanization' signal through two different criteria groups counted once. Recommended for BOTH the Conservative and Expanded candidate architectures below (Conservative simply omits the dimension's criteria if none pass the Conservative bar)."
+}

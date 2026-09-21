@@ -1,0 +1,58 @@
+{
+  "version": "INTERACTIVE_URBAN_MOBILITY_INTELLIGENCE_PRODUCT_V1",
+  "purpose": "First production-quality interactive web experience for the completed Istanbul Urban Mobility Intelligence framework. Frontend/product implementation only -- no new analysis, no modified frozen output.",
+  "stack": {
+    "framework": "Next.js 14.2.35 (App Router)",
+    "language": "TypeScript",
+    "ui": "React 18 + Tailwind CSS",
+    "map": "MapLibre GL JS 4.5.0",
+    "charts": "Recharts 2.12.7",
+    "basemap": "CARTO Dark Matter (free, no API key; attribution shown via MapLibre attribution control)"
+  },
+  "frozen_data_contract": "analysis/framework_synthesis/ (Phase 12 output) -- read-only. See docs/data_contract.md for the full field-level mapping.",
+  "frontend_preprocessing_performed": {
+    "script": "data/prepare_frontend_data.py",
+    "outputs": "frontend/public/data/*.json, grid_map.geojson",
+    "total_payload_mb": 49.7,
+    "derived_presentation_only_fields": ["cross_app_convergence", "data_confidence", "required_categories_walk_15", "required_categories_cycle_15"],
+    "upstream_bug_found_and_fixed": "cycling_required_categories_accessible_15min was never joined into the Phase 11 synthesis table; Phase 12 substituted the wrong (all-8-category) count under the name required_categories_cycle_15. Fixed in src/citywide/phase11_synthesis.py; full Phase 11->12->frontend chain re-run and re-verified (see docs/data_contract.md, qa/visual_qa.md)."
+  },
+  "pages_implemented": [
+    "/ (landing)", "/overview", "/typology", "/fifteen-minute", "/cycling-gain (flagship)",
+    "/transit", "/gaps", "/ebike", "/methods"
+  ],
+  "map_interactions_implemented": ["pan/zoom", "hover highlight", "click to select + open Grid Intelligence Card",
+    "layer switching per page", "district selector with fit-bounds", "reset view", "URL state (?grid=&district=)"],
+  "district_exploration": "Alphabetical district selector on every map page; selecting fits the map to that district's cells (no ranking).",
+  "case_study_interaction": "CaseStudyNavigator on /overview; each of the 9 frozen Phase 12 case studies navigates to its relevant page with the actual cell pre-selected.",
+  "claim_registry_integration": "lib/data.ts getClaim(claimId) is the sole path for headline analytical wording; used by KpiCard and ShareableInsightCard.",
+  "o3_sustainability_integration": "Dark forest palette + Outfit typography applied product-wide via app/globals.css tokens; O3BrandMark + footer/landing copy establish O3 as publisher, not primary brand; editorial InsightCard highlight-panel variant used for the 'why this matters' framing on /overview.",
+  "content_hooks_created": 10,
+  "shareable_insight_component": "components/ShareableInsightCard.tsx; one working example (claim C02, 4:5 aspect) rendered on /overview.",
+  "responsive_behavior": "Desktop: map + side Grid Intelligence Card. Mobile (<768px): map + fixed-position bottom-sheet Grid Intelligence Card, compact hamburger nav. Verified at 1440px and 390px via live browser screenshots.",
+  "accessibility": "Keyboard focus rings (#B2F093, :focus-visible), aria-labels on the map/nav/close controls, semantic legend text (not color-only), select elements for filters (native keyboard support).",
+  "data_qa": "frontend/qa/data_qa.json -- 10/10 checks (A-J) pass.",
+  "visual_qa": "frontend/qa/visual_qa.md -- live Playwright screenshots at 1440px and 390px; 2 real bugs found and fixed during this pass (see file for full account).",
+  "performance_qa": "frontend/qa/performance_qa.json -- payload sizes, build output, documented as local/loopback measurements only.",
+  "known_limitations": [
+    "grid_map.geojson (~22.6MB) and grid_attributes.json (~27MB) are bulk-fetched client-side; acceptable for local MVP, a per-grid API route is the natural next step before wide deployment.",
+    "npm audit flags Next.js 14.2.35 production-server-side advisories (Server Actions, Image Optimization API, custom-server SSRF/RCE) -- irrelevant to a local dev/build MVP, must be addressed before any real deployment.",
+    "No dedicated 1280px screenshot pass (1440px layout is representative above the md: 768px breakpoint).",
+    "Fixed-guideway-specific cycling-gain boolean layer not separately joined into the map payload (Phase 11's transit_gap_type already keeps General vs Fixed-Guideway analytically distinct); noted as a natural follow-up increment.",
+    "Missing favicon (cosmetic 404 in console).",
+    "The Playwright browser session used for QA was shared with other automated activity on this machine mid-session; all reported screenshots were re-verified against their expected URL before being trusted."
+  ],
+  "local_run_instructions": "cd frontend && npm install && npm run dev (or npm run build && npm run start for production mode). Regenerate data first with npm run prepare-data if analysis/ has changed.",
+  "output_paths": {
+    "app": "frontend/app/", "components": "frontend/components/", "lib": "frontend/lib/", "types": "frontend/types/",
+    "content_hooks": "frontend/content/content_hooks.json", "data_prep": "frontend/data/prepare_frontend_data.py",
+    "public_data": "frontend/public/data/", "docs": "frontend/docs/", "qa": "frontend/qa/",
+    "readme": "frontend/README.md", "manifest": "frontend/phase13_manifest.json", "summary": "frontend/phase13_summary.json"
+  },
+  "verified_build_and_run": {
+    "npm_run_build": "Compiled successfully, TypeScript type-checked with no errors, 9 pages generated.",
+    "npm_run_dev": "Confirmed serving on http://localhost:3001 (port 3000 was occupied by an unrelated process on this machine); all 9 pages and all data endpoints return HTTP 200; live-rendered and interacted with via Playwright."
+  },
+  "completion_decision": "B_INTERACTIVE_PRODUCT_MVP_VALIDATED_WITH_DOCUMENTED_LIMITATIONS",
+  "stop_condition_respected": "No public deployment, no domain purchase, no production analytics, no user accounts, no database, no new analytical model or conclusion, no automated social posting. Deployment is a separate future phase."
+}

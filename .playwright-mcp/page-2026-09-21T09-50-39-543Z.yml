@@ -1,0 +1,155 @@
+- generic [active] [ref=f58e1]:
+  - generic [ref=f58e2]:
+    - navigation [ref=f58e3]:
+      - generic [ref=f58e4]:
+        - link "Istanbul Urban Mobility Intelligence, home" [ref=f58e5] [cursor=pointer]:
+          - /url: /
+          - generic [ref=f58e7]: Istanbul / Urban Mobility Intelligence
+        - list [ref=f58e8]:
+          - listitem [ref=f58e9]:
+            - link "Overview" [ref=f58e10] [cursor=pointer]:
+              - /url: /overview
+          - listitem [ref=f58e11]:
+            - link "Urban Typology" [ref=f58e12] [cursor=pointer]:
+              - /url: /typology
+          - listitem [ref=f58e13]:
+            - link "15-Minute Istanbul" [ref=f58e14] [cursor=pointer]:
+              - /url: /fifteen-minute
+          - listitem [ref=f58e15]:
+            - link "Cycling Gain" [ref=f58e16] [cursor=pointer]:
+              - /url: /cycling-gain
+          - listitem [ref=f58e17]:
+            - link "Transit Connection" [ref=f58e18] [cursor=pointer]:
+              - /url: /transit
+          - listitem [ref=f58e19]:
+            - link "Accessibility Gaps" [ref=f58e20] [cursor=pointer]:
+              - /url: /gaps
+          - listitem [ref=f58e21]:
+            - link "E-bike" [ref=f58e22] [cursor=pointer]:
+              - /url: /ebike
+          - listitem [ref=f58e23]:
+            - link "Data & Methods" [ref=f58e24] [cursor=pointer]:
+              - /url: /methods
+    - main [ref=f58e25]:
+      - generic [ref=f58e26]:
+        - generic [ref=f58e27]:
+          - heading "Overview" [level=1] [ref=f58e28]
+          - paragraph [ref=f58e29]: What does accessibility look like across Istanbul, and what changes when walking, cycling and transit are considered together?
+        - generic [ref=f58e30]:
+          - generic [ref=f58e31]:
+            - generic [ref=f58e32]: Walking access (Food+Healthcare+Education, 15min)
+            - generic [ref=f58e33]: 82.49%
+            - paragraph [ref=f58e34]: Approximately 82.5% of the calibrated 2020 population distribution lies in cells with modeled 15-minute walking access to Food, Healthcare and Education.
+            - group [ref=f58e35]:
+              - generic "methodology" [ref=f58e36] [cursor=pointer]
+          - generic [ref=f58e37]:
+            - generic [ref=f58e38]: Cycling access (Food+Healthcare+Education, 15min)
+            - generic [ref=f58e39]: 95.57%
+            - paragraph [ref=f58e40]: Approximately 95.6% of the calibrated 2020 population has complete 15-minute potential cycling access to the three required everyday needs.
+            - group [ref=f58e41]:
+              - generic "methodology" [ref=f58e42] [cursor=pointer]
+          - generic [ref=f58e43]:
+            - generic [ref=f58e44]: Cycling accessibility gain
+            - generic [ref=f58e45]: 2.10M
+            - paragraph [ref=f58e46]: Cycling potentially closes the mapped everyday-needs walking gap for approximately 2.10 million people in the calibrated population surface.
+            - group [ref=f58e47]:
+              - generic "methodology" [ref=f58e48] [cursor=pointer]
+        - generic [ref=f58e49]:
+          - generic [ref=f58e50]:
+            - text: "01"
+            - heading "Istanbul is not one urban environment" [level=3] [ref=f58e51]
+            - generic [ref=f58e52]:
+              - paragraph [ref=f58e53]: A frozen five-cluster typology built from ~94 spatial indicators shows Istanbul is made of recurring, structurally different urban regimes -- not a single uniform city.
+              - link "Explore urban typology →" [ref=f58e54] [cursor=pointer]:
+                - /url: /typology
+          - generic [ref=f58e55]:
+            - text: "02"
+            - heading "Everyday access is highly concentrated" [level=3] [ref=f58e56]
+            - generic [ref=f58e57]:
+              - paragraph [ref=f58e58]: Complete 15-minute walking access to Food, Healthcare and Education is concentrated in a small share of grid cells that hold a large share of the population -- a real property of Istanbul's population distribution, not a modeling artifact.
+              - link "See 15-Minute Istanbul →" [ref=f58e59] [cursor=pointer]:
+                - /url: /fifteen-minute
+          - generic [ref=f58e60]:
+            - text: "03"
+            - heading "Cycling changes the map" [level=3] [ref=f58e61]
+            - generic [ref=f58e62]:
+              - paragraph [ref=f58e63]: Modeled cycling accessibility reaches a much larger share of the population than walking alone, and materially expands where residents could potentially reach everyday needs.
+              - link "See the Cycling Gain →" [ref=f58e64] [cursor=pointer]:
+                - /url: /cycling-gain
+          - generic [ref=f58e65]:
+            - text: "04"
+            - heading "Cycling can also extend transit catchments" [level=3] [ref=f58e66]
+            - generic [ref=f58e67]:
+              - paragraph [ref=f58e68]: Beyond everyday needs, cycling potentially expands how many residents can reach general transit and, especially, fixed-guideway/high-capacity transit stops within a modeled time budget.
+              - link "See Transit Connection →" [ref=f58e69] [cursor=pointer]:
+                - /url: /transit
+          - generic [ref=f58e70]:
+            - text: "05"
+            - heading "Some gaps remain" [level=3] [ref=f58e71]
+            - generic [ref=f58e72]:
+              - paragraph [ref=f58e73]: Not every accessibility gap is closed by cycling. Where destinations themselves are sparse, no mode-shift can create access that does not exist.
+              - link "See Accessibility Gaps →" [ref=f58e74] [cursor=pointer]:
+                - /url: /gaps
+          - generic [ref=f58e75]:
+            - text: "06"
+            - heading "Data quality matters" [level=3] [ref=f58e76]
+            - generic [ref=f58e77]:
+              - paragraph [ref=f58e78]: Network and transit-feed quality vary across the city. This product treats uncertainty as a first-class signal, not something to hide inside an average.
+              - link "See Data & Methods →" [ref=f58e79] [cursor=pointer]:
+                - /url: /methods
+        - generic [ref=f58e80]:
+          - heading "Explore examples" [level=2] [ref=f58e81]
+          - paragraph [ref=f58e82]: Nine representative cells, selected by analytical archetype (not by picking extremes), each linking to the relevant module with the cell already selected.
+          - generic [ref=f58e83]:
+            - 'button "Dense Core Strong Walking Kadıköy · GRID_15026 Illustrates the dense-core baseline: complete walking access is already the norm here, so this is the reference case against which every ''cycling adds value'' claim elsewhere should be compared." [ref=f58e84] [cursor=pointer]':
+              - generic [ref=f58e85]: Dense Core Strong Walking
+              - generic [ref=f58e86]: Kadıköy · GRID_15026
+              - generic [ref=f58e87]: "Illustrates the dense-core baseline: complete walking access is already the norm here, so this is the reference case against which every 'cycling adds value' claim elsewhere should be compared."
+            - 'button "Dense Cycling Adds Little Kadıköy · GRID_14541 Shows the honest counter-case to the ''cycling helps everywhere'' narrative: in an already-complete dense area, cycling has no everyday-needs gap left to close." [ref=f58e88] [cursor=pointer]':
+              - generic [ref=f58e89]: Dense Cycling Adds Little
+              - generic [ref=f58e90]: Kadıköy · GRID_14541
+              - generic [ref=f58e91]: "Shows the honest counter-case to the 'cycling helps everywhere' narrative: in an already-complete dense area, cycling has no everyday-needs gap left to close."
+            - 'button "Cycling Fully Closes Gap Büyükçekmece · GRID_07856 A populated, mid-range (not extreme) example of the single most important active-mobility finding: a cell with an everyday-needs gap under walking where cycling''s modeled network fully closes it." [ref=f58e92] [cursor=pointer]':
+              - generic [ref=f58e93]: Cycling Fully Closes Gap
+              - generic [ref=f58e94]: Büyükçekmece · GRID_07856
+              - generic [ref=f58e95]: "A populated, mid-range (not extreme) example of the single most important active-mobility finding: a cell with an everyday-needs gap under walking where cycling's modeled network fully closes it."
+            - 'button "Cycling Partially Closes Gap Arnavutköy · GRID_10160 Illustrates the nuance lost in a binary framing: cycling helps but does not fully solve the gap here -- one or two required categories remain out of reach even by bike." [ref=f58e96] [cursor=pointer]':
+              - generic [ref=f58e97]: Cycling Partially Closes Gap
+              - generic [ref=f58e98]: Arnavutköy · GRID_10160
+              - generic [ref=f58e99]: "Illustrates the nuance lost in a binary framing: cycling helps but does not fully solve the gap here -- one or two required categories remain out of reach even by bike."
+            - 'button "Cycling Cannot Overcome Sparsity Eyüpsultan · GRID_11971 Demonstrates the limit of active-mobility interventions: when destinations themselves are sparse, no network-based mode improvement (walking or cycling) can create accessibility that does not exist." [ref=f58e100] [cursor=pointer]':
+              - generic [ref=f58e101]: Cycling Cannot Overcome Sparsity
+              - generic [ref=f58e102]: Eyüpsultan · GRID_11971
+              - generic [ref=f58e103]: "Demonstrates the limit of active-mobility interventions: when destinations themselves are sparse, no network-based mode improvement (walking or cycling) can create accessibility that does not exist."
+            - 'button "Cycling Expands Fixed Guideway Access Sarıyer · GRID_14262 Shows cycling''s single largest quantified transit contribution (Phase 10): reaching a metro/tram/rail/metrobus station within 15 minutes by bike where walking cannot, at all, within the same window." [ref=f58e104] [cursor=pointer]':
+              - generic [ref=f58e105]: Cycling Expands Fixed Guideway Access
+              - generic [ref=f58e106]: Sarıyer · GRID_14262
+              - generic [ref=f58e107]: "Shows cycling's single largest quantified transit contribution (Phase 10): reaching a metro/tram/rail/metrobus station within 15 minutes by bike where walking cannot, at all, within the same window."
+            - 'button "Ebike Accessibility Convergence Pendik · GRID_17420 A concrete instance of Phase 11/12''s cross-application convergence finding: this cell''s network-measured everyday-needs cycling closure co-occurs with an independently-derived, ROBUST_HIGH e-bike Readiness score." [ref=f58e108] [cursor=pointer]':
+              - generic [ref=f58e109]: Ebike Accessibility Convergence
+              - generic [ref=f58e110]: Pendik · GRID_17420
+              - generic [ref=f58e111]: "A concrete instance of Phase 11/12's cross-application convergence finding: this cell's network-measured everyday-needs cycling closure co-occurs with an independently-derived, ROBUST_HIGH e-bike Readiness score."
+            - 'button "Insufficient Transit Data Sarıyer · GRID_13640 A mandatory transparency case: this cell''s transit-access figures must be read as DATA INSUFFICIENT, not as evidence of an actual transit desert -- the underlying GTFS feed simply does not map stops reliably here." [ref=f58e112] [cursor=pointer]':
+              - generic [ref=f58e113]: Insufficient Transit Data
+              - generic [ref=f58e114]: Sarıyer · GRID_13640
+              - generic [ref=f58e115]: "A mandatory transparency case: this cell's transit-access figures must be read as DATA INSUFFICIENT, not as evidence of an actual transit desert -- the underlying GTFS feed simply does not map stops reliably here."
+            - 'button "Adalar Known Network Limitation Adalar · GRID_14892 The framework''s standing known-limitation case: Adalar''s walking network is a genuine small local component and its cycling network has ZERO real on-island nodes (cycling figures reflect cross-water snapping to the mainland, not real routes) -- flagged at every phase since Phase 7." [ref=f58e116] [cursor=pointer]':
+              - generic [ref=f58e117]: Adalar Known Network Limitation
+              - generic [ref=f58e118]: Adalar · GRID_14892
+              - generic [ref=f58e119]: "The framework's standing known-limitation case: Adalar's walking network is a genuine small local component and its cycling network has ZERO real on-island nodes (cycling figures reflect cross-water snapping to the mainland, not real routes) -- flagged at every phase since Phase 7."
+        - generic [ref=f58e120]:
+          - heading "Shareable insight" [level=2] [ref=f58e121]
+          - generic [ref=f58e122]:
+            - generic [ref=f58e124]:
+              - text: Cycling Accessibility Gain
+              - generic [ref=f58e125]: 2.10M
+            - generic [ref=f58e126]:
+              - paragraph [ref=f58e127]: Cycling potentially closes the mapped everyday-needs walking gap for approximately 2.10 million people in the calibrated population surface.
+              - paragraph [ref=f58e128]: Consistent across Phase 9 and Phase 11 (>99% overlap, see consistency test B)
+              - generic [ref=f58e129]:
+                - generic [ref=f58e130]: by O3 Sustainability
+                - generic [ref=f58e131]: Istanbul Urban Mobility Intelligence
+    - contentinfo [ref=f58e132]:
+      - generic [ref=f58e133]: Istanbul Urban Mobility Intelligence — an O3 Sustainability spatial intelligence project.
+      - generic [ref=f58e134]: Modeled network accessibility. Not observed travel behavior. See Data & Methods.
+  - alert [ref=f58e135]

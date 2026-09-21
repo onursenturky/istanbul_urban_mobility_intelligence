@@ -1,0 +1,35 @@
+{
+  "question": "Does cycling improve everyday-needs accessibility (Phase 9) and transit access (Phase 10) in the same places, or do these benefits occur in different urban contexts?",
+  "definition_phase10_gain": "cell where general-transit (System A) is NOT reachable by walking within 10min but IS reachable by cycling within 10min (CYCLE_ONLY general-transit gain)",
+  "overlap_summary": [
+    {
+      "overlap_group": "BOTH_GAINS",
+      "n_cells": 650,
+      "pct_cells": 2.91,
+      "population": 152509.2,
+      "pct_population": 0.99
+    },
+    {
+      "overlap_group": "EVERYDAY_NEEDS_GAIN_ONLY",
+      "n_cells": 3224,
+      "pct_cells": 14.44,
+      "population": 1945040.9,
+      "pct_population": 12.58
+    },
+    {
+      "overlap_group": "NO_CYCLING_GAIN",
+      "n_cells": 16850,
+      "pct_cells": 75.49,
+      "population": 13040488.4,
+      "pct_population": 84.37
+    },
+    {
+      "overlap_group": "TRANSIT_GAIN_ONLY",
+      "n_cells": 1598,
+      "pct_cells": 7.16,
+      "population": 317527.0,
+      "pct_population": 2.05
+    }
+  ],
+  "no_combined_score_created": true
+}

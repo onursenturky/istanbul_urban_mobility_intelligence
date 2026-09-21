@@ -1,0 +1,10 @@
+[ 2214993ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3002/ebike?_rsc=oJ8_WAYgspvxL3sn:0
+[ 2214993ms] [ERROR] Failed to fetch RSC payload for http://localhost:3002/ebike. Falling back to browser navigation. TypeError: Failed to fetch
+    at y (http://localhost:3002/_next/static/chunks/255-37e0f0325134c4d7.js:1:40384)
+    at async _ (http://localhost:3002/_next/static/chunks/255-37e0f0325134c4d7.js:1:39242)
+    at async Object.o [as task] (http://localhost:3002/_next/static/chunks/255-37e0f0325134c4d7.js:1:172750) @ http://localhost:3002/_next/static/chunks/255-37e0f0325134c4d7.js:0
+[ 2216691ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3002/gaps?_rsc=oJ8_WAYgspvxL3sn:0
+[ 2216691ms] [ERROR] Failed to fetch RSC payload for http://localhost:3002/gaps. Falling back to browser navigation. TypeError: Failed to fetch
+    at y (http://localhost:3002/_next/static/chunks/255-37e0f0325134c4d7.js:1:40384)
+    at async _ (http://localhost:3002/_next/static/chunks/255-37e0f0325134c4d7.js:1:39242)
+    at async Object.o [as task] (http://localhost:3002/_next/static/chunks/255-37e0f0325134c4d7.js:1:172750) @ http://localhost:3002/_next/static/chunks/255-37e0f0325134c4d7.js:0

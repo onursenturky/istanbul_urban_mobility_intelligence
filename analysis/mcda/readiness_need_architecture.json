@@ -1,0 +1,26 @@
+{
+  "recommendation": "YES -- construct two separate dimensions (Readiness, Need/Opportunity) rather than one immediate suitability index. Several retained criteria (cycling infrastructure density/proximity, parking density/proximity) have a direction that depends on which question is being asked, and Phase 5C's robustness audit already showed the citywide typology's structure is sensitive to how such criteria are combined -- collapsing them into one number now would hide that ambiguity rather than resolve it.",
+  "deployment_readiness": {
+    "definition": "How ready is this cell's existing environment to support safe, integrated station-free e-bike operation right now?",
+    "candidate_criteria": [
+      "has_buildings (BENEFIT)",
+      "building_coverage_ratio_conditional (CONTEXT_DEPENDENT, inverted-U)",
+      "cycle_infrastructure_density_km_per_km2_ibb_only (BENEFIT direction)",
+      "protected_cycleway_density_km_per_km2_ibb_only (BENEFIT direction)",
+      "distance_to_nearest_cycle_infrastructure_m_ibb_only (COST direction, i.e. closer=better)",
+      "distance_to_nearest_bicycle_parking_m (COST direction)",
+      "distance_to_nearest_micromobility_parking_m (COST direction)",
+      "transit accessibility criteria, moderate-proximity framing (CONTEXT_DEPENDENT)"
+    ]
+  },
+  "potential_need_opportunity": {
+    "definition": "How much latent demand exists that current cycling/micromobility provision does not yet serve? Directly parallels the pilot's frozen Latent Opportunity Gap concept (non-infrastructure composite minus cycling-infrastructure score), now considered for a two-dimension readiness/need architecture rather than a single gap score.",
+    "candidate_criteria": [
+      "population_density_calibrated_km2 (demand side, CONTEXT_DEPENDENT re: saturation)",
+      "poi_density_km2, poi_entropy, retail_count, leisure_count (demand side, BENEFIT)",
+      "cycle_infrastructure_density_km_per_km2_ibb_only (need direction, i.e. LOW = higher latent need, conditional on high demand)",
+      "distance_to_nearest_bicycle_parking_m / micromobility_parking_m (need direction, i.e. FAR = higher latent need, conditional on high demand)"
+    ]
+  },
+  "explicit_non_combination": "This phase does NOT combine readiness and need/opportunity into one score, and does NOT compute either dimension's value for any cell. That is scoring work for a later phase, contingent on resolving the unresolved value-function questions logged here (especially the transit and cycling-infrastructure dual-direction ambiguities)."
+}

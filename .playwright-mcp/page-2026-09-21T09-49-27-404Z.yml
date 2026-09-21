@@ -1,0 +1,128 @@
+- generic [active] [ref=f49e1]:
+  - generic [ref=f49e2]:
+    - navigation [ref=f49e3]:
+      - generic [ref=f49e4]:
+        - link "Istanbul Urban Mobility Intelligence, home" [ref=f49e5] [cursor=pointer]:
+          - /url: /
+          - generic [ref=f49e7]: Istanbul / Urban Mobility Intelligence
+        - list [ref=f49e8]:
+          - listitem [ref=f49e9]:
+            - link "Overview" [ref=f49e10] [cursor=pointer]:
+              - /url: /overview
+          - listitem [ref=f49e11]:
+            - link "Urban Typology" [ref=f49e12] [cursor=pointer]:
+              - /url: /typology
+          - listitem [ref=f49e13]:
+            - link "15-Minute Istanbul" [ref=f49e14] [cursor=pointer]:
+              - /url: /fifteen-minute
+          - listitem [ref=f49e15]:
+            - link "Cycling Gain" [ref=f49e16] [cursor=pointer]:
+              - /url: /cycling-gain
+          - listitem [ref=f49e17]:
+            - link "Transit Connection" [ref=f49e18] [cursor=pointer]:
+              - /url: /transit
+          - listitem [ref=f49e19]:
+            - link "Accessibility Gaps" [ref=f49e20] [cursor=pointer]:
+              - /url: /gaps
+          - listitem [ref=f49e21]:
+            - link "E-bike" [ref=f49e22] [cursor=pointer]:
+              - /url: /ebike
+          - listitem [ref=f49e23]:
+            - link "Data & Methods" [ref=f49e24] [cursor=pointer]:
+              - /url: /methods
+    - main [ref=f49e25]:
+      - generic [ref=f49e26]:
+        - generic [ref=f49e27]:
+          - heading "Urban Typology" [level=1] [ref=f49e28]
+          - paragraph [ref=f49e29]: What kinds of urban mobility environments exist across Istanbul? Five frozen clusters, built from ~94 spatial indicators, describe recurring urban regimes. Clusters are descriptive, not ranked, and never entered any routing or accessibility computation.
+        - generic [ref=f49e31]:
+          - generic [ref=f49e32]:
+            - tablist "Map layer" [ref=f49e33]:
+              - tab "Urban typology" [selected] [ref=f49e34] [cursor=pointer]
+            - generic [ref=f49e36]:
+              - generic [ref=f49e37]: District
+              - combobox "District" [ref=f49e38]:
+                - option "All districts" [selected]
+                - option "Adalar"
+                - option "Arnavutköy"
+                - option "Ataşehir"
+                - option "Avcılar"
+                - option "Bağcılar"
+                - option "Bahçelievler"
+                - option "Bakırköy"
+                - option "Başakşehir"
+                - option "Bayrampaşa"
+                - option "Beşiktaş"
+                - option "Beykoz"
+                - option "Beylikdüzü"
+                - option "Beyoğlu"
+                - option "Büyükçekmece"
+                - option "Çatalca"
+                - option "Çekmeköy"
+                - option "Esenler"
+                - option "Esenyurt"
+                - option "Eyüpsultan"
+                - option "Fatih"
+                - option "Gaziosmanpaşa"
+                - option "Güngören"
+                - option "Kadıköy"
+                - option "Kâğıthane"
+                - option "Kartal"
+                - option "Küçükçekmece"
+                - option "Maltepe"
+                - option "Pendik"
+                - option "Sancaktepe"
+                - option "Sarıyer"
+                - option "Silivri"
+                - option "Sultanbeyli"
+                - option "Sultangazi"
+                - option "Şile"
+                - option "Şişli"
+                - option "Tuzla"
+                - option "Ümraniye"
+                - option "Üsküdar"
+                - option "Zeytinburnu"
+          - generic [ref=f49e39]:
+            - generic [ref=f49e40]:
+              - application "Istanbul accessibility map":
+                - region "Map" [ref=f49e41]
+                - generic [ref=f49e42]:
+                  - button "Zoom in" [ref=f49e43] [cursor=pointer]
+                  - button "Zoom out" [ref=f49e45] [cursor=pointer]
+              - button "Reset view" [ref=f49e47] [cursor=pointer]
+              - generic [ref=f49e50]:
+                - paragraph [ref=f49e51]: Loading the Istanbul accessibility map
+                - paragraph [ref=f49e52]: Preparing 22,322 spatial cells…
+            - generic [ref=f49e54]:
+              - generic [ref=f49e55]: Urban mobility typology
+              - list [ref=f49e56]:
+                - listitem [ref=f49e57]:
+                  - generic [ref=f49e59]: Cluster 0
+                - listitem [ref=f49e60]:
+                  - generic [ref=f49e62]: Cluster 1
+                - listitem [ref=f49e63]:
+                  - generic [ref=f49e65]: Cluster 2
+                - listitem [ref=f49e66]:
+                  - generic [ref=f49e68]: Cluster 3
+                - listitem [ref=f49e69]:
+                  - generic [ref=f49e71]: Cluster 4
+        - generic [ref=f49e72]:
+          - generic [ref=f49e73]:
+            - generic [ref=f49e74]: Cluster 0
+            - paragraph [ref=f49e77]: 0 districts where this is the plurality typology by population.
+          - generic [ref=f49e78]:
+            - generic [ref=f49e79]: Cluster 1
+            - paragraph [ref=f49e82]: 24 districts where this is the plurality typology by population.
+          - generic [ref=f49e83]:
+            - generic [ref=f49e84]: Cluster 2
+            - paragraph [ref=f49e87]: 3 districts where this is the plurality typology by population.
+          - generic [ref=f49e88]:
+            - generic [ref=f49e89]: Cluster 3
+            - paragraph [ref=f49e92]: 0 districts where this is the plurality typology by population.
+          - generic [ref=f49e93]:
+            - generic [ref=f49e94]: Cluster 4
+            - paragraph [ref=f49e97]: 12 districts where this is the plurality typology by population.
+    - contentinfo [ref=f49e98]:
+      - generic [ref=f49e99]: Istanbul Urban Mobility Intelligence — an O3 Sustainability spatial intelligence project.
+      - generic [ref=f49e100]: Modeled network accessibility. Not observed travel behavior. See Data & Methods.
+  - alert [ref=f49e101]

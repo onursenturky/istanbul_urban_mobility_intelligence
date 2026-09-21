@@ -1,0 +1,76 @@
+{
+  "checks": {
+    "A_unique_grid_ids": {
+      "pass": true,
+      "grid_attributes_count": 22322,
+      "geometry_feature_count": 22322
+    },
+    "B_no_analytical_values_changed": {
+      "pass": true,
+      "n_cells_sampled": 100,
+      "n_fields_checked_per_cell": 35,
+      "mismatches": []
+    },
+    "C_headline_kpis_match_phase12": {
+      "pass": true
+    },
+    "D_case_studies_match_phase12": {
+      "pass": true
+    },
+    "E_district_names_reconcile": {
+      "pass": true,
+      "n_districts": 39
+    },
+    "F_quality_flags_preserved": {
+      "pass": true,
+      "frontend": {
+        "RELIABLE": 14319,
+        "RELIABLE_SEPARATE_COMPONENT": 7745,
+        "QUESTIONABLE_ANCHOR": 159,
+        "KNOWN_NETWORK_LIMITATION_ADALAR": 72,
+        "SMALL_COMPONENT_CAUTION": 27
+      },
+      "frozen": {
+        "RELIABLE": 14319,
+        "RELIABLE_SEPARATE_COMPONENT": 7745,
+        "QUESTIONABLE_ANCHOR": 159,
+        "KNOWN_NETWORK_LIMITATION_ADALAR": 72,
+        "SMALL_COMPONENT_CAUTION": 27
+      }
+    },
+    "G_nan_not_converted_to_zero": {
+      "pass": true,
+      "n_checked": 20,
+      "n_incorrectly_zero": 0
+    },
+    "H_transit_uncertainty_preserved": {
+      "pass": true,
+      "n_checked": 200,
+      "n_incorrect": 0
+    },
+    "I_typology_uses_authoritative_labels": {
+      "pass": true,
+      "frozen_artifact_has_named_cluster_mapping": false,
+      "note": "No authoritative cluster NAME mapping exists in the frozen artifact -- the frontend correctly shows 'Cluster 0'..'Cluster 4' rather than inventing descriptive names not present in the source."
+    },
+    "J_claims_use_allowed_language": {
+      "pass": true,
+      "n_claims_checked": 8,
+      "violations": []
+    },
+    "K_population_is_calibrated_2020_baseline": {
+      "pass": true,
+      "field_name": "calibrated_population_2020",
+      "n_checked": 100,
+      "n_mismatched": 0,
+      "note": "Field name and values are unchanged from the frozen Phase 12 calibrated 2020 baseline; the frontend must never present this as a 2026 population estimate (see docs/brand_and_content.md)."
+    },
+    "L_optimized_architecture_joins_back_to_source": {
+      "pass": true,
+      "geometry_matches_source": true,
+      "details_match_source": true,
+      "layer_lookup_mismatches": {}
+    }
+  },
+  "ALL_DATA_QA_PASS": true
+}

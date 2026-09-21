@@ -1,0 +1,10 @@
+{
+  "freeze_decision": "B_VALIDATED_WITH_DOCUMENTED_LIMITATIONS_FREEZE_V1",
+  "pct_cells_quality_interpretation_changed": 34.82,
+  "population_pct_denominator_A": 82.49,
+  "population_pct_denominator_B": 82.56,
+  "population_pct_denominator_C": 83.24,
+  "max_drift_across_denominators_pp": 0.75,
+  "n_sanity_cases_checked": 10,
+  "n_implausible_flags": 0
+}

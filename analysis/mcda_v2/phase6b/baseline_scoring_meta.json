@@ -1,0 +1,41 @@
+{
+  "dimensions": [
+    "Demand/Activity",
+    "Transit Accessibility",
+    "Cycling Readiness",
+    "Street Connectivity",
+    "Physical Feasibility"
+  ],
+  "dimension_weights_baseline": {
+    "Demand/Activity": 0.2,
+    "Transit Accessibility": 0.2,
+    "Cycling Readiness": 0.2,
+    "Street Connectivity": 0.2,
+    "Physical Feasibility": 0.2
+  },
+  "terrain_weights_with_grade": {
+    "mean_slope_deg": 0.4,
+    "mean_absolute_road_grade_pct": 0.3,
+    "pct_area_slope_6_10deg": 0.2,
+    "pct_area_slope_3_6deg": 0.1
+  },
+  "readiness_formula": "renormalized weighted mean of {Transit Accessibility, Cycling Readiness, Street Connectivity, Physical Feasibility}; Demand/Activity excluded (Readiness = enabling conditions, not demand)",
+  "opportunity_formula": "demand_potential ** alpha * cycling_gap ** (1 - alpha); alpha = 0.5000 = weight(Demand)/(weight(Demand)+weight(Cycling Readiness)) from the ORIGINAL 5-dim vector, unchanged geometric form from V1",
+  "cycling_gap_definition": "mean of (1 - value) across the same 5 Cycling Readiness criteria used for readiness -- NOT a separately defined gap concept",
+  "urban_form_dimension_excluded": "V1's Urban Form dimension (has_buildings / building_coverage_ratio) is NOT part of this 5-dimension e-bike model, per the explicit governing 5-dimension list. Retained in the V2 feature store for future applications; not silently dropped from the data.",
+  "readiness_stats": {
+    "min": 0.1743407446369345,
+    "max": 0.98756832911387,
+    "mean": 0.49444488235485207,
+    "median": 0.471194563139064,
+    "std": 0.15581197146861253
+  },
+  "opportunity_stats": {
+    "min": 0.0,
+    "max": 0.9151004805215363,
+    "mean": 0.1814165317551484,
+    "median": 0.0,
+    "std": 0.2284233148330416,
+    "pct_zero": 55.47
+  }
+}

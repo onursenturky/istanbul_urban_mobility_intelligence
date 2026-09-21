@@ -1,0 +1,75 @@
+{
+  "version": "INTERIM_CITYWIDE_V1_SIX_FAMILY",
+  "remote_periphery_audit": {
+    "n_cells": 44,
+    "n_with_buildings": 38,
+    "n_with_nonzero_poi": 44,
+    "district_distribution": {
+      "Silivri": 27,
+      "Çatalca": 16,
+      "Şile": 1
+    },
+    "verdict": "38/44 cells have built structures and 44/44 have nonzero POI density -- consistent with GENUINE LOCAL SETTLEMENT/ACTIVITY NODES (small town centers, villages, or local service clusters) embedded within otherwise rural/peripheral districts, not a boundary/grid artifact or scoring bug. These districts (Çatalca, Silivri, Şile) are large and genuinely contain both deep-rural land AND real, if modest, settlement centers -- the same finding already surfaced descriptively in Phase 5C's typology profiling. Retained, not removed."
+  },
+  "t1_vs_t2_statement": {
+    "decision": "T1 (integration) and T2 (substitution) are RETAINED as competing, unresolved hypotheses. Neither is averaged with the other, and neither is selected as default.",
+    "evidence_required_to_resolve": [
+      "Observed shared e-bike/micromobility trip origin-destination data near varying transit proximities, to test whether ridership actually rises, falls, or is flat as transit proximity increases.",
+      "Operator-reported substitution/complementarity data (e.g. trip surveys asking whether the e-bike trip replaced a transit trip or accessed one).",
+      "A published or agency-validated distance/frequency threshold for first/last-mile integration specific to Istanbul's transit network, which does not currently exist in any source used by this project.",
+      "None of this evidence exists in the current project scope -- this is recorded as an explicit evidence gap, not resolved by assumption or by picking the 'more plausible-sounding' hypothesis."
+    ]
+  },
+  "high_high_n_cells": 292,
+  "high_high_typology_composition": {
+    "transit-intensive node": 129,
+    "retail/commercial core": 99,
+    "moderate mixed-use activity": 64
+  },
+  "high_opportunity_lower_readiness_n_cells": 1734,
+  "high_opportunity_lower_readiness_weakest_dimension_counts": {
+    "terrain": 1336,
+    "transit": 210,
+    "cycling_readiness": 180,
+    "urban_form": 8
+  },
+  "final_qa_all_pass": true,
+  "final_qa_detail": {
+    "zero_demand_remote_cells_never_high_opportunity": {
+      "pct_in_citywide_top_decile": 0.0,
+      "pass": "True"
+    },
+    "consensus_frequencies_reproduce_phase6c_exactly": {
+      "readiness_match": true,
+      "opportunity_match": true,
+      "pass": true
+    },
+    "no_cluster_membership_used_in_scoring": {
+      "cluster_reference_in_score_computation_code": false,
+      "cluster_reference_in_downstream_interpretation_code": true,
+      "note": "The downstream reference is run_sensitivity()'s typology_score_summary.csv cross-tab, built strictly AFTER scenario_scores is computed and saved -- interpretation only, not a scoring input.",
+      "pass": true
+    },
+    "no_district_identifier_used_as_predictor": {
+      "note": "district is carried as METADATA in all output tables for grouping/reporting, never read as a numeric predictor by any value function or weighting formula in mcda_phase6b_scoring.py.",
+      "pass": true
+    },
+    "readiness_and_opportunity_mathematically_separate": {
+      "note": "No column in scenario_scores.parquet combines the two; verified by column name inspection.",
+      "combined_columns_found": [],
+      "pass": true
+    },
+    "no_scenario_silently_defaulted": {
+      "note": "All 4 scenarios appear symmetrically in every Phase 6B/6C output; sanity-check and mapping code uses 'balanced_equal_dimensions' only as an ILLUSTRATIVE example for printed diagnostics, never as a computational default embedded in a saved score.",
+      "pass": true
+    }
+  },
+  "recommended_final_products": [
+    "A_urban_mobility_typology",
+    "B_deployment_readiness_consensus",
+    "C_latent_opportunity_consensus",
+    "D_assumption_sensitivity",
+    "E_joint_readiness_opportunity_matrix"
+  ],
+  "version_frozen": true
+}

@@ -1,0 +1,8 @@
+{
+  "n_valid_grid_cells": 22322,
+  "pct_cells_complete_15min_access": 14.64,
+  "pct_population_complete_15min_access": 82.49,
+  "n_multi_service_deficit_cells": 18106,
+  "most_common_missing_required_category": "food",
+  "n_cells_quality_flagged_non_reliable": 8003
+}

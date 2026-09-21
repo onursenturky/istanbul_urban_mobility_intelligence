@@ -1,0 +1,8 @@
+{
+  "freeze_decision": "B_VALIDATED_WITH_DOCUMENTED_LIMITATIONS_FREEZE_V1",
+  "pct_population_complete_walking_15min": 82.47,
+  "pct_reliable_gap_population_closed_by_cycling": 77.81,
+  "most_common_bottleneck": "FOOD",
+  "n_contradiction_flags": 0,
+  "all_consistency_tests_pass": true
+}

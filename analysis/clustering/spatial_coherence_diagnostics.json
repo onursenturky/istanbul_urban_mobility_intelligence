@@ -1,0 +1,101 @@
+{
+  "fragmentation": {
+    "total_components_all_clusters": 1261,
+    "per_cluster": {
+      "0": {
+        "n_components": 317,
+        "largest_component_size": 47,
+        "largest_component_share": 0.0462
+      },
+      "1": {
+        "n_components": 60,
+        "largest_component_size": 95,
+        "largest_component_share": 0.2632
+      },
+      "2": {
+        "n_components": 146,
+        "largest_component_size": 77,
+        "largest_component_share": 0.1023
+      },
+      "3": {
+        "n_components": 235,
+        "largest_component_size": 139,
+        "largest_component_share": 0.1526
+      },
+      "4": {
+        "n_components": 6,
+        "largest_component_size": 5999,
+        "largest_component_share": 0.7819
+      },
+      "5": {
+        "n_components": 406,
+        "largest_component_size": 48,
+        "largest_component_share": 0.0352
+      },
+      "6": {
+        "n_components": 91,
+        "largest_component_size": 5764,
+        "largest_component_share": 0.5627
+      }
+    },
+    "mean_largest_component_share_weighted_by_cluster_size": 0.5452
+  },
+  "morans_i_per_cluster": {
+    "cluster_0": {
+      "morans_i": 0.2341,
+      "expected_i_under_null": -0.0,
+      "z_score": 68.597,
+      "p_value_pseudo": 0.001,
+      "n_permutations": 999,
+      "interpretation": "significant positive spatial autocorrelation"
+    },
+    "cluster_1": {
+      "morans_i": 0.4207,
+      "expected_i_under_null": -0.0,
+      "z_score": 124.396,
+      "p_value_pseudo": 0.001,
+      "n_permutations": 999,
+      "interpretation": "significant positive spatial autocorrelation"
+    },
+    "cluster_2": {
+      "morans_i": 0.3355,
+      "expected_i_under_null": -0.0,
+      "z_score": 97.663,
+      "p_value_pseudo": 0.001,
+      "n_permutations": 999,
+      "interpretation": "significant positive spatial autocorrelation"
+    },
+    "cluster_3": {
+      "morans_i": 0.2673,
+      "expected_i_under_null": -0.0,
+      "z_score": 80.043,
+      "p_value_pseudo": 0.001,
+      "n_permutations": 999,
+      "interpretation": "significant positive spatial autocorrelation"
+    },
+    "cluster_4": {
+      "morans_i": 0.9666,
+      "expected_i_under_null": -0.0,
+      "z_score": 280.586,
+      "p_value_pseudo": 0.001,
+      "n_permutations": 999,
+      "interpretation": "significant positive spatial autocorrelation"
+    },
+    "cluster_5": {
+      "morans_i": 0.2262,
+      "expected_i_under_null": -0.0,
+      "z_score": 67.493,
+      "p_value_pseudo": 0.001,
+      "n_permutations": 999,
+      "interpretation": "significant positive spatial autocorrelation"
+    },
+    "cluster_6": {
+      "morans_i": 0.8438,
+      "expected_i_under_null": -0.0,
+      "z_score": 244.476,
+      "p_value_pseudo": 0.001,
+      "n_permutations": 999,
+      "interpretation": "significant positive spatial autocorrelation"
+    }
+  }
+}

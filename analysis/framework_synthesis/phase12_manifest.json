@@ -1,0 +1,109 @@
+{
+  "version": "FRAMEWORK_SYNTHESIS_AND_VISUALIZATION_PACKAGE_V1",
+  "purpose": "Presentation/dashboard-ready synthesis of all 5 frozen applications -- NOT a new analytical phase.",
+  "depends_on_frozen": [
+    "CITYWIDE_V2_EIGHT_FAMILY_TYPOLOGY",
+    "NETWORK_INTELLIGENCE_FOUNDATION_V1",
+    "E-bike Readiness & Opportunity",
+    "15MIN_ISTANBUL_WALKING_V1_FROZEN",
+    "CYCLING_ACCESSIBILITY_AND_ACTIVE_MOBILITY_GAIN_V1",
+    "FIRST_LAST_MILE_TRANSIT_ACCESSIBILITY_V1",
+    "ACCESSIBILITY_GAP_INTELLIGENCE_V1"
+  ],
+  "no_new_analysis": true,
+  "no_new_composite_score": true,
+  "no_frozen_artifact_modified": true,
+  "qa_summary": {
+    "checks": {
+      "B_no_new_composite_score": {
+        "pass": true,
+        "checked_columns": [
+          "calibrated_population_2020",
+          "cycle_infrastructure_density_km_per_km2",
+          "ebike_opportunity",
+          "ebike_readiness",
+          "education_cycle_min",
+          "education_walk_min",
+          "fixed_transit_cycle_min",
+          "fixed_transit_walk_min",
+          "food_cycle_min",
+          "food_walk_min",
+          "general_transit_cycle_min",
+          "general_transit_walk_min",
+          "healthcare_cycle_min",
+          "healthcare_walk_min",
+          "intersection_density_km2",
+          "population_density_per_km2",
+          "required_categories_cycle_15",
+          "required_categories_walk_15"
+        ],
+        "suspicious_columns_found": []
+      },
+      "D_dashboard_fields_trace_to_frozen_sources": {
+        "pass": true,
+        "unmapped_dashboard_columns": [],
+        "mapped_columns_whose_source_is_missing": []
+      },
+      "E_population_totals_reconcile": {
+        "pass": true,
+        "frozen_v2_total": 15455565.5,
+        "dashboard_total": 15455565.5
+      },
+      "F_quality_flags_visible": {
+        "pass": true,
+        "n_non_reliable_walking": 258,
+        "n_non_reliable_cycling": 268
+      },
+      "G_transit_uncertainty_not_shown_as_absence": {
+        "pass": true,
+        "n_no_feed_cells_checked": 8103,
+        "n_incorrectly_labeled_genuine_gap": 0
+      },
+      "H_adalar_limitations_visible": {
+        "pass": true,
+        "n_adalar_cells": 72
+      },
+      "I_claims_registry_blocks_overclaims": {
+        "pass": true,
+        "n_claims": 8
+      },
+      "J_case_studies_use_actual_frozen_values": {
+        "pass": true,
+        "n_cases_checked": 9,
+        "mismatches": []
+      },
+      "K_rounding_does_not_flip_interpretation": {
+        "pass": true,
+        "h01_vs_h01b_raw_diff": 0.02,
+        "note": "82.49 vs 82.47 differ by 0.02pp (2,424 people / 20 cells) -- explicitly reconciled in headline_kpis.json, not silently rounded away; both values are reported, never just one picked."
+      }
+    },
+    "source_reconciliation_pass": true,
+    "ALL_QA_PASS": true
+  },
+  "completion_decision": "B_PRESENTATION_PACKAGE_VALIDATED_WITH_DOCUMENTED_LIMITATIONS",
+  "output_paths": [
+    "analysis/framework_synthesis/case_studies/case_studies.json",
+    "analysis/framework_synthesis/dashboard/dashboard_district_summary.parquet",
+    "analysis/framework_synthesis/dashboard/dashboard_filter_spec.json",
+    "analysis/framework_synthesis/dashboard/dashboard_grid.geojson",
+    "analysis/framework_synthesis/dashboard/dashboard_grid.parquet",
+    "analysis/framework_synthesis/dashboard/dashboard_grid_lite.geojson",
+    "analysis/framework_synthesis/dashboard/dashboard_information_architecture.json",
+    "analysis/framework_synthesis/district_profiles.parquet",
+    "analysis/framework_synthesis/framework_findings.json",
+    "analysis/framework_synthesis/headline_kpis.json",
+    "analysis/framework_synthesis/methodology/framework_architecture.json",
+    "analysis/framework_synthesis/methodology/framework_narrative.md",
+    "analysis/framework_synthesis/methodology/methodology_registry.csv",
+    "analysis/framework_synthesis/phase12_manifest.json",
+    "analysis/framework_synthesis/phase12_summary.json",
+    "analysis/framework_synthesis/qa/phase12_qa_report.json",
+    "analysis/framework_synthesis/qa/phase12_source_reconciliation.json",
+    "analysis/framework_synthesis/registries/chart_registry.csv",
+    "analysis/framework_synthesis/registries/claims_registry.csv",
+    "analysis/framework_synthesis/registries/kpi_registry.csv",
+    "analysis/framework_synthesis/registries/map_layer_registry.csv"
+  ],
+  "stop_condition": "Synthesis/visualization SPECIFICATION package only. Did NOT build Streamlit, MapLibre, deck.gl, or any web app; did NOT create final visual styling; did NOT acquire data or run new analysis; did NOT change any frozen output. The next phase selects frontend technology and implements the product."
+}

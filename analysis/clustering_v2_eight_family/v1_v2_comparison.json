@@ -1,0 +1,51 @@
+{
+  "adjusted_rand_index": 0.6614,
+  "normalized_mutual_info": 0.6789,
+  "contingency_matrix": {
+    "0": {
+      "0": 10,
+      "1": 165,
+      "2": 0,
+      "3": 0,
+      "4": 5938
+    },
+    "1": {
+      "0": 2202,
+      "1": 110,
+      "2": 3,
+      "3": 570,
+      "4": 29
+    },
+    "2": {
+      "0": 270,
+      "1": 8194,
+      "2": 32,
+      "3": 0,
+      "4": 125
+    },
+    "3": {
+      "0": 1,
+      "1": 1621,
+      "2": 1,
+      "3": 0,
+      "4": 1517
+    },
+    "4": {
+      "0": 11,
+      "1": 11,
+      "2": 1467,
+      "3": 45,
+      "4": 0
+    }
+  },
+  "best_match_mapping_v2_to_v1": {
+    "0": 4,
+    "1": 0,
+    "2": 1,
+    "3": 3,
+    "4": 2
+  },
+  "pct_cells_retaining_corresponding_regime": 79.75,
+  "pct_cells_changing_regime": 20.25,
+  "note": "best-match mapping is for interpretive comparison ONLY -- V1 and V2 cluster IDs are nominal (unordered) and not otherwise equivalent."
+}

@@ -1,0 +1,10 @@
+{
+  "A_spatially_heterogeneous": "5 urban regimes identified via the frozen V2 typology; see typology_accessibility_gap_summary.csv.",
+  "B_accessibility_concentrated": "14.6% of cells hold 82.5% of the population's complete-walking-access outcome (C01); confirmed as a real population-distribution property, not a modeling artifact (Phase 8.1).",
+  "C_cycling_changes_geography": "Complete everyday-needs access rises from 82.5% (walking, C01) to 95.6% (cycling, C03); 2.10M people gain complete access via cycling (C02).",
+  "D_cycling_expands_transit": "Up to 4.80M people (RAW) show cycling-only fixed-guideway transit gain (C05); quality-aware combined closure is 341,370 people (C07) -- a large RAW-to-quality-aware gap driven by transit-feed coverage, not network performance.",
+  "E_not_all_gaps_solved": "352,939 people remain in cells cycling cannot help (C06) -- genuine destination sparsity.",
+  "F_cross_application_convergence": "74.67% of CYCLING_CLOSES_EVERYDAY_GAP cells are top-quartile e-bike Readiness vs a 25% baseline (C08) -- descriptive convergence, not validation.",
+  "G_uncertainty_is_part_of_product": "Only 27.29% of cells / 73.84% of population are STRICT_SYNTHESIS_RELIABLE; Silivri and Catalca have zero mapped transit stops; Adalar carries a standing network limitation.",
+  "claims_registry_reference": "See registries/claims_registry.csv for the exact-value, denominator-traced version of every claim above."
+}

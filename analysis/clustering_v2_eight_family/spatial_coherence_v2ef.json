@@ -1,0 +1,40 @@
+{
+  "fragmentation": {
+    "total_components_all_clusters": 1178,
+    "per_cluster": {
+      "0": {
+        "n_components": 23,
+        "largest_component_size": 5123,
+        "largest_component_share": 0.8381
+      },
+      "1": {
+        "n_components": 291,
+        "largest_component_size": 1113,
+        "largest_component_share": 0.3819
+      },
+      "2": {
+        "n_components": 116,
+        "largest_component_size": 4924,
+        "largest_component_share": 0.5712
+      },
+      "3": {
+        "n_components": 690,
+        "largest_component_size": 234,
+        "largest_component_share": 0.0745
+      },
+      "4": {
+        "n_components": 58,
+        "largest_component_size": 1079,
+        "largest_component_share": 0.7034
+      }
+    },
+    "mean_largest_component_share_weighted_by_cluster_size": 0.5588
+  },
+  "morans_i_per_cluster": {
+    "cluster_0": 0.7692,
+    "cluster_1": 0.5868,
+    "cluster_2": 0.6749,
+    "cluster_3": 0.3666,
+    "cluster_4": 0.5727
+  }
+}

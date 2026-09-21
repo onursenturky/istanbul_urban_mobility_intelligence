@@ -1,0 +1,20 @@
+{
+  "methodological_note": "excess_min_over_15 is structurally ~0 for all reachable cells because Phase 8's search horizon itself was capped at 15 minutes -- it is retained in the output for schema completeness but is NOT an informative severity signal on its own. The genuinely informative fields here are (a) number_required_categories_unreachable_within_15min (0-3) and (b) mean/min_required_service_headroom_min (how close a reachable category is to the 15-minute edge).",
+  "n_cells_any_required_category_unreachable": 19053,
+  "distribution_n_categories_unreachable": {
+    "0": 3269,
+    "1": 947,
+    "2": 1246,
+    "3": 16860
+  },
+  "mean_headroom_min_summary_stats": {
+    "count": 5462.0,
+    "mean": 7.4302639448,
+    "std": 3.7319164112,
+    "min": 0.001,
+    "25%": 4.3969166667,
+    "50%": 7.6721666667,
+    "75%": 10.5676666667,
+    "max": 15.0
+  }
+}

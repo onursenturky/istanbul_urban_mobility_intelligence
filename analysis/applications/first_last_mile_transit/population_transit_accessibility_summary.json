@@ -1,0 +1,175 @@
+{
+  "population_layer_caveat": "This combines calibrated 2020 population distribution with the frozen transit/network data snapshots -- NOT a 2026 population estimate.",
+  "walking_general_transit": {
+    "label": "walking_general_transit",
+    "total_population": 15455565.5,
+    "RAW": {
+      "population_within_5min": 5652073.9,
+      "pct_within_5min": 36.57,
+      "population_within_10min": 9342682.6,
+      "pct_within_10min": 60.45,
+      "population_within_15min": 11368767.3,
+      "pct_within_15min": 73.56,
+      "population_unreachable_within_15min": 4086798.1,
+      "pct_unreachable_within_15min": 26.44,
+      "denominator_population": 15455565.5
+    },
+    "QUALITY_AWARE_RELIABLE_ONLY": {
+      "population_within_5min": 5389629.7,
+      "pct_within_5min": 47.23,
+      "population_within_10min": 8487613.1,
+      "pct_within_10min": 74.37,
+      "population_within_15min": 9965582.2,
+      "pct_within_15min": 87.32,
+      "population_unreachable_within_15min": 1446600.4,
+      "pct_unreachable_within_15min": 12.68,
+      "denominator_population": 11412182.6
+    }
+  },
+  "walking_fixed_transit": {
+    "label": "walking_fixed_transit",
+    "total_population": 15455565.5,
+    "RAW": {
+      "population_within_5min": 1843197.5,
+      "pct_within_5min": 11.93,
+      "population_within_10min": 4984436.6,
+      "pct_within_10min": 32.25,
+      "population_within_15min": 7648411.5,
+      "pct_within_15min": 49.49,
+      "population_unreachable_within_15min": 7807153.9,
+      "pct_unreachable_within_15min": 50.51,
+      "denominator_population": 15455565.5
+    },
+    "QUALITY_AWARE_RELIABLE_ONLY": {
+      "population_within_5min": 1678268.0,
+      "pct_within_5min": 14.71,
+      "population_within_10min": 4315688.9,
+      "pct_within_10min": 37.82,
+      "population_within_15min": 6508694.7,
+      "pct_within_15min": 57.03,
+      "population_unreachable_within_15min": 4903487.9,
+      "pct_unreachable_within_15min": 42.97,
+      "denominator_population": 11412182.6
+    }
+  },
+  "cycling_general_transit": {
+    "label": "cycling_general_transit",
+    "total_population": 15455565.5,
+    "RAW": {
+      "population_within_5min": 11065155.9,
+      "pct_within_5min": 71.59,
+      "population_within_10min": 13674115.7,
+      "pct_within_10min": 88.47,
+      "population_within_15min": 14319319.7,
+      "pct_within_15min": 92.65,
+      "population_unreachable_within_15min": 1136245.8,
+      "pct_unreachable_within_15min": 7.35,
+      "denominator_population": 15455565.5
+    },
+    "QUALITY_AWARE_RELIABLE_ONLY": {
+      "population_within_5min": 9760862.9,
+      "pct_within_5min": 85.53,
+      "population_within_10min": 11111322.3,
+      "pct_within_10min": 97.36,
+      "population_within_15min": 11232873.4,
+      "pct_within_15min": 98.43,
+      "population_unreachable_within_15min": 179309.2,
+      "pct_unreachable_within_15min": 1.57,
+      "denominator_population": 11412182.6
+    }
+  },
+  "cycling_fixed_transit": {
+    "label": "cycling_fixed_transit",
+    "total_population": 15455565.5,
+    "RAW": {
+      "population_within_5min": 7249879.2,
+      "pct_within_5min": 46.91,
+      "population_within_10min": 11066626.3,
+      "pct_within_10min": 71.6,
+      "population_within_15min": 12387893.3,
+      "pct_within_15min": 80.15,
+      "population_unreachable_within_15min": 3067672.1,
+      "pct_unreachable_within_15min": 19.85,
+      "denominator_population": 15455565.5
+    },
+    "QUALITY_AWARE_RELIABLE_ONLY": {
+      "population_within_5min": 6184011.0,
+      "pct_within_5min": 54.19,
+      "population_within_10min": 8853375.0,
+      "pct_within_10min": 77.58,
+      "population_within_15min": 9647339.7,
+      "pct_within_15min": 84.54,
+      "population_unreachable_within_15min": 1764842.9,
+      "pct_unreachable_within_15min": 15.46,
+      "denominator_population": 11412182.6
+    }
+  },
+  "gap_class_population_raw": {
+    "BOTH_TRANSIT_GAPS": 1227855.9,
+    "FIXED_GUIDEWAY_GAP": 1777903.4,
+    "GENERAL_TRANSIT_GAP": 490878.1,
+    "NO_TRANSIT_GAP": 11958927.9
+  },
+  "gap_class_population_reliable_only": {
+    "BOTH_TRANSIT_GAPS": 157543.9,
+    "FIXED_GUIDEWAY_GAP": 1563475.1,
+    "GENERAL_TRANSIT_GAP": 103380.6,
+    "NO_TRANSIT_GAP": 9587783.0
+  },
+  "cycle_only_transit_gain_by_system_and_threshold": [
+    {
+      "system": "GENERAL",
+      "threshold_min": 5,
+      "access_class": "CYCLE_ONLY_TRANSIT_GAIN",
+      "n_cells": 2700,
+      "pct_cells": 12.1,
+      "population": 5467286.7,
+      "pct_population": 35.37
+    },
+    {
+      "system": "FIXED",
+      "threshold_min": 5,
+      "access_class": "CYCLE_ONLY_TRANSIT_GAIN",
+      "n_cells": 1181,
+      "pct_cells": 5.29,
+      "population": 5456954.8,
+      "pct_population": 35.31
+    },
+    {
+      "system": "GENERAL",
+      "threshold_min": 10,
+      "access_class": "CYCLE_ONLY_TRANSIT_GAIN",
+      "n_cells": 3369,
+      "pct_cells": 15.09,
+      "population": 4394148.8,
+      "pct_population": 28.43
+    },
+    {
+      "system": "FIXED",
+      "threshold_min": 10,
+      "access_class": "CYCLE_ONLY_TRANSIT_GAIN",
+      "n_cells": 1638,
+      "pct_cells": 7.34,
+      "population": 6125219.8,
+      "pct_population": 39.63
+    },
+    {
+      "system": "GENERAL",
+      "threshold_min": 15,
+      "access_class": "CYCLE_ONLY_TRANSIT_GAIN",
+      "n_cells": 3663,
+      "pct_cells": 16.41,
+      "population": 3025322.3,
+      "pct_population": 19.57
+    },
+    {
+      "system": "FIXED",
+      "threshold_min": 15,
+      "access_class": "CYCLE_ONLY_TRANSIT_GAIN",
+      "n_cells": 1661,
+      "pct_cells": 7.44,
+      "population": 4801394.5,
+      "pct_population": 31.07
+    }
+  ]
+}

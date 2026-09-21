@@ -1,0 +1,219 @@
+{
+  "readiness_spearman_matrix": {
+    "readiness__BASELINE": {
+      "readiness__BASELINE": 1.0,
+      "readiness__NO_STREET_CONNECTIVITY": 0.8445,
+      "readiness__NO_ROAD_GRADE": 0.9976,
+      "readiness__EXPANDED_TRANSIT": 0.9882,
+      "readiness__ALTERNATIVE_CYCLING": 0.9983,
+      "readiness__WEIGHT_PERTURBATION": 0.9986
+    },
+    "readiness__NO_STREET_CONNECTIVITY": {
+      "readiness__BASELINE": 0.8445,
+      "readiness__NO_STREET_CONNECTIVITY": 1.0,
+      "readiness__NO_ROAD_GRADE": 0.8468,
+      "readiness__EXPANDED_TRANSIT": 0.8735,
+      "readiness__ALTERNATIVE_CYCLING": 0.8541,
+      "readiness__WEIGHT_PERTURBATION": 0.8324
+    },
+    "readiness__NO_ROAD_GRADE": {
+      "readiness__BASELINE": 0.9976,
+      "readiness__NO_STREET_CONNECTIVITY": 0.8468,
+      "readiness__NO_ROAD_GRADE": 1.0,
+      "readiness__EXPANDED_TRANSIT": 0.9864,
+      "readiness__ALTERNATIVE_CYCLING": 0.9975,
+      "readiness__WEIGHT_PERTURBATION": 0.9951
+    },
+    "readiness__EXPANDED_TRANSIT": {
+      "readiness__BASELINE": 0.9882,
+      "readiness__NO_STREET_CONNECTIVITY": 0.8735,
+      "readiness__NO_ROAD_GRADE": 0.9864,
+      "readiness__EXPANDED_TRANSIT": 1.0,
+      "readiness__ALTERNATIVE_CYCLING": 0.989,
+      "readiness__WEIGHT_PERTURBATION": 0.9887
+    },
+    "readiness__ALTERNATIVE_CYCLING": {
+      "readiness__BASELINE": 0.9983,
+      "readiness__NO_STREET_CONNECTIVITY": 0.8541,
+      "readiness__NO_ROAD_GRADE": 0.9975,
+      "readiness__EXPANDED_TRANSIT": 0.989,
+      "readiness__ALTERNATIVE_CYCLING": 1.0,
+      "readiness__WEIGHT_PERTURBATION": 0.9966
+    },
+    "readiness__WEIGHT_PERTURBATION": {
+      "readiness__BASELINE": 0.9986,
+      "readiness__NO_STREET_CONNECTIVITY": 0.8324,
+      "readiness__NO_ROAD_GRADE": 0.9951,
+      "readiness__EXPANDED_TRANSIT": 0.9887,
+      "readiness__ALTERNATIVE_CYCLING": 0.9966,
+      "readiness__WEIGHT_PERTURBATION": 1.0
+    }
+  },
+  "opportunity_spearman_matrix": {
+    "opportunity__BASELINE": {
+      "opportunity__BASELINE": 1.0,
+      "opportunity__NO_STREET_CONNECTIVITY": 1.0,
+      "opportunity__NO_ROAD_GRADE": 1.0,
+      "opportunity__EXPANDED_TRANSIT": 1.0,
+      "opportunity__ALTERNATIVE_CYCLING": 0.9994,
+      "opportunity__WEIGHT_PERTURBATION": 0.9991
+    },
+    "opportunity__NO_STREET_CONNECTIVITY": {
+      "opportunity__BASELINE": 1.0,
+      "opportunity__NO_STREET_CONNECTIVITY": 1.0,
+      "opportunity__NO_ROAD_GRADE": 1.0,
+      "opportunity__EXPANDED_TRANSIT": 1.0,
+      "opportunity__ALTERNATIVE_CYCLING": 0.9994,
+      "opportunity__WEIGHT_PERTURBATION": 0.9991
+    },
+    "opportunity__NO_ROAD_GRADE": {
+      "opportunity__BASELINE": 1.0,
+      "opportunity__NO_STREET_CONNECTIVITY": 1.0,
+      "opportunity__NO_ROAD_GRADE": 1.0,
+      "opportunity__EXPANDED_TRANSIT": 1.0,
+      "opportunity__ALTERNATIVE_CYCLING": 0.9994,
+      "opportunity__WEIGHT_PERTURBATION": 0.9991
+    },
+    "opportunity__EXPANDED_TRANSIT": {
+      "opportunity__BASELINE": 1.0,
+      "opportunity__NO_STREET_CONNECTIVITY": 1.0,
+      "opportunity__NO_ROAD_GRADE": 1.0,
+      "opportunity__EXPANDED_TRANSIT": 1.0,
+      "opportunity__ALTERNATIVE_CYCLING": 0.9994,
+      "opportunity__WEIGHT_PERTURBATION": 0.9991
+    },
+    "opportunity__ALTERNATIVE_CYCLING": {
+      "opportunity__BASELINE": 0.9994,
+      "opportunity__NO_STREET_CONNECTIVITY": 0.9994,
+      "opportunity__NO_ROAD_GRADE": 0.9994,
+      "opportunity__EXPANDED_TRANSIT": 0.9994,
+      "opportunity__ALTERNATIVE_CYCLING": 1.0,
+      "opportunity__WEIGHT_PERTURBATION": 0.9985
+    },
+    "opportunity__WEIGHT_PERTURBATION": {
+      "opportunity__BASELINE": 0.9991,
+      "opportunity__NO_STREET_CONNECTIVITY": 0.9991,
+      "opportunity__NO_ROAD_GRADE": 0.9991,
+      "opportunity__EXPANDED_TRANSIT": 0.9991,
+      "opportunity__ALTERNATIVE_CYCLING": 0.9985,
+      "opportunity__WEIGHT_PERTURBATION": 1.0
+    }
+  },
+  "readiness_min_pairwise_spearman": 0.8324,
+  "opportunity_min_pairwise_spearman": 0.9985,
+  "readiness_jaccard_matrix": {
+    "readiness__BASELINE": {
+      "readiness__BASELINE": 1.0,
+      "readiness__NO_STREET_CONNECTIVITY": 0.8686,
+      "readiness__NO_ROAD_GRADE": 0.9485,
+      "readiness__EXPANDED_TRANSIT": 0.7807,
+      "readiness__ALTERNATIVE_CYCLING": 0.9982,
+      "readiness__WEIGHT_PERTURBATION": 0.9317
+    },
+    "readiness__NO_STREET_CONNECTIVITY": {
+      "readiness__BASELINE": 0.8686,
+      "readiness__NO_STREET_CONNECTIVITY": 1.0,
+      "readiness__NO_ROAD_GRADE": 0.847,
+      "readiness__EXPANDED_TRANSIT": 0.7277,
+      "readiness__ALTERNATIVE_CYCLING": 0.8678,
+      "readiness__WEIGHT_PERTURBATION": 0.8394
+    },
+    "readiness__NO_ROAD_GRADE": {
+      "readiness__BASELINE": 0.9485,
+      "readiness__NO_STREET_CONNECTIVITY": 0.847,
+      "readiness__NO_ROAD_GRADE": 1.0,
+      "readiness__EXPANDED_TRANSIT": 0.7907,
+      "readiness__ALTERNATIVE_CYCLING": 0.9477,
+      "readiness__WEIGHT_PERTURBATION": 0.9045
+    },
+    "readiness__EXPANDED_TRANSIT": {
+      "readiness__BASELINE": 0.7807,
+      "readiness__NO_STREET_CONNECTIVITY": 0.7277,
+      "readiness__NO_ROAD_GRADE": 0.7907,
+      "readiness__EXPANDED_TRANSIT": 1.0,
+      "readiness__ALTERNATIVE_CYCLING": 0.78,
+      "readiness__WEIGHT_PERTURBATION": 0.7936
+    },
+    "readiness__ALTERNATIVE_CYCLING": {
+      "readiness__BASELINE": 0.9982,
+      "readiness__NO_STREET_CONNECTIVITY": 0.8678,
+      "readiness__NO_ROAD_GRADE": 0.9477,
+      "readiness__EXPANDED_TRANSIT": 0.78,
+      "readiness__ALTERNATIVE_CYCLING": 1.0,
+      "readiness__WEIGHT_PERTURBATION": 0.93
+    },
+    "readiness__WEIGHT_PERTURBATION": {
+      "readiness__BASELINE": 0.9317,
+      "readiness__NO_STREET_CONNECTIVITY": 0.8394,
+      "readiness__NO_ROAD_GRADE": 0.9045,
+      "readiness__EXPANDED_TRANSIT": 0.7936,
+      "readiness__ALTERNATIVE_CYCLING": 0.93,
+      "readiness__WEIGHT_PERTURBATION": 1.0
+    }
+  },
+  "opportunity_jaccard_matrix": {
+    "opportunity__BASELINE": {
+      "opportunity__BASELINE": 1.0,
+      "opportunity__NO_STREET_CONNECTIVITY": 1.0,
+      "opportunity__NO_ROAD_GRADE": 1.0,
+      "opportunity__EXPANDED_TRANSIT": 1.0,
+      "opportunity__ALTERNATIVE_CYCLING": 0.9902,
+      "opportunity__WEIGHT_PERTURBATION": 0.8401
+    },
+    "opportunity__NO_STREET_CONNECTIVITY": {
+      "opportunity__BASELINE": 1.0,
+      "opportunity__NO_STREET_CONNECTIVITY": 1.0,
+      "opportunity__NO_ROAD_GRADE": 1.0,
+      "opportunity__EXPANDED_TRANSIT": 1.0,
+      "opportunity__ALTERNATIVE_CYCLING": 0.9902,
+      "opportunity__WEIGHT_PERTURBATION": 0.8401
+    },
+    "opportunity__NO_ROAD_GRADE": {
+      "opportunity__BASELINE": 1.0,
+      "opportunity__NO_STREET_CONNECTIVITY": 1.0,
+      "opportunity__NO_ROAD_GRADE": 1.0,
+      "opportunity__EXPANDED_TRANSIT": 1.0,
+      "opportunity__ALTERNATIVE_CYCLING": 0.9902,
+      "opportunity__WEIGHT_PERTURBATION": 0.8401
+    },
+    "opportunity__EXPANDED_TRANSIT": {
+      "opportunity__BASELINE": 1.0,
+      "opportunity__NO_STREET_CONNECTIVITY": 1.0,
+      "opportunity__NO_ROAD_GRADE": 1.0,
+      "opportunity__EXPANDED_TRANSIT": 1.0,
+      "opportunity__ALTERNATIVE_CYCLING": 0.9902,
+      "opportunity__WEIGHT_PERTURBATION": 0.8401
+    },
+    "opportunity__ALTERNATIVE_CYCLING": {
+      "opportunity__BASELINE": 0.9902,
+      "opportunity__NO_STREET_CONNECTIVITY": 0.9902,
+      "opportunity__NO_ROAD_GRADE": 0.9902,
+      "opportunity__EXPANDED_TRANSIT": 0.9902,
+      "opportunity__ALTERNATIVE_CYCLING": 1.0,
+      "opportunity__WEIGHT_PERTURBATION": 0.8326
+    },
+    "opportunity__WEIGHT_PERTURBATION": {
+      "opportunity__BASELINE": 0.8401,
+      "opportunity__NO_STREET_CONNECTIVITY": 0.8401,
+      "opportunity__NO_ROAD_GRADE": 0.8401,
+      "opportunity__EXPANDED_TRANSIT": 0.8401,
+      "opportunity__ALTERNATIVE_CYCLING": 0.8326,
+      "opportunity__WEIGHT_PERTURBATION": 1.0
+    }
+  },
+  "readiness_consensus_class_counts": {
+    "NEVER_HIGH": 19650,
+    "ROBUST_HIGH": 1837,
+    "RARE_HIGH": 330,
+    "CONDITIONAL_HIGH": 267,
+    "FREQUENT_HIGH": 238
+  },
+  "opportunity_consensus_class_counts": {
+    "NEVER_HIGH": 19885,
+    "ROBUST_HIGH": 2028,
+    "FREQUENT_HIGH": 205,
+    "RARE_HIGH": 203,
+    "CONDITIONAL_HIGH": 1
+  },
+  "note": "Agreement across the tested variants means robustness to THESE SPECIFIC assumptions -- it is not an empirical validation of readiness/opportunity against any ground truth."
+}

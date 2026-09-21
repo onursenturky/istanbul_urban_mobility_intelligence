@@ -1,0 +1,84 @@
+{
+  "version": "15MIN_ISTANBUL_WALKING_V1_FROZEN",
+  "generated_at_utc": "2026-09-20T09:00:00Z",
+  "supersedes": "None -- first frozen version of this application",
+  "frozen_scope": "15-Minute Istanbul, WALKING mode only. Cycling accessibility is a SEPARATE, subsequent application (not part of this freeze).",
+  "phase8_summary": {
+    "n_valid_grid_cells": 22322,
+    "pct_cells_complete_15min_access": 14.64,
+    "pct_population_complete_15min_access": 82.49,
+    "n_multi_service_deficit_cells": 18106,
+    "most_common_missing_required_category": "food",
+    "n_cells_quality_flagged_non_reliable": 8003
+  },
+  "phase8_1_validation_summary": {
+    "freeze_decision": "B_VALIDATED_WITH_DOCUMENTED_LIMITATIONS_FREEZE_V1",
+    "pct_cells_quality_interpretation_changed": 34.82,
+    "population_pct_denominator_A": 82.49,
+    "population_pct_denominator_B": 82.56,
+    "population_pct_denominator_C": 83.24,
+    "max_drift_across_denominators_pp": 0.75,
+    "n_sanity_cases_checked": 10,
+    "n_implausible_flags": 0
+  },
+  "freeze_decision": "B_VALIDATED_WITH_DOCUMENTED_LIMITATIONS_FREEZE_V1",
+  "freeze_decision_rationale": "The headline population-accessibility result is exactly reproducible and quality-robust (A=82.49%, B=82.56%, C=83.24%, max drift 0.75pp across denominators). The 34.8% quality-flag reinterpretation (Asian side reclassified from ISOLATED to RELIABLE_SEPARATE_COMPONENT) was a genuine correction, applied and verified, not a band-aid over a real problem. No threshold cliffs, no implausible sanity-check results. Documented limitations (Adalar network gap, POI-only green/recreation undercount, moderate-reliability Daily Services category) remain and are carried forward, not hidden.",
+  "headline_result": {
+    "pct_cells_complete_15min_access": 14.64,
+    "pct_population_complete_15min_access_denominator_A_raw": 82.49,
+    "pct_population_complete_15min_access_denominator_B_quality_reliable": 82.56,
+    "pct_population_complete_15min_access_denominator_C_strict_high_confidence": 83.24
+  },
+  "everyday_needs_taxonomy": {
+    "required": [
+      "A_food_groceries",
+      "B_healthcare",
+      "C_education"
+    ],
+    "optional_contextual": [
+      "D_daily_services",
+      "E_retail_shopping",
+      "F_leisure_social",
+      "G_green_recreation",
+      "H_public_transport_access"
+    ]
+  },
+  "key_artifact_hashes": {
+    "poi_everyday_needs_taxonomy": {
+      "path": "analysis/applications/15min_city/poi_everyday_needs_taxonomy.csv",
+      "sha256": "708710f703615c81a624acdb30107c05ed88598402707168c4f786d9e2606cfe"
+    },
+    "poi_network_anchors": {
+      "path": "analysis/applications/15min_city/poi_network_anchors.parquet",
+      "sha256": "0296bfbc72aa67395e6072db8c309d2f661cc869ef06f3db8fad39bcf36ffcbf"
+    },
+    "grid_proximity_summary": {
+      "path": "analysis/applications/15min_city/grid_proximity_summary.parquet",
+      "sha256": "9a32428a0be67aaba7f37c457c3d559837fb2eaeafe6a38dfec336aaa2259e0d"
+    },
+    "grid_nearest_service_times": {
+      "path": "analysis/applications/15min_city/grid_nearest_service_times.parquet",
+      "sha256": "efc810023368066da24a04935b1d6dc548c7c07ffc0e2f06f45a52327a89decd"
+    },
+    "accessibility_deficit_classes": {
+      "path": "analysis/applications/15min_city/accessibility_deficit_classes.parquet",
+      "sha256": "78ddfa8327a5f9781cd73e8b9335db2ab57f379061b402b38197576f55236a60"
+    },
+    "corrected_accessibility_quality_flags": {
+      "path": "analysis/applications/15min_city/validation/corrected_accessibility_quality_flags.parquet",
+      "sha256": "3308201b0fce6081953f94f18f1d235ca835ba4ffb18fa6bafe9793de0bab23d"
+    },
+    "network_component_audit": {
+      "path": "analysis/applications/15min_city/validation/network_component_audit.csv",
+      "sha256": "02a137533ef34c48275ca91f7b5a0335a088a330f1bfd0ff4c445bf9ee9a55c7"
+    }
+  },
+  "known_limitations": {
+    "adalar": "Explicit known network-coverage limitation (Phase 7) -- low accessibility there must NOT be interpreted as genuine urban accessibility failure until network representation is resolved.",
+    "isolated_network_components": "7772 cells anchor to a walking-network fragment disconnected from the largest component (genuine Bosphorus/water fragmentation, confirmed in Phase 7) -- their accessibility results reflect local-fragment-only reachability, flagged in accessibility_quality_flags.parquet.",
+    "green_recreation_category": "POI-sourced only (not land-use polygons) -- likely undercounts true green-space access; interpret G_green_recreation results as a lower bound.",
+    "daily_services_category": "A new grouping not part of any frozen MCDA category; moderate reliability.",
+    "component_quality_correction": "Original Phase 8 ISOLATED_NETWORK_COMPONENT flag was corrected in Phase 8.1 to distinguish genuine geographic separation (Asian side, RELIABLE_SEPARATE_COMPONENT) from real network-quality caution (SMALL_COMPONENT_CAUTION, 27 cells only). Use corrected_accessibility_quality_flags.parquet, not the original accessibility_quality_flags.parquet, for any downstream quality interpretation."
+  },
+  "immutability_notice": "All files under analysis/applications/15min_city/ and analysis/applications/15min_city/validation/ are now FROZEN. Any subsequent application (e.g. cycling accessibility) must write to a NEW, separate output directory and must not modify these files."
+}

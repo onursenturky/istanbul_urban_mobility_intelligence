@@ -1,0 +1,83 @@
+- generic [active] [ref=f74e1]:
+  - generic [ref=f74e2]:
+    - generic [ref=f74e3]:
+      - link "Istanbul / Urban Mobility Intelligence" [ref=f74e4] [cursor=pointer]:
+        - /url: /
+      - button "Toggle navigation menu" [ref=f74e7] [cursor=pointer]
+    - main [ref=f74e10]:
+      - generic [ref=f74e11]:
+        - generic [ref=f74e13]:
+          - heading "Cycling Gain" [level=1] [ref=f74e14]
+          - paragraph [ref=f74e15]:
+            - text: What changes when we add cycling?
+            - button "How this works" [ref=f74e17] [cursor=pointer]: i
+        - generic [ref=f74e19]:
+          - generic [ref=f74e20]:
+            - application "Istanbul accessibility map" [ref=f74e21]:
+              - region "Map" [ref=f74e22]
+              - generic [ref=f74e23]:
+                - button "Zoom in" [ref=f74e24] [cursor=pointer]
+                - button "Zoom out" [ref=f74e26] [cursor=pointer]
+            - button "Reset view" [ref=f74e28] [cursor=pointer]
+            - generic [ref=f74e31]:
+              - paragraph [ref=f74e32]: Loading the Istanbul accessibility map
+              - paragraph [ref=f74e33]: Preparing 22,322 spatial cells…
+          - tablist "Map layer" [ref=f74e35]:
+            - tab "Accessibility change" [selected] [ref=f74e36] [cursor=pointer]
+          - generic [ref=f74e38]:
+            - generic [ref=f74e39]: District
+            - combobox "District" [ref=f74e40]:
+              - option "All districts" [selected]
+              - option "Adalar"
+              - option "Arnavutköy"
+              - option "Ataşehir"
+              - option "Avcılar"
+              - option "Bağcılar"
+              - option "Bahçelievler"
+              - option "Bakırköy"
+              - option "Başakşehir"
+              - option "Bayrampaşa"
+              - option "Beşiktaş"
+              - option "Beykoz"
+              - option "Beylikdüzü"
+              - option "Beyoğlu"
+              - option "Büyükçekmece"
+              - option "Çatalca"
+              - option "Çekmeköy"
+              - option "Esenler"
+              - option "Esenyurt"
+              - option "Eyüpsultan"
+              - option "Fatih"
+              - option "Gaziosmanpaşa"
+              - option "Güngören"
+              - option "Kadıköy"
+              - option "Kâğıthane"
+              - option "Kartal"
+              - option "Küçükçekmece"
+              - option "Maltepe"
+              - option "Pendik"
+              - option "Sancaktepe"
+              - option "Sarıyer"
+              - option "Silivri"
+              - option "Sultanbeyli"
+              - option "Sultangazi"
+              - option "Şile"
+              - option "Şişli"
+              - option "Tuzla"
+              - option "Ümraniye"
+              - option "Üsküdar"
+              - option "Zeytinburnu"
+          - generic [ref=f74e42]:
+            - generic [ref=f74e43]: Walking → cycling accessibility change
+            - list [ref=f74e44]:
+              - listitem [ref=f74e45]:
+                - generic [ref=f74e47]: Walking access already complete
+              - listitem [ref=f74e48]:
+                - generic [ref=f74e50]: Cycling closes the gap
+              - listitem [ref=f74e51]:
+                - generic [ref=f74e53]: Cycling partially closes the gap
+              - listitem [ref=f74e54]:
+                - generic [ref=f74e56]: Gap remains
+              - listitem [ref=f74e57]:
+                - generic [ref=f74e59]: Evidence uncertain
+  - alert [ref=f74e60]

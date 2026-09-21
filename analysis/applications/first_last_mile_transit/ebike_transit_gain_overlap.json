@@ -1,0 +1,12 @@
+{
+  "note": "Cross-application convergence check -- descriptive co-location only, NOT validation, NOT a combined score. E-bike model was not modified; e-bike scores did not enter transit routing.",
+  "definition_transit_gain_cells": "cells where general transit (System A) is unreachable by walking within 10min but reachable by cycling within 10min",
+  "n_transit_gain_cells": 3369,
+  "n_transit_gain_cells_top_quartile_ebike_opportunity": 1009,
+  "pct_transit_gain_cells_top_quartile_ebike_opportunity": 29.95,
+  "n_transit_gain_cells_top_quartile_ebike_readiness": 1293,
+  "pct_transit_gain_cells_top_quartile_ebike_readiness": 38.38,
+  "baseline_top_quartile_share_citywide_pct": 25.0,
+  "ebike_opportunity_q75_threshold": 0.3172,
+  "ebike_readiness_q75_threshold": 0.591
+}

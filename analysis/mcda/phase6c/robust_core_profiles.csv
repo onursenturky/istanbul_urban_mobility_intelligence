@@ -1,0 +1,13 @@
+group,n_cells,feature,median,q1,q3,citywide_percentile_of_median
+robust_high_readiness,467,population_density_calibrated_km2,11117.224,5923.893,18090.265,90.7
+robust_high_readiness,467,poi_density_km2,40.0,16.14,98.407,91.8
+robust_high_readiness,467,distance_to_nearest_transit_m,373.66,190.435,711.275,11.7
+robust_high_readiness,467,cycle_infrastructure_density_km_per_km2_ibb_only,2.032,0.657,4.101,97.7
+robust_high_readiness,467,distance_to_nearest_bicycle_parking_m,1091.544,598.149,1674.779,6.4
+robust_high_readiness,467,mean_slope_deg,3.577,2.735,4.875,20.3
+robust_high_opportunity,1350,population_density_calibrated_km2,11731.504,4001.269,21468.296,91.0
+robust_high_opportunity,1350,poi_density_km2,52.0,24.0,104.0,93.4
+robust_high_opportunity,1350,distance_to_nearest_transit_m,350.263,165.701,1041.704,11.0
+robust_high_opportunity,1350,cycle_infrastructure_density_km_per_km2_ibb_only,0.0,0.0,0.0,48.0
+robust_high_opportunity,1350,distance_to_nearest_bicycle_parking_m,2043.651,1126.221,4902.155,13.2
+robust_high_opportunity,1350,mean_slope_deg,5.084,3.797,7.068,36.2

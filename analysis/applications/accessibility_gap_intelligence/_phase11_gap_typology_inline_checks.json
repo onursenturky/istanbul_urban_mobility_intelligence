@@ -1,0 +1,4 @@
+{
+  "check_A_no_required_gap_matches_complete_access": true,
+  "check_B_fully_closed_cycle_only_gain_rate": 1.0
+}

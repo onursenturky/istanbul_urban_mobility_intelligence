@@ -1,0 +1,41 @@
+{
+  "measurement_context": "Local dev/build measurements only (localhost, loopback network) -- NOT representative of real-world network latency. Recorded to document payload sizes and structure, per Section 40, ahead of any future deployment-phase performance work.",
+  "map_geometry_payload": {
+    "source_considered": {
+      "dashboard_grid.geojson_full": "33.9 MB (Phase 12 full presentation export -- NOT used by the frontend)",
+      "dashboard_grid_lite.geojson": "21.0 MB (Phase 12 lite presentation export -- base for the frontend payload)"
+    },
+    "frontend_payload_used": "grid_map.geojson",
+    "input_size_mb": 21.0,
+    "output_size_mb": 22.6,
+    "feature_count": 22322,
+    "fields_retained": 22,
+    "geometry_simplification_status": "Reused verbatim from Phase 12's dashboard_grid_lite.geojson (20m Douglas-Peucker tolerance, 5-decimal coordinate precision) -- no additional simplification applied. 3 small categorical fields (required_categories_walk_15/cycle_15, cross_app_convergence, data_confidence) were joined on for presentation purposes; this increased size by ~1.6MB.",
+    "decision": "Used the LITE geometry, per Section 6 instruction to prefer lite geometry if visual quality is adequate -- did not load the heavier 33.9MB full export."
+  },
+  "grid_attributes_payload": {
+    "file": "grid_attributes.json",
+    "size_mb": 27.0,
+    "record_count": 22322,
+    "fields_per_record": 36,
+    "loading_strategy": "Fetched once client-side via a singleton in-memory cache (lib/useGridAttributes.ts) on first Grid Intelligence Card open, shared across all pages for the rest of the session -- not re-fetched per page navigation, not bundled into the initial page load.",
+    "known_limitation": "27MB is a meaningful one-time fetch on a slow connection. Acceptable for a local MVP; a real deployment should consider per-grid lazy fetch (e.g. a small API route keyed by grid_id) instead of one bulk JSON file -- explicitly noted as future work, not implemented here per the Phase 13 scope boundary (no backend unless genuinely required)."
+  },
+  "build_output": {
+    "next_build_static_assets_mb": 24,
+    "pages_built": 9,
+    "build_status": "Compiled successfully; TypeScript type-checked with no errors.",
+    "route_first_load_js": {
+      "/": "96.1 kB",
+      "/overview": "97.0 kB",
+      "/typology, /fifteen-minute, /cycling-gain, /transit, /gaps, /ebike, /methods": "299 kB (includes MapLibre GL JS + Recharts)"
+    }
+  },
+  "server_response_times_localhost": {
+    "note": "Loopback measurements only, not a proxy for real user latency.",
+    "page_ttfb_seconds": 0.06,
+    "grid_map_geojson_fetch_seconds": 0.03,
+    "grid_attributes_json_fetch_seconds": 0.04
+  },
+  "if_performance_is_poor": "Per Section 40: any future optimization targets the PRESENTATION data (further geometry simplification, splitting grid_attributes.json by district for lazy loading, or moving it behind a small API route) -- analytical logic and values are never simplified or altered to improve performance."
+}

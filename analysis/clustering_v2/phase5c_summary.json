@@ -1,0 +1,77 @@
+{
+  "final_k": 5,
+  "preprocessing": "Candidate D: two-part (has_buildings 0/1 + building_coverage_ratio_conditional, fit only on built cells, zero-building cells floored below the built-cell minimum)",
+  "selection_rationale": "Silhouette peaks at k=4 (0.2676) and k=5 (0.2661, effectively tied) under the corrected feature geometry. k=5 was chosen over k=4 because it adds one further clean, interpretable split (a distinct small retail/POI-specific node) without the silhouette cliff seen at k=6 (0.2661 -> 0.1787), which indicates a materially less defensible split from k=6 onward.",
+  "ari_vs_original_k7_candidate_a": 0.8109,
+  "cluster_sizes": {
+    "0": 2494,
+    "1": 10101,
+    "2": 1503,
+    "3": 615,
+    "4": 7609
+  },
+  "algorithm_comparison_kmeans_vs_gmm": {
+    "kmeans": {
+      "calinski_harabasz": 8593.1,
+      "davies_bouldin": 1.3428
+    },
+    "gaussian_mixture": {
+      "calinski_harabasz": 3811.6,
+      "davies_bouldin": 2.3866,
+      "bic": -6305212.8
+    },
+    "adjusted_rand_index_kmeans_vs_gmm": 0.3
+  },
+  "stability_across_seeds": {
+    "seeds_tested": [
+      42,
+      1,
+      7,
+      123,
+      2024
+    ],
+    "pairwise_ari_mean": 0.9999,
+    "pairwise_ari_min": 0.9998
+  },
+  "sensitivity_family_ablations": {
+    "population_limitation_only": {
+      "n_features_dropped": 1,
+      "ari_vs_v2_baseline": 0.9846
+    },
+    "main_gtfs_transit_only": {
+      "n_features_dropped": 13,
+      "ari_vs_v2_baseline": 0.8983
+    },
+    "ibb_cycling_only": {
+      "n_features_dropped": 3,
+      "ari_vs_v2_baseline": 0.9585
+    },
+    "all_limitations_removed": {
+      "n_features_dropped": 17,
+      "ari_vs_v2_baseline": 0.8801
+    }
+  },
+  "feature_family_dominance": {
+    "top10_predictors_by_bss_pct": {
+      "poi_density_km2": 22.43,
+      "bus_departures_per_day": 17.13,
+      "transit_stops_within_1000m": 7.54,
+      "building_coverage_ratio_conditional": 5.92,
+      "distance_to_nearest_cycle_infrastructure_m_ibb_only": 4.01,
+      "distance_to_nearest_bicycle_parking_m": 3.4,
+      "distance_to_nearest_metrobus_m": 3.23,
+      "distance_to_nearest_rail_m": 3.22,
+      "transit_stops_within_500m": 3.19,
+      "distance_to_nearest_micromobility_parking_m": 3.13
+    },
+    "family_bss_share_pct": {
+      "buildings": 7.12,
+      "cycling": 10.67,
+      "poi": 32.49,
+      "population": 2.32,
+      "terrain": 1.07,
+      "transit": 46.34
+    }
+  },
+  "interim_typology_limitation": "Interim six-family typology (buildings, POI, population, terrain, transit, cycling). Citywide land-use/green-space (PARTIAL, 22/39 districts) and the road network (PARTIAL, 0/39 districts) remain unavailable and are not represented -- their absence is not treated as zero."
+}

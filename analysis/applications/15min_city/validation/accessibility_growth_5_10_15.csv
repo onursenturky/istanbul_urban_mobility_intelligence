@@ -1,0 +1,13 @@
+category,threshold_min,n_cells_accessible,pct_cells_accessible,population_accessible,pct_population_accessible
+A_food_groceries,5,1527,6.84,6791061.7,43.94
+A_food_groceries,10,2965,13.28,11254000.2,72.82
+A_food_groceries,15,4145,18.57,13247385.6,85.71
+B_healthcare,5,1712,7.67,8147937.7,52.72
+B_healthcare,10,3201,14.34,12434725.7,80.45
+B_healthcare,15,4222,18.91,13804886.9,89.32
+C_education,5,1765,7.91,7909754.0,51.18
+C_education,10,3417,15.31,12668683.6,81.97
+C_education,15,4580,20.52,13950129.0,90.26
+COMPLETE,5,798,3.57,4233043.4,27.39
+COMPLETE,10,2197,9.84,10123841.6,65.5
+COMPLETE,15,3269,14.64,12748528.5,82.49

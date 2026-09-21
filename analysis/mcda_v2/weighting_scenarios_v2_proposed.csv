@@ -1,0 +1,6 @@
+scenario,architecture,weights__Demand/Activity Potential,weights__Urban Form,weights__Mobility/Transit Context,weights__Cycling Readiness,weights__Terrain Feasibility,weights__Street Network/Connectivity,note
+balanced_equal_dimensions_conservative,"Conservative (5 dims, unchanged from V1)",0.2,0.2,0.2,0.2,0.2,,
+balanced_equal_dimensions_expanded,Expanded (6 dims),0.1667,0.1667,0.1667,0.1667,0.1667,0.1667,
+demand_oriented_expanded,Expanded (6 dims),0.35,0.13,0.13,0.13,0.13,0.13,
+infrastructure_readiness_oriented_expanded,Expanded (6 dims),0.12,0.12,0.12,0.32,0.12,0.2,
+connectivity_oriented_expanded_NEW,Expanded (6 dims),0.13,0.1,0.15,0.15,0.12,0.35,"NEW scenario proposed specifically to stress-test Street Network's influence in isolation -- not a V1 scenario, added because a new dimension warrants its own dedicated stress-test."

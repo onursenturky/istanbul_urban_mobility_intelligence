@@ -1,0 +1,118 @@
+{
+  "poi_source_diagnostics": {
+    "n_raw": 107002,
+    "n_invalid_geometries_repaired": 0,
+    "n_uncategorized_dropped": 28618,
+    "n_duplicate_pois_removed_within_category": 2031,
+    "n_pois_used": 76353
+  },
+  "transit_source_diagnostics": {
+    "main_gtfs": {
+      "n_stops_raw": 7073,
+      "n_stops_after_location_type_filter": 7073,
+      "n_stops_with_no_in_scope_route": 6763,
+      "n_routes_out_of_scope": 381,
+      "n_stop_mode_rows": 310
+    },
+    "iett_gtfs": {
+      "n_stops_raw": 15390,
+      "n_stops_after_location_type_filter": 15387,
+      "n_stops_with_mangled_coordinates_recovered": 15386,
+      "n_stops_with_unrecoverable_invalid_coordinates": 1,
+      "n_stops_with_no_in_scope_route": 9477,
+      "n_stop_mode_rows": 6196
+    },
+    "n_duplicate_stops_removed": 1005,
+    "n_stops_by_mode_total_citywide": {
+      "bus": 4872,
+      "metrobus": 333,
+      "metro": 120,
+      "ferry": 66,
+      "tram": 63,
+      "rail": 47
+    }
+  },
+  "total_destinations": 81854,
+  "destinations_by_category": {
+    "F_leisure_social": 28244,
+    "E_retail_shopping": 22571,
+    "D_daily_services": 6130,
+    "B_healthcare": 5926,
+    "G_green_recreation": 5916,
+    "H_public_transport_access": 5501,
+    "A_food_groceries": 4175,
+    "C_education": 3391
+  },
+  "anchoring_qa_by_category": {
+    "A_food_groceries": {
+      "n_destinations": 4175,
+      "snap_distance_median_m": 16.46,
+      "snap_distance_p90_m": 32.61,
+      "snap_distance_max_m": 5227.26,
+      "n_questionable": 14,
+      "pct_ok": 99.66
+    },
+    "B_healthcare": {
+      "n_destinations": 5926,
+      "snap_distance_median_m": 16.98,
+      "snap_distance_p90_m": 33.53,
+      "snap_distance_max_m": 6274.39,
+      "n_questionable": 13,
+      "pct_ok": 99.78
+    },
+    "C_education": {
+      "n_destinations": 3391,
+      "snap_distance_median_m": 31.65,
+      "snap_distance_p90_m": 52.37,
+      "snap_distance_max_m": 6364.63,
+      "n_questionable": 12,
+      "pct_ok": 99.65
+    },
+    "D_daily_services": {
+      "n_destinations": 6130,
+      "snap_distance_median_m": 14.85,
+      "snap_distance_p90_m": 31.41,
+      "snap_distance_max_m": 6186.19,
+      "n_questionable": 21,
+      "pct_ok": 99.66
+    },
+    "E_retail_shopping": {
+      "n_destinations": 22571,
+      "snap_distance_median_m": 14.91,
+      "snap_distance_p90_m": 30.98,
+      "snap_distance_max_m": 6346.32,
+      "n_questionable": 53,
+      "pct_ok": 99.77
+    },
+    "F_leisure_social": {
+      "n_destinations": 28244,
+      "snap_distance_median_m": 20.06,
+      "snap_distance_p90_m": 46.94,
+      "snap_distance_max_m": 11905.85,
+      "n_questionable": 410,
+      "pct_ok": 98.55
+    },
+    "G_green_recreation": {
+      "n_destinations": 5916,
+      "snap_distance_median_m": 19.95,
+      "snap_distance_p90_m": 42.26,
+      "snap_distance_max_m": 11805.97,
+      "n_questionable": 26,
+      "pct_ok": 99.56
+    },
+    "H_public_transport_access": {
+      "n_destinations": 5501,
+      "snap_distance_median_m": 10.97,
+      "snap_distance_p90_m": 26.04,
+      "snap_distance_max_m": 6094.42,
+      "n_questionable": 41,
+      "pct_ok": 99.25
+    }
+  },
+  "excluded_categories_not_constructed": {
+    "office_workplaces": "amenity/office=* -- workplaces are not resident-facing everyday-need destinations",
+    "tourism": "tourism=* -- visitor-oriented, not an everyday need for residents",
+    "civic_emergency_religious": "police/fire_station/courthouse/townhall/social_facility/place_of_worship -- exist in raw data but excluded, no defensible value-neutral grouping"
+  },
+  "double_counting_avoided": "Each raw POI is assigned to exactly ONE category via ordered, mutually exclusive rules (same design principle as the frozen 12-category MCDA system); within-category node/way duplicates of the same physical feature are removed via the same _dedup_within_category logic already used for frozen POI features."
+}

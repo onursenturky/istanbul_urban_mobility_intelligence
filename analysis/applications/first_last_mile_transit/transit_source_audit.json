@@ -1,0 +1,97 @@
+{
+  "main_gtfs_reliability_note": "Page states this feed will not be updated; calendar.csv date ranges have all expired (mostly end 2024-12-31). Used for station locations and route topology only — NOT for departure frequency.",
+  "iett_gtfs_reliability_note": "calendar.csv service_id=0 ('WEEKDAYS') valid 2026-03-16 to 2026-12-31 — current as of retrieval. Used for infrastructure AND departure-frequency (bus/metrobüs only).",
+  "parent_station_audit": {
+    "main_gtfs_n_raw_stops": 7073,
+    "main_gtfs_n_with_parent_station": 0,
+    "main_gtfs_location_type_counts": {
+      "0": 7072,
+      "NaN": 1
+    },
+    "iett_gtfs_n_raw_stops": 15390,
+    "iett_gtfs_has_parent_station_column": false,
+    "finding": "Neither feed provides usable parent/child station hierarchy -- main_gtfs's parent_station column is empty for all rows and location_type is uniformly '0' (no stations/platforms distinguished); iett_gtfs has no parent_station column at all. The existing 20m same-mode spatial-buffer dedup (src/features/transit_infrastructure.dedup_stops, STOP_DEDUP_DISTANCE_M=20m) is therefore the only defensible deduplication available from this data, not a simplification chosen over a better option."
+  },
+  "stop_load_diagnostics": {
+    "main_gtfs": {
+      "n_stops_raw": 7073,
+      "n_stops_after_location_type_filter": 7073,
+      "n_stops_with_no_in_scope_route": 6763,
+      "n_routes_out_of_scope": 381,
+      "n_stop_mode_rows": 310
+    },
+    "iett_gtfs": {
+      "n_stops_raw": 15390,
+      "n_stops_after_location_type_filter": 15387,
+      "n_stops_with_mangled_coordinates_recovered": 15386,
+      "n_stops_with_unrecoverable_invalid_coordinates": 1,
+      "n_stops_with_no_in_scope_route": 9477,
+      "n_stop_mode_rows": 6196
+    },
+    "n_duplicate_stops_removed": 1005,
+    "n_stops_by_mode_total_citywide": {
+      "bus": 4872,
+      "metrobus": 333,
+      "metro": 120,
+      "ferry": 66,
+      "tram": 63,
+      "rail": 47
+    }
+  },
+  "dedup_documentation": {
+    "raw_stop_records_both_feeds": 22463,
+    "stop_mode_rows_before_spatial_dedup": 6506,
+    "note_on_stop_mode_rows": "A stop serving >1 in-scope mode (rare) is counted once per mode before dedup; this is intentional multi-mode representation, not a duplication bug.",
+    "n_duplicate_stops_removed_by_20m_same_mode_buffer": 1005,
+    "n_deduplicated_physical_access_points": 5501,
+    "dedup_logic": "Two stops of the SAME mode within 20m are treated as one physical access point (e.g. duplicate platform records, opposite-direction stops mapped as separate points close together); stops of DIFFERENT modes at the same physical location (e.g. a bus stop next to a metro entrance) are intentionally NOT merged, since they represent genuinely different access opportunities.",
+    "parent_child_station_logic_used": "None available in either feed (see parent_station_audit) -- dedup is spatial-only, per mode.",
+    "counts_by_mode_after_dedup": {
+      "bus": 4872,
+      "metrobus": 333,
+      "metro": 120,
+      "ferry": 66,
+      "tram": 63,
+      "rail": 47
+    },
+    "counts_by_source_feed_after_dedup": {
+      "iett_gtfs": 5205,
+      "main_gtfs": 296
+    },
+    "raw_stop_id_mapping_preserved": "Every deduplicated record retains its own raw_stop_id and stop_id (prefixed main_/iett_); the identity of stops REMOVED as duplicates is not separately itemized here (not retained by the existing dedup_stops function) but the counts above are exact and reproducible from source.",
+    "stop_id_not_globally_unique_finding": "534 stop_id values are shared by exactly 2 rows each -- a single physical stop served by both a regular bus route AND a metrobus route (mode classification is per-route, and dedup_stops groups by mode, so this multi-mode stop is correctly represented as 2 distinct rows, not a bug). access_point_id (stop_id + '__' + mode) is the globally-unique key used for all Phase 10 anchoring/routing."
+  },
+  "known_facts_reaudit": {
+    "catalca_total_stops": 0,
+    "silivri_total_stops": 0,
+    "bahcelievler_total_stops": 3,
+    "gaziosmanpasa_total_stops": 6,
+    "kagithane_total_stops": 6,
+    "sultangazi_total_stops": 6
+  },
+  "district_quality_classification_method": "NOT mechanical: NO_FEED_COVERAGE = zero mapped stops; SUSPECT_FEED_COVERAGE = below 25% of citywide median stop density among served districts, OR one of the 4 districts already flagged as unusually sparse in earlier phases (Bahçelievler, Gaziosmanpaşa, Kâğıthane, Sultangazi) despite non-zero counts; USABLE_WITH_LIMITATION = below 75% of median density; GOOD_COVERAGE = otherwise.",
+  "system_definitions": {
+    "system_a_general_transit": {
+      "modes": [
+        "metro",
+        "tram",
+        "rail",
+        "metrobus",
+        "bus",
+        "ferry"
+      ],
+      "question": "Can the resident reach some mapped public transport access point?"
+    },
+    "system_b_fixed_guideway": {
+      "modes": [
+        "metro",
+        "tram",
+        "rail",
+        "metrobus"
+      ],
+      "question": "Can the resident reach a major fixed-guideway/high-capacity transit access point?",
+      "ferry_treatment": "EXCLUDED from System B -- ferry lacks a fixed physical guideway and behaves differently operationally from rail-based modes; reported only within System A and descriptively on its own."
+    }
+  },
+  "n_deduplicated_access_points_total": 5501
+}

@@ -1,0 +1,18 @@
+# Core dependency versions verified working together on Python 3.11.15 (2026-09-18).
+# Install with: python3.11 -m venv .venv && .venv/bin/pip install -r requirements.txt
+geopandas==1.1.4
+shapely==2.1.2
+pyproj==3.7.2
+osmnx==2.1.1
+pyogrio==0.13.0
+matplotlib==3.11.2
+pandas==3.0.6
+numpy==2.4.6
+requests==2.34.2
+pyarrow==25.0.1
+scipy==1.17.1
+rasterio==1.4.4
+openpyxl==3.1.5
+scikit-learn==1.9.1
+esda==2.9.0
+libpysal==4.14.1

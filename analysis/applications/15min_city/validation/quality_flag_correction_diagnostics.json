@@ -1,0 +1,57 @@
+{
+  "n_cells_interpretation_changed": 7772,
+  "pct_cells_interpretation_changed": 34.82,
+  "original_flag_counts": {
+    "RELIABLE": 14319,
+    "ISOLATED_NETWORK_COMPONENT": 7772,
+    "QUESTIONABLE_ANCHOR": 159,
+    "KNOWN_NETWORK_LIMITATION_ADALAR": 72
+  },
+  "corrected_flag_counts": {
+    "RELIABLE": 14319,
+    "RELIABLE_SEPARATE_COMPONENT": 7745,
+    "QUESTIONABLE_ANCHOR": 159,
+    "KNOWN_NETWORK_LIMITATION_ADALAR": 72,
+    "SMALL_COMPONENT_CAUTION": 27
+  },
+  "transition_matrix": {
+    "KNOWN_NETWORK_LIMITATION_ADALAR": {
+      "ISOLATED_NETWORK_COMPONENT": 0,
+      "KNOWN_NETWORK_LIMITATION_ADALAR": 72,
+      "QUESTIONABLE_ANCHOR": 0,
+      "RELIABLE": 0
+    },
+    "QUESTIONABLE_ANCHOR": {
+      "ISOLATED_NETWORK_COMPONENT": 0,
+      "KNOWN_NETWORK_LIMITATION_ADALAR": 0,
+      "QUESTIONABLE_ANCHOR": 159,
+      "RELIABLE": 0
+    },
+    "RELIABLE": {
+      "ISOLATED_NETWORK_COMPONENT": 0,
+      "KNOWN_NETWORK_LIMITATION_ADALAR": 0,
+      "QUESTIONABLE_ANCHOR": 0,
+      "RELIABLE": 14319
+    },
+    "RELIABLE_SEPARATE_COMPONENT": {
+      "ISOLATED_NETWORK_COMPONENT": 7745,
+      "KNOWN_NETWORK_LIMITATION_ADALAR": 0,
+      "QUESTIONABLE_ANCHOR": 0,
+      "RELIABLE": 0
+    },
+    "SMALL_COMPONENT_CAUTION": {
+      "ISOLATED_NETWORK_COMPONENT": 27,
+      "KNOWN_NETWORK_LIMITATION_ADALAR": 0,
+      "QUESTIONABLE_ANCHOR": 0,
+      "RELIABLE": 0
+    }
+  },
+  "component_classification_thresholds": {
+    "MAJOR_VALID_COMPONENT": ">=500,000 nodes",
+    "LARGE_LOCAL_VALID_COMPONENT": ">=1 anchored cell AND population>=1,000",
+    "SMALL_LOCAL_COMPONENT": ">=1 anchored cell AND 0<population<1,000",
+    "QUESTIONABLE_FRAGMENT": "0 anchored cells, OR anchored cells with 0 population",
+    "KNOWN_NETWORK_LIMITATION": "component's only district is Adalar"
+  },
+  "key_finding": "Reclassifying the Asian-side mega-component (521,850 nodes, 14 districts, 5.44M population) from ISOLATED_NETWORK_COMPONENT to RELIABLE_SEPARATE_COMPONENT/RELIABLE is the single largest correction -- it was never a network-quality problem, only a genuine, expected Bosphorus separation."
+}

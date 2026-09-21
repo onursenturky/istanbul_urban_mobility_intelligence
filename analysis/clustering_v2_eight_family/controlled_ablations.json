@@ -1,0 +1,32 @@
+{
+  "v2_full": {
+    "n_features_dropped": 0,
+    "n_features_remaining": 56,
+    "ari_vs_selected_v2": 1.0,
+    "ari_vs_frozen_v1": 0.6614
+  },
+  "v2_minus_roads": {
+    "n_features_dropped": 5,
+    "n_features_remaining": 51,
+    "ari_vs_selected_v2": 0.9216,
+    "ari_vs_frozen_v1": 0.6689
+  },
+  "v2_minus_landuse": {
+    "n_features_dropped": 4,
+    "n_features_remaining": 52,
+    "ari_vs_selected_v2": 0.9344,
+    "ari_vs_frozen_v1": 0.6835
+  },
+  "v2_minus_roads_and_landuse": {
+    "n_features_dropped": 9,
+    "n_features_remaining": 47,
+    "ari_vs_selected_v2": 0.887,
+    "ari_vs_frozen_v1": 0.6824
+  },
+  "v2_minus_roads_landuse_and_roadgrade_true_v1_lineage": {
+    "n_features_dropped": 11,
+    "n_features_remaining": 45,
+    "ari_vs_selected_v2": 0.6614,
+    "ari_vs_frozen_v1": 1.0
+  }
+}

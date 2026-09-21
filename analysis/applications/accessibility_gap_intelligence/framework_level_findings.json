@@ -1,0 +1,41 @@
+{
+  "q1_population_complete_walking_15min_all_required": {
+    "population": 12746104.4,
+    "pct": 82.47
+  },
+  "q2_population_gaining_complete_access_via_cycling": {
+    "population": 2095477.3,
+    "pct_of_reliable_gap_population": 77.81
+  },
+  "q3_most_common_remaining_bottleneck": {
+    "category": "FOOD",
+    "counts": {
+      "FOOD": 18177,
+      "HEALTHCARE": 18100,
+      "EDUCATION": 17742
+    }
+  },
+  "q4_population_cycling_closes_transit_gap": {
+    "population": 341370.2,
+    "pct": 2.21
+  },
+  "q5_overlap_everyday_and_transit_cycling_gains": {
+    "both_n_cells": 445,
+    "everyday_only_n_cells": 1145,
+    "transit_only_n_cells": 745
+  },
+  "q6_cluster_share_among_any_cycling_closure": {
+    "2": 0.608,
+    "1": 0.216,
+    "4": 0.11,
+    "3": 0.065
+  },
+  "q7_population_cycling_does_not_close_gap_destinations_sparse": {
+    "population": 352939.0,
+    "pct": 2.28
+  },
+  "q8_population_too_uncertain_to_interpret": {
+    "population": 4043382.9,
+    "pct": 26.16
+  }
+}

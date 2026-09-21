@@ -1,0 +1,71 @@
+{
+  "phase": "Phase 14 -- Production Readiness, Performance & Final Product Polish",
+  "scope_note": "This summary focuses on what changed since PHASE14_HANDOFF.md (the resume checkpoint), per instruction, rather than repeating the full project history already covered there and in qa/phase14_baseline_audit.json.",
+
+  "maplibre_worker_bug": {
+    "status": "RESOLVED",
+    "real_browser_verification": "PASSED -- the project owner independently opened http://localhost:3002/fifteen-minute in their own real desktop browser after the fix and confirmed the map renders correctly. This is NOT listed as a remaining product limitation.",
+    "root_cause": "MapLibre GL JS 6.x loads a separate worker script (maplibre-gl-worker.mjs, plus its own dependency maplibre-gl-shared.mjs) via a runtime-computed import.meta.url-relative path. Next.js's webpack build could not statically detect this pattern (MapLibre wraps the URL computation in a helper function), so the worker file was never emitted into the build output. The resulting Worker was constructed against a URL serving nothing -- silently, with no thrown error -- so every tile-load request was dispatched and never answered.",
+    "fix": "Copied both required files into public/ and called MapLibre's own documented setWorkerUrl() API in components/MapView.tsx before constructing any Map. Automated via a new `npm run sync-maplibre-worker` script wired into `postinstall`, so this survives a fresh install or a future maplibre-gl version bump.",
+    "verification_layers": [
+      "map.loaded() confirmed true on every exploration page",
+      "all 7 exploration pages screenshotted showing correctly colored, fully rendered analytical maps",
+      "click-to-select verified end-to-end via a real map click (GRID_14426/Üsküdar resolved correctly)",
+      "layer switching verified (15-Minute page's Walking/Cycling tabs correctly recolor)",
+      "full navigation stress test re-run with the map rendering: 0 console errors, correct canvas sizing at every hop",
+      "clean-environment reproduction: rm -rf .next + fresh npm install (postinstall regenerates worker files) + build + start, all verified",
+      "REAL BROWSER VERIFICATION: PASSED -- independently confirmed by the project owner, outside of any automated tooling"
+    ],
+    "full_writeup": "qa/map_rendering_environment_note.md"
+  },
+
+  "performance_summary": {
+    "note": "Two separate numbers, reported separately so they are never conflated.",
+    "map_payload_only_reduction": "22.58MB (old grid_map.geojson, fetched on every page load) -> 5.53-6.05MB (new base geometry + one default layer) -- a ~73-76% reduction in the pure map-rendering payload.",
+    "total_initial_analytical_data_architecture": {
+      "OLD": "~49.62MB total before any interaction beyond one click (22.58MB map geometry on page load + 27.04MB full-city attribute bulk file on first cell click).",
+      "NEW": "~5.53-6.05MB before interaction for a typical map page, plus ~0.72MB average on-demand district detail when a cell is selected (min 0.03MB, max 5.67MB) -- roughly 6.25-6.77MB total after one click.",
+      "reduction": "~86-88%"
+    },
+    "full_report": "qa/phase14_performance_report.json"
+  },
+
+  "security_summary": {
+    "npm_audit": "0 vulnerabilities",
+    "next_version": "15.5.25",
+    "maplibre_gl_version": "6.10.0",
+    "postcss_version": "8.5.28",
+    "high_vulnerabilities_remaining": 0,
+    "critical_vulnerabilities_remaining": 0,
+    "reconfirmed_after_clean_install": true,
+    "full_audit": "qa/security_dependency_audit.md"
+  },
+
+  "completed_this_resume_session": {
+    "maplibre_worker_bug_fixed_and_verified": "See maplibre_worker_bug above. This was the single blocking item from the prior handoff and is now fully resolved, verified by automated testing AND independently confirmed by the project owner in a real browser.",
+    "task_109_navigation_reverification": "Full client-side navigation stress test (Overview -> 15-Minute -> Cycling Gain -> Transit -> Gaps -> E-bike -> Typology -> 15-Minute revisit), re-run with the map rendering: 0 console errors at every hop, correct non-zero canvas dimensions with no manual interaction at every hop. 5 of 9 frozen case studies plus one ad-hoc real map-click case re-verified, all matching frozen source values exactly, including the Adalar 'Known special case' quality flag.",
+    "task_108_closeout": "Data architecture optimization fully verified end-to-end with a working map: qa/data_qa.py 12/12 checks pass, AND live click-to-select/layer-switch interaction confirmed the client-side fetch+merge logic works correctly in real usage.",
+    "task_111_production_identity": "Favicon, complete metadata, a generated 1200x630 social preview image, a global error boundary, an exploration-scoped map-specific error boundary, and a branded 404 page were all added and verified working in the production build.",
+    "task_112_polish": "Accessibility spot-check found solid pre-existing coverage. Terminology guide fixed. Temporal population labeling re-confirmed correct. Mobile layout (390px) re-confirmed working with the map actually rendering.",
+    "task_113_repo_hygiene": "frontend/.gitignore created. Secrets/API-key/token scan: none found. frontend/README.md substantially rewritten, including the MapLibre worker-bundling fix and its re-sync requirement. Root README.md given a minimal pointer to the frontend product. docs/deployment_options.md and docs/production_architecture.md written.",
+    "task_114_complete": "phase14_performance_report.json, phase14_production_qa.json, phase14_visual_qa.md, phase14_manifest.json, and this file all updated with the final resolved map-rendering status and real-browser confirmation. Security/dependency audit re-confirmed 0 vulnerabilities after a clean install."
+  },
+
+  "not_completed": {
+    "district_camera_fit_on_url_load": "Minor, non-blocking, UNRELATED to the (now resolved) MapLibre worker bug: the map camera doesn't always visibly re-frame to a district's bounds when arriving via a ?grid=&district= URL. Selection and data are correct regardless -- only the camera framing is affected.",
+    "task_112_remaining": "A dedicated screen-reader pass and a full keyboard-only navigation walkthrough of the map's own controls were not performed.",
+    "case_study_coverage": "4 of the 9 frozen case studies were not individually re-tested this session (5 were, plus one ad-hoc real map-click test); no reason to expect failure given the identical, now-verified-working mechanism applies to all 39 districts."
+  },
+
+  "current_data_delivery_architecture": "Base geometry (5.2MB) + 12 per-field layer lookups (7.15MB total) + 39 per-district detail chunks (28MB total, on-demand) + a grid-district index (0.5MB). See docs/map_delivery_decision.md and docs/production_architecture.md. Confirmed working end-to-end via live map interaction in both automated testing and a real browser.",
+
+  "build_status": "npm run build succeeds, 0 TypeScript errors, 14 routes generated. Reconfirmed via a full clean npm install cycle.",
+
+  "runtime_status": "npx next start -p 3002 serves all 9 primary routes with HTTP 200; map renders correctly (colored analytical layer, working click/layer-switch) on every exploration route -- verified via automated testing AND the project owner's own real desktop browser.",
+
+  "security_status": "0 known vulnerabilities (npm audit), Next.js 15.5.25, no high or critical advisories remaining, does not block a production-readiness decision.",
+
+  "completion_decision": "B -- PRODUCTION-READY WITH DOCUMENTED LIMITATIONS",
+
+  "completion_decision_reasoning": "Every explicit Section 51 precondition is now met, including live map rendering, which is fully resolved and independently confirmed by the project owner in a real browser (not just automated tooling) -- the MapLibre worker bug is CLOSED and is not a factor in this decision. Production build succeeds, production server runs, all routes work, optimized data joins correctly (12/12 integrity checks), navigation is stable through a full client-side stress test with the map rendering, the security audit is clean (0 vulnerabilities, reconfirmed after a clean install), and responsive layout passes at all 3 required viewports with the map visible. This is not an unconditional 'A' because of two genuinely-documented, non-blocking gaps, NEITHER related to the map-rendering bug: (1) a district camera fit-to-bounds cosmetic nuance on URL-driven selection, and (2) a dedicated accessibility pass (keyboard-only interaction, screen-reader behavior) on the map's own controls was not performed. Both are narrow, known, and documented, not open questions -- hence B, not C."
+}

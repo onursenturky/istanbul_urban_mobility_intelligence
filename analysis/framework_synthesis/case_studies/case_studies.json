@@ -1,0 +1,446 @@
+{
+  "cases": [
+    {
+      "case_label": "CASE_1_DENSE_CORE_STRONG_WALKING",
+      "grid_id": "GRID_15026",
+      "district": "Kadıköy",
+      "population": 4635.3,
+      "typology_cluster": 1,
+      "walking_accessibility": {
+        "food_min": 4.41,
+        "healthcare_min": 3.97,
+        "education_min": 5.04,
+        "required_categories_15min": "3",
+        "complete_15min": true
+      },
+      "cycling_accessibility": {
+        "food_min": 1.47,
+        "healthcare_min": 1.32,
+        "education_min": 1.68,
+        "required_categories_15min": "3",
+        "complete_15min": true,
+        "cycle_only_everyday_gain": false
+      },
+      "transit_accessibility": {
+        "general_transit_walk_min": 6.67,
+        "general_transit_cycle_min": 2.22,
+        "fixed_transit_walk_min": 8.4,
+        "fixed_transit_cycle_min": 4.37,
+        "cycle_only_transit_gain_general_10min": false
+      },
+      "gap_class": {
+        "everyday_gap_type": "NO_REQUIRED_GAP",
+        "cycling_gap_closure": "NOT_APPLICABLE_NO_GAP",
+        "transit_gap_type": "NO_TRANSIT_ACCESS_GAP",
+        "multi_domain_pattern": "A_BROAD_ACCESS",
+        "active_mobility_intervention": "WALKING_SUFFICIENT"
+      },
+      "ebike_context": {
+        "readiness": 0.76,
+        "opportunity": 0.64,
+        "readiness_robustness": "ROBUST_HIGH",
+        "opportunity_robustness": "ROBUST_HIGH"
+      },
+      "quality_status": {
+        "walking_quality": "RELIABLE_SEPARATE_COMPONENT",
+        "cycling_quality": "RELIABLE_SEPARATE_COMPONENT",
+        "transit_data_quality": "GOOD_COVERAGE",
+        "synthesis_reliable": true
+      },
+      "why_this_case_matters": "Illustrates the dense-core baseline: complete walking access is already the norm here, so this is the reference case against which every 'cycling adds value' claim elsewhere should be compared."
+    },
+    {
+      "case_label": "CASE_2_DENSE_CYCLING_ADDS_LITTLE",
+      "grid_id": "GRID_14541",
+      "district": "Kadıköy",
+      "population": 4650.1,
+      "typology_cluster": 1,
+      "walking_accessibility": {
+        "food_min": 3.06,
+        "healthcare_min": 1.44,
+        "education_min": 5.68,
+        "required_categories_15min": "3",
+        "complete_15min": true
+      },
+      "cycling_accessibility": {
+        "food_min": 1.02,
+        "healthcare_min": 0.48,
+        "education_min": 1.37,
+        "required_categories_15min": "3",
+        "complete_15min": true,
+        "cycle_only_everyday_gain": false
+      },
+      "transit_accessibility": {
+        "general_transit_walk_min": null,
+        "general_transit_cycle_min": 6.42,
+        "fixed_transit_walk_min": null,
+        "fixed_transit_cycle_min": 6.42,
+        "cycle_only_transit_gain_general_10min": true
+      },
+      "gap_class": {
+        "everyday_gap_type": "NO_REQUIRED_GAP",
+        "cycling_gap_closure": "NOT_APPLICABLE_NO_GAP",
+        "transit_gap_type": "NO_TRANSIT_ACCESS_GAP",
+        "multi_domain_pattern": "A_BROAD_ACCESS",
+        "active_mobility_intervention": "WALKING_SUFFICIENT"
+      },
+      "ebike_context": {
+        "readiness": 0.78,
+        "opportunity": 0.07,
+        "readiness_robustness": "ROBUST_HIGH",
+        "opportunity_robustness": "NEVER_HIGH"
+      },
+      "quality_status": {
+        "walking_quality": "RELIABLE_SEPARATE_COMPONENT",
+        "cycling_quality": "RELIABLE_SEPARATE_COMPONENT",
+        "transit_data_quality": "GOOD_COVERAGE",
+        "synthesis_reliable": true
+      },
+      "why_this_case_matters": "Shows the honest counter-case to the 'cycling helps everywhere' narrative: in an already-complete dense area, cycling has no everyday-needs gap left to close."
+    },
+    {
+      "case_label": "CASE_3_CYCLING_FULLY_CLOSES_GAP",
+      "grid_id": "GRID_07856",
+      "district": "Büyükçekmece",
+      "population": 291.4,
+      "typology_cluster": 2,
+      "walking_accessibility": {
+        "food_min": 10.8,
+        "healthcare_min": null,
+        "education_min": 4.77,
+        "required_categories_15min": "2",
+        "complete_15min": false
+      },
+      "cycling_accessibility": {
+        "food_min": 3.6,
+        "healthcare_min": 11.29,
+        "education_min": 1.59,
+        "required_categories_15min": "3",
+        "complete_15min": true,
+        "cycle_only_everyday_gain": true
+      },
+      "transit_accessibility": {
+        "general_transit_walk_min": null,
+        "general_transit_cycle_min": null,
+        "fixed_transit_walk_min": null,
+        "fixed_transit_cycle_min": null,
+        "cycle_only_transit_gain_general_10min": false
+      },
+      "gap_class": {
+        "everyday_gap_type": "HEALTHCARE_GAP",
+        "cycling_gap_closure": "FULLY_CLOSED_BY_CYCLING",
+        "transit_gap_type": "TRANSIT_DATA_UNCERTAIN",
+        "multi_domain_pattern": "E_DATA_OR_NETWORK_UNCERTAIN",
+        "active_mobility_intervention": "QUALITY_UNCERTAIN"
+      },
+      "ebike_context": {
+        "readiness": 0.61,
+        "opportunity": 0.29,
+        "readiness_robustness": "NEVER_HIGH",
+        "opportunity_robustness": "NEVER_HIGH"
+      },
+      "quality_status": {
+        "walking_quality": "RELIABLE",
+        "cycling_quality": "RELIABLE",
+        "transit_data_quality": "SUSPECT_FEED_COVERAGE",
+        "synthesis_reliable": false
+      },
+      "why_this_case_matters": "A populated, mid-range (not extreme) example of the single most important active-mobility finding: a cell with an everyday-needs gap under walking where cycling's modeled network fully closes it."
+    },
+    {
+      "case_label": "CASE_4_CYCLING_PARTIALLY_CLOSES_GAP",
+      "grid_id": "GRID_10160",
+      "district": "Arnavutköy",
+      "population": 47.7,
+      "typology_cluster": 2,
+      "walking_accessibility": {
+        "food_min": null,
+        "healthcare_min": 12.46,
+        "education_min": null,
+        "required_categories_15min": "1",
+        "complete_15min": false
+      },
+      "cycling_accessibility": {
+        "food_min": null,
+        "healthcare_min": 4.15,
+        "education_min": 5.11,
+        "required_categories_15min": "2",
+        "complete_15min": false,
+        "cycle_only_everyday_gain": false
+      },
+      "transit_accessibility": {
+        "general_transit_walk_min": null,
+        "general_transit_cycle_min": null,
+        "fixed_transit_walk_min": null,
+        "fixed_transit_cycle_min": null,
+        "cycle_only_transit_gain_general_10min": false
+      },
+      "gap_class": {
+        "everyday_gap_type": "FOOD_EDUCATION_GAP",
+        "cycling_gap_closure": "PARTIALLY_CLOSED_BY_CYCLING",
+        "transit_gap_type": "TRANSIT_DATA_UNCERTAIN",
+        "multi_domain_pattern": "E_DATA_OR_NETWORK_UNCERTAIN",
+        "active_mobility_intervention": "QUALITY_UNCERTAIN"
+      },
+      "ebike_context": {
+        "readiness": 0.55,
+        "opportunity": 0.32,
+        "readiness_robustness": "NEVER_HIGH",
+        "opportunity_robustness": "NEVER_HIGH"
+      },
+      "quality_status": {
+        "walking_quality": "RELIABLE",
+        "cycling_quality": "RELIABLE",
+        "transit_data_quality": "SUSPECT_FEED_COVERAGE",
+        "synthesis_reliable": false
+      },
+      "why_this_case_matters": "Illustrates the nuance lost in a binary framing: cycling helps but does not fully solve the gap here -- one or two required categories remain out of reach even by bike."
+    },
+    {
+      "case_label": "CASE_5_CYCLING_CANNOT_OVERCOME_SPARSITY",
+      "grid_id": "GRID_11971",
+      "district": "Eyüpsultan",
+      "population": 39.8,
+      "typology_cluster": 2,
+      "walking_accessibility": {
+        "food_min": null,
+        "healthcare_min": null,
+        "education_min": null,
+        "required_categories_15min": "0",
+        "complete_15min": false
+      },
+      "cycling_accessibility": {
+        "food_min": null,
+        "healthcare_min": null,
+        "education_min": null,
+        "required_categories_15min": "0",
+        "complete_15min": false,
+        "cycle_only_everyday_gain": false
+      },
+      "transit_accessibility": {
+        "general_transit_walk_min": null,
+        "general_transit_cycle_min": null,
+        "fixed_transit_walk_min": null,
+        "fixed_transit_cycle_min": null,
+        "cycle_only_transit_gain_general_10min": false
+      },
+      "gap_class": {
+        "everyday_gap_type": "ALL_REQUIRED_GAP",
+        "cycling_gap_closure": "UNCHANGED_BY_CYCLING",
+        "transit_gap_type": "TRANSIT_DATA_UNCERTAIN",
+        "multi_domain_pattern": "E_DATA_OR_NETWORK_UNCERTAIN",
+        "active_mobility_intervention": "QUALITY_UNCERTAIN"
+      },
+      "ebike_context": {
+        "readiness": 0.48,
+        "opportunity": 0.31,
+        "readiness_robustness": "NEVER_HIGH",
+        "opportunity_robustness": "NEVER_HIGH"
+      },
+      "quality_status": {
+        "walking_quality": "RELIABLE",
+        "cycling_quality": "RELIABLE",
+        "transit_data_quality": "SUSPECT_FEED_COVERAGE",
+        "synthesis_reliable": false
+      },
+      "why_this_case_matters": "Demonstrates the limit of active-mobility interventions: when destinations themselves are sparse, no network-based mode improvement (walking or cycling) can create accessibility that does not exist."
+    },
+    {
+      "case_label": "CASE_6_CYCLING_EXPANDS_FIXED_GUIDEWAY_ACCESS",
+      "grid_id": "GRID_14262",
+      "district": "Sarıyer",
+      "population": 2157.8,
+      "typology_cluster": 1,
+      "walking_accessibility": {
+        "food_min": 7.6,
+        "healthcare_min": 6.22,
+        "education_min": 5.44,
+        "required_categories_15min": "3",
+        "complete_15min": true
+      },
+      "cycling_accessibility": {
+        "food_min": 2.53,
+        "healthcare_min": 2.07,
+        "education_min": 1.89,
+        "required_categories_15min": "3",
+        "complete_15min": true,
+        "cycle_only_everyday_gain": false
+      },
+      "transit_accessibility": {
+        "general_transit_walk_min": null,
+        "general_transit_cycle_min": 6.91,
+        "fixed_transit_walk_min": null,
+        "fixed_transit_cycle_min": 6.91,
+        "cycle_only_transit_gain_general_10min": true
+      },
+      "gap_class": {
+        "everyday_gap_type": "NO_REQUIRED_GAP",
+        "cycling_gap_closure": "NOT_APPLICABLE_NO_GAP",
+        "transit_gap_type": "TRANSIT_DATA_UNCERTAIN",
+        "multi_domain_pattern": "E_DATA_OR_NETWORK_UNCERTAIN",
+        "active_mobility_intervention": "QUALITY_UNCERTAIN"
+      },
+      "ebike_context": {
+        "readiness": 0.67,
+        "opportunity": 0.5,
+        "readiness_robustness": "NEVER_HIGH",
+        "opportunity_robustness": "NEVER_HIGH"
+      },
+      "quality_status": {
+        "walking_quality": "RELIABLE",
+        "cycling_quality": "RELIABLE",
+        "transit_data_quality": "SUSPECT_FEED_COVERAGE",
+        "synthesis_reliable": false
+      },
+      "why_this_case_matters": "Shows cycling's single largest quantified transit contribution (Phase 10): reaching a metro/tram/rail/metrobus station within 15 minutes by bike where walking cannot, at all, within the same window."
+    },
+    {
+      "case_label": "CASE_7_EBIKE_ACCESSIBILITY_CONVERGENCE",
+      "grid_id": "GRID_17420",
+      "district": "Pendik",
+      "population": 1846.1,
+      "typology_cluster": 1,
+      "walking_accessibility": {
+        "food_min": null,
+        "healthcare_min": 14.84,
+        "education_min": 9.34,
+        "required_categories_15min": "2",
+        "complete_15min": false
+      },
+      "cycling_accessibility": {
+        "food_min": 5.72,
+        "healthcare_min": 4.95,
+        "education_min": 3.12,
+        "required_categories_15min": "3",
+        "complete_15min": true,
+        "cycle_only_everyday_gain": true
+      },
+      "transit_accessibility": {
+        "general_transit_walk_min": 1.89,
+        "general_transit_cycle_min": 0.63,
+        "fixed_transit_walk_min": null,
+        "fixed_transit_cycle_min": null,
+        "cycle_only_transit_gain_general_10min": false
+      },
+      "gap_class": {
+        "everyday_gap_type": "FOOD_GAP",
+        "cycling_gap_closure": "FULLY_CLOSED_BY_CYCLING",
+        "transit_gap_type": "FIXED_GUIDEWAY_ACCESS_GAP",
+        "multi_domain_pattern": "D_BOTH_ACCESS_GAPS",
+        "active_mobility_intervention": "CYCLING_CLOSES_EVERYDAY_GAP"
+      },
+      "ebike_context": {
+        "readiness": 0.77,
+        "opportunity": 0.51,
+        "readiness_robustness": "ROBUST_HIGH",
+        "opportunity_robustness": "NEVER_HIGH"
+      },
+      "quality_status": {
+        "walking_quality": "RELIABLE_SEPARATE_COMPONENT",
+        "cycling_quality": "RELIABLE_SEPARATE_COMPONENT",
+        "transit_data_quality": "GOOD_COVERAGE",
+        "synthesis_reliable": true
+      },
+      "why_this_case_matters": "A concrete instance of Phase 11/12's cross-application convergence finding: this cell's network-measured everyday-needs cycling closure co-occurs with an independently-derived, ROBUST_HIGH e-bike Readiness score."
+    },
+    {
+      "case_label": "CASE_8_INSUFFICIENT_TRANSIT_DATA",
+      "grid_id": "GRID_13640",
+      "district": "Sarıyer",
+      "population": 93.5,
+      "typology_cluster": 2,
+      "walking_accessibility": {
+        "food_min": null,
+        "healthcare_min": null,
+        "education_min": null,
+        "required_categories_15min": "0",
+        "complete_15min": false
+      },
+      "cycling_accessibility": {
+        "food_min": 7.83,
+        "healthcare_min": null,
+        "education_min": 12.51,
+        "required_categories_15min": "2",
+        "complete_15min": false,
+        "cycle_only_everyday_gain": false
+      },
+      "transit_accessibility": {
+        "general_transit_walk_min": null,
+        "general_transit_cycle_min": null,
+        "fixed_transit_walk_min": null,
+        "fixed_transit_cycle_min": null,
+        "cycle_only_transit_gain_general_10min": false
+      },
+      "gap_class": {
+        "everyday_gap_type": "ALL_REQUIRED_GAP",
+        "cycling_gap_closure": "PARTIALLY_CLOSED_BY_CYCLING",
+        "transit_gap_type": "TRANSIT_DATA_UNCERTAIN",
+        "multi_domain_pattern": "E_DATA_OR_NETWORK_UNCERTAIN",
+        "active_mobility_intervention": "QUALITY_UNCERTAIN"
+      },
+      "ebike_context": {
+        "readiness": 0.53,
+        "opportunity": 0.3,
+        "readiness_robustness": "NEVER_HIGH",
+        "opportunity_robustness": "NEVER_HIGH"
+      },
+      "quality_status": {
+        "walking_quality": "RELIABLE",
+        "cycling_quality": "RELIABLE",
+        "transit_data_quality": "SUSPECT_FEED_COVERAGE",
+        "synthesis_reliable": false
+      },
+      "why_this_case_matters": "A mandatory transparency case: this cell's transit-access figures must be read as DATA INSUFFICIENT, not as evidence of an actual transit desert -- the underlying GTFS feed simply does not map stops reliably here."
+    },
+    {
+      "case_label": "CASE_9_ADALAR_KNOWN_NETWORK_LIMITATION",
+      "grid_id": "GRID_14892",
+      "district": "Adalar",
+      "population": 161.0,
+      "typology_cluster": 1,
+      "walking_accessibility": {
+        "food_min": null,
+        "healthcare_min": 12.08,
+        "education_min": null,
+        "required_categories_15min": "1",
+        "complete_15min": false
+      },
+      "cycling_accessibility": {
+        "food_min": null,
+        "healthcare_min": null,
+        "education_min": null,
+        "required_categories_15min": "0",
+        "complete_15min": false,
+        "cycle_only_everyday_gain": false
+      },
+      "transit_accessibility": {
+        "general_transit_walk_min": 6.34,
+        "general_transit_cycle_min": 14.14,
+        "fixed_transit_walk_min": null,
+        "fixed_transit_cycle_min": null,
+        "cycle_only_transit_gain_general_10min": false
+      },
+      "gap_class": {
+        "everyday_gap_type": "UNKNOWN_OR_QUALITY_LIMITED",
+        "cycling_gap_closure": "CYCLING_RESULT_UNCERTAIN",
+        "transit_gap_type": "NETWORK_QUALITY_UNCERTAIN",
+        "multi_domain_pattern": "E_DATA_OR_NETWORK_UNCERTAIN",
+        "active_mobility_intervention": "QUALITY_UNCERTAIN"
+      },
+      "ebike_context": {
+        "readiness": 0.63,
+        "opportunity": 0.42,
+        "readiness_robustness": "NEVER_HIGH",
+        "opportunity_robustness": "NEVER_HIGH"
+      },
+      "quality_status": {
+        "walking_quality": "KNOWN_NETWORK_LIMITATION_ADALAR",
+        "cycling_quality": "KNOWN_NETWORK_LIMITATION_ADALAR",
+        "transit_data_quality": "USABLE_WITH_LIMITATION",
+        "synthesis_reliable": false
+      },
+      "why_this_case_matters": "The framework's standing known-limitation case: Adalar's walking network is a genuine small local component and its cycling network has ZERO real on-island nodes (cycling figures reflect cross-water snapping to the mainland, not real routes) -- flagged at every phase since Phase 7."
+    }
+  ],
+  "selection_method": "Median-population member of each analytically-defined archetype group (not global min/max) -- avoids cherry-picking per instruction."
+}

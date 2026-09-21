@@ -1,0 +1,25 @@
+{
+  "version": "EBIKE_APPLICATION_V2_BASELINE",
+  "readiness_stats": {
+    "min": 0.1743407446369345,
+    "max": 0.98756832911387,
+    "mean": 0.49444488235485207,
+    "median": 0.471194563139064,
+    "std": 0.15581197146861253
+  },
+  "opportunity_stats": {
+    "min": 0.0,
+    "max": 0.9151004805215363,
+    "mean": 0.1814165317551484,
+    "median": 0.0,
+    "std": 0.2284233148330416,
+    "pct_zero": 55.47
+  },
+  "strongest_sensitivity_driver_readiness": "NO_STREET_CONNECTIVITY",
+  "strongest_sensitivity_driver_opportunity": "WEIGHT_PERTURBATION",
+  "n_robust_high_readiness": 1837,
+  "n_robust_high_opportunity": 2028,
+  "critical_pathological_check_passed": true,
+  "v1_v2_readiness_correlation": 0.852,
+  "v1_v2_opportunity_correlation": 1.0
+}

@@ -1,0 +1,49 @@
+{
+  "headline_kpi_reproduction": {
+    "H01": {
+      "stored": 82.49,
+      "live": 82.49,
+      "match": true
+    },
+    "H03": {
+      "stored": 95.57,
+      "live": 95.57,
+      "match": true
+    },
+    "H06": {
+      "stored": 352939.0,
+      "live": 352939.0,
+      "match": true
+    },
+    "H08": {
+      "stored": 74.67,
+      "live": 74.67,
+      "match": true
+    }
+  },
+  "all_headline_reproduce_source": true,
+  "frozen_artifact_hash_recheck": {
+    "accessibility_gap_grid_synthesis": {
+      "unchanged": true
+    },
+    "everyday_needs_gap_typology": {
+      "unchanged": true
+    },
+    "cycling_gap_closure": {
+      "unchanged": true
+    },
+    "transit_access_gap_typology": {
+      "unchanged": true
+    },
+    "phase8_1_corrected_quality_flags": {
+      "unchanged": true
+    },
+    "phase9_cycling_quality_flags": {
+      "unchanged": true
+    },
+    "phase10_transit_gap_diagnostics": {
+      "unchanged": true
+    }
+  },
+  "all_frozen_artifacts_unchanged": true
+}

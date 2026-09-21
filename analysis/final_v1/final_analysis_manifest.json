@@ -1,0 +1,80 @@
+{
+  "version": "INTERIM_CITYWIDE_V1_SIX_FAMILY",
+  "generated_at_utc": "2026-09-19T12:19:37.290736+00:00",
+  "scope": "39 districts, 22,322-cell 500m grid, six feature families (buildings, POI, population, terrain elevation/slope, transit, cycling İBB-only)",
+  "explicitly_absent": [
+    "citywide road network (PARTIAL, 0/39 districts)",
+    "complete citywide land-use/green-space (PARTIAL, 22/39 districts)"
+  ],
+  "pipeline_stages": {
+    "feature_families": "src/citywide/{compute_poi_features_citywide,build_population_features_citywide,build_terrain_features_citywide,build_transit_features_citywide,build_cycling_features_citywide,compute_building_features_citywide}.py",
+    "master_merge": "src/citywide/build_master_features_citywide.py",
+    "phase5a_eda": "src/citywide/eda_phase5a_citywide.py",
+    "phase5c_typology_preprocessing_fix": "src/citywide/bcr_preprocessing_candidates.py (Candidate D: two-part has_buildings + conditional building coverage, replacing a log1p+RobustScaler treatment that produced 96.88% of between-cluster separation from a single feature)",
+    "phase5c_typology": "src/citywide/clustering_v2_final.py (k=5, KMeans, random_state=42)",
+    "phase6a_criteria_architecture": "src/citywide/mcda_phase6a_criteria.py (24 retained criteria of 71 eligible)",
+    "phase6b_scenario_scoring": "src/citywide/mcda_phase6b_scoring.py (4 weighting scenarios x transit T1/T2 x 2 urban-form/demand variants; percentile-rank value functions use method='min' to correctly floor zero-inflated criteria at percentile 0)",
+    "phase6c_consensus_stability": "src/citywide/mcda_phase6c_stability.py",
+    "phase6d_finalization": "src/citywide/mcda_phase6d_finalize.py (this phase)"
+  },
+  "frozen_typology_k": 5,
+  "frozen_criteria_count": 24,
+  "frozen_weighting_scenarios": [
+    "balanced_equal_dimensions",
+    "demand_oriented",
+    "infrastructure_readiness_oriented",
+    "first_last_mile_transit_integration_oriented"
+  ],
+  "consensus_definition": "pct_top_decile = % of scenario variants (16 for Readiness, 8 for Opportunity) in which a cell's score is >= that variant's own citywide 90th percentile. Classes: ROBUST_HIGH=100%, FREQUENT_HIGH=[75,100), CONDITIONAL_HIGH=[25,75), RARE_HIGH=(0,25), NEVER_HIGH=0%.",
+  "unresolved_assumptions": [
+    "T1 (transit integration) vs T2 (transit substitution) -- retained as competing hypotheses, not resolved.",
+    "Population/building-coverage saturation vs target-range value function -- both retained.",
+    "Which of the 4 weighting scenarios (if any) best reflects real decision priorities -- not chosen.",
+    "Whether Readiness and Opportunity should ever be combined into one score, and how -- not decided."
+  ],
+  "known_limitations": [
+    "No observed shared e-bike/micromobility demand or deployment data exists anywhere in this project.",
+    "Population reference year 2020 vs. OSM/GTFS 2026.",
+    "main_gtfs (metro/tram/rail/ferry) snapshot 2023-2024.",
+    "Cycling infrastructure/parking is İBB-only (OSM complement excluded).",
+    "No causal claims are made or implied by any criterion direction or score."
+  ],
+  "key_artifact_hashes": {
+    "master_feature_table": {
+      "path": "data/processed/citywide/features/urban_mobility_features_citywide.parquet",
+      "sha256": "16109f9120b4558251abe3c70dbf50f960c9f501df2dea8c59df3638975fc671"
+    },
+    "feature_dictionary": {
+      "path": "data/processed/citywide/metadata/feature_dictionary_citywide.csv",
+      "sha256": "6dd90a20a49bf13c10501b0044b1bf7e6ed87e7de0cea3b05e06ccf6b8af9685"
+    },
+    "typology_assignments": {
+      "path": "analysis/clustering_v2/cluster_assignments_v2.parquet",
+      "sha256": "13be0589bf6a080ff98bd24b6b873311828f515e21cacca3ac02f880d13a1de1"
+    },
+    "mcda_criteria_catalog": {
+      "path": "analysis/mcda/criteria_catalog.csv",
+      "sha256": "e73bd220b14f5e8eb1e8fe8d62ad330b98e1da8a39cd60463f5266de238ba783"
+    },
+    "phase6b_scenario_scores": {
+      "path": "analysis/mcda/phase6b/scenario_scores.parquet",
+      "sha256": "34616231745d683540ba20f8adfb9749d5c4422f3da37aaed32b0b4310d6208a"
+    },
+    "phase6b_dimension_scores": {
+      "path": "analysis/mcda/phase6b/dimension_scores.parquet",
+      "sha256": "1aa0bd131f70680302421ad6d070c0b417f4737a09530b6f0e9d0821ec12f7b5"
+    },
+    "phase6c_cell_stability_metrics": {
+      "path": "analysis/mcda/phase6c/cell_stability_metrics.parquet",
+      "sha256": "227ca45d69da7f6efb28e1e2b0ddd421503029bcb88f179a33d4d6e2a86522e9"
+    },
+    "phase6c_consensus_classes": {
+      "path": "analysis/mcda/phase6c/consensus_classes.parquet",
+      "sha256": "d78a65eb890744961768f8921875b4c2faef33364e3c8a3d36692b9cdb8c6f63"
+    },
+    "phase6c_joint_classes": {
+      "path": "analysis/mcda/phase6c/joint_readiness_opportunity_classes.parquet",
+      "sha256": "6fcf7bbdcfd07a69f4e3b185252847c94c71f4f5a0e4b10c836835b004d0c4f0"
+    }
+  }
+}

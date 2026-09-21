@@ -1,0 +1,65 @@
+{
+  "dashboard_grid_rows": 22322,
+  "dashboard_grid_columns": 36,
+  "dashboard_grid_parquet_size_mb": 1.08,
+  "dashboard_grid_geojson_size_mb": 33.93,
+  "dashboard_grid_lite_geojson_size_mb": 21.03,
+  "lite_geometry_simplification_tolerance_m": 20.0,
+  "geometry_simplification_tolerance_m": 5.0,
+  "geometry_simplification_applies_to": "Presentation GeoJSON export ONLY -- never the analytical grid geometry.",
+  "district_summary_rows": 39,
+  "columns_by_group": {
+    "IDENTITY": [
+      "grid_id",
+      "district",
+      "calibrated_population_2020"
+    ],
+    "URBAN_CONTEXT": [
+      "typology_cluster",
+      "population_density_per_km2",
+      "intersection_density_km2",
+      "cycle_infrastructure_density_km_per_km2"
+    ],
+    "WALKING": [
+      "food_walk_min",
+      "healthcare_walk_min",
+      "education_walk_min",
+      "required_categories_walk_15",
+      "complete_walk_15"
+    ],
+    "CYCLING": [
+      "food_cycle_min",
+      "healthcare_cycle_min",
+      "education_cycle_min",
+      "required_categories_cycle_15",
+      "complete_cycle_15",
+      "cycle_only_everyday_gain"
+    ],
+    "TRANSIT": [
+      "general_transit_walk_min",
+      "general_transit_cycle_min",
+      "fixed_transit_walk_min",
+      "fixed_transit_cycle_min",
+      "cycle_only_transit_gain"
+    ],
+    "GAPS": [
+      "everyday_gap_type",
+      "cycling_gap_closure",
+      "transit_gap_type",
+      "multi_domain_pattern",
+      "active_mobility_intervention"
+    ],
+    "EBIKE": [
+      "ebike_readiness",
+      "ebike_opportunity",
+      "ebike_readiness_robustness",
+      "ebike_opportunity_robustness"
+    ],
+    "QUALITY": [
+      "walking_quality",
+      "cycling_quality",
+      "transit_data_quality",
+      "synthesis_reliable"
+    ]
+  }
+}

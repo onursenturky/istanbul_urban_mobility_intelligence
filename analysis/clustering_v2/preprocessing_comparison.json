@@ -1,0 +1,155 @@
+{
+  "A_baseline": {
+    "label": "A_baseline",
+    "silhouette_subsampled": null,
+    "calinski_harabasz": 65830.2,
+    "davies_bouldin": 0.9815,
+    "cluster_sizes": [
+      1018,
+      361,
+      753,
+      911,
+      7672,
+      1363,
+      10244
+    ],
+    "min_pct": 1.62,
+    "max_pct": 45.89,
+    "ari_vs_original_k7": 1.0,
+    "two_seed_stability_ari": 1.0,
+    "top10_predictors_by_bss_pct": {
+      "building_coverage_ratio": 96.88,
+      "poi_density_km2": 0.81,
+      "transit_stops_within_1000m": 0.23,
+      "bus_departures_per_day": 0.21,
+      "distance_to_nearest_cycle_infrastructure_m_ibb_only": 0.18,
+      "distance_to_nearest_bicycle_parking_m": 0.15,
+      "distance_to_nearest_rail_m": 0.14,
+      "distance_to_nearest_metrobus_m": 0.14,
+      "distance_to_nearest_micromobility_parking_m": 0.14,
+      "distance_to_nearest_ferry_m": 0.13
+    },
+    "building_coverage_related_bss_pct": {
+      "building_coverage_ratio": 96.88
+    }
+  },
+  "B_winsorized_p99": {
+    "label": "B_winsorized_p99",
+    "silhouette_subsampled": null,
+    "calinski_harabasz": 68991.9,
+    "davies_bouldin": 1.0029,
+    "cluster_sizes": [
+      7667,
+      850,
+      980,
+      520,
+      1354,
+      10238,
+      713
+    ],
+    "min_pct": 2.33,
+    "max_pct": 45.87,
+    "ari_vs_original_k7": 0.9944,
+    "two_seed_stability_ari": 0.9991,
+    "top10_predictors_by_bss_pct": {
+      "building_coverage_ratio": 96.72,
+      "poi_density_km2": 0.85,
+      "transit_stops_within_1000m": 0.25,
+      "bus_departures_per_day": 0.22,
+      "distance_to_nearest_cycle_infrastructure_m_ibb_only": 0.18,
+      "distance_to_nearest_bicycle_parking_m": 0.16,
+      "distance_to_nearest_metrobus_m": 0.15,
+      "distance_to_nearest_rail_m": 0.15,
+      "distance_to_nearest_micromobility_parking_m": 0.14,
+      "distance_to_nearest_ferry_m": 0.14
+    },
+    "building_coverage_related_bss_pct": {
+      "building_coverage_ratio": 96.72
+    },
+    "cap_value_raw": 0.4072596519427747
+  },
+  "C_quantile": {
+    "label": "C_quantile",
+    "silhouette_subsampled": null,
+    "calinski_harabasz": 6970.8,
+    "davies_bouldin": 1.5041,
+    "cluster_sizes": [
+      4395,
+      558,
+      3952,
+      3768,
+      1506,
+      2366,
+      5777
+    ],
+    "min_pct": 2.5,
+    "max_pct": 25.88,
+    "ari_vs_original_k7": 0.3476,
+    "two_seed_stability_ari": 0.9949,
+    "top10_predictors_by_bss_pct": {
+      "poi_density_km2": 22.16,
+      "bus_departures_per_day": 16.97,
+      "transit_stops_within_1000m": 7.64,
+      "distance_to_nearest_cycle_infrastructure_m_ibb_only": 4.23,
+      "distance_to_nearest_transit_m": 3.75,
+      "distance_to_nearest_bicycle_parking_m": 3.58,
+      "distance_to_nearest_rail_m": 3.39,
+      "distance_to_nearest_metrobus_m": 3.28,
+      "distance_to_nearest_micromobility_parking_m": 3.2,
+      "distance_to_nearest_metro_m": 3.19
+    },
+    "building_coverage_related_bss_pct": {
+      "building_coverage_ratio": 0.98
+    },
+    "zero_mass_diagnostic": {
+      "n_distinct_transformed_values_for_zero_mass": 1,
+      "transformed_value_for_zero": 0.0,
+      "note": "All exact-zero raw values receive (approximately) the same transformed value -- QuantileTransformer assigns rank-based quantiles, and ties (all zeros) get the same average rank -- rather than being spread out or treated as distinct. This collapses the 65% zero-mass into a single point at roughly the midpoint of the zero-mass's rank range, still far below all non-zero cells."
+    }
+  },
+  "D_two_part": {
+    "label": "D_two_part",
+    "silhouette_subsampled": null,
+    "calinski_harabasz": 6901.4,
+    "davies_bouldin": 1.5461,
+    "cluster_sizes": [
+      3968,
+      604,
+      1490,
+      3910,
+      5564,
+      4411,
+      2375
+    ],
+    "min_pct": 2.71,
+    "max_pct": 24.93,
+    "ari_vs_original_k7": 0.3402,
+    "two_seed_stability_ari": 0.9982,
+    "top10_predictors_by_bss_pct": {
+      "poi_density_km2": 20.93,
+      "bus_departures_per_day": 15.96,
+      "transit_stops_within_1000m": 7.18,
+      "building_coverage_ratio_conditional": 5.58,
+      "distance_to_nearest_cycle_infrastructure_m_ibb_only": 4.03,
+      "distance_to_nearest_transit_m": 3.52,
+      "distance_to_nearest_bicycle_parking_m": 3.38,
+      "distance_to_nearest_rail_m": 3.2,
+      "distance_to_nearest_metrobus_m": 3.08,
+      "distance_to_nearest_micromobility_parking_m": 3.01
+    },
+    "building_coverage_related_bss_pct": {
+      "building_coverage_ratio_conditional": 5.58,
+      "has_buildings": 1.15
+    },
+    "construction_diagnostic": {
+      "n_built_cells": 7775,
+      "n_zero_building_cells": 14547,
+      "conditional_scaled_range_among_built_cells": [
+        -0.25971678165793133,
+        3.4226863006299677
+      ],
+      "floor_value_assigned_to_zero_building_cells": -1.2597167816579313,
+      "rationale": "has_buildings (0/1) carries the presence/absence signal directly. The conditional intensity column is fit ONLY on built cells (so its scale reflects real variation among built cells, undistorted by the zero mass), and zero-building cells are floored just below the minimum observed built-cell value -- clearly separated, but not an arbitrary large outlier, and not conflated with a real (if low) building coverage value."
+    }
+  }
+}

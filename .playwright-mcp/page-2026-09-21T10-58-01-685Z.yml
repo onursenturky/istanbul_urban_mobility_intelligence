@@ -1,0 +1,132 @@
+- generic [active] [ref=f2e1]:
+  - generic [ref=f2e2]:
+    - complementary [ref=f2e3]:
+      - link "Istanbul Urban Mobility Intelligence" [ref=f2e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f2e5]:
+          - generic [ref=f2e6]: Istanbul
+          - generic [ref=f2e7]: Urban Mobility Intelligence
+      - navigation "Analysis modules" [ref=f2e8]:
+        - list [ref=f2e9]:
+          - listitem [ref=f2e10]:
+            - link "Overview" [ref=f2e11] [cursor=pointer]:
+              - /url: /overview
+          - listitem [ref=f2e12]:
+            - link "Urban Typology" [ref=f2e13] [cursor=pointer]:
+              - /url: /typology
+          - listitem [ref=f2e14]:
+            - link "15-Minute Istanbul" [ref=f2e15] [cursor=pointer]:
+              - /url: /fifteen-minute
+          - listitem [ref=f2e16]:
+            - link "Cycling Gain" [ref=f2e17] [cursor=pointer]:
+              - /url: /cycling-gain
+          - listitem [ref=f2e18]:
+            - link "Transit Connection" [ref=f2e19] [cursor=pointer]:
+              - /url: /transit
+          - listitem [ref=f2e20]:
+            - link "Accessibility Gaps" [ref=f2e21] [cursor=pointer]:
+              - /url: /gaps
+          - listitem [ref=f2e22]:
+            - link "E-bike" [ref=f2e23] [cursor=pointer]:
+              - /url: /ebike
+          - listitem [ref=f2e24]:
+            - link "Data & Methods" [ref=f2e25] [cursor=pointer]:
+              - /url: /methods
+      - paragraph [ref=f2e27]: An O3 Sustainability spatial intelligence project.
+    - main [ref=f2e28]:
+      - generic [ref=f2e29]:
+        - generic [ref=f2e31]:
+          - heading "Access Gaps" [level=1] [ref=f2e32]
+          - paragraph [ref=f2e33]:
+            - text: What's still out of reach?
+            - button "How this works" [ref=f2e35] [cursor=pointer]: i
+        - generic [ref=f2e36]:
+          - generic [ref=f2e37]:
+            - generic [ref=f2e38]:
+              - application "Istanbul accessibility map" [ref=f2e39]:
+                - region "Map" [ref=f2e40]
+                - generic [ref=f2e41]:
+                  - button "Zoom in" [ref=f2e42] [cursor=pointer]
+                  - button "Zoom out" [ref=f2e44] [cursor=pointer]
+              - button "Reset view" [ref=f2e46] [cursor=pointer]
+              - generic [ref=f2e49]:
+                - paragraph [ref=f2e50]: Loading the Istanbul accessibility map
+                - paragraph [ref=f2e51]: Preparing 22,322 spatial cells…
+            - tablist "Map layer" [ref=f2e53]:
+              - tab "What's missing" [selected] [ref=f2e54] [cursor=pointer]
+              - tab "Cycling's effect" [ref=f2e55] [cursor=pointer]
+            - generic [ref=f2e57]:
+              - generic [ref=f2e58]: District
+              - combobox "District" [ref=f2e59]:
+                - option "All districts" [selected]
+                - option "Adalar"
+                - option "Arnavutköy"
+                - option "Ataşehir"
+                - option "Avcılar"
+                - option "Bağcılar"
+                - option "Bahçelievler"
+                - option "Bakırköy"
+                - option "Başakşehir"
+                - option "Bayrampaşa"
+                - option "Beşiktaş"
+                - option "Beykoz"
+                - option "Beylikdüzü"
+                - option "Beyoğlu"
+                - option "Büyükçekmece"
+                - option "Çatalca"
+                - option "Çekmeköy"
+                - option "Esenler"
+                - option "Esenyurt"
+                - option "Eyüpsultan"
+                - option "Fatih"
+                - option "Gaziosmanpaşa"
+                - option "Güngören"
+                - option "Kadıköy"
+                - option "Kâğıthane"
+                - option "Kartal"
+                - option "Küçükçekmece"
+                - option "Maltepe"
+                - option "Pendik"
+                - option "Sancaktepe"
+                - option "Sarıyer"
+                - option "Silivri"
+                - option "Sultanbeyli"
+                - option "Sultangazi"
+                - option "Şile"
+                - option "Şişli"
+                - option "Tuzla"
+                - option "Ümraniye"
+                - option "Üsküdar"
+                - option "Zeytinburnu"
+            - generic [ref=f2e61]:
+              - generic [ref=f2e62]: Everyday essentials still out of reach (walking)
+              - list [ref=f2e63]:
+                - listitem [ref=f2e64]:
+                  - generic [ref=f2e66]: No mapped gap
+                - listitem [ref=f2e67]:
+                  - generic [ref=f2e69]: Food access gap
+                - listitem [ref=f2e70]:
+                  - generic [ref=f2e72]: Healthcare access gap
+                - listitem [ref=f2e73]:
+                  - generic [ref=f2e75]: Education access gap
+                - listitem [ref=f2e76]:
+                  - generic [ref=f2e78]: Food + Healthcare gap
+                - listitem [ref=f2e79]:
+                  - generic [ref=f2e81]: Food + Education gap
+                - listitem [ref=f2e82]:
+                  - generic [ref=f2e84]: Healthcare + Education gap
+                - listitem [ref=f2e85]:
+                  - generic [ref=f2e87]: Multiple-need gap (all three)
+                - listitem [ref=f2e88]:
+                  - generic [ref=f2e90]: Evidence uncertain
+          - complementary [ref=f2e91]:
+            - generic [ref=f2e92]:
+              - generic [ref=f2e93]:
+                - heading "What's still out of reach?" [level=2] [ref=f2e94]
+                - paragraph [ref=f2e95]: See where everyday accessibility gaps remain after considering cycling.
+              - generic [ref=f2e97]:
+                - text: Remains out of reach even with cycling
+                - generic [ref=f2e98]: 353K
+                - paragraph [ref=f2e99]: 352,939 people remain in cells where cycling does not close the mapped everyday-needs accessibility gap, most plausibly due to genuine destination sparsity.
+              - paragraph [ref=f2e100]: Click any cell on the map to see its details.
+  - alert [ref=f2e101]

@@ -1,0 +1,79 @@
+{
+  "version": "15MIN_ISTANBUL_NETWORK_PROXIMITY_V1",
+  "methodological_language_used": [
+    "network-based urban proximity",
+    "walking accessibility",
+    "access to everyday needs"
+  ],
+  "methodological_language_avoided": [
+    "true 15-minute city",
+    "validated quality of life",
+    "causal effect",
+    "behavioral accessibility",
+    "actual walking behavior"
+  ],
+  "input_hashes": {
+    "walking_graph": {
+      "path": "data/processed/network/walking_graph.pkl",
+      "sha256": "a6e4e1f057841e993fb88cc2a486a056ab89ec9c23110fbce264e4dd777f8dd3"
+    },
+    "grid_network_anchors": {
+      "path": "analysis/network_intelligence/grid_network_anchors.parquet",
+      "sha256": "4c62b43cec0959693dd3e0a391670853a7f6d9054126e0fefe2977b969e1dd25"
+    },
+    "v2_master_feature_table": {
+      "path": "data/processed/citywide/features/urban_mobility_features_citywide_v2.parquet",
+      "sha256": "d4b726a3957128fcd1ebc12b6d1f2a5f21532d509177a8b5bbbcf2ddd0e21ded"
+    },
+    "v2_typology_assignments": {
+      "path": "analysis/clustering_v2_eight_family/cluster_assignments_v2ef.parquet",
+      "sha256": "0361840b37d9937e3e7e9cb3d0ba7efd1802e18446a3cad724b707d5d8606599"
+    },
+    "poi_network_anchors": {
+      "path": "analysis/applications/15min_city/poi_network_anchors.parquet",
+      "sha256": "0296bfbc72aa67395e6072db8c309d2f661cc869ef06f3db8fad39bcf36ffcbf"
+    }
+  },
+  "everyday_needs_taxonomy": {
+    "required": [
+      "A_food_groceries",
+      "B_healthcare",
+      "C_education"
+    ],
+    "optional_contextual": [
+      "D_daily_services",
+      "E_retail_shopping",
+      "F_leisure_social",
+      "G_green_recreation",
+      "H_public_transport_access"
+    ]
+  },
+  "complete_15min_access_definition": "reach >=1 destination in EVERY required category (Food/Groceries, Healthcare, Education) within a 15-minute walk on the mapped pedestrian network",
+  "coverage_ratio_definition": "required_categories_accessible / n_required_categories (0-1) -- a transparent DESCRIPTIVE coverage ratio, explicitly NOT an empirically validated score or weighted index",
+  "population_layer": "Calibrated 2020 population (WorldPop-based, Phase 3C) -- results describe accessibility of the 2020 population's spatial distribution to the CURRENT (2026) network/destination snapshot, not a 2026 population estimate",
+  "known_quality_limitations": {
+    "adalar": "Explicit known network-coverage limitation (Phase 7) -- low accessibility there must NOT be interpreted as genuine urban accessibility failure until network representation is resolved.",
+    "isolated_network_components": "7772 cells anchor to a walking-network fragment disconnected from the largest component (genuine Bosphorus/water fragmentation, confirmed in Phase 7) -- their accessibility results reflect local-fragment-only reachability, flagged in accessibility_quality_flags.parquet.",
+    "green_recreation_category": "POI-sourced only (not land-use polygons) -- likely undercounts true green-space access; interpret G_green_recreation results as a lower bound.",
+    "daily_services_category": "A new grouping not part of any frozen MCDA category; moderate reliability."
+  },
+  "output_paths": [
+    "analysis/applications/15min_city/15min_city_summary_data.json",
+    "analysis/applications/15min_city/accessibility_computation_diagnostics.json",
+    "analysis/applications/15min_city/accessibility_deficit_classes.parquet",
+    "analysis/applications/15min_city/accessibility_quality_flags.parquet",
+    "analysis/applications/15min_city/category_accessibility_summary.csv",
+    "analysis/applications/15min_city/grid_accessibility_10min.parquet",
+    "analysis/applications/15min_city/grid_accessibility_15min.parquet",
+    "analysis/applications/15min_city/grid_accessibility_5min.parquet",
+    "analysis/applications/15min_city/grid_nearest_service_times.parquet",
+    "analysis/applications/15min_city/grid_proximity_summary.parquet",
+    "analysis/applications/15min_city/poi_category_qa.json",
+    "analysis/applications/15min_city/poi_everyday_needs_taxonomy.csv",
+    "analysis/applications/15min_city/poi_network_anchors.parquet",
+    "analysis/applications/15min_city/population_accessibility_summary.json",
+    "analysis/applications/15min_city/sanity_check_cases.json",
+    "analysis/applications/15min_city/typology_accessibility_summary.csv"
+  ],
+  "stop_condition": "Descriptive network-based 15-minute accessibility analysis only -- no weighted MCDA, cycling accessibility, transit-inclusive accessibility, predictive ML, equity modeling, dashboard, or final visualization styling were performed."
+}

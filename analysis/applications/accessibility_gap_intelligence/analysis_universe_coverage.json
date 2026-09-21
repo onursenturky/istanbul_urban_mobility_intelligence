@@ -1,0 +1,36 @@
+{
+  "total_calibrated_population_2020": 15455565.5,
+  "definitions": {
+    "RAW_UNIVERSE": "All 22,322 grid cells.",
+    "EVERYDAY_ACCESS_RELIABLE": "Cells where BOTH walking and cycling network quality flags permit interpretation (RELIABLE or RELIABLE_SEPARATE_COMPONENT, per Phase 8.1/Phase 9's own corrected classification) -- excludes QUESTIONABLE_ANCHOR, SMALL_COMPONENT_CAUTION, KNOWN_NETWORK_LIMITATION_ADALAR.",
+    "TRANSIT_ACCESS_RELIABLE": "Cells flagged RELIABLE by Phase 10's own quality_uncertainty_flag, which already combines network-quality AND transit-feed/data-coverage adequacy.",
+    "STRICT_SYNTHESIS_RELIABLE": "Intersection of EVERYDAY_ACCESS_RELIABLE and TRANSIT_ACCESS_RELIABLE -- the universe used for any claim spanning both domains at once."
+  },
+  "coverage": {
+    "RAW_UNIVERSE": {
+      "n_cells": 22322,
+      "pct_cells": 100.0,
+      "population": 15455565.5,
+      "pct_population": 100.0
+    },
+    "EVERYDAY_ACCESS_RELIABLE": {
+      "n_cells": 22053,
+      "pct_cells": 98.79,
+      "population": 15439028.9,
+      "pct_population": 99.89
+    },
+    "TRANSIT_ACCESS_RELIABLE": {
+      "n_cells": 6092,
+      "pct_cells": 27.29,
+      "population": 11412182.6,
+      "pct_population": 73.84
+    },
+    "STRICT_SYNTHESIS_RELIABLE": {
+      "n_cells": 6092,
+      "pct_cells": 27.29,
+      "population": 11412182.6,
+      "pct_population": 73.84
+    }
+  },
+  "uncertainty_handling": "NaN nearest-service times and non-RELIABLE quality flags are preserved as-is throughout this synthesis -- never converted to zero accessibility or a large finite placeholder."
+}

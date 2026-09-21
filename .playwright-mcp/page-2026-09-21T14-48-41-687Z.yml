@@ -1,0 +1,92 @@
+- generic [active] [ref=f15e1]:
+  - generic [ref=f15e2]:
+    - generic [ref=f15e3]:
+      - link "Istanbul / Urban Mobility Intelligence" [ref=f15e4] [cursor=pointer]:
+        - /url: /
+      - button "Toggle navigation menu" [ref=f15e7] [cursor=pointer]
+    - main [ref=f15e10]:
+      - generic [ref=f15e11]:
+        - generic [ref=f15e13]:
+          - heading "Access Gaps" [level=1] [ref=f15e14]
+          - paragraph [ref=f15e15]:
+            - text: What's still out of reach?
+            - button "How this works" [ref=f15e17] [cursor=pointer]: i
+        - generic [ref=f15e19]:
+          - generic [ref=f15e20]:
+            - application "Istanbul accessibility map" [ref=f15e21]:
+              - region "Map" [ref=f15e22]
+              - generic [ref=f15e23]:
+                - button "Zoom in" [ref=f15e24] [cursor=pointer]
+                - button "Zoom out" [ref=f15e26] [cursor=pointer]
+            - button "Reset view" [ref=f15e28] [cursor=pointer]
+            - generic [ref=f15e31]:
+              - paragraph [ref=f15e32]: Loading the Istanbul accessibility map
+              - paragraph [ref=f15e33]: Preparing 22,322 spatial cells…
+          - tablist "Map layer" [ref=f15e35]:
+            - tab "What's missing" [selected] [ref=f15e36] [cursor=pointer]
+            - tab "Cycling's effect" [ref=f15e37] [cursor=pointer]
+          - generic [ref=f15e39]:
+            - generic [ref=f15e40]: District
+            - combobox "District" [ref=f15e41]:
+              - option "All districts" [selected]
+              - option "Adalar"
+              - option "Arnavutköy"
+              - option "Ataşehir"
+              - option "Avcılar"
+              - option "Bağcılar"
+              - option "Bahçelievler"
+              - option "Bakırköy"
+              - option "Başakşehir"
+              - option "Bayrampaşa"
+              - option "Beşiktaş"
+              - option "Beykoz"
+              - option "Beylikdüzü"
+              - option "Beyoğlu"
+              - option "Büyükçekmece"
+              - option "Çatalca"
+              - option "Çekmeköy"
+              - option "Esenler"
+              - option "Esenyurt"
+              - option "Eyüpsultan"
+              - option "Fatih"
+              - option "Gaziosmanpaşa"
+              - option "Güngören"
+              - option "Kadıköy"
+              - option "Kâğıthane"
+              - option "Kartal"
+              - option "Küçükçekmece"
+              - option "Maltepe"
+              - option "Pendik"
+              - option "Sancaktepe"
+              - option "Sarıyer"
+              - option "Silivri"
+              - option "Sultanbeyli"
+              - option "Sultangazi"
+              - option "Şile"
+              - option "Şişli"
+              - option "Tuzla"
+              - option "Ümraniye"
+              - option "Üsküdar"
+              - option "Zeytinburnu"
+          - generic [ref=f15e43]:
+            - generic [ref=f15e44]: Everyday essentials still out of reach (walking)
+            - list [ref=f15e45]:
+              - listitem [ref=f15e46]:
+                - generic [ref=f15e48]: No mapped gap
+              - listitem [ref=f15e49]:
+                - generic [ref=f15e51]: Food access gap
+              - listitem [ref=f15e52]:
+                - generic [ref=f15e54]: Healthcare access gap
+              - listitem [ref=f15e55]:
+                - generic [ref=f15e57]: Education access gap
+              - listitem [ref=f15e58]:
+                - generic [ref=f15e60]: Food + Healthcare gap
+              - listitem [ref=f15e61]:
+                - generic [ref=f15e63]: Food + Education gap
+              - listitem [ref=f15e64]:
+                - generic [ref=f15e66]: Healthcare + Education gap
+              - listitem [ref=f15e67]:
+                - generic [ref=f15e69]: Multiple-need gap (all three)
+              - listitem [ref=f15e70]:
+                - generic [ref=f15e72]: Evidence uncertain
+  - alert [ref=f15e73]

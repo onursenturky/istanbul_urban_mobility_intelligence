@@ -1,0 +1,123 @@
+- generic [active] [ref=f5e1]:
+  - generic [ref=f5e2]:
+    - complementary [ref=f5e3]:
+      - link "Istanbul Urban Mobility Intelligence" [ref=f5e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f5e5]:
+          - generic [ref=f5e6]: Istanbul
+          - generic [ref=f5e7]: Urban Mobility Intelligence
+      - navigation "Analysis modules" [ref=f5e8]:
+        - list [ref=f5e9]:
+          - listitem [ref=f5e10]:
+            - link "Overview" [ref=f5e11] [cursor=pointer]:
+              - /url: /overview
+          - listitem [ref=f5e12]:
+            - link "Urban Typology" [ref=f5e13] [cursor=pointer]:
+              - /url: /typology
+          - listitem [ref=f5e14]:
+            - link "15-Minute Istanbul" [ref=f5e15] [cursor=pointer]:
+              - /url: /fifteen-minute
+          - listitem [ref=f5e16]:
+            - link "Cycling Gain" [ref=f5e17] [cursor=pointer]:
+              - /url: /cycling-gain
+          - listitem [ref=f5e18]:
+            - link "Transit Connection" [ref=f5e19] [cursor=pointer]:
+              - /url: /transit
+          - listitem [ref=f5e20]:
+            - link "Accessibility Gaps" [ref=f5e21] [cursor=pointer]:
+              - /url: /gaps
+          - listitem [ref=f5e22]:
+            - link "E-bike" [ref=f5e23] [cursor=pointer]:
+              - /url: /ebike
+          - listitem [ref=f5e24]:
+            - link "Data & Methods" [ref=f5e25] [cursor=pointer]:
+              - /url: /methods
+      - paragraph [ref=f5e27]: An O3 Sustainability spatial intelligence project.
+    - main [ref=f5e28]:
+      - generic [ref=f5e29]:
+        - generic [ref=f5e31]:
+          - heading "Urban Typology" [level=1] [ref=f5e32]
+          - paragraph [ref=f5e33]:
+            - text: What kind of urban environment is this?
+            - button "How this works" [ref=f5e35] [cursor=pointer]: i
+        - generic [ref=f5e36]:
+          - generic [ref=f5e37]:
+            - generic [ref=f5e38]:
+              - application "Istanbul accessibility map" [ref=f5e39]:
+                - region "Map" [ref=f5e40]
+                - generic [ref=f5e41]:
+                  - button "Zoom in" [ref=f5e42] [cursor=pointer]
+                  - button "Zoom out" [ref=f5e44] [cursor=pointer]
+              - button "Reset view" [ref=f5e46] [cursor=pointer]
+              - generic [ref=f5e49]:
+                - paragraph [ref=f5e50]: Loading the Istanbul accessibility map
+                - paragraph [ref=f5e51]: Preparing 22,322 spatial cells…
+            - tablist "Map layer" [ref=f5e53]:
+              - tab "Urban typology" [selected] [ref=f5e54] [cursor=pointer]
+            - generic [ref=f5e56]:
+              - generic [ref=f5e57]: District
+              - combobox "District" [ref=f5e58]:
+                - option "All districts" [selected]
+                - option "Adalar"
+                - option "Arnavutköy"
+                - option "Ataşehir"
+                - option "Avcılar"
+                - option "Bağcılar"
+                - option "Bahçelievler"
+                - option "Bakırköy"
+                - option "Başakşehir"
+                - option "Bayrampaşa"
+                - option "Beşiktaş"
+                - option "Beykoz"
+                - option "Beylikdüzü"
+                - option "Beyoğlu"
+                - option "Büyükçekmece"
+                - option "Çatalca"
+                - option "Çekmeköy"
+                - option "Esenler"
+                - option "Esenyurt"
+                - option "Eyüpsultan"
+                - option "Fatih"
+                - option "Gaziosmanpaşa"
+                - option "Güngören"
+                - option "Kadıköy"
+                - option "Kâğıthane"
+                - option "Kartal"
+                - option "Küçükçekmece"
+                - option "Maltepe"
+                - option "Pendik"
+                - option "Sancaktepe"
+                - option "Sarıyer"
+                - option "Silivri"
+                - option "Sultanbeyli"
+                - option "Sultangazi"
+                - option "Şile"
+                - option "Şişli"
+                - option "Tuzla"
+                - option "Ümraniye"
+                - option "Üsküdar"
+                - option "Zeytinburnu"
+            - generic [ref=f5e60]:
+              - generic [ref=f5e61]: Urban mobility typology
+              - list [ref=f5e62]:
+                - listitem [ref=f5e63]:
+                  - generic [ref=f5e65]: Cluster 0
+                - listitem [ref=f5e66]:
+                  - generic [ref=f5e68]: Cluster 1
+                - listitem [ref=f5e69]:
+                  - generic [ref=f5e71]: Cluster 2
+                - listitem [ref=f5e72]:
+                  - generic [ref=f5e74]: Cluster 3
+                - listitem [ref=f5e75]:
+                  - generic [ref=f5e77]: Cluster 4
+          - complementary [ref=f5e78]:
+            - generic [ref=f5e79]:
+              - generic [ref=f5e80]:
+                - heading "What kind of urban environment is this?" [level=2] [ref=f5e81]
+                - paragraph [ref=f5e82]: Explore different mobility environments across Istanbul.
+              - generic [ref=f5e84]:
+                - text: Walking access to everyday essentials
+                - generic [ref=f5e85]: 82.49%
+                - paragraph [ref=f5e86]: Approximately 82.5% of the calibrated 2020 population distribution lies in cells with modeled 15-minute walking access to Food, Healthcare and Education.
+              - paragraph [ref=f5e87]: Click any cell on the map to see its details.
+  - alert [ref=f5e88]

@@ -1,0 +1,56 @@
+{
+  "network_type": "walking",
+  "source": "pyrosm.config.osm_filters.walking_filter() -- reproduces OSMnx's 'walk' network-type filter",
+  "semantics": "EXCLUDE dict: a way is DROPPED if it carries any of the listed values for that key. Everything else is included by default.",
+  "exclude": {
+    "area": [
+      "yes"
+    ],
+    "access": [
+      "private"
+    ],
+    "highway": [
+      "abandoned",
+      "construction",
+      "no",
+      "planned",
+      "platform",
+      "proposed",
+      "raceway",
+      "razed",
+      "rest_area",
+      "services",
+      "bus_guideway",
+      "cycleway",
+      "motor",
+      "motorway",
+      "motorway_link"
+    ],
+    "foot": [
+      "no"
+    ],
+    "service": [
+      "private"
+    ],
+    "sidewalk": [
+      "separate"
+    ],
+    "sidewalk:both": [
+      "separate"
+    ],
+    "sidewalk:left": [
+      "separate"
+    ],
+    "sidewalk:right": [
+      "separate"
+    ]
+  },
+  "directedness": "UNDIRECTED -- pedestrians are not bound by vehicle-oneway restrictions; oneway:foot tagging is too sparse citywide to support a reliable directed pedestrian graph (documented limitation, not silently assumed to be handled).",
+  "notes": [
+    "highway values always excluded regardless of mode: abandoned/construction/no/planned/platform/proposed/raceway/razed/rest_area/services (not a physical or current part of the street network).",
+    "Additionally excludes motorway/motorway_link/bus_guideway/cycleway (motor-only or cycle-only ways).",
+    "access=private and service=private ways excluded; foot=no ways excluded explicitly.",
+    "Ways whose sidewalk is separately mapped (sidewalk[:both/:left/:right]=separate) are excluded so the separately-digitized sidewalk way is not double-counted.",
+    "Service roads (parking-lot lanes, alleys) ARE included -- walkable in practice even if unpleasant."
+  ]
+}

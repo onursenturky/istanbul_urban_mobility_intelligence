@@ -1,0 +1,244 @@
+{
+  "version": "EBIKE_APPLICATION_V2_BASELINE",
+  "generated_at_utc": "2026-09-19T23:00:00Z",
+  "framework_context": "First application ('applications/ebike/' conceptually) built on the CITYWIDE_V2_EIGHT_FAMILY_FEATURE_BASELINE / CITYWIDE_V2_EIGHT_FAMILY_TYPOLOGY core data foundation. No new datasets, predictors, or typology changes were introduced in this phase.",
+  "input_hashes": {
+    "v2_master_feature_table": {
+      "path": "data/processed/citywide/features/urban_mobility_features_citywide_v2.parquet",
+      "sha256": "d4b726a3957128fcd1ebc12b6d1f2a5f21532d509177a8b5bbbcf2ddd0e21ded"
+    },
+    "v2_feature_dictionary": {
+      "path": "data/processed/citywide/metadata/feature_dictionary_citywide_v2.csv",
+      "sha256": "d4f84b4018b37463a1a43593f31f2881aa2c310d24ac37c1f115631d4d97c377"
+    },
+    "v2_typology_assignments": {
+      "path": "analysis/clustering_v2_eight_family/cluster_assignments_v2ef.parquet",
+      "sha256": "0361840b37d9937e3e7e9cb3d0ba7efd1802e18446a3cad724b707d5d8606599"
+    },
+    "phase6a_v2_criteria_audit": {
+      "path": "analysis/mcda_v2/criteria_catalog_v2_audit.csv",
+      "sha256": "fcb9ae84f180764f858c26a2f84415d2c976956cebedaff035321b69f9b72373"
+    }
+  },
+  "conceptual_model": {
+    "dimensions": [
+      "Demand/Activity",
+      "Transit Accessibility",
+      "Cycling Readiness",
+      "Street Connectivity",
+      "Physical Feasibility"
+    ],
+    "dimension_weights_baseline": {
+      "Demand/Activity": 0.2,
+      "Transit Accessibility": 0.2,
+      "Cycling Readiness": 0.2,
+      "Street Connectivity": 0.2,
+      "Physical Feasibility": 0.2
+    },
+    "urban_form_dimension_deliberately_excluded": true,
+    "readiness_definition": "Existing enabling urban/mobility conditions -- renormalized weighted mean of {Transit Accessibility, Cycling Readiness, Street Connectivity, Physical Feasibility}. Demand/Activity excluded.",
+    "opportunity_definition": "demand_potential ** alpha * cycling_gap ** (1-alpha); alpha=0.5 at baseline (unchanged geometric form from V1); zero demand forces zero opportunity regardless of gap size.",
+    "readiness_and_opportunity_never_combined": true,
+    "typology_never_used_as_predictor": true
+  },
+  "baseline_criteria": {
+    "Demand/Activity": [
+      "poi_density_km2",
+      "poi_entropy",
+      "retail_count",
+      "leisure_count",
+      "population_density_calibrated_km2"
+    ],
+    "Transit Accessibility (REDUCED)": [
+      "distance_to_nearest_transit_m",
+      "transit_stops_within_500m",
+      "bus_departures_per_day",
+      "fixed_guideway_stations_within_1000m"
+    ],
+    "Cycling Readiness (unchanged from V1)": [
+      "cycle_infrastructure_density_km_per_km2_ibb_only",
+      "protected_cycleway_density_km_per_km2_ibb_only",
+      "distance_to_nearest_cycle_infrastructure_m_ibb_only",
+      "distance_to_nearest_bicycle_parking_m",
+      "distance_to_nearest_micromobility_parking_m"
+    ],
+    "Street Connectivity (NEW)": [
+      "intersection_density_km2",
+      "local_road_length_m",
+      "cycle_accessible_road_density_km_per_km2"
+    ],
+    "Physical Feasibility (supplemented)": [
+      "mean_slope_deg",
+      "pct_area_slope_3_6deg",
+      "pct_area_slope_6_10deg",
+      "mean_absolute_road_grade_pct"
+    ]
+  },
+  "excluded_no_score": [
+    "residential_area_ratio (and its three-state derivative)",
+    "industrial_area_ratio (and its three-state derivative)",
+    "landuse_has_mapped_evidence",
+    "green_area_ratio",
+    "major_road_length_m",
+    "road_density_km_per_km2",
+    "pct_road_length_grade_gt_8pct (secondary/sensitivity-only)",
+    "5 mode-specific transit distances (sensitivity-only)",
+    "pct_road_network_with_cycle_infrastructure (sensitivity-only)"
+  ],
+  "terrain_weights": {
+    "with_grade_baseline": {
+      "mean_slope_deg": 0.4,
+      "mean_absolute_road_grade_pct": 0.3,
+      "pct_area_slope_6_10deg": 0.2,
+      "pct_area_slope_3_6deg": 0.1
+    },
+    "no_grade_sensitivity": {
+      "mean_slope_deg": 0.6,
+      "pct_area_slope_6_10deg": 0.25,
+      "pct_area_slope_3_6deg": 0.15
+    }
+  },
+  "sensitivity_variants": {
+    "variants_tested": [
+      "BASELINE",
+      "NO_STREET_CONNECTIVITY",
+      "NO_ROAD_GRADE",
+      "EXPANDED_TRANSIT",
+      "ALTERNATIVE_CYCLING",
+      "WEIGHT_PERTURBATION"
+    ],
+    "weight_perturbation_vector": {
+      "Demand/Activity": 0.16,
+      "Transit Accessibility": 0.2,
+      "Cycling Readiness": 0.24,
+      "Street Connectivity": 0.24,
+      "Physical Feasibility": 0.16
+    },
+    "alpha_by_variant": {
+      "BASELINE": 0.5,
+      "NO_STREET_CONNECTIVITY": 0.5,
+      "NO_ROAD_GRADE": 0.5,
+      "EXPANDED_TRANSIT": 0.5,
+      "ALTERNATIVE_CYCLING": 0.5,
+      "WEIGHT_PERTURBATION": 0.4
+    },
+    "strongest_sensitivity_driver_readiness": {
+      "variant": "NO_STREET_CONNECTIVITY",
+      "spearman_rho_vs_baseline": 0.8445,
+      "jaccard_top_decile_vs_baseline": 0.8686,
+      "mean_abs_diff_vs_baseline": 0.0627,
+      "target": "readiness"
+    },
+    "strongest_sensitivity_driver_opportunity": {
+      "variant": "WEIGHT_PERTURBATION",
+      "spearman_rho_vs_baseline": 0.9991,
+      "jaccard_top_decile_vs_baseline": 0.8401,
+      "mean_abs_diff_vs_baseline": 0.015,
+      "target": "opportunity"
+    }
+  },
+  "weight_perturbation_vector": {
+    "Demand/Activity": 0.16,
+    "Transit Accessibility": 0.2,
+    "Cycling Readiness": 0.24,
+    "Street Connectivity": 0.24,
+    "Physical Feasibility": 0.16
+  },
+  "robustness_summary": {
+    "readiness_consensus_class_counts": {
+      "NEVER_HIGH": 19650,
+      "ROBUST_HIGH": 1837,
+      "RARE_HIGH": 330,
+      "CONDITIONAL_HIGH": 267,
+      "FREQUENT_HIGH": 238
+    },
+    "opportunity_consensus_class_counts": {
+      "NEVER_HIGH": 19885,
+      "ROBUST_HIGH": 2028,
+      "FREQUENT_HIGH": 205,
+      "RARE_HIGH": 203,
+      "CONDITIONAL_HIGH": 1
+    },
+    "readiness_min_pairwise_spearman": 0.8324,
+    "opportunity_min_pairwise_spearman": 0.9985
+  },
+  "pathological_case_qa_critical_check": {
+    "n_cells": 10731,
+    "mean_opportunity": 0.0513,
+    "pct_in_citywide_top_decile": 0.0,
+    "pct_in_citywide_top_quartile": 8.05,
+    "passed": true
+  },
+  "v1_v2_comparison_headline": {
+    "spearman_rho_readiness": 0.852,
+    "spearman_rho_opportunity": 1.0,
+    "jaccard_top_decile_readiness": 0.7583,
+    "jaccard_top_decile_opportunity": 1.0
+  },
+  "assumptions_flagged_for_future_sensitivity": [
+    "Grade thresholds (comfortable<=3%, floor by 10%) are REUSED from the pilot's raster-slope convention, not independently derived for road-anchored grade -- an assumption, not an empirical estimate.",
+    "Terrain internal weights (0.40/0.30/0.20/0.10) are assumption-driven; no optimization was performed.",
+    "Saturating-benefit shape (percentile_rank**0.5) for Street Connectivity and most other benefit criteria is a functional-form assumption, not an estimated behavioral response curve.",
+    "The single WEIGHT_PERTURBATION vector tested is illustrative (one deterministic +/-20% tilt), not an exhaustive robustness search.",
+    "Opportunity's V1-vs-V2 correlation is exactly 1.0 because none of its actual inputs (demand criteria, cycling criteria) changed between versions at alpha=0.5 in both -- this is an expected consistency result, not independent validation of the Opportunity construct itself."
+  ],
+  "known_limitations_carried_forward": [
+    "main_gtfs (metro/tram/rail/ferry) feed is static/topology-only, last modified 2023-2024, calendar expired -- station LOCATIONS used in distance/count criteria may not reflect post-2024 network changes; no ground truth was available to test this directly (documented, not corrected).",
+    "OSM land-use tagging sparsity (~9.2% mean coverage) is why land-use composition and green-space area were excluded from or handled cautiously in scoring, per Phase 6A-V2."
+  ],
+  "typology_posthoc": {
+    "by_cluster": {
+      "0": {
+        "n_cells": 6113,
+        "mean_readiness": 0.3956,
+        "mean_opportunity": 0.0573,
+        "pct_robust_high_readiness": 0.0,
+        "pct_robust_high_opportunity": 1.6031
+      },
+      "1": {
+        "n_cells": 2914,
+        "mean_readiness": 0.6892,
+        "mean_opportunity": 0.4996,
+        "pct_robust_high_readiness": 24.8456,
+        "pct_robust_high_opportunity": 38.9842
+      },
+      "2": {
+        "n_cells": 8621,
+        "mean_readiness": 0.5058,
+        "mean_opportunity": 0.1563,
+        "pct_robust_high_readiness": 0.3364,
+        "pct_robust_high_opportunity": 0.5336
+      },
+      "3": {
+        "n_cells": 3140,
+        "mean_readiness": 0.3279,
+        "mean_opportunity": 0.0332,
+        "pct_robust_high_readiness": 0.0,
+        "pct_robust_high_opportunity": 0.0
+      },
+      "4": {
+        "n_cells": 1534,
+        "mean_readiness": 0.7959,
+        "mean_opportunity": 0.5159,
+        "pct_robust_high_readiness": 70.6649,
+        "pct_robust_high_opportunity": 48.7614
+      }
+    },
+    "note": "Typology membership was NEVER used as a scoring input -- this is post-hoc interpretation only, cross-tabulating already-computed scores against the independently-derived V2 k=5 typology."
+  },
+  "output_paths": {
+    "ebike_readiness_baseline": "/Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/analysis/mcda_v2/phase6b/ebike_readiness_baseline.parquet",
+    "ebike_opportunity_baseline": "/Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/analysis/mcda_v2/phase6b/ebike_opportunity_baseline.parquet",
+    "ebike_dimension_scores": "/Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/analysis/mcda_v2/phase6b/ebike_dimension_scores.parquet",
+    "sensitivity_variant_scores": "/Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/analysis/mcda_v2/phase6b/sensitivity_variant_scores.parquet",
+    "readiness_robustness": "/Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/analysis/mcda_v2/phase6b/readiness_robustness.parquet",
+    "opportunity_robustness": "/Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/analysis/mcda_v2/phase6b/opportunity_robustness.parquet",
+    "consensus_classes": "/Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/analysis/mcda_v2/phase6b/consensus_classes.parquet",
+    "sensitivity_summary": "/Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/analysis/mcda_v2/phase6b/sensitivity_summary.csv",
+    "pathological_case_qa": "/Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/analysis/mcda_v2/phase6b/pathological_case_qa.json",
+    "v1_v2_ebike_comparison": "/Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/analysis/mcda_v2/phase6b/v1_v2_ebike_comparison.json",
+    "typology_posthoc_summary": "/Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/analysis/mcda_v2/phase6b/typology_posthoc_summary.json",
+    "criterion_value_functions": "/Users/onursenturk/Desktop/istanbul_urban_mobility_intelligence/analysis/mcda_v2/phase6b/criterion_value_functions_v2.csv"
+  },
+  "stop_condition": "STOPPED after validation and reporting -- no 15-minute-city analysis, isochrones, new feature engineering, dashboards, new data acquisition, predictive ML, or cartographic styling were performed."
+}

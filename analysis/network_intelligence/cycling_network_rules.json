@@ -1,0 +1,47 @@
+{
+  "network_type": "cycling",
+  "source": "pyrosm.config.osm_filters.cycling_filter() -- reproduces OSMnx's 'bike' network-type filter",
+  "semantics": "EXCLUDE dict: a way is DROPPED if it carries any of the listed values for that key. Everything else is included by default.",
+  "exclude": {
+    "area": [
+      "yes"
+    ],
+    "access": [
+      "private"
+    ],
+    "highway": [
+      "abandoned",
+      "construction",
+      "no",
+      "planned",
+      "platform",
+      "proposed",
+      "raceway",
+      "razed",
+      "rest_area",
+      "services",
+      "bus_guideway",
+      "corridor",
+      "elevator",
+      "escalator",
+      "footway",
+      "steps",
+      "motor",
+      "motorway",
+      "motorway_link"
+    ],
+    "bicycle": [
+      "no"
+    ],
+    "service": [
+      "private"
+    ]
+  },
+  "directedness": "DIRECTED -- respects the generic `oneway` tag (standard default). oneway:bicycle contraflow exceptions ARE present in the source data (verified) but are NOT yet applied to override directionality in this baseline -- a documented limitation, not a silent gap.",
+  "notes": [
+    "highway values always excluded regardless of mode: abandoned/construction/no/planned/platform/proposed/raceway/razed/rest_area/services.",
+    "Additionally excludes motorway/motorway_link/bus_guideway/corridor/elevator/escalator/footway/steps (motor-only or foot-only ways).",
+    "access=private and service=private ways excluded; bicycle=no ways excluded explicitly.",
+    "Unlike walking, sidewalk-mapped-separately is not a cycling-relevant exclusion (cycleways are handled by the highway=cycleway inclusion, not a sidewalk tag)."
+  ]
+}

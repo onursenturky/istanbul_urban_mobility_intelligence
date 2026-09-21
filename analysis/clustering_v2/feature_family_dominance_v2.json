@@ -1,0 +1,22 @@
+{
+  "top10_predictors_by_bss_pct": {
+    "poi_density_km2": 22.43,
+    "bus_departures_per_day": 17.13,
+    "transit_stops_within_1000m": 7.54,
+    "building_coverage_ratio_conditional": 5.92,
+    "distance_to_nearest_cycle_infrastructure_m_ibb_only": 4.01,
+    "distance_to_nearest_bicycle_parking_m": 3.4,
+    "distance_to_nearest_metrobus_m": 3.23,
+    "distance_to_nearest_rail_m": 3.22,
+    "transit_stops_within_500m": 3.19,
+    "distance_to_nearest_micromobility_parking_m": 3.13
+  },
+  "family_bss_share_pct": {
+    "buildings": 7.12,
+    "cycling": 10.67,
+    "poi": 32.49,
+    "population": 2.32,
+    "terrain": 1.07,
+    "transit": 46.34
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "audit_scope": "Phase 5B.1 -- audits the existing k=7 solution; does NOT change it.",
+  "raw_percentile_reprofiling_note": "Phase 5B's z-score magnitudes (e.g. 67.7 sigma building coverage) are mathematically real consequences of extreme skew in count/density variables, not defensible substantive claims (a '67.7 standard deviation' building coverage does not mean the cell is 67x more built-up in any literal sense). Cluster descriptions are now grounded in raw median/IQR and citywide percentile position of the cluster median; scaled/z-score values are retained only as a secondary diagnostic (see cluster_profiles_scaled_means.csv from Phase 5B).",
+  "sensitivity_family_ablations": {
+    "population_limitation_only": {
+      "n_features_dropped": 1,
+      "features_dropped": [
+        "population_density_calibrated_km2"
+      ],
+      "n_features_remaining": 43,
+      "adjusted_rand_index_vs_baseline": 0.985,
+      "baseline_cluster_sizes": {
+        "0": 1018,
+        "1": 361,
+        "2": 753,
+        "3": 911,
+        "4": 7672,
+        "5": 1363,
+        "6": 10244
+      },
+      "ablated_cluster_sizes": {
+        "0": 7623,
+        "1": 752,
+        "2": 912,
+        "3": 361,
+        "4": 1016,
+        "5": 1353,
+        "6": 10305
+      }
+    },
+    "main_gtfs_transit_only": {
+      "n_features_dropped": 13,
+      "features_dropped": [
+        "metro_station_count",
+        "distance_to_nearest_metro_m",
+        "tram_station_count",
+        "distance_to_nearest_tram_m",
+        "rail_station_count",
+        "distance_to_nearest_rail_m",
+        "ferry_terminal_count",
+        "distance_to_nearest_ferry_m",
+        "distance_to_nearest_transit_m",
+        "transit_stops_within_500m",
+        "transit_stops_within_1000m",
+        "fixed_guideway_stations_within_1000m",
+        "unique_rail_lines"
+      ],
+      "n_features_remaining": 31,
+      "adjusted_rand_index_vs_baseline": 0.4151,
+      "baseline_cluster_sizes": {
+        "0": 1018,
+        "1": 361,
+        "2": 753,
+        "3": 911,
+        "4": 7672,
+        "5": 1363,
+        "6": 10244
+      },
+      "ablated_cluster_sizes": {
+        "0": 17819,
+        "1": 832,
+        "2": 438,
+        "3": 955,
+        "4": 1374,
+        "5": 240,
+        "6": 664
+      }
+    },
+    "ibb_cycling_only": {
+      "n_features_dropped": 3,
+      "features_dropped": [
+        "cycle_infrastructure_density_km_per_km2_ibb_only",
+        "protected_cycleway_density_km_per_km2_ibb_only",
+        "distance_to_nearest_cycle_infrastructure_m_ibb_only"
+      ],
+      "n_features_remaining": 41,
+      "adjusted_rand_index_vs_baseline": 0.9649,
+      "baseline_cluster_sizes": {
+        "0": 1018,
+        "1": 361,
+        "2": 753,
+        "3": 911,
+        "4": 7672,
+        "5": 1363,
+        "6": 10244
+      },
+      "ablated_cluster_sizes": {
+        "0": 7655,
+        "1": 752,
+        "2": 361,
+        "3": 1016,
+        "4": 10266,
+        "5": 912,
+        "6": 1360
+      }
+    },
+    "all_limitations_removed": {
+      "n_features_dropped": 17,
+      "features_dropped": [
+        "cycle_infrastructure_density_km_per_km2_ibb_only",
+        "distance_to_nearest_cycle_infrastructure_m_ibb_only",
+        "distance_to_nearest_ferry_m",
+        "distance_to_nearest_metro_m",
+        "distance_to_nearest_rail_m",
+        "distance_to_nearest_tram_m",
+        "distance_to_nearest_transit_m",
+        "ferry_terminal_count",
+        "fixed_guideway_stations_within_1000m",
+        "metro_station_count",
+        "population_density_calibrated_km2",
+        "protected_cycleway_density_km_per_km2_ibb_only",
+        "rail_station_count",
+        "tram_station_count",
+        "transit_stops_within_1000m",
+        "transit_stops_within_500m",
+        "unique_rail_lines"
+      ],
+      "n_features_remaining": 27,
+      "adjusted_rand_index_vs_baseline": 0.4167,
+      "baseline_cluster_sizes": {
+        "0": 1018,
+        "1": 361,
+        "2": 753,
+        "3": 911,
+        "4": 7672,
+        "5": 1363,
+        "6": 10244
+      },
+      "ablated_cluster_sizes": {
+        "0": 17864,
+        "1": 438,
+        "2": 943,
+        "3": 1343,
+        "4": 240,
+        "5": 830,
+        "6": 664
+      }
+    }
+  },
+  "feature_family_dominance": {
+    "buildings": {
+      "n_predictors": 1,
+      "predictors": [
+        "building_coverage_ratio"
+      ],
+      "mean_within_family_abs_spearman_after_screening": null,
+      "pct_of_total_between_cluster_sum_of_squares": 96.88
+    },
+    "cycling": {
+      "n_predictors": 7,
+      "predictors": [
+        "cycle_infrastructure_density_km_per_km2_ibb_only",
+        "protected_cycleway_density_km_per_km2_ibb_only",
+        "distance_to_nearest_cycle_infrastructure_m_ibb_only",
+        "distance_to_nearest_bicycle_parking_m",
+        "bicycle_parking_count",
+        "distance_to_nearest_micromobility_parking_m",
+        "micromobility_parking_count"
+      ],
+      "mean_within_family_abs_spearman_after_screening": 0.303,
+      "pct_of_total_between_cluster_sum_of_squares": 0.47
+    },
+    "poi": {
+      "n_predictors": 14,
+      "predictors": [
+        "hospital_count",
+        "university_count",
+        "school_count",
+        "healthcare_count",
+        "cafe_count",
+        "restaurant_count",
+        "bar_pub_count",
+        "supermarket_count",
+        "retail_count",
+        "office_count",
+        "tourism_count",
+        "leisure_count",
+        "poi_density_km2",
+        "poi_entropy"
+      ],
+      "mean_within_family_abs_spearman_after_screening": 0.4,
+      "pct_of_total_between_cluster_sum_of_squares": 1.16
+    },
+    "population": {
+      "n_predictors": 1,
+      "predictors": [
+        "population_density_calibrated_km2"
+      ],
+      "mean_within_family_abs_spearman_after_screening": null,
+      "pct_of_total_between_cluster_sum_of_squares": 0.11
+    },
+    "terrain": {
+      "n_predictors": 4,
+      "predictors": [
+        "mean_elevation_m",
+        "mean_slope_deg",
+        "pct_area_slope_3_6deg",
+        "pct_area_slope_6_10deg"
+      ],
+      "mean_within_family_abs_spearman_after_screening": 0.252,
+      "pct_of_total_between_cluster_sum_of_squares": 0.05
+    },
+    "transit": {
+      "n_predictors": 17,
+      "predictors": [
+        "metro_station_count",
+        "distance_to_nearest_metro_m",
+        "tram_station_count",
+        "distance_to_nearest_tram_m",
+        "rail_station_count",
+        "distance_to_nearest_rail_m",
+        "ferry_terminal_count",
+        "distance_to_nearest_ferry_m",
+        "metrobus_station_count",
+        "distance_to_nearest_metrobus_m",
+        "distance_to_nearest_transit_m",
+        "transit_stops_within_500m",
+        "transit_stops_within_1000m",
+        "fixed_guideway_stations_within_1000m",
+        "unique_rail_lines",
+        "bus_departures_per_day",
+        "bus_departures_peak_hour"
+      ],
+      "mean_within_family_abs_spearman_after_screening": 0.273,
+      "pct_of_total_between_cluster_sum_of_squares": 1.33
+    }
+  },
+  "k_transition_verification": {
+    "k6_to_k7_note": "See transition_k6_to_k7.csv for the full cross-tabulation.",
+    "k7_to_k8_note": "See transition_k7_to_k8.csv for the full cross-tabulation."
+  }
+}

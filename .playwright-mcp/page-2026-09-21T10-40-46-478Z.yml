@@ -1,0 +1,128 @@
+- generic [active] [ref=f1e1]:
+  - generic [ref=f1e2]:
+    - complementary [ref=f1e3]:
+      - link "Istanbul Urban Mobility Intelligence" [ref=f1e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f1e5]:
+          - generic [ref=f1e6]: Istanbul
+          - generic [ref=f1e7]: Urban Mobility Intelligence
+      - navigation "Analysis modules" [ref=f1e8]:
+        - list [ref=f1e9]:
+          - listitem [ref=f1e10]:
+            - link "Overview" [ref=f1e11] [cursor=pointer]:
+              - /url: /overview
+          - listitem [ref=f1e12]:
+            - link "Urban Typology" [ref=f1e13] [cursor=pointer]:
+              - /url: /typology
+          - listitem [ref=f1e14]:
+            - link "15-Minute Istanbul" [ref=f1e15] [cursor=pointer]:
+              - /url: /fifteen-minute
+          - listitem [ref=f1e16]:
+            - link "Cycling Gain" [ref=f1e17] [cursor=pointer]:
+              - /url: /cycling-gain
+          - listitem [ref=f1e18]:
+            - link "Transit Connection" [ref=f1e19] [cursor=pointer]:
+              - /url: /transit
+          - listitem [ref=f1e20]:
+            - link "Accessibility Gaps" [ref=f1e21] [cursor=pointer]:
+              - /url: /gaps
+          - listitem [ref=f1e22]:
+            - link "E-bike" [ref=f1e23] [cursor=pointer]:
+              - /url: /ebike
+          - listitem [ref=f1e24]:
+            - link "Data & Methods" [ref=f1e25] [cursor=pointer]:
+              - /url: /methods
+      - paragraph [ref=f1e27]: An O3 Sustainability spatial intelligence project.
+    - main [ref=f1e28]:
+      - generic [ref=f1e29]:
+        - generic [ref=f1e31]:
+          - heading "Cycling Gain" [level=1] [ref=f1e32]
+          - paragraph [ref=f1e33]:
+            - text: What changes when we add cycling?
+            - button "How this works" [ref=f1e35] [cursor=pointer]: i
+        - generic [ref=f1e36]:
+          - generic [ref=f1e37]:
+            - generic [ref=f1e38]:
+              - application "Istanbul accessibility map" [ref=f1e39]:
+                - region "Map" [ref=f1e40]
+                - generic [ref=f1e41]:
+                  - button "Zoom in" [ref=f1e42] [cursor=pointer]
+                  - button "Zoom out" [ref=f1e44] [cursor=pointer]
+              - button "Reset view" [ref=f1e46] [cursor=pointer]
+              - generic [ref=f1e49]:
+                - paragraph [ref=f1e50]: Loading the Istanbul accessibility map
+                - paragraph [ref=f1e51]: Preparing 22,322 spatial cells…
+            - tablist "Map layer" [ref=f1e53]:
+              - tab "Accessibility change" [selected] [ref=f1e54] [cursor=pointer]
+            - generic [ref=f1e56]:
+              - generic [ref=f1e57]: District
+              - combobox "District" [ref=f1e58]:
+                - option "All districts" [selected]
+                - option "Adalar"
+                - option "Arnavutköy"
+                - option "Ataşehir"
+                - option "Avcılar"
+                - option "Bağcılar"
+                - option "Bahçelievler"
+                - option "Bakırköy"
+                - option "Başakşehir"
+                - option "Bayrampaşa"
+                - option "Beşiktaş"
+                - option "Beykoz"
+                - option "Beylikdüzü"
+                - option "Beyoğlu"
+                - option "Büyükçekmece"
+                - option "Çatalca"
+                - option "Çekmeköy"
+                - option "Esenler"
+                - option "Esenyurt"
+                - option "Eyüpsultan"
+                - option "Fatih"
+                - option "Gaziosmanpaşa"
+                - option "Güngören"
+                - option "Kadıköy"
+                - option "Kâğıthane"
+                - option "Kartal"
+                - option "Küçükçekmece"
+                - option "Maltepe"
+                - option "Pendik"
+                - option "Sancaktepe"
+                - option "Sarıyer"
+                - option "Silivri"
+                - option "Sultanbeyli"
+                - option "Sultangazi"
+                - option "Şile"
+                - option "Şişli"
+                - option "Tuzla"
+                - option "Ümraniye"
+                - option "Üsküdar"
+                - option "Zeytinburnu"
+            - generic [ref=f1e60]:
+              - generic [ref=f1e61]: Walking → cycling accessibility change
+              - list [ref=f1e62]:
+                - listitem [ref=f1e63]:
+                  - generic [ref=f1e65]: Walking access already complete
+                - listitem [ref=f1e66]:
+                  - generic [ref=f1e68]: Cycling closes the gap
+                - listitem [ref=f1e69]:
+                  - generic [ref=f1e71]: Cycling partially closes the gap
+                - listitem [ref=f1e72]:
+                  - generic [ref=f1e74]: Gap remains
+                - listitem [ref=f1e75]:
+                  - generic [ref=f1e77]: Evidence uncertain
+          - complementary [ref=f1e78]:
+            - generic [ref=f1e79]:
+              - generic [ref=f1e80]:
+                - heading "What changes when we add cycling?" [level=2] [ref=f1e81]
+                - paragraph [ref=f1e82]: See where cycling expands access to everyday essentials beyond walking.
+              - generic [ref=f1e83]:
+                - generic [ref=f1e84]:
+                  - text: Complete cycling access
+                  - generic [ref=f1e85]: 95.57%
+                  - paragraph [ref=f1e86]: Approximately 95.6% of the calibrated 2020 population has complete 15-minute potential cycling access to the three required everyday needs.
+                - generic [ref=f1e87]:
+                  - text: Cycling accessibility gain
+                  - generic [ref=f1e88]: 2.10M
+                  - paragraph [ref=f1e89]: Cycling potentially closes the mapped everyday-needs walking gap for approximately 2.10 million people in the calibrated population surface.
+              - paragraph [ref=f1e90]: Click any cell on the map to see its details.
+  - alert [ref=f1e91]

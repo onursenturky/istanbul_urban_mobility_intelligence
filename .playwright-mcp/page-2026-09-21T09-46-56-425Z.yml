@@ -1,0 +1,132 @@
+- generic [active] [ref=f47e1]:
+  - generic [ref=f47e2]:
+    - navigation [ref=f47e3]:
+      - generic [ref=f47e4]:
+        - link "Istanbul Urban Mobility Intelligence, home" [ref=f47e5] [cursor=pointer]:
+          - /url: /
+          - generic [ref=f47e7]: Istanbul / Urban Mobility Intelligence
+        - list [ref=f47e8]:
+          - listitem [ref=f47e9]:
+            - link "Overview" [ref=f47e10] [cursor=pointer]:
+              - /url: /overview
+          - listitem [ref=f47e11]:
+            - link "Urban Typology" [ref=f47e12] [cursor=pointer]:
+              - /url: /typology
+          - listitem [ref=f47e13]:
+            - link "15-Minute Istanbul" [ref=f47e14] [cursor=pointer]:
+              - /url: /fifteen-minute
+          - listitem [ref=f47e15]:
+            - link "Cycling Gain" [ref=f47e16] [cursor=pointer]:
+              - /url: /cycling-gain
+          - listitem [ref=f47e17]:
+            - link "Transit Connection" [ref=f47e18] [cursor=pointer]:
+              - /url: /transit
+          - listitem [ref=f47e19]:
+            - link "Accessibility Gaps" [ref=f47e20] [cursor=pointer]:
+              - /url: /gaps
+          - listitem [ref=f47e21]:
+            - link "E-bike" [ref=f47e22] [cursor=pointer]:
+              - /url: /ebike
+          - listitem [ref=f47e23]:
+            - link "Data & Methods" [ref=f47e24] [cursor=pointer]:
+              - /url: /methods
+    - main [ref=f47e25]:
+      - generic [ref=f47e26]:
+        - generic [ref=f47e27]:
+          - heading "Urban Typology" [level=1] [ref=f47e28]
+          - paragraph [ref=f47e29]: What kinds of urban mobility environments exist across Istanbul? Five frozen clusters, built from ~94 spatial indicators, describe recurring urban regimes. Clusters are descriptive, not ranked, and never entered any routing or accessibility computation.
+        - generic [ref=f47e31]:
+          - generic [ref=f47e32]:
+            - tablist "Map layer" [ref=f47e33]:
+              - tab "Urban typology" [selected] [ref=f47e34] [cursor=pointer]
+            - generic [ref=f47e36]:
+              - generic [ref=f47e37]: District
+              - combobox "District" [ref=f47e38]:
+                - option "All districts" [selected]
+                - option "Adalar"
+                - option "Arnavutköy"
+                - option "Ataşehir"
+                - option "Avcılar"
+                - option "Bağcılar"
+                - option "Bahçelievler"
+                - option "Bakırköy"
+                - option "Başakşehir"
+                - option "Bayrampaşa"
+                - option "Beşiktaş"
+                - option "Beykoz"
+                - option "Beylikdüzü"
+                - option "Beyoğlu"
+                - option "Büyükçekmece"
+                - option "Çatalca"
+                - option "Çekmeköy"
+                - option "Esenler"
+                - option "Esenyurt"
+                - option "Eyüpsultan"
+                - option "Fatih"
+                - option "Gaziosmanpaşa"
+                - option "Güngören"
+                - option "Kadıköy"
+                - option "Kâğıthane"
+                - option "Kartal"
+                - option "Küçükçekmece"
+                - option "Maltepe"
+                - option "Pendik"
+                - option "Sancaktepe"
+                - option "Sarıyer"
+                - option "Silivri"
+                - option "Sultanbeyli"
+                - option "Sultangazi"
+                - option "Şile"
+                - option "Şişli"
+                - option "Tuzla"
+                - option "Ümraniye"
+                - option "Üsküdar"
+                - option "Zeytinburnu"
+          - generic [ref=f47e39]:
+            - generic [ref=f47e40]:
+              - application "Istanbul accessibility map":
+                - region "Map" [ref=f47e41]
+                - generic [ref=f47e42]:
+                  - button "Zoom in" [ref=f47e43] [cursor=pointer]
+                  - button "Zoom out" [ref=f47e45] [cursor=pointer]
+                - region "Map" [ref=f47e47]
+                - generic [ref=f47e48]:
+                  - button "Zoom in" [ref=f47e49] [cursor=pointer]
+                  - button "Zoom out" [ref=f47e51] [cursor=pointer]
+              - button "Reset view" [ref=f47e53] [cursor=pointer]
+              - generic [ref=f47e56]:
+                - paragraph [ref=f47e57]: Loading the Istanbul accessibility map
+                - paragraph [ref=f47e58]: Preparing 22,322 spatial cells…
+            - generic [ref=f47e60]:
+              - generic [ref=f47e61]: Urban mobility typology
+              - list [ref=f47e62]:
+                - listitem [ref=f47e63]:
+                  - generic [ref=f47e65]: Cluster 0
+                - listitem [ref=f47e66]:
+                  - generic [ref=f47e68]: Cluster 1
+                - listitem [ref=f47e69]:
+                  - generic [ref=f47e71]: Cluster 2
+                - listitem [ref=f47e72]:
+                  - generic [ref=f47e74]: Cluster 3
+                - listitem [ref=f47e75]:
+                  - generic [ref=f47e77]: Cluster 4
+        - generic [ref=f47e78]:
+          - generic [ref=f47e79]:
+            - generic [ref=f47e80]: Cluster 0
+            - paragraph [ref=f47e83]: 0 districts where this is the plurality typology by population.
+          - generic [ref=f47e84]:
+            - generic [ref=f47e85]: Cluster 1
+            - paragraph [ref=f47e88]: 24 districts where this is the plurality typology by population.
+          - generic [ref=f47e89]:
+            - generic [ref=f47e90]: Cluster 2
+            - paragraph [ref=f47e93]: 3 districts where this is the plurality typology by population.
+          - generic [ref=f47e94]:
+            - generic [ref=f47e95]: Cluster 3
+            - paragraph [ref=f47e98]: 0 districts where this is the plurality typology by population.
+          - generic [ref=f47e99]:
+            - generic [ref=f47e100]: Cluster 4
+            - paragraph [ref=f47e103]: 12 districts where this is the plurality typology by population.
+    - contentinfo [ref=f47e104]:
+      - generic [ref=f47e105]: Istanbul Urban Mobility Intelligence — an O3 Sustainability spatial intelligence project.
+      - generic [ref=f47e106]: Modeled network accessibility. Not observed travel behavior. See Data & Methods.
+  - alert [ref=f47e107]
