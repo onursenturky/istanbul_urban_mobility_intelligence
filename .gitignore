@@ -4,6 +4,9 @@ __pycache__/
 .ipynb_checkpoints/
 .DS_Store
 
+# Browser-automation test-tool session output (never project content)
+.playwright-mcp/
+
 # osmnx's internal HTTP response cache (not a project data artifact —
 # the real raw artifact is data/raw/boundaries/*.geojson)
 /cache/

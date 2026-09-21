@@ -57,7 +57,27 @@ export function Sidebar() {
         </Link>
         <nav aria-label="Analysis modules">{links}</nav>
         <div className="mt-auto px-1 pt-4 border-t border-o3-card">
-          <p className="text-o3-text-secondary text-[11px] leading-snug">An O3 Sustainability spatial intelligence project.</p>
+          <p className="text-o3-text-secondary text-[11px] leading-snug">
+            A project by{" "}
+            <a
+              href="https://www.linkedin.com/company/o3sustainability/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-dotted underline-offset-2 hover:text-o3-text-primary transition-colors"
+            >
+              O3 Sustainability
+            </a>
+            , developed by{" "}
+            <a
+              href="https://www.linkedin.com/in/onursenturky/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-dotted underline-offset-2 hover:text-o3-text-primary transition-colors"
+            >
+              Onur Şentürk
+            </a>
+            .
+          </p>
         </div>
       </aside>
 

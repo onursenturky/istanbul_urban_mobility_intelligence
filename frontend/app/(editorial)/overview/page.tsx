@@ -89,6 +89,31 @@ export default async function OverviewPage() {
           <ShareableInsightCard claim={c02} headline="Cycling Accessibility Gain" />
         </section>
       )}
+
+      <section className="pt-6 border-t border-o3-card">
+        <p className="text-o3-text-secondary/70 text-[10px] uppercase tracking-wider mb-2">About</p>
+        <p className="text-o3-text-secondary/70 text-xs max-w-2xl">
+          A spatial intelligence project by{" "}
+          <a
+            href="https://www.linkedin.com/company/o3sustainability/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline decoration-dotted underline-offset-2 hover:text-o3-text-primary transition-colors"
+          >
+            O3 Sustainability
+          </a>
+          . Developed by{" "}
+          <a
+            href="https://www.linkedin.com/in/onursenturky/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline decoration-dotted underline-offset-2 hover:text-o3-text-primary transition-colors"
+          >
+            Onur Şentürk
+          </a>
+          .
+        </p>
+      </section>
     </div>
   );
 }
