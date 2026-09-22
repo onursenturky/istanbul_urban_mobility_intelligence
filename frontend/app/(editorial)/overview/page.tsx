@@ -57,7 +57,7 @@ export default async function OverviewPage() {
         </p>
       </header>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div className="flex flex-col sm:flex-row flex-wrap gap-x-12 gap-y-6 pt-6 border-t border-o3-card">
         {c01 && <KpiCard label="Walking access (Food+Healthcare+Education, 15min)" claim={c01} />}
         {c03 && <KpiCard label="Cycling access (Food+Healthcare+Education, 15min)" claim={c03} />}
         {c02 && <KpiCard label="Cycling accessibility gain" claim={c02} />}
